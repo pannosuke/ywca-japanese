@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.1
+
+Not tagged in this pull request. `versionCode` is 5. Package name stays `dev.ericallerton.yoruben`.
+
+- A verb is answered by tapping kana into one box per character. The prompt says so, in kana and in a short English line. It also says some tiles do not belong. A tapped tile leaves the bank.
+- A fight shows three steps, which cards can be played, the card's attack or block, the enemy's next hit, and an end-turn button that says the enemy will attack.
+- あそびかた on the title replays a one-turn lesson. The first fight on a profile is that lesson.
+- A test checks every card and every form. 行く, する, and 来る stay the exceptions. Words that are not verbs are not asked as verbs. The 36 verb cards had a blank Japanese gloss; each now has a short one.
+
 ## 0.4.0
 
 Not tagged in this pull request. `versionCode` is 4 so a signed build can replace 0.3.0 in place. Package name stays `dev.ericallerton.yoruben`.

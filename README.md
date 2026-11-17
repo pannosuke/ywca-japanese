@@ -6,7 +6,7 @@ Kanji study has not started. Every kanji on screen has furigana above it. Defini
 
 ## Progress
 
-Version 0.4.0, not tagged yet, is a one-act deckbuilder. Open the app and press 出発. The map appears. Tap the glowing node. That is the fight, two taps from the title. The design is in [DESIGN.md](DESIGN.md). The checklist is in [ROADMAP.md](ROADMAP.md). [CHANGELOG.md](CHANGELOG.md) has the unreleased notes.
+Version 0.4.1, not tagged yet, is the same one-act deckbuilder. あそびかた on the title is a one-turn lesson in spelling a card. 出発 opens the map. The design is in [DESIGN.md](DESIGN.md). The checklist is in [ROADMAP.md](ROADMAP.md). [CHANGELOG.md](CHANGELOG.md) has the unreleased notes.
 
 AnkiDroid, FSRS, and class-day bosses wait until after this act. Speech is still last.
 
@@ -14,7 +14,7 @@ AnkiDroid, FSRS, and class-day bosses wait until after this act. Speech is still
 
 1. **出発** — start the act. The coach marks can be skipped.
 2. **The map** — tap a lit neighbor. The top node is the boss.
-3. **A fight** — play a card, answer it, then end the turn or keep playing. After the win, pick one reward and read the gem payout.
+3. **A fight** — tap a lit card, spell a verb by tapping kana into the boxes, then tap これで答える. End the turn when you want the enemy to move. After the win, pick one reward and read the gem payout.
 4. **ずかん** — word cards and any yokai that dropped. A yokai card opens its story.
 5. **宿題** — on the map, or at the campfire. Turning in a graded sheet pays gems and marks the missed verbs for the next run. It is not on the path to the first fight.
 
@@ -74,7 +74,7 @@ godot --headless --path . --import --quit
 godot --headless --path . -s addons/gut/gut_cmdln.gd -gdir=res://tests -gprefix=test_ -gexit
 ```
 
-The Android export preset is `Android` in `export_presets.cfg`. Package `dev.ericallerton.yoruben`, version name `0.4.0`, version code `4`, arm64-v8a only. The preset exports an unsigned APK. CI signs it. Bump `version/code` and `version/name` there, and `config/version` in `project.godot`, before the next tag.
+The Android export preset is `Android` in `export_presets.cfg`. Package `dev.ericallerton.yoruben`, version name `0.4.1`, version code `5`, arm64-v8a only. The preset exports an unsigned APK. CI signs it. Bump `version/code` and `version/name` there, and `config/version` in `project.godot`, before the next tag.
 
 The previous Kotlin project is in `archive/kotlin-app`. It is not the CI build.
 
@@ -137,7 +137,7 @@ The tag workflow runs lint and tests, builds a signed release APK, and attaches 
 
 Re-run the failed workflow after the secrets exist, or push the same tag again (`git push origin v0.1.0` cannot repeat a tag; delete the remote tag first only if no release was published, or move on to `v0.1.1`).
 
-The Godot export is `0.4.0` (`versionCode` 4). Bump `export_presets.cfg` before the next tag. Tags are pushed by hand after merge. Do not tag v0.4.0 until it has been reviewed.
+The Godot export is `0.4.1` (`versionCode` 5). Bump `export_presets.cfg` before the next tag. Tags are pushed by hand after merge. Do not tag v0.4.1 until it has been reviewed.
 
 ## AnkiDroid
 
@@ -151,7 +151,7 @@ Wrong answers wear the brush. The shop repairs it. Dying keeps mastery and gems 
 
 ## Known gaps
 
-- v0.1.0, v0.2.0, and v0.3.0 are already released. v0.4.0 is not tagged. Tags are pushed by hand after review.
+- v0.1.0, v0.2.0, and v0.3.0 are already released. v0.4.1 is not tagged. Tags are pushed by hand after review.
 - Photographing a worksheet, AnkiDroid, FSRS, class-day bosses, shared packs, and speech are not in this build. See [ROADMAP.md](ROADMAP.md).
 - Lesson 8's date (2026-11-13) and Ōuchi-sensei are inferred from the Friday worksheet, not from a printed header. The No.89 homework file uses that same date and teacher.
 - New lessons are a new pack file and a release, not an in-app download.

@@ -52,6 +52,8 @@ static func resolve(correct: bool, card: Dictionary, rarity: String, relics: Arr
 	elif str(card["effect"]) == "chant":
 		draw = 1 if landed else 0
 		block = 3 if landed else 0
+	elif str(card["effect"]) == "spark":
+		block = 2 if landed else 0
 	else:
 		block = 2 if landed else 0
 	return {

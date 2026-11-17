@@ -30,12 +30,13 @@ This is the game from here on. A commute session is one act: a map, a hand of ca
 - [x] Homework JSON, the No.89 sheet, turn-in rewards, and weak-verb cards on the next run
 - [x] Tests for the map, conjugation (including ない), rarity, payout, deck, yokai stories, drop rates, and homework
 - [x] Furigana on every kanji unless it is in the profile's `known_kanji` list. Eric's list is empty
+- [x] v0.4.1: the fight explains how to spell a card, and the first battle is a lesson that can be replayed. A test audits every card
 - [ ] Camera or OCR grading of a paper worksheet. The sheet is graded outside the app and imported as JSON until then
 - [ ] More than one act, and more than the thirteen yokai
 
 ## v0.5.0 — art pass
 
-This is the next build after v0.4.0. The act stays. The pictures and the feel catch up.
+This is the next feature after v0.4. v0.4.1 only makes the current fight easier to understand. The act stays. The pictures and the feel catch up.
 
 - [ ] Real card frames, not a flat panel and a border
 - [ ] Foil and holo shaders by rarity, so an Ultra Rare card looks dramatically different from a Common one
