@@ -1,0 +1,591 @@
+{
+  "updated": "2026-11-17 11:18 JST",
+  "kanji_status": "not started",
+  "furigana": "everywhere",
+  "anki": {
+    "deck": "YWCA",
+    "study_cards": 18,
+    "wordbank_deck": "YWCA::Word Bank",
+    "wordbank_notes_suspended": 219
+  },
+  "details": "curriculum.json (per-lesson detail), wordbank.json (all words)",
+  "lessons": [
+    {
+      "id": "lesson-01",
+      "date": "2026-10-16",
+      "date_inferred": false,
+      "weekday": "Fri",
+      "teacher": "大内(おおうち) Ōuchi",
+      "anki_tag": "class::2026-10-16",
+      "source": "Osaka YWCA 日本語学科 Evening Class 2 worksheet; handout boxes No.2, No.3, No.5",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "topic": "じこしょうかい: self-introduction (name, country/city, arrival in Japan, home, commute, job, birthday, age)",
+      "grammar": [
+        "〜と よんでください",
+        "[くに]の[まち]から きました",
+        "いつ 日本に きましたか / 〜ねんに きました",
+        "[乗り物]で きます",
+        "すみません、かいてください"
+      ],
+      "notes": [
+        "Corrected his city spelling: wrote サンディエゴ with a margin note 'di ディ' (small-kana combos like ディ were a sticking point).",
+        "Classmate table filled in (names/places listed in report)."
+      ],
+      "kanji_status": "not started",
+      "furigana": "everywhere",
+      "study_word_count": 3,
+      "words": [
+        {
+          "Word": "看護師[かんごし]",
+          "Meaning": "nurse"
+        },
+        {
+          "Word": "通訳[つうやく]",
+          "Meaning": "interpreter (spoken language)"
+        },
+        {
+          "Word": "警官[けいかん]",
+          "Meaning": "police officer"
+        }
+      ],
+      "wordbank_count": 21,
+      "wordbank_words": [
+        "自己紹介",
+        "名前",
+        "国",
+        "町",
+        "フルネーム",
+        "ニックネーム",
+        "お宅",
+        "電車",
+        "仕事",
+        "誕生日",
+        "〜歳",
+        "書いてください",
+        "先生",
+        "学生",
+        "医者",
+        "歯医者",
+        "主婦",
+        "会社員",
+        "店員",
+        "駅員",
+        "歌手"
+      ]
+    },
+    {
+      "id": "lesson-02",
+      "date": "2026-10-20",
+      "date_inferred": false,
+      "weekday": "Tue",
+      "teacher": "ツジ Tsuji",
+      "anki_tag": "class::2026-10-20",
+      "source": "別科【かいわ】 dialogue No.6 'どんな映画を見ますか' (handwritten number 20) + Tsuji handwritten worksheet No.6",
+      "pages": [
+        5,
+        6
+      ],
+      "topic": "Hobbies and frequency: what kind of movies do you watch, how often",
+      "grammar": [
+        "Nの しゅみは なんですか",
+        "どんな N を V ますか",
+        "Frequency adverbs + ます / あまり・ぜんぜん + ません",
+        "Nも です"
+      ],
+      "notes": [
+        "Eric's handwritten header '頻率/frequency ひんどう' (Chinese term 頻率; Japanese is 頻度 ひんど)."
+      ],
+      "kanji_status": "not started",
+      "furigana": "everywhere",
+      "study_word_count": 0,
+      "words": [],
+      "wordbank_count": 12,
+      "wordbank_words": [
+        "趣味",
+        "映画",
+        "見ます",
+        "香港",
+        "ラブストーリー",
+        "好き",
+        "頻度",
+        "いつも",
+        "よく",
+        "時々",
+        "あまり〜ません",
+        "全然〜ません"
+      ]
+    },
+    {
+      "id": "lesson-03",
+      "date": "2026-10-23",
+      "date_inferred": false,
+      "weekday": "Fri",
+      "teacher": "大内 Ōuchi",
+      "anki_tag": "class::2026-10-23",
+      "source": "Dialogue No.34 'ごはん、食べませんか' (handwritten 97) + Evening Class 2 worksheet No.34 + worksheet 第7課 (ぶんぽう1-2, with ねむい dialogue)",
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "topic": "Invitations (〜ませんか/〜ましょう, declining with ちょっと…) and time expressions with に, から〜まで; past tense of verbs",
+      "grammar": [
+        "Vませんか",
+        "ええ、そうしましょう / Vましょう",
+        "Nは どうですか",
+        "すみません、Nは ちょっと…",
+        "[時間]に V",
+        "〜から 〜まで",
+        "Vます/ません vs Vました/ませんでした",
+        "Nではありません"
+      ],
+      "notes": [
+        "Eric wrote 'last night' next to highlighted ゆうべ.",
+        "Name エリック written at top of the No.34 dialogue."
+      ],
+      "kanji_status": "not started",
+      "furigana": "everywhere",
+      "study_word_count": 1,
+      "words": [
+        {
+          "Word": "昨夜[ゆうべ]",
+          "Meaning": "last night"
+        }
+      ],
+      "wordbank_count": 40,
+      "wordbank_words": [
+        "お腹が空きました",
+        "ご飯",
+        "食べます",
+        "レストラン",
+        "入ります",
+        "一緒に",
+        "ハンバーガー",
+        "寿司",
+        "ラーメン",
+        "旅行します",
+        "京都",
+        "遊びます",
+        "テニス",
+        "ちょっと…",
+        "眠い",
+        "寝ます",
+        "遅い",
+        "起きます",
+        "働きます",
+        "勉強します",
+        "授業",
+        "〜ごろ",
+        "毎日",
+        "毎週",
+        "毎月",
+        "昨日",
+        "今日",
+        "明日",
+        "今朝",
+        "先週",
+        "今週",
+        "来週",
+        "先月",
+        "今月",
+        "来月",
+        "去年",
+        "今年",
+        "来年",
+        "結婚します",
+        "飲みます"
+      ]
+    },
+    {
+      "id": "lesson-04",
+      "date": "2026-10-27",
+      "date_inferred": false,
+      "weekday": "Tue",
+      "teacher": "ツジ Tsuji",
+      "anki_tag": "class::2026-10-27",
+      "source": "Dialogues No.213 'きれいな花!' (handwritten 101), No.167 '大阪はどうですか' (207), No.205 '万里の長城が有名です' (42); Eric's handwritten board notes 形容詞 + No.167 practice sheet",
+      "pages": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "topic": "Adjectives (い/な) in compliments and descriptions; describing Osaka and your hometown",
+      "grammar": [
+        "Aい/Aな + N",
+        "Aいです → Aくないです",
+        "Aなです → Aじゃありません",
+        "Nは どうですか / Aです",
+        "Nが 有名です / Nに あります"
+      ],
+      "notes": [
+        "Board notes in Eric's hand (highlighted): きびしい=strict, しんせつな=kind, らくな=easy, ひまな='Bored?', ほくとう=north east.",
+        "MISCONCEPTION: he glossed ひまな as 'Bored?'. ひま means free/not busy; bored is たいくつ.",
+        "Copied 形容詞 (けいようし), 花, 高い, 元気 in kanji from the board."
+      ],
+      "kanji_status": "not started",
+      "furigana": "everywhere",
+      "study_word_count": 8,
+      "words": [
+        {
+          "Word": "万里[ばんり]の 長城[ちょうじょう]",
+          "Meaning": "the Great Wall of China"
+        },
+        {
+          "Word": "北東[ほくとう]",
+          "Meaning": "northeast"
+        },
+        {
+          "Word": "厳[きび]しい",
+          "Meaning": "strict; severe"
+        },
+        {
+          "Word": "親切[しんせつ]な",
+          "Meaning": "kind"
+        },
+        {
+          "Word": "楽[らく]な",
+          "Meaning": "easy; comfortable"
+        },
+        {
+          "Word": "暇[ひま]な",
+          "Meaning": "free; not busy"
+        },
+        {
+          "Word": "生活[せいかつ]",
+          "Meaning": "life; lifestyle; daily living"
+        },
+        {
+          "Word": "匂[にお]い",
+          "Meaning": "smell (pleasant or neutral)"
+        }
+      ],
+      "wordbank_count": 23,
+      "wordbank_words": [
+        "お誕生日おめでとう",
+        "プレゼント",
+        "綺麗な",
+        "花",
+        "何て言うんですか",
+        "薔薇",
+        "本当に",
+        "初めて",
+        "〜回目",
+        "面白い",
+        "食べ物",
+        "美味しい",
+        "形容詞",
+        "高い",
+        "元気",
+        "暑い",
+        "名詞",
+        "お国",
+        "中国",
+        "北京",
+        "古い",
+        "有名",
+        "北京ダック"
+      ]
+    },
+    {
+      "id": "lesson-05",
+      "date": "2026-10-30",
+      "date_inferred": false,
+      "weekday": "Fri",
+      "teacher": "大内 Ōuchi",
+      "anki_tag": "class::2026-10-30",
+      "source": "Evening Class 2 worksheets No.205 (ぶんぽう1-2 + れんしゅう with 方位 compass) and No.97 (past adjectives, れんしゅう1-3); dialogue No.97 'どうでしたか'",
+      "pages": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "topic": "い/な adjective negatives, 'N1 is what kind of N2?', compass directions; past tense of adjectives (how was it?)",
+      "grammar": [
+        "N1は どんな N2 ですか / A N2 です",
+        "Aい → Aかったです / Aくなかったです",
+        "Aな → Aでした / Aじゃありませんでした",
+        "どうでしたか"
+      ],
+      "notes": [
+        "Wrote ゆうひ = sunset on the No.205 sheet and 'sunset' under 夕日 on No.97.",
+        "Wrote しんせつ な at the top of No.97.",
+        "Practice answers: wrote おもしかった / おもしくなかった (dropped the ろ in おもしろい); other past forms correct."
+      ],
+      "kanji_status": "not started",
+      "furigana": "everywhere",
+      "study_word_count": 1,
+      "words": [
+        {
+          "Word": "夕日[ゆうひ]",
+          "Meaning": "sunset; setting sun"
+        }
+      ],
+      "wordbank_count": 22,
+      "wordbank_words": [
+        "富士山",
+        "山",
+        "方位",
+        "北",
+        "南",
+        "東",
+        "西",
+        "北西",
+        "南東",
+        "南西",
+        "デート",
+        "楽しい",
+        "パーティ",
+        "テスト",
+        "難しい",
+        "忙しい",
+        "良かった",
+        "会います",
+        "日曜日",
+        "家",
+        "登ります",
+        "大変な"
+      ]
+    },
+    {
+      "id": "lesson-06",
+      "date": "2026-11-06",
+      "date_inferred": false,
+      "weekday": "Fri",
+      "teacher": "大内 Ōuchi",
+      "anki_tag": "class::2026-11-06",
+      "source": "Dialogue No.204 '大阪より暖かいです' (handwritten 34) + Evening Class 2 worksheet No.204 (ぶんぽう1-4)",
+      "pages": [
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "topic": "Comparisons: より, どちら/〜のほうが, おなじぐらい, いちばん; weather and seasons",
+      "grammar": [
+        "N1は N2より Aです",
+        "N1と N2と どちらが Aですか / Nのほうが Aです",
+        "どちらが すきですか / Nのほうが すきです / どちらも",
+        "Nと おなじぐらいです",
+        "[group]のなかで なにが いちばん Aですか"
+      ],
+      "notes": [
+        "Wrote どこか = somewhere (highlighted) at the top.",
+        "Wrote ひくい (highlighted) under ふじさん in the Everest vs Fuji drill."
+      ],
+      "kanji_status": "not started",
+      "furigana": "everywhere",
+      "study_word_count": 2,
+      "words": [
+        {
+          "Word": "どこか",
+          "Meaning": "somewhere"
+        },
+        {
+          "Word": "低[ひく]い",
+          "Meaning": "low; short (in height)"
+        }
+      ],
+      "wordbank_count": 40,
+      "wordbank_words": [
+        "寒い",
+        "暖かい",
+        "だから",
+        "冬",
+        "嫌い",
+        "マイナス",
+        "〜度",
+        "〜ぐらい",
+        "へえ",
+        "西瓜",
+        "林檎",
+        "牛肉",
+        "鶏肉",
+        "バイク",
+        "自転車",
+        "奈良",
+        "北海道",
+        "沖縄",
+        "同じぐらい",
+        "人口",
+        "多い",
+        "大きい",
+        "賑やかな",
+        "天ぷら",
+        "どちら",
+        "〜の方",
+        "どちらも",
+        "犬",
+        "猫",
+        "紅茶",
+        "パン",
+        "海",
+        "サッカー",
+        "夏",
+        "土曜日",
+        "一番",
+        "果物",
+        "お菓子",
+        "動物",
+        "スポーツ"
+      ]
+    },
+    {
+      "id": "lesson-07",
+      "date": "2026-11-10",
+      "date_inferred": false,
+      "weekday": "Tue",
+      "teacher": "ツジ Tsuji",
+      "anki_tag": "class::2026-11-10",
+      "source": "Dialogue No.176 '古い町が見たいです' (handwritten 367) + Tsuji worksheet No.176 (ほしい / 〜たい) + pair-interview table",
+      "pages": [
+        29,
+        30,
+        31
+      ],
+      "topic": "Wants: Nが ほしいです, Vたいです; suggesting where to go on Sunday",
+      "grammar": [
+        "Nが ほしいです / ほしくないです",
+        "Vます-stem + たいです / たくないです",
+        "[place]に いきたいです",
+        "どこかに Vませんか / どこに Vましょうか"
+      ],
+      "notes": [
+        "Top-of-page notes (highlighted): ぶっか = price; ねだん = price (circled 'cost?'), so he was unsure how the two differ; じっさい = actually.",
+        "Wrote にいきます → にいきたいです on the ~たい chart."
+      ],
+      "kanji_status": "not started",
+      "furigana": "everywhere",
+      "study_word_count": 3,
+      "words": [
+        {
+          "Word": "物価[ぶっか]",
+          "Meaning": "prices; cost of living (in general)"
+        },
+        {
+          "Word": "値段[ねだん]",
+          "Meaning": "price (of a specific item)"
+        },
+        {
+          "Word": "実際[じっさい]",
+          "Meaning": "actually; in reality"
+        }
+      ],
+      "wordbank_count": 10,
+      "wordbank_words": [
+        "今度",
+        "別に",
+        "日本料理",
+        "店",
+        "欲しい",
+        "冷蔵庫",
+        "机",
+        "車",
+        "電子レンジ",
+        "〜億円"
+      ]
+    },
+    {
+      "id": "lesson-08",
+      "date": "2026-11-13",
+      "date_inferred": true,
+      "weekday": "Fri",
+      "teacher": "unknown (printed worksheets look like Ōuchi's)",
+      "anki_tag": "class::2026-11-13",
+      "source": "Dialogues No.45 'この電車は吹田に止まりますか' (handwritten 152) and No.89 'ボールペンを貸してください' (377) + te-form worksheets (動詞のて形, ぶんぽう1 instructions, ぶんぽう2 requests)",
+      "pages": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "topic": "Verb groups and the て-form; Vてください for instructions (school, hospital, airport, taxi, salon, station) and polite requests",
+      "grammar": [
+        "Verb groups 1/2/3",
+        "て-form rules (G1)",
+        "Vてください (instruction)",
+        "すみません、Vてください (request)",
+        "Nは [place]に とまりますか"
+      ],
+      "notes": [
+        "Wrote い,ち,り beside the あって/もって/かえって group as a memory aid.",
+        "Wrote しゃしん above the photo request (しゃしんを とってください).",
+        "Te-form drill answers were nearly all correct."
+      ],
+      "kanji_status": "not started",
+      "furigana": "everywhere",
+      "study_word_count": 0,
+      "words": [],
+      "wordbank_count": 51,
+      "wordbank_words": [
+        "吹田",
+        "止まります",
+        "次",
+        "普通",
+        "乗ります",
+        "降ります",
+        "梅田",
+        "ボールペン",
+        "貸します",
+        "動詞",
+        "て形",
+        "グループ",
+        "書きます",
+        "泳ぎます",
+        "持ちます",
+        "帰ります",
+        "死にます",
+        "話します",
+        "開けます",
+        "閉めます",
+        "聞きます",
+        "宿題",
+        "出します",
+        "読みます",
+        "ホワイトボード",
+        "学校",
+        "病院",
+        "口",
+        "野菜",
+        "薬",
+        "早く",
+        "空港",
+        "パスポート",
+        "見せます",
+        "鞄",
+        "タクシー",
+        "美容院",
+        "切ります",
+        "センチ",
+        "駅",
+        "窓",
+        "電気",
+        "付けます",
+        "消します",
+        "ドア",
+        "ゆっくり",
+        "撮ります",
+        "写真",
+        "傘",
+        "教えます",
+        "お金"
+      ]
+    }
+  ]
+}

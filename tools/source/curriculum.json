@@ -1,0 +1,1783 @@
+{
+  "student": "Eric Allerton",
+  "school": "Osaka YWCA 日本語学科 (Japanese Dept.), 別科【かいわ】 (non-degree conversation course), イブニングクラス2 (Evening Class 2)",
+  "schedule": "Tue & Fri 19:00–20:30 JST",
+  "source_file": "Drive: Japanese Language/YWCA Class/Scanned_20261117-1100.pdf (1 file, 38 pages)",
+  "textbook_note": "No commercial textbook is named on any page. Materials are YWCA in-house: numbered conversation cards (No.X) with glosses in English, Chinese and Thai, plus teacher worksheets. The grammar order closely follows Minna no Nihongo I, lessons 4–14 (inference only). One worksheet is labeled 第7課.",
+  "handwritten_numbers_note": "Each conversation card has a handwritten number under its No. box (20, 97, 101, 207, 42, 34, 367, 152, 377). Their meaning is unknown; they could be page or index numbers.",
+  "lessons": [
+    {
+      "id": "L01",
+      "date": "2026-10-16",
+      "weekday": "Fri",
+      "teacher": "大内(おおうち) Ōuchi",
+      "date_source": "printed header",
+      "source": "Osaka YWCA 日本語学科 Evening Class 2 worksheet; handout boxes No.2, No.3, No.5",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "topic": "じこしょうかい: self-introduction (name, country/city, arrival in Japan, home, commute, job, birthday, age)",
+      "vocab": [
+        {
+          "kana": "じこしょうかい",
+          "kanji": "自己紹介",
+          "meaning": "self-introduction"
+        },
+        {
+          "kana": "なまえ",
+          "kanji": "名前",
+          "meaning": "name"
+        },
+        {
+          "kana": "くに",
+          "kanji": "国",
+          "meaning": "country"
+        },
+        {
+          "kana": "まち",
+          "kanji": "町",
+          "meaning": "town; city"
+        },
+        {
+          "kana": "フルネーム",
+          "kanji": "",
+          "meaning": "full name"
+        },
+        {
+          "kana": "ニックネーム",
+          "kanji": "",
+          "meaning": "nickname"
+        },
+        {
+          "kana": "おたく",
+          "kanji": "お宅",
+          "meaning": "(your) home (polite)"
+        },
+        {
+          "kana": "でんしゃ",
+          "kanji": "電車",
+          "meaning": "train"
+        },
+        {
+          "kana": "しごと",
+          "kanji": "仕事",
+          "meaning": "work; job"
+        },
+        {
+          "kana": "たんじょうび",
+          "kanji": "誕生日",
+          "meaning": "birthday"
+        },
+        {
+          "kana": "〜さい",
+          "kanji": "〜歳",
+          "meaning": "~ years old"
+        },
+        {
+          "kana": "せんせい",
+          "kanji": "先生",
+          "meaning": "teacher"
+        },
+        {
+          "kana": "がくせい",
+          "kanji": "学生",
+          "meaning": "student"
+        },
+        {
+          "kana": "いしゃ",
+          "kanji": "医者",
+          "meaning": "doctor"
+        },
+        {
+          "kana": "はいしゃ",
+          "kanji": "歯医者",
+          "meaning": "dentist"
+        },
+        {
+          "kana": "かんごし",
+          "kanji": "看護師",
+          "meaning": "nurse",
+          "in_anki": true
+        },
+        {
+          "kana": "つうやく",
+          "kanji": "通訳",
+          "meaning": "interpreter",
+          "in_anki": true
+        },
+        {
+          "kana": "しゅふ",
+          "kanji": "主婦",
+          "meaning": "housewife"
+        },
+        {
+          "kana": "かいしゃいん",
+          "kanji": "会社員",
+          "meaning": "company employee"
+        },
+        {
+          "kana": "てんいん",
+          "kanji": "店員",
+          "meaning": "shop clerk"
+        },
+        {
+          "kana": "けいかん",
+          "kanji": "警官",
+          "meaning": "police officer",
+          "in_anki": true
+        },
+        {
+          "kana": "えきいん",
+          "kanji": "駅員",
+          "meaning": "station attendant"
+        },
+        {
+          "kana": "かしゅ",
+          "kanji": "歌手",
+          "meaning": "singer"
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "〜と よんでください",
+          "explanation": "Please call me ~ (nickname).",
+          "example": "エリックと よんでください。",
+          "example_en": "Please call me Eric."
+        },
+        {
+          "pattern": "[くに]の[まち]から きました",
+          "explanation": "I came from (city) in (country).",
+          "example": "アメリカの サンディエゴから きました。",
+          "example_en": "I'm from San Diego, USA."
+        },
+        {
+          "pattern": "いつ 日本に きましたか / 〜ねんに きました",
+          "explanation": "When did you come to Japan? / I came in ~.",
+          "example": "2020ねんに きました。",
+          "example_en": "I came in 2020."
+        },
+        {
+          "pattern": "[乗り物]で きます",
+          "explanation": "で marks means of transport.",
+          "example": "でんしゃで きます。",
+          "example_en": "I come by train."
+        },
+        {
+          "pattern": "すみません、かいてください",
+          "explanation": "Classroom request: please write it.",
+          "example": "すみません、かいてください。",
+          "example_en": "Excuse me, please write it down."
+        }
+      ],
+      "notes": [
+        "Corrected his city spelling: wrote サンディエゴ with a margin note 'di ディ' (small-kana combos like ディ were a sticking point).",
+        "Classmate table filled in (names/places listed in report)."
+      ],
+      "kanji_shown": [
+        "自我介绍 (Chinese gloss only)"
+      ]
+    },
+    {
+      "id": "L02",
+      "date": "2026-10-20",
+      "weekday": "Tue",
+      "teacher": "ツジ Tsuji",
+      "date_source": "handwritten header on Tsuji's handwritten worksheet",
+      "source": "別科【かいわ】 dialogue No.6 'どんな映画を見ますか' (handwritten number 20) + Tsuji handwritten worksheet No.6",
+      "pages": [
+        5,
+        6
+      ],
+      "topic": "Hobbies and frequency: what kind of movies do you watch, how often",
+      "vocab": [
+        {
+          "kana": "しゅみ",
+          "kanji": "趣味",
+          "meaning": "hobby"
+        },
+        {
+          "kana": "えいが",
+          "kanji": "映画",
+          "meaning": "movie"
+        },
+        {
+          "kana": "みます",
+          "kanji": "見ます",
+          "meaning": "watch; see"
+        },
+        {
+          "kana": "ほんこん",
+          "kanji": "香港",
+          "meaning": "Hong Kong"
+        },
+        {
+          "kana": "ラブストーリー",
+          "kanji": "",
+          "meaning": "love story"
+        },
+        {
+          "kana": "すき",
+          "kanji": "好き",
+          "meaning": "like"
+        },
+        {
+          "kana": "ひんど",
+          "kanji": "頻度",
+          "meaning": "frequency (Eric wrote 頻率/ひんどう; see ambiguities)"
+        },
+        {
+          "kana": "いつも",
+          "kanji": "",
+          "meaning": "always"
+        },
+        {
+          "kana": "よく",
+          "kanji": "",
+          "meaning": "often"
+        },
+        {
+          "kana": "ときどき",
+          "kanji": "時々",
+          "meaning": "sometimes"
+        },
+        {
+          "kana": "あまり〜ません",
+          "kanji": "",
+          "meaning": "not very often"
+        },
+        {
+          "kana": "ぜんぜん〜ません",
+          "kanji": "全然",
+          "meaning": "never; not at all"
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "Nの しゅみは なんですか",
+          "explanation": "What is (someone)'s hobby?",
+          "example": "Bさんの しゅみは なんですか。",
+          "example_en": "What is your hobby?"
+        },
+        {
+          "pattern": "どんな N を V ますか",
+          "explanation": "What kind of N do you V?",
+          "example": "どんな えいがを みますか。",
+          "example_en": "What kind of movies do you watch?"
+        },
+        {
+          "pattern": "Frequency adverbs + ます / あまり・ぜんぜん + ません",
+          "explanation": "いつも>よく>ときどき take affirmative; あまり and ぜんぜん need a negative verb.",
+          "example": "わたしは あまり えいがを みません。",
+          "example_en": "I don't watch movies much."
+        },
+        {
+          "pattern": "Nも です",
+          "explanation": "も = also/too.",
+          "example": "わたしも です。",
+          "example_en": "Me too."
+        }
+      ],
+      "notes": [
+        "Eric's handwritten header '頻率/frequency ひんどう' (Chinese term 頻率; Japanese is 頻度 ひんど)."
+      ],
+      "kanji_shown": [
+        "映画",
+        "見",
+        "趣味",
+        "何",
+        "私",
+        "香港",
+        "好"
+      ]
+    },
+    {
+      "id": "L03",
+      "date": "2026-10-23",
+      "weekday": "Fri",
+      "teacher": "大内 Ōuchi",
+      "date_source": "printed header",
+      "source": "Dialogue No.34 'ごはん、食べませんか' (handwritten 97) + Evening Class 2 worksheet No.34 + worksheet 第7課 (ぶんぽう1-2, with ねむい dialogue)",
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "topic": "Invitations (〜ませんか/〜ましょう, declining with ちょっと…) and time expressions with に, から〜まで; past tense of verbs",
+      "vocab": [
+        {
+          "kana": "おなかが すきました",
+          "kanji": "お腹が空きました",
+          "meaning": "I'm hungry"
+        },
+        {
+          "kana": "ごはん",
+          "kanji": "ご飯",
+          "meaning": "meal; rice"
+        },
+        {
+          "kana": "たべます",
+          "kanji": "食べます",
+          "meaning": "eat"
+        },
+        {
+          "kana": "レストラン",
+          "kanji": "",
+          "meaning": "restaurant"
+        },
+        {
+          "kana": "はいります",
+          "kanji": "入ります",
+          "meaning": "enter"
+        },
+        {
+          "kana": "いっしょに",
+          "kanji": "一緒に",
+          "meaning": "together"
+        },
+        {
+          "kana": "ハンバーガー",
+          "kanji": "",
+          "meaning": "hamburger"
+        },
+        {
+          "kana": "すし",
+          "kanji": "寿司",
+          "meaning": "sushi"
+        },
+        {
+          "kana": "ラーメン",
+          "kanji": "",
+          "meaning": "ramen"
+        },
+        {
+          "kana": "りょこうします",
+          "kanji": "旅行します",
+          "meaning": "travel"
+        },
+        {
+          "kana": "きょうと",
+          "kanji": "京都",
+          "meaning": "Kyoto"
+        },
+        {
+          "kana": "あそびます",
+          "kanji": "遊びます",
+          "meaning": "play; hang out"
+        },
+        {
+          "kana": "テニス",
+          "kanji": "",
+          "meaning": "tennis"
+        },
+        {
+          "kana": "ちょっと…",
+          "kanji": "",
+          "meaning": "(soft refusal) that's a bit…"
+        },
+        {
+          "kana": "ねむい",
+          "kanji": "眠い",
+          "meaning": "sleepy"
+        },
+        {
+          "kana": "ねます",
+          "kanji": "寝ます",
+          "meaning": "sleep; go to bed"
+        },
+        {
+          "kana": "おそい",
+          "kanji": "遅い",
+          "meaning": "late"
+        },
+        {
+          "kana": "おきます",
+          "kanji": "起きます",
+          "meaning": "get up"
+        },
+        {
+          "kana": "はたらきます",
+          "kanji": "働きます",
+          "meaning": "work"
+        },
+        {
+          "kana": "べんきょうします",
+          "kanji": "勉強します",
+          "meaning": "study"
+        },
+        {
+          "kana": "じゅぎょう",
+          "kanji": "授業",
+          "meaning": "class; lesson"
+        },
+        {
+          "kana": "〜ごろ",
+          "kanji": "",
+          "meaning": "around (time)"
+        },
+        {
+          "kana": "まいにち",
+          "kanji": "毎日",
+          "meaning": "every day"
+        },
+        {
+          "kana": "まいしゅう",
+          "kanji": "毎週",
+          "meaning": "every week"
+        },
+        {
+          "kana": "まいつき",
+          "kanji": "毎月",
+          "meaning": "every month"
+        },
+        {
+          "kana": "きのう",
+          "kanji": "昨日",
+          "meaning": "yesterday"
+        },
+        {
+          "kana": "きょう",
+          "kanji": "今日",
+          "meaning": "today"
+        },
+        {
+          "kana": "あした",
+          "kanji": "明日",
+          "meaning": "tomorrow"
+        },
+        {
+          "kana": "けさ",
+          "kanji": "今朝",
+          "meaning": "this morning"
+        },
+        {
+          "kana": "ゆうべ",
+          "kanji": "昨夜",
+          "meaning": "last night",
+          "in_anki": true
+        },
+        {
+          "kana": "せんしゅう",
+          "kanji": "先週",
+          "meaning": "last week"
+        },
+        {
+          "kana": "こんしゅう",
+          "kanji": "今週",
+          "meaning": "this week"
+        },
+        {
+          "kana": "らいしゅう",
+          "kanji": "来週",
+          "meaning": "next week"
+        },
+        {
+          "kana": "せんげつ",
+          "kanji": "先月",
+          "meaning": "last month"
+        },
+        {
+          "kana": "こんげつ",
+          "kanji": "今月",
+          "meaning": "this month"
+        },
+        {
+          "kana": "らいげつ",
+          "kanji": "来月",
+          "meaning": "next month"
+        },
+        {
+          "kana": "きょねん",
+          "kanji": "去年",
+          "meaning": "last year"
+        },
+        {
+          "kana": "ことし",
+          "kanji": "今年",
+          "meaning": "this year"
+        },
+        {
+          "kana": "らいねん",
+          "kanji": "来年",
+          "meaning": "next year"
+        },
+        {
+          "kana": "けっこんします",
+          "kanji": "結婚します",
+          "meaning": "get married"
+        },
+        {
+          "kana": "のみます",
+          "kanji": "飲みます",
+          "meaning": "drink"
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "Vませんか",
+          "explanation": "Invitation: won't you ~?",
+          "example": "いっしょに ごはんを たべませんか。",
+          "example_en": "Won't you have a meal with me?"
+        },
+        {
+          "pattern": "ええ、そうしましょう / Vましょう",
+          "explanation": "Accepting / let's ~.",
+          "example": "ハンバーガーを たべましょう。",
+          "example_en": "Let's eat hamburgers."
+        },
+        {
+          "pattern": "Nは どうですか",
+          "explanation": "Suggestion: how about N?",
+          "example": "あそこの レストランは どうですか。",
+          "example_en": "How about that restaurant?"
+        },
+        {
+          "pattern": "すみません、Nは ちょっと…",
+          "explanation": "Polite refusal by trailing off.",
+          "example": "すみません、おすしは ちょっと…",
+          "example_en": "Sorry, sushi is a bit…"
+        },
+        {
+          "pattern": "[時間]に V",
+          "explanation": "に marks clock times, days, dates; relative words (きのう, まいにち, らいしゅう…) take no に. 〜ごろ = around.",
+          "example": "まいにち 11じに ねます。",
+          "example_en": "I go to bed at 11 every day."
+        },
+        {
+          "pattern": "〜から 〜まで",
+          "explanation": "from ~ until ~.",
+          "example": "12じから 4じまで べんきょうしました。",
+          "example_en": "I studied from 12 to 4."
+        },
+        {
+          "pattern": "Vます/ません vs Vました/ませんでした",
+          "explanation": "Non-past (habit/future) vs past.",
+          "example": "ゆうべ 11じに ねました。",
+          "example_en": "I went to bed at 11 last night."
+        },
+        {
+          "pattern": "Nではありません",
+          "explanation": "Correcting: it's not N.",
+          "example": "きのうでは ありません。けさ、4じに ねました。",
+          "example_en": "Not yesterday — I went to bed at 4 this morning."
+        }
+      ],
+      "notes": [
+        "Eric wrote 'last night' next to highlighted ゆうべ.",
+        "Name エリック written at top of the No.34 dialogue."
+      ],
+      "kanji_shown": [
+        "食",
+        "入",
+        "動詞"
+      ]
+    },
+    {
+      "id": "L04",
+      "date": "2026-10-27",
+      "weekday": "Tue",
+      "teacher": "ツジ Tsuji",
+      "date_source": "handwritten header (board-notes page and No.205 sheet)",
+      "source": "Dialogues No.213 'きれいな花!' (handwritten 101), No.167 '大阪はどうですか' (207), No.205 '万里の長城が有名です' (42); Eric's handwritten board notes 形容詞 + No.167 practice sheet",
+      "pages": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "topic": "Adjectives (い/な) in compliments and descriptions; describing Osaka and your hometown",
+      "vocab": [
+        {
+          "kana": "たんじょうび おめでとう",
+          "kanji": "お誕生日おめでとう",
+          "meaning": "happy birthday"
+        },
+        {
+          "kana": "プレゼント",
+          "kanji": "",
+          "meaning": "present"
+        },
+        {
+          "kana": "きれいな",
+          "kanji": "綺麗な",
+          "meaning": "pretty; clean"
+        },
+        {
+          "kana": "はな",
+          "kanji": "花",
+          "meaning": "flower"
+        },
+        {
+          "kana": "なんて いうんですか",
+          "kanji": "何て言うんですか",
+          "meaning": "what is it called?"
+        },
+        {
+          "kana": "バラ",
+          "kanji": "薔薇",
+          "meaning": "rose"
+        },
+        {
+          "kana": "におい",
+          "kanji": "匂い",
+          "meaning": "smell",
+          "in_anki": true
+        },
+        {
+          "kana": "ほんとうに",
+          "kanji": "本当に",
+          "meaning": "really"
+        },
+        {
+          "kana": "はじめて",
+          "kanji": "初めて",
+          "meaning": "first time"
+        },
+        {
+          "kana": "〜かいめ",
+          "kanji": "〜回目",
+          "meaning": "~th time"
+        },
+        {
+          "kana": "おもしろい",
+          "kanji": "面白い",
+          "meaning": "interesting; fun"
+        },
+        {
+          "kana": "たべもの",
+          "kanji": "食べ物",
+          "meaning": "food"
+        },
+        {
+          "kana": "おいしい",
+          "kanji": "美味しい",
+          "meaning": "delicious"
+        },
+        {
+          "kana": "けいようし",
+          "kanji": "形容詞",
+          "meaning": "adjective"
+        },
+        {
+          "kana": "たかい",
+          "kanji": "高い",
+          "meaning": "expensive; tall"
+        },
+        {
+          "kana": "げんき",
+          "kanji": "元気",
+          "meaning": "healthy; well"
+        },
+        {
+          "kana": "あつい",
+          "kanji": "熱い/暑い",
+          "meaning": "hot"
+        },
+        {
+          "kana": "きびしい",
+          "kanji": "厳しい",
+          "meaning": "strict",
+          "in_anki": true
+        },
+        {
+          "kana": "しんせつな",
+          "kanji": "親切な",
+          "meaning": "kind",
+          "in_anki": true
+        },
+        {
+          "kana": "らくな",
+          "kanji": "楽な",
+          "meaning": "easy; comfortable",
+          "in_anki": true
+        },
+        {
+          "kana": "ひまな",
+          "kanji": "暇な",
+          "meaning": "free; not busy",
+          "in_anki": true
+        },
+        {
+          "kana": "ほくとう",
+          "kanji": "北東",
+          "meaning": "northeast",
+          "in_anki": true
+        },
+        {
+          "kana": "せいかつ",
+          "kanji": "生活",
+          "meaning": "life; daily living",
+          "in_anki": true
+        },
+        {
+          "kana": "めいし",
+          "kanji": "名詞",
+          "meaning": "noun"
+        },
+        {
+          "kana": "おくに",
+          "kanji": "お国",
+          "meaning": "(your) country"
+        },
+        {
+          "kana": "ちゅうごく",
+          "kanji": "中国",
+          "meaning": "China"
+        },
+        {
+          "kana": "ペキン",
+          "kanji": "北京",
+          "meaning": "Beijing"
+        },
+        {
+          "kana": "ふるい",
+          "kanji": "古い",
+          "meaning": "old"
+        },
+        {
+          "kana": "ばんりのちょうじょう",
+          "kanji": "万里の長城",
+          "meaning": "Great Wall of China",
+          "in_anki": true
+        },
+        {
+          "kana": "ゆうめい",
+          "kanji": "有名",
+          "meaning": "famous"
+        },
+        {
+          "kana": "ペキンダック",
+          "kanji": "北京ダック",
+          "meaning": "Peking duck"
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "Aい/Aな + N",
+          "explanation": "Adjective before a noun: い-adj as-is, な-adj adds な.",
+          "example": "きれいな 花ですね。",
+          "example_en": "What a pretty flower."
+        },
+        {
+          "pattern": "Aいです → Aくないです",
+          "explanation": "い-adjective negative.",
+          "example": "あつくないです。",
+          "example_en": "It's not hot."
+        },
+        {
+          "pattern": "Aなです → Aじゃありません",
+          "explanation": "な-adjective negative.",
+          "example": "げんきじゃ ありません。",
+          "example_en": "I'm not well."
+        },
+        {
+          "pattern": "Nは どうですか / Aです",
+          "explanation": "Asking for an impression.",
+          "example": "大阪は どうですか。—おもしろいです。",
+          "example_en": "How's Osaka? — It's fun."
+        },
+        {
+          "pattern": "Nが 有名です / Nに あります",
+          "explanation": "Famous for ~ / located in ~.",
+          "example": "中国の 北東に あります。",
+          "example_en": "It's in northeast China."
+        }
+      ],
+      "notes": [
+        "Board notes in Eric's hand (highlighted): きびしい=strict, しんせつな=kind, らくな=easy, ひまな='Bored?', ほくとう=north east.",
+        "MISCONCEPTION: he glossed ひまな as 'Bored?'. ひま means free/not busy; bored is たいくつ.",
+        "Copied 形容詞 (けいようし), 花, 高い, 元気 in kanji from the board."
+      ],
+      "kanji_shown": [
+        "花",
+        "誕生日",
+        "何",
+        "言",
+        "匂",
+        "本当",
+        "大阪",
+        "日本",
+        "初",
+        "回目",
+        "食べ物",
+        "形容詞",
+        "高",
+        "元気",
+        "国",
+        "中国",
+        "北京",
+        "町",
+        "古",
+        "北東",
+        "万里",
+        "長城",
+        "有名",
+        "名詞"
+      ]
+    },
+    {
+      "id": "L05",
+      "date": "2026-10-30",
+      "weekday": "Fri",
+      "teacher": "大内 Ōuchi",
+      "date_source": "printed headers",
+      "source": "Evening Class 2 worksheets No.205 (ぶんぽう1-2 + れんしゅう with 方位 compass) and No.97 (past adjectives, れんしゅう1-3); dialogue No.97 'どうでしたか'",
+      "pages": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "topic": "い/な adjective negatives, 'N1 is what kind of N2?', compass directions; past tense of adjectives (how was it?)",
+      "vocab": [
+        {
+          "kana": "ふじさん",
+          "kanji": "富士山",
+          "meaning": "Mt. Fuji"
+        },
+        {
+          "kana": "やま",
+          "kanji": "山",
+          "meaning": "mountain"
+        },
+        {
+          "kana": "ほうい",
+          "kanji": "方位",
+          "meaning": "compass direction"
+        },
+        {
+          "kana": "きた",
+          "kanji": "北",
+          "meaning": "north"
+        },
+        {
+          "kana": "みなみ",
+          "kanji": "南",
+          "meaning": "south"
+        },
+        {
+          "kana": "ひがし",
+          "kanji": "東",
+          "meaning": "east"
+        },
+        {
+          "kana": "にし",
+          "kanji": "西",
+          "meaning": "west"
+        },
+        {
+          "kana": "ほくせい",
+          "kanji": "北西",
+          "meaning": "northwest"
+        },
+        {
+          "kana": "なんとう",
+          "kanji": "南東",
+          "meaning": "southeast"
+        },
+        {
+          "kana": "なんせい",
+          "kanji": "南西",
+          "meaning": "southwest"
+        },
+        {
+          "kana": "ゆうひ",
+          "kanji": "夕日",
+          "meaning": "sunset",
+          "in_anki": true
+        },
+        {
+          "kana": "デート",
+          "kanji": "",
+          "meaning": "date"
+        },
+        {
+          "kana": "たのしい",
+          "kanji": "楽しい",
+          "meaning": "fun; enjoyable"
+        },
+        {
+          "kana": "パーティ",
+          "kanji": "",
+          "meaning": "party"
+        },
+        {
+          "kana": "テスト",
+          "kanji": "",
+          "meaning": "test"
+        },
+        {
+          "kana": "むずかしい",
+          "kanji": "難しい",
+          "meaning": "difficult"
+        },
+        {
+          "kana": "いそがしい",
+          "kanji": "忙しい",
+          "meaning": "busy"
+        },
+        {
+          "kana": "いい / よかった",
+          "kanji": "",
+          "meaning": "good / was good"
+        },
+        {
+          "kana": "あいます",
+          "kanji": "会います",
+          "meaning": "meet"
+        },
+        {
+          "kana": "にちようび",
+          "kanji": "日曜日",
+          "meaning": "Sunday"
+        },
+        {
+          "kana": "いえ",
+          "kanji": "家",
+          "meaning": "house"
+        },
+        {
+          "kana": "のぼります",
+          "kanji": "登ります",
+          "meaning": "climb"
+        },
+        {
+          "kana": "たいへんな",
+          "kanji": "大変な",
+          "meaning": "tough; hard"
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "N1は どんな N2 ですか / A N2 です",
+          "explanation": "What kind of N2 is N1?",
+          "example": "きょうとは どんな まちですか。—ふるい まちです。",
+          "example_en": "What kind of town is Kyoto? — An old town."
+        },
+        {
+          "pattern": "Aい → Aかったです / Aくなかったです",
+          "explanation": "Past of い-adjectives (いい → よかった).",
+          "example": "おいしかったです。/ おいしくなかったです。",
+          "example_en": "It was / wasn't delicious."
+        },
+        {
+          "pattern": "Aな → Aでした / Aじゃありませんでした",
+          "explanation": "Past of な-adjectives.",
+          "example": "ひまでした。/ ひまじゃありませんでした。",
+          "example_en": "I was free / wasn't free."
+        },
+        {
+          "pattern": "どうでしたか",
+          "explanation": "How was it?",
+          "example": "デートは どうでしたか。",
+          "example_en": "How was the date?"
+        }
+      ],
+      "notes": [
+        "Wrote ゆうひ = sunset on the No.205 sheet and 'sunset' under 夕日 on No.97.",
+        "Wrote しんせつ な at the top of No.97.",
+        "Practice answers: wrote おもしかった / おもしくなかった (dropped the ろ in おもしろい); other past forms correct."
+      ],
+      "kanji_shown": [
+        "北",
+        "南",
+        "東",
+        "西",
+        "北東",
+        "北西",
+        "南東",
+        "南西",
+        "方位",
+        "夕日",
+        "楽",
+        "映画",
+        "見",
+        "行",
+        "元気",
+        "会",
+        "日曜日",
+        "先生",
+        "家",
+        "形容詞",
+        "過去形"
+      ]
+    },
+    {
+      "id": "L06",
+      "date": "2026-11-06",
+      "weekday": "Fri",
+      "teacher": "大内 Ōuchi",
+      "date_source": "printed header",
+      "source": "Dialogue No.204 '大阪より暖かいです' (handwritten 34) + Evening Class 2 worksheet No.204 (ぶんぽう1-4)",
+      "pages": [
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "topic": "Comparisons: より, どちら/〜のほうが, おなじぐらい, いちばん; weather and seasons",
+      "vocab": [
+        {
+          "kana": "けさ",
+          "kanji": "今朝",
+          "meaning": "this morning"
+        },
+        {
+          "kana": "さむい",
+          "kanji": "寒い",
+          "meaning": "cold (weather)"
+        },
+        {
+          "kana": "あたたかい",
+          "kanji": "暖かい",
+          "meaning": "warm"
+        },
+        {
+          "kana": "だから",
+          "kanji": "",
+          "meaning": "so; therefore"
+        },
+        {
+          "kana": "ふゆ",
+          "kanji": "冬",
+          "meaning": "winter"
+        },
+        {
+          "kana": "きらい",
+          "kanji": "嫌い",
+          "meaning": "dislike"
+        },
+        {
+          "kana": "マイナス",
+          "kanji": "",
+          "meaning": "minus"
+        },
+        {
+          "kana": "〜ど",
+          "kanji": "〜度",
+          "meaning": "~ degrees"
+        },
+        {
+          "kana": "〜ぐらい",
+          "kanji": "",
+          "meaning": "about"
+        },
+        {
+          "kana": "へえー",
+          "kanji": "",
+          "meaning": "wow; really?"
+        },
+        {
+          "kana": "どこか",
+          "kanji": "",
+          "meaning": "somewhere",
+          "in_anki": true
+        },
+        {
+          "kana": "ひくい",
+          "kanji": "低い",
+          "meaning": "low; short",
+          "in_anki": true
+        },
+        {
+          "kana": "すいか",
+          "kanji": "西瓜",
+          "meaning": "watermelon"
+        },
+        {
+          "kana": "りんご",
+          "kanji": "林檎",
+          "meaning": "apple"
+        },
+        {
+          "kana": "ぎゅうにく",
+          "kanji": "牛肉",
+          "meaning": "beef"
+        },
+        {
+          "kana": "とりにく",
+          "kanji": "鶏肉",
+          "meaning": "chicken"
+        },
+        {
+          "kana": "バイク",
+          "kanji": "",
+          "meaning": "motorbike"
+        },
+        {
+          "kana": "じてんしゃ",
+          "kanji": "自転車",
+          "meaning": "bicycle"
+        },
+        {
+          "kana": "なら",
+          "kanji": "奈良",
+          "meaning": "Nara"
+        },
+        {
+          "kana": "ほっかいどう",
+          "kanji": "北海道",
+          "meaning": "Hokkaido"
+        },
+        {
+          "kana": "おきなわ",
+          "kanji": "沖縄",
+          "meaning": "Okinawa"
+        },
+        {
+          "kana": "おなじぐらい",
+          "kanji": "同じぐらい",
+          "meaning": "about the same"
+        },
+        {
+          "kana": "じんこう",
+          "kanji": "人口",
+          "meaning": "population"
+        },
+        {
+          "kana": "おおい",
+          "kanji": "多い",
+          "meaning": "many; a lot"
+        },
+        {
+          "kana": "おおきい",
+          "kanji": "大きい",
+          "meaning": "big"
+        },
+        {
+          "kana": "にぎやかな",
+          "kanji": "賑やかな",
+          "meaning": "lively"
+        },
+        {
+          "kana": "てんぷら",
+          "kanji": "天ぷら",
+          "meaning": "tempura"
+        },
+        {
+          "kana": "どちらも",
+          "kanji": "",
+          "meaning": "both"
+        },
+        {
+          "kana": "いぬ",
+          "kanji": "犬",
+          "meaning": "dog"
+        },
+        {
+          "kana": "ねこ",
+          "kanji": "猫",
+          "meaning": "cat"
+        },
+        {
+          "kana": "こうちゃ",
+          "kanji": "紅茶",
+          "meaning": "black tea"
+        },
+        {
+          "kana": "パン",
+          "kanji": "",
+          "meaning": "bread"
+        },
+        {
+          "kana": "うみ",
+          "kanji": "海",
+          "meaning": "sea"
+        },
+        {
+          "kana": "サッカー",
+          "kanji": "",
+          "meaning": "soccer"
+        },
+        {
+          "kana": "なつ",
+          "kanji": "夏",
+          "meaning": "summer"
+        },
+        {
+          "kana": "どようび",
+          "kanji": "土曜日",
+          "meaning": "Saturday"
+        },
+        {
+          "kana": "いちばん",
+          "kanji": "一番",
+          "meaning": "the most; best"
+        },
+        {
+          "kana": "くだもの",
+          "kanji": "果物",
+          "meaning": "fruit"
+        },
+        {
+          "kana": "おかし",
+          "kanji": "お菓子",
+          "meaning": "sweets; snacks"
+        },
+        {
+          "kana": "どうぶつ",
+          "kanji": "動物",
+          "meaning": "animal"
+        },
+        {
+          "kana": "スポーツ",
+          "kanji": "",
+          "meaning": "sports"
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "N1は N2より Aです",
+          "explanation": "N1 is more A than N2.",
+          "example": "ほっかいどうは おおさかより さむいです。",
+          "example_en": "Hokkaido is colder than Osaka."
+        },
+        {
+          "pattern": "N1と N2と どちらが Aですか / Nのほうが Aです",
+          "explanation": "Which of two is more A?",
+          "example": "ほっかいどうの ほうが さむいです。",
+          "example_en": "Hokkaido is colder."
+        },
+        {
+          "pattern": "どちらが すきですか / Nのほうが すきです / どちらも",
+          "explanation": "Preference between two; both.",
+          "example": "すしの ほうが すきです。",
+          "example_en": "I prefer sushi."
+        },
+        {
+          "pattern": "Nと おなじぐらいです",
+          "explanation": "About the same as N.",
+          "example": "おおさかと おなじぐらいです。",
+          "example_en": "About the same as Osaka."
+        },
+        {
+          "pattern": "[group]のなかで なにが いちばん Aですか",
+          "explanation": "Superlative within a group.",
+          "example": "くだものの なかで なにが いちばん すきですか。",
+          "example_en": "Which fruit do you like best?"
+        }
+      ],
+      "notes": [
+        "Wrote どこか = somewhere (highlighted) at the top.",
+        "Wrote ひくい (highlighted) under ふじさん in the Everest vs Fuji drill."
+      ],
+      "kanji_shown": [
+        "大阪",
+        "暖",
+        "今朝",
+        "寒",
+        "私",
+        "国",
+        "冬",
+        "嫌",
+        "度"
+      ]
+    },
+    {
+      "id": "L07",
+      "date": "2026-11-10",
+      "weekday": "Tue",
+      "teacher": "ツジ Tsuji",
+      "date_source": "handwritten header",
+      "source": "Dialogue No.176 '古い町が見たいです' (handwritten 367) + Tsuji worksheet No.176 (ほしい / 〜たい) + pair-interview table",
+      "pages": [
+        29,
+        30,
+        31
+      ],
+      "topic": "Wants: Nが ほしいです, Vたいです; suggesting where to go on Sunday",
+      "vocab": [
+        {
+          "kana": "こんど",
+          "kanji": "今度",
+          "meaning": "next time; this coming"
+        },
+        {
+          "kana": "いそがしい",
+          "kanji": "忙しい",
+          "meaning": "busy"
+        },
+        {
+          "kana": "べつに",
+          "kanji": "別に",
+          "meaning": "not particularly"
+        },
+        {
+          "kana": "どこかに",
+          "kanji": "",
+          "meaning": "(to) somewhere"
+        },
+        {
+          "kana": "にほんりょうり",
+          "kanji": "日本料理",
+          "meaning": "Japanese food"
+        },
+        {
+          "kana": "みせ",
+          "kanji": "店",
+          "meaning": "shop; restaurant"
+        },
+        {
+          "kana": "ほしい",
+          "kanji": "欲しい",
+          "meaning": "want (a thing)"
+        },
+        {
+          "kana": "れいぞうこ",
+          "kanji": "冷蔵庫",
+          "meaning": "refrigerator"
+        },
+        {
+          "kana": "つくえ",
+          "kanji": "机",
+          "meaning": "desk"
+        },
+        {
+          "kana": "くるま",
+          "kanji": "車",
+          "meaning": "car"
+        },
+        {
+          "kana": "でんしレンジ",
+          "kanji": "電子レンジ",
+          "meaning": "microwave"
+        },
+        {
+          "kana": "〜おくえん",
+          "kanji": "〜億円",
+          "meaning": "~ hundred million yen"
+        },
+        {
+          "kana": "ぶっか",
+          "kanji": "物価",
+          "meaning": "cost of living; price level",
+          "in_anki": true
+        },
+        {
+          "kana": "ねだん",
+          "kanji": "値段",
+          "meaning": "price (of an item)",
+          "in_anki": true
+        },
+        {
+          "kana": "じっさい",
+          "kanji": "実際",
+          "meaning": "actually",
+          "in_anki": true
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "Nが ほしいです / ほしくないです",
+          "explanation": "Want a thing (an い-adjective).",
+          "example": "くるまが ほしいです。",
+          "example_en": "I want a car."
+        },
+        {
+          "pattern": "Vます-stem + たいです / たくないです",
+          "explanation": "Want to do; を can become が.",
+          "example": "日本の 古い 町が 見たいです。",
+          "example_en": "I want to see an old Japanese town."
+        },
+        {
+          "pattern": "[place]に いきたいです",
+          "explanation": "Want to go to ~.",
+          "example": "きょうとに いきたいです。",
+          "example_en": "I want to go to Kyoto."
+        },
+        {
+          "pattern": "どこかに Vませんか / どこに Vましょうか",
+          "explanation": "Invite somewhere; ask where.",
+          "example": "一緒に どこかに 行きませんか。",
+          "example_en": "Shall we go somewhere together?"
+        }
+      ],
+      "notes": [
+        "Top-of-page notes (highlighted): ぶっか = price; ねだん = price (circled 'cost?'), so he was unsure how the two differ; じっさい = actually.",
+        "Wrote にいきます → にいきたいです on the ~たい chart."
+      ],
+      "kanji_shown": [
+        "古",
+        "町",
+        "見",
+        "今度",
+        "日曜日",
+        "忙",
+        "別",
+        "一緒",
+        "行",
+        "私",
+        "日本",
+        "京都",
+        "日本料理",
+        "店"
+      ]
+    },
+    {
+      "id": "L08",
+      "date": null,
+      "date_guess": "2026-11-13 (Fri) — inferred from order; no date on these pages",
+      "teacher": "unknown (printed worksheets look like Ōuchi's)",
+      "date_source": "none",
+      "source": "Dialogues No.45 'この電車は吹田に止まりますか' (handwritten 152) and No.89 'ボールペンを貸してください' (377) + te-form worksheets (動詞のて形, ぶんぽう1 instructions, ぶんぽう2 requests)",
+      "pages": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "topic": "Verb groups and the て-form; Vてください for instructions (school, hospital, airport, taxi, salon, station) and polite requests",
+      "vocab": [
+        {
+          "kana": "でんしゃ",
+          "kanji": "電車",
+          "meaning": "train"
+        },
+        {
+          "kana": "すいた",
+          "kanji": "吹田",
+          "meaning": "Suita (city between Ibaraki and Osaka)"
+        },
+        {
+          "kana": "とまります",
+          "kanji": "止まります",
+          "meaning": "stop"
+        },
+        {
+          "kana": "つぎ",
+          "kanji": "次",
+          "meaning": "next"
+        },
+        {
+          "kana": "ふつう",
+          "kanji": "普通",
+          "meaning": "local train (stops at every station)"
+        },
+        {
+          "kana": "のります",
+          "kanji": "乗ります",
+          "meaning": "get on; ride"
+        },
+        {
+          "kana": "おります",
+          "kanji": "降ります",
+          "meaning": "get off"
+        },
+        {
+          "kana": "うめだ",
+          "kanji": "梅田",
+          "meaning": "Umeda"
+        },
+        {
+          "kana": "ボールペン",
+          "kanji": "",
+          "meaning": "ballpoint pen"
+        },
+        {
+          "kana": "かします",
+          "kanji": "貸します",
+          "meaning": "lend"
+        },
+        {
+          "kana": "どうし",
+          "kanji": "動詞",
+          "meaning": "verb"
+        },
+        {
+          "kana": "てけい",
+          "kanji": "て形",
+          "meaning": "te-form"
+        },
+        {
+          "kana": "グループ",
+          "kanji": "",
+          "meaning": "group"
+        },
+        {
+          "kana": "かきます",
+          "kanji": "書きます",
+          "meaning": "write"
+        },
+        {
+          "kana": "およぎます",
+          "kanji": "泳ぎます",
+          "meaning": "swim"
+        },
+        {
+          "kana": "もちます",
+          "kanji": "持ちます",
+          "meaning": "hold; carry"
+        },
+        {
+          "kana": "かえります",
+          "kanji": "帰ります",
+          "meaning": "go home"
+        },
+        {
+          "kana": "しにます",
+          "kanji": "死にます",
+          "meaning": "die"
+        },
+        {
+          "kana": "はなします",
+          "kanji": "話します",
+          "meaning": "speak"
+        },
+        {
+          "kana": "あけます",
+          "kanji": "開けます",
+          "meaning": "open"
+        },
+        {
+          "kana": "しめます",
+          "kanji": "閉めます",
+          "meaning": "close"
+        },
+        {
+          "kana": "ききます",
+          "kanji": "聞きます",
+          "meaning": "listen"
+        },
+        {
+          "kana": "しゅくだい",
+          "kanji": "宿題",
+          "meaning": "homework"
+        },
+        {
+          "kana": "だします",
+          "kanji": "出します",
+          "meaning": "hand in"
+        },
+        {
+          "kana": "よみます",
+          "kanji": "読みます",
+          "meaning": "read"
+        },
+        {
+          "kana": "ホワイトボード",
+          "kanji": "",
+          "meaning": "whiteboard"
+        },
+        {
+          "kana": "がっこう",
+          "kanji": "学校",
+          "meaning": "school"
+        },
+        {
+          "kana": "びょういん",
+          "kanji": "病院",
+          "meaning": "hospital"
+        },
+        {
+          "kana": "くち",
+          "kanji": "口",
+          "meaning": "mouth"
+        },
+        {
+          "kana": "やさい",
+          "kanji": "野菜",
+          "meaning": "vegetables"
+        },
+        {
+          "kana": "くすり",
+          "kanji": "薬",
+          "meaning": "medicine"
+        },
+        {
+          "kana": "はやく",
+          "kanji": "早く",
+          "meaning": "early"
+        },
+        {
+          "kana": "くうこう",
+          "kanji": "空港",
+          "meaning": "airport"
+        },
+        {
+          "kana": "パスポート",
+          "kanji": "",
+          "meaning": "passport"
+        },
+        {
+          "kana": "みせます",
+          "kanji": "見せます",
+          "meaning": "show"
+        },
+        {
+          "kana": "かばん",
+          "kanji": "鞄",
+          "meaning": "bag"
+        },
+        {
+          "kana": "タクシー",
+          "kanji": "",
+          "meaning": "taxi"
+        },
+        {
+          "kana": "びよういん",
+          "kanji": "美容院",
+          "meaning": "beauty salon (worksheet prints it as びょういん; see ambiguities)"
+        },
+        {
+          "kana": "きります",
+          "kanji": "切ります",
+          "meaning": "cut"
+        },
+        {
+          "kana": "センチ",
+          "kanji": "",
+          "meaning": "centimeter"
+        },
+        {
+          "kana": "えき",
+          "kanji": "駅",
+          "meaning": "station"
+        },
+        {
+          "kana": "まど",
+          "kanji": "窓",
+          "meaning": "window"
+        },
+        {
+          "kana": "でんき",
+          "kanji": "電気",
+          "meaning": "light"
+        },
+        {
+          "kana": "つけます",
+          "kanji": "",
+          "meaning": "turn on"
+        },
+        {
+          "kana": "けします",
+          "kanji": "消します",
+          "meaning": "turn off"
+        },
+        {
+          "kana": "ドア",
+          "kanji": "",
+          "meaning": "door"
+        },
+        {
+          "kana": "ゆっくり",
+          "kanji": "",
+          "meaning": "slowly"
+        },
+        {
+          "kana": "とります",
+          "kanji": "撮ります",
+          "meaning": "take (a photo)"
+        },
+        {
+          "kana": "しゃしん",
+          "kanji": "写真",
+          "meaning": "photo"
+        },
+        {
+          "kana": "かさ",
+          "kanji": "傘",
+          "meaning": "umbrella"
+        },
+        {
+          "kana": "おしえます",
+          "kanji": "教えます",
+          "meaning": "teach; tell"
+        },
+        {
+          "kana": "おかね",
+          "kanji": "お金",
+          "meaning": "money"
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "Verb groups 1/2/3",
+          "explanation": "G1: 〜i-ます (かきます); G2: 〜e-ます + some 〜i-ます (たべます, みます); G3: します, きます.",
+          "example": "かきます→かいて, たべます→たべて, します→して",
+          "example_en": "write / eat / do"
+        },
+        {
+          "pattern": "て-form rules (G1)",
+          "explanation": "き→いて, ぎ→いで, い・ち・り→って, み・に・び→んで, し→して; exception いきます→いって.",
+          "example": "のみます→のんで",
+          "example_en": "drink → te-form"
+        },
+        {
+          "pattern": "Vてください (instruction)",
+          "explanation": "Please do ~.",
+          "example": "くすりを のんでください。",
+          "example_en": "Please take the medicine."
+        },
+        {
+          "pattern": "すみません、Vてください (request)",
+          "explanation": "Polite request.",
+          "example": "すみません、ペンを かしてください。",
+          "example_en": "Excuse me, could you lend me a pen?"
+        },
+        {
+          "pattern": "Nは [place]に とまりますか",
+          "explanation": "Does it stop at ~?",
+          "example": "この電車は 吹田に 止まりますか。",
+          "example_en": "Does this train stop at Suita?"
+        }
+      ],
+      "notes": [
+        "Wrote い,ち,り beside the あって/もって/かえって group as a memory aid.",
+        "Wrote しゃしん above the photo request (しゃしんを とってください).",
+        "Te-form drill answers were nearly all correct."
+      ],
+      "kanji_shown": [
+        "電車",
+        "吹田",
+        "止",
+        "次",
+        "普通",
+        "乗",
+        "貸",
+        "動詞",
+        "形",
+        "指示",
+        "依頼",
+        "美容院"
+      ]
+    }
+  ],
+  "anki_crosscheck": {
+    "summary": "All 18 cards in the deck tagged 'lesson-01' come from Eric's own handwritten or highlighted notes, spread over 6 class dates (10/16–11/10). They are not from a single lesson.",
+    "map": {
+      "看護師, 通訳, 警官": "L01 2026-10-16, occupations sheet (p3)",
+      "昨夜(ゆうべ)": "L03 2026-10-23, 第7課 time words; he wrote 'last night' (p11)",
+      "厳しい, 親切な, 楽な, 暇な, 北東": "L04 2026-10-27, Eric's highlighted board notes (p15); 北東 also in No.205 (p17)",
+      "匂い": "L04 2026-10-27, No.213 (p13, highlighted)",
+      "生活": "L04 2026-10-27, No.167 practice (p16, highlighted)",
+      "万里の長城": "L04 2026-10-27, No.205 dialogue (p17, highlighted)",
+      "夕日": "L05 2026-10-30, No.97 dialogue + note on No.205 sheet (p18, p20)",
+      "どこか, 低い": "L06 2026-11-06, No.204 worksheet notes (p25)",
+      "物価, 値段, 実際": "L07 2026-11-10, notes at top of No.176 (p29)"
+    },
+    "anki_notes": [
+      "Anki uses 昨夜 for ゆうべ. That is correct, but the handout only had it in kana.",
+      "The deck's 暇な = 'free; not busy' is correct. Eric's own note said 'Bored?'."
+    ]
+  },
+  "stats": {
+    "files": 1,
+    "pages": 38,
+    "lessons": 8,
+    "vocab_entries": 238,
+    "unique_vocab": 235,
+    "unique_not_in_anki": 217
+  }
+}
