@@ -6,20 +6,25 @@ Kanji study has not started. Every kanji on screen has furigana above it. Defini
 
 ## Progress
 
-Version 0.3.0 is the Godot game. Phase 1 is in: the 2.5D commute RPG, study screens, gear, loot, and consequences. AnkiDroid reading, memory scheduling, village quests, classmate play, extra biomes, and speech are still ahead. Speech is last.
+Version 0.4.0, not tagged yet, is a one-act deckbuilder. Open the app and press 出発. The map appears. Tap the glowing node. That is the fight, two taps from the title. The design is in [DESIGN.md](DESIGN.md). The checklist is in [ROADMAP.md](ROADMAP.md). [CHANGELOG.md](CHANGELOG.md) has the unreleased notes.
 
-The checklist, including v0.1.0 and v0.2.0, is in [ROADMAP.md](ROADMAP.md). Releases are listed in [CHANGELOG.md](CHANGELOG.md).
+AnkiDroid, FSRS, and class-day bosses wait until after this act. Speech is still last.
 
-## Screens
+## A run
 
-The home screen opens the forest, a fight, lessons, practice, class prep, gear, and the character record. Fights resume from the save. Practice records a review and does not wear gear. A lost fight drops only what was not banked at the village.
+1. **出発** — start the act. The coach marks can be skipped.
+2. **The map** — tap a lit neighbor. The top node is the boss.
+3. **A fight** — play a card, answer it, then end the turn or keep playing. After the win, pick one reward and read the gem payout.
+4. **ずかん** — word cards and any yokai that dropped. A yokai card opens its story.
+5. **宿題** — on the map, or at the campfire. Turning in a graded sheet pays gems and marks the missed verbs for the next run. It is not on the path to the first fight.
 
-1. **レッスン** — class sessions by date. Each one opens onto the words and the grammar point (pattern, explanation, example).
-2. **れんしゅう** — conjugation drills, plus the class questions (weak spots and worksheet blanks). The mix still includes ひま vs たいくつ, 物価 vs 値段, small kana such as ディ, and おもしろかった (the ろ stays).
-3. **じゅんび** — the next class and the trip, read from the content pack.
-4. **きろく / そうび** — stats, skills, volumes, cosmetics, loot, and repair. Cosmetics are visual. They do not lock a lesson.
+## Cards from class
 
-AnkiDroid is not read in this build. The pack still has the deck name `YWCA` and the `class::` tags. Reading them needs an Android plugin and is phase 2.
+```bash
+python3 tools/build_card_pack.py
+```
+
+That writes one pack per lesson date under `content/packs/ywca-evening/releases/` and a `catalog.json`. A kanji without furigana fails the build. `python3 tools/write_yokai.py` rewrites the yokai stories. Homework sheets live in `content/packs/ywca-evening/homework/`. The sample is No.89: Eric named three misses and eleven right answers, and the file keeps all of them, so the score is 11 of 14.
 
 ## His commute
 
@@ -69,7 +74,7 @@ godot --headless --path . --import --quit
 godot --headless --path . -s addons/gut/gut_cmdln.gd -gdir=res://tests -gprefix=test_ -gexit
 ```
 
-The Android export preset is `Android` in `export_presets.cfg`. Package `dev.ericallerton.yoruben`, version name `0.3.0`, version code `3`, arm64-v8a only. The preset exports an unsigned APK. CI signs it. Bump `version/code` and `version/name` there, and `config/version` in `project.godot`, before the next tag.
+The Android export preset is `Android` in `export_presets.cfg`. Package `dev.ericallerton.yoruben`, version name `0.4.0`, version code `4`, arm64-v8a only. The preset exports an unsigned APK. CI signs it. Bump `version/code` and `version/name` there, and `config/version` in `project.godot`, before the next tag.
 
 The previous Kotlin project is in `archive/kotlin-app`. It is not the CI build.
 
@@ -132,27 +137,23 @@ The tag workflow runs lint and tests, builds a signed release APK, and attaches 
 
 Re-run the failed workflow after the secrets exist, or push the same tag again (`git push origin v0.1.0` cannot repeat a tag; delete the remote tag first only if no release was published, or move on to `v0.1.1`).
 
-The Godot export is `0.3.0` (`versionCode` 3). Bump `export_presets.cfg` before the next tag. Tags are pushed by hand after merge.
+The Godot export is `0.4.0` (`versionCode` 4). Bump `export_presets.cfg` before the next tag. Tags are pushed by hand after merge. Do not tag v0.4.0 until it has been reviewed.
 
 ## AnkiDroid
 
-0.1.0 and 0.2.0 read the deck through the content provider (`content://com.ichi2.anki.flashcards`, permission `com.ichi2.anki.permission.READ_WRITE_DATABASE`). That screen is not in the Godot build yet. The pack still names the deck `YWCA` and the tags `class::YYYY-MM-DD`. The plugin is phase 2, and it stays read-only.
+0.1.0 and 0.2.0 read the deck through the content provider (`content://com.ichi2.anki.flashcards`, permission `com.ichi2.anki.permission.READ_WRITE_DATABASE`). That screen is not in the Godot build. The pack still names the deck `YWCA` and the tags `class::YYYY-MM-DD`. The plugin waits until after v0.4, and it stays read-only.
 
 ## 灯森
 
-Version 0.3.0 is the same forest, now a 2.5D Godot scene. Regions are the lesson dates. A fight asks for ます, ません, ました, ませんでした, or the て-form, using the class verbs. Plain past (た) stays out of normal fights. Covered polite forms follow the lesson sheets.
+v0.4 keeps the night forest, the three CC0 loops in `assets/music/CREDITS.md`, and the name ほたる玉. Fights ask for ます, ません, ました, ませんでした, て-form, or ない. The ない form uses the あ-row, and う becomes わ (あう → あわない). 行く in the て-form is still いって.
 
-Gems are still ほたる玉. Wrong answers wear the equipped gear. The village repairs it and banks the pouch. A streak of three days adds defense and wisdom. A region clouds over when a verb from that lesson was missed, or when a correct answer is more than seven days old and a miss is on record. Reviewing it clears the cloud. Dying drops the pouch and unbanked gems. It does not delete the study log, the bank, or equipped gear.
-
-Outfits are visual. Nothing in the village locks a lesson or a drill. There are no purchases for real money. Music is the three CC0 loops in `assets/music/CREDITS.md`.
+Wrong answers wear the brush. The shop repairs it. Dying keeps mastery and gems already paid out. It does not keep the rest of that run. Nothing in the shop costs real money.
 
 ## Known gaps
 
-- `v0.1.0` and `v0.2.0` are already released. `v0.3.0` is tagged by hand after this branch merges. Do not push the tag from CI.
-- AnkiDroid progress, FSRS-style respawns, class-day bosses, village quests, shared packs, and speech input are not in this build. See [ROADMAP.md](ROADMAP.md).
-- Lesson 8's date (2026-11-13) and Ōuchi-sensei are inferred from the Friday worksheet, not from a printed header.
-- New lessons are a new build and release, not an in-app import.
-- The Japanese glosses were written for this app. They are not copied from a published dictionary.
-- Debrief JSON export does not write back into the lesson assets.
-- Quiz scores are not sent to Anki.
+- v0.1.0, v0.2.0, and v0.3.0 are already released. v0.4.0 is not tagged. Tags are pushed by hand after review.
+- Photographing a worksheet, AnkiDroid, FSRS, class-day bosses, shared packs, and speech are not in this build. See [ROADMAP.md](ROADMAP.md).
+- Lesson 8's date (2026-11-13) and Ōuchi-sensei are inferred from the Friday worksheet, not from a printed header. The No.89 homework file uses that same date and teacher.
+- New lessons are a new pack file and a release, not an in-app download.
+- The Japanese glosses and the yokai stories were written for this app. They are not copied from a published dictionary or a graded-reader series.
 - There is no kanji-study mode.

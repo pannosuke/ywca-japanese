@@ -1,7 +1,11 @@
 class_name Conjugation
 extends RefCounted
 
-const FORMS := ["masu", "masen", "mashita", "masen_deshita", "te", "ta"]
+const FORMS := ["masu", "masen", "mashita", "masen_deshita", "te", "ta", "nai"]
+const A_ROW := {
+	"う": "わ", "く": "か", "ぐ": "が", "す": "さ", "つ": "た",
+	"ぬ": "な", "ぶ": "ば", "む": "ま", "る": "ら",
+}
 const I_ROW := {
 	"う": "い", "く": "き", "ぐ": "ぎ", "す": "し", "つ": "ち",
 	"ぬ": "に", "ぶ": "び", "む": "み", "る": "り",
@@ -35,6 +39,8 @@ static func ruby_for(verb: Dictionary, done: String) -> String:
 	return kanji + "[" + reading + "]" + done.trim_prefix(reading)
 
 static func rule_id(verb: Dictionary, form: String) -> String:
+	if form == "nai":
+		return "nai"
 	if form == "te" or form == "ta":
 		return _te_rule(verb)
 	if form == "masu":
@@ -118,6 +124,7 @@ static func prompt(verb: Dictionary, form: String) -> String:
 		"masen_deshita": "ませんでした",
 		"te": "て形[けい]",
 		"ta": "た形[けい]",
+		"nai": "ない形[けい]",
 	}
 	var ask: String = names[form]
 	return source + " の " + ask + " は？"
@@ -138,7 +145,10 @@ static func covered_forms(lessons: Array) -> Array:
 
 static func _godan(dict: String, form: String) -> String:
 	var stem := dict.substr(0, dict.length() - 1)
-	var polite: String = stem + I_ROW[dict.substr(dict.length() - 1, 1)]
+	var tail := dict.substr(dict.length() - 1, 1)
+	if form == "nai":
+		return stem + A_ROW[tail] + "ない"
+	var polite: String = stem + I_ROW[tail]
 	match form:
 		"masu":
 			return polite + "ます"
@@ -192,6 +202,7 @@ static func _kuru(form: String) -> String:
 		"mashita": return "きました"
 		"masen_deshita": return "きませんでした"
 		"te": return "きて"
+		"nai": return "こない"
 		_: return "きた"
 
 static func _suru(form: String) -> String:
@@ -201,6 +212,7 @@ static func _suru(form: String) -> String:
 		"mashita": return "しました"
 		"masen_deshita": return "しませんでした"
 		"te": return "して"
+		"nai": return "しない"
 		_: return "した"
 
 static func _ichidan(form: String) -> String:
@@ -210,10 +222,13 @@ static func _ichidan(form: String) -> String:
 		"mashita": return "ました"
 		"masen_deshita": return "ませんでした"
 		"te": return "て"
+		"nai": return "ない"
 		_: return "た"
 
 static func _ending(form: String) -> String:
-	return {"masu": "ます", "masen": "ません", "mashita": "ました", "masen_deshita": "ませんでした", "te": "て", "ta": "た"}[form]
+	var names := {"masu": "ます", "masen": "ません", "mashita": "ました", "masen_deshita": "ませんでした", "te": "て", "ta": "た", "nai": "ない"}
+	var ending: String = names[form]
+	return ending
 
 static func _te_rule(verb: Dictionary) -> String:
 	var dict: String = verb["dict_kana"]
@@ -250,6 +265,11 @@ static func _wrongs(verb: Dictionary, form: String, correct: String) -> Array:
 	var dict: String = verb["dict_kana"]
 	var stem := dict.substr(0, dict.length() - 1)
 	var out: Array = []
+	if form == "nai":
+		for piece in [stem + "あない", stem + "わない", stem + "いない", stem + "えない", "しない", "こない"]:
+			if piece != correct:
+				out.append(piece)
+		return out
 	if form == "te" or form == "ta":
 		for piece in [stem + "って", stem + "んで", stem + "いて", stem + "いで", stem + "して", stem + "て", "いって", "きて", "して"]:
 			var value: String = piece if form == "te" else _ta_from_te(piece)

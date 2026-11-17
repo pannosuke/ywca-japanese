@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased
+
+v0.4.0 is not tagged. `versionCode` in the project is 4 so the next signed build can replace 0.3.0 in place. Package name stays `dev.ericallerton.yoruben`.
+
+- The game is a one-act deckbuilder. 出発 opens a seeded map. The second tap is a battle. Coach marks can be skipped.
+- Class words, verbs, and grammar points are cards. A turn has energy and a hand. Playing a card answers that card.
+- Rarity climbs with use and can fall after three misses. A payout lists base gems, rarity gems, and combo gems.
+- Enemies are yokai drawn in the game. Defeating one can add it to the binder, with a graded-reader story. 茨木童子 is the act boss.
+- `tools/build_card_pack.py` writes a versioned pack per class date. A new pack id opens as a small booster.
+- Homework is imported as JSON. No.89 (2026-11-13, 大内, てください) is the sample: 11 correct of 14 items, with the three named misses kept. Turning it in pays gems, boosts the cards that were right, and puts the missed verbs in the next run. A perfect sheet would add a card back. Photographing a worksheet is not in this build.
+- The save file is `user://yoruben-v4.json`.
+
 ## 0.3.0
 
 The installable app is a Godot 4.7 project. The Kotlin app is archived under `archive/kotlin-app` and is no longer what Obtainium installs. Package name stays `dev.ericallerton.yoruben`. `versionCode` is 3.

@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "id": "no89-2026-11-13",
+  "worksheet_id": "No.89",
+  "date": "2026-11-13",
+  "teacher_id": "ouchi",
+  "teacher_ruby": "大内[おおうち]",
+  "title_ruby": "てください",
+  "note": "Eric named three misses and eleven right answers. This file keeps all of them, so the counted score is 11 of 14. He first said 11/13.",
+  "items": [
+    {"id": "ok-kaku", "prompt_ruby": "なまえを ____ ください", "expected": "かいて", "answer": "かいて", "correct": true, "error_type": "", "verb_id": "kaku", "card_id": "verb:kaku"},
+    {"id": "ok-yomu", "prompt_ruby": "ほんを ____ ください", "expected": "よんで", "answer": "よんで", "correct": true, "error_type": "", "verb_id": "yomu", "card_id": "verb:yomu"},
+    {"id": "ok-nomu", "prompt_ruby": "みずを ____ ください", "expected": "のんで", "answer": "のんで", "correct": true, "error_type": "", "verb_id": "nomu", "card_id": "verb:nomu"},
+    {"id": "ok-miru", "prompt_ruby": "えいがを ____ ください", "expected": "みて", "answer": "みて", "correct": true, "error_type": "", "verb_id": "miru", "card_id": "verb:miru"},
+    {"id": "ok-taberu", "prompt_ruby": "パンを ____ ください", "expected": "たべて", "answer": "たべて", "correct": true, "error_type": "", "verb_id": "taberu", "card_id": "verb:taberu"},
+    {"id": "ok-kiku", "prompt_ruby": "おんがくを ____ ください", "expected": "きいて", "answer": "きいて", "correct": true, "error_type": "", "verb_id": "kiku", "card_id": "verb:kiku"},
+    {"id": "ok-asobu", "prompt_ruby": "こうえんで ____ ください", "expected": "あそんで", "answer": "あそんで", "correct": true, "error_type": "", "verb_id": "asobu", "card_id": "verb:asobu"},
+    {"id": "ok-okiru", "prompt_ruby": "はやく ____ ください", "expected": "おきて", "answer": "おきて", "correct": true, "error_type": "", "verb_id": "okiru", "card_id": "verb:okiru"},
+    {"id": "ok-neru", "prompt_ruby": "もう ____ ください", "expected": "ねて", "answer": "ねて", "correct": true, "error_type": "", "verb_id": "neru", "card_id": "verb:neru"},
+    {"id": "ok-kuru", "prompt_ruby": "ここに ____ ください", "expected": "きて", "answer": "きて", "correct": true, "error_type": "", "verb_id": "kuru", "card_id": "verb:kuru"},
+    {"id": "ok-suru", "prompt_ruby": "しゅくだいを ____ ください", "expected": "して", "answer": "して", "correct": true, "error_type": "", "verb_id": "suru", "card_id": "verb:suru"},
+    {"id": "miss-dasu", "prompt_ruby": "しゅくだいを ____ ください", "expected": "だして", "answer": "たして", "correct": false, "error_type": "dakuten", "verb_id": "dasu", "card_id": "verb:dasu"},
+    {"id": "miss-iku", "prompt_ruby": "くうこうへ ____ ください", "expected": "いって", "answer": "いて", "correct": false, "error_type": "sokuon", "verb_id": "iku", "card_id": "verb:iku"},
+    {"id": "miss-hanasu", "prompt_ruby": "ゆっくり ____ ください", "expected": "はなして", "answer": "おしえて", "correct": false, "error_type": "word-choice", "verb_id": "hanasu", "card_id": "verb:hanasu"}
+  ]
+}
