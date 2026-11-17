@@ -35,29 +35,37 @@ func present(card: Dictionary, rarity: String, font: Font, compact := false) -> 
 	var ruby := RubyLabel.new()
 	ruby.font = font
 	ruby.font_size = 22 if compact else 28
+	ruby.max_width = 180 if compact else 250
 	ruby.set_markup(str(card.get("ruby", "")))
 	box.add_child(ruby)
 	if not compact:
-		var gloss := Label.new()
-		gloss.text = str(card.get("gloss_ja", ""))
-		gloss.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		gloss.add_theme_font_override("font", font)
-		gloss.add_theme_font_size_override("font_size", 14)
-		gloss.add_theme_color_override("font_color", Color("3a332b"))
-		box.add_child(gloss)
-		var en := Label.new()
-		en.text = str(card.get("gloss_en", ""))
-		en.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		en.add_theme_font_override("font", font)
-		en.add_theme_font_size_override("font_size", 12)
-		en.add_theme_color_override("font_color", Color("6d6256"))
-		box.add_child(en)
+		_line(box, str(card.get("gloss_ja", "")), font, 14, Color("3a332b"))
+		_line(box, str(card.get("gloss_en", "")), font, 12, Color("6d6256"))
 	var mark := Label.new()
 	mark.text = _rarity(rarity)
 	mark.add_theme_font_override("font", font)
 	mark.add_theme_font_size_override("font_size", 13)
 	mark.add_theme_color_override("font_color", style.border_color)
 	box.add_child(mark)
+
+func _line(parent: Node, value: String, font: Font, size: int, color: Color) -> void:
+	var marked := Furigana.apply(value, Furigana.known)
+	if marked.find("[") == -1:
+		var label := Label.new()
+		label.text = marked
+		label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		label.add_theme_font_override("font", font)
+		label.add_theme_font_size_override("font_size", size)
+		label.add_theme_color_override("font_color", color)
+		parent.add_child(label)
+		return
+	var ruby := RubyLabel.new()
+	ruby.font = font
+	ruby.font_size = size
+	ruby.color = color
+	ruby.max_width = 190
+	ruby.set_markup(marked)
+	parent.add_child(ruby)
 
 func _kind(type_name: String) -> String:
 	match type_name:

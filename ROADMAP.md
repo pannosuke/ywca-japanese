@@ -29,13 +29,22 @@ This is the game from here on. A commute session is one act: a map, a hand of ca
 - [x] Versioned class packs (`tools/build_card_pack.py`) and a booster when a new pack id appears
 - [x] Homework JSON, the No.89 sheet, turn-in rewards, and weak-verb cards on the next run
 - [x] Tests for the map, conjugation (including ない), rarity, payout, deck, yokai stories, drop rates, and homework
+- [x] Furigana on every kanji unless it is in the profile's `known_kanji` list. Eric's list is empty
 - [ ] Camera or OCR grading of a paper worksheet. The sheet is graded outside the app and imported as JSON until then
 - [ ] More than one act, and more than the thirteen yokai
-- [ ] A foil shader and animated card frames. Ultra is a gold frame in this build
 
-## After v0.4
+## v0.5.0 — art pass
 
-These were phase 2 of the old plan. They wait until the act is the game people actually play.
+This is the next build after v0.4.0. The act stays. The pictures and the feel catch up.
+
+- [ ] Real card frames, not a flat panel and a border
+- [ ] Foil and holo shaders by rarity, so an Ultra Rare card looks dramatically different from a Common one
+- [ ] Yokai illustrations in place of the ink silhouettes
+- [ ] Battle juice: hits, shakes, and the combo should read at a glance
+
+## After the art pass
+
+AnkiDroid, FSRS, and class-day bosses come after v0.5.0.
 
 - [ ] AnkiDroid read-only progress. The pack still stores the deck name and the `class::` tags. Mastery counts are shaped so a later feed can write them
 - [ ] FSRS-style respawns on top of the weak-verb cards homework already creates

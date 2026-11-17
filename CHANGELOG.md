@@ -1,8 +1,8 @@
 # Changelog
 
-## Unreleased
+## 0.4.0
 
-v0.4.0 is not tagged. `versionCode` in the project is 4 so the next signed build can replace 0.3.0 in place. Package name stays `dev.ericallerton.yoruben`.
+Not tagged in this pull request. `versionCode` is 4 so a signed build can replace 0.3.0 in place. Package name stays `dev.ericallerton.yoruben`.
 
 - The game is a one-act deckbuilder. 出発 opens a seeded map. The second tap is a battle. Coach marks can be skipped.
 - Class words, verbs, and grammar points are cards. A turn has energy and a hand. Playing a card answers that card.
@@ -11,6 +11,7 @@ v0.4.0 is not tagged. `versionCode` in the project is 4 so the next signed build
 - `tools/build_card_pack.py` writes a versioned pack per class date. A new pack id opens as a small booster.
 - Homework is imported as JSON. No.89 (2026-11-13, 大内, てください) is the sample: 11 correct of 14 items, with the three named misses kept. Turning it in pays gems, boosts the cards that were right, and puts the missed verbs in the next run. A perfect sheet would add a card back. Photographing a worksheet is not in this build.
 - The save file is `user://yoruben-v4.json`.
+- Every kanji on screen has furigana unless it is in that profile's `known_kanji` list. Eric's list is empty. One helper applies the reading. A test scans scripts, scenes, and the content pack with an empty list and fails on a bare kanji.
 
 ## 0.3.0
 

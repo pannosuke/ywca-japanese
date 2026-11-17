@@ -2,6 +2,8 @@
 
 v0.4 is a one-act deckbuilder. A session is a walk through a lantern forest. Words from class are the cards.
 
+Every kanji on screen has furigana unless that character is in the profile's `known_kanji` list. Eric's list is empty, because kanji study has not started. Buttons, the map, cards, stories, and homework all go through one helper, `Furigana.apply`.
+
 ## Core loop
 
 The title has one button, 出発. The first tap opens the map. The first node is a battle, so the second tap is a fight. A short coach mark explains the map, the hand, and the reward, and it can be skipped.

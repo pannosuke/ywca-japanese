@@ -13,6 +13,7 @@ var cards: Array
 var packs: Array
 var yokai: Array
 var homework: Array
+var known_kanji: Array = []
 
 static func load_default() -> ContentPack:
 	return load_from(ROOT)
@@ -23,6 +24,8 @@ static func load_from(root: String) -> ContentPack:
 	pack.id = str(meta.get("id", "pack"))
 	pack.title_ruby = str(meta.get("title_ruby", ""))
 	pack.profile = _read(root + "/profile.json")
+	var listed = pack.profile.get("known_kanji", [])
+	pack.known_kanji = listed if listed is Array else []
 	pack.lessons = _read(root + "/lessons.json")["lessons"]
 	pack.words = _read(root + "/words.json")["words"]
 	pack.verbs = _read(root + "/verbs.json")

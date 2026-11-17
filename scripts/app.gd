@@ -28,12 +28,14 @@ var reading: Dictionary = {}
 
 func _ready() -> void:
 	pack = ContentPack.load_default()
+	Furigana.prepare(pack)
 	font = load("res://assets/fonts/NotoSansJP-Regular.otf")
 	correct_sfx = load("res://assets/sfx/correct.wav")
 	wrong_sfx = load("res://assets/sfx/wrong.wav")
 	shot = OS.get_environment("YORUBEN_SHOT")
 	_chrome()
 	_load()
+	_bind_known()
 	if shot != "":
 		state["music"] = 0.0
 		_prepare_shot()
@@ -108,18 +110,22 @@ func _ruby(parent: Node, markup: String, size := 24, color := INK) -> RubyLabel:
 	label.font = font
 	label.font_size = size
 	label.color = color
+	label.max_width = 500
 	label.set_markup(markup)
 	parent.add_child(label)
 	return label
 
-func _text(parent: Node, value: String, size := 18, color := INK) -> Label:
-	var label := Label.new()
-	label.text = value
-	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	label.add_theme_font_size_override("font_size", size)
-	label.add_theme_color_override("font_color", color)
-	parent.add_child(label)
-	return label
+func _text(parent: Node, value: String, size := 18, color := INK) -> Control:
+	var marked := Furigana.apply(value, Furigana.known)
+	if marked.find("[") == -1:
+		var label := Label.new()
+		label.text = marked
+		label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		label.add_theme_font_size_override("font_size", size)
+		label.add_theme_color_override("font_color", color)
+		parent.add_child(label)
+		return label
+	return _ruby(parent, marked, size, color)
 
 func _button(parent: Node, markup: String, fill: Color, cb: Callable, height := 72, font_size := 24) -> Button:
 	var button := Button.new()
@@ -157,7 +163,7 @@ func _show_title() -> void:
 	var box := _panel()
 	_ruby(box, "よるべん", 52)
 	_ruby(box, "よるの べんきょう", 22)
-	_text(box, "カードを つかって、灯りの もりを あるく。", 18, Color("5c5146"))
+	_text(box, "カードで、灯りの もりを あるく。", 18, Color("5c5146"))
 	_button(column, "出発[しゅっぱつ]", LANTERN, _depart, 104, 34)
 	var track := MusicCredits.for_region(2)
 	_text(column, "%s · %s · %s" % [track["title"], track["author"], track["license"]], 13, Color("f0e2c8"))
@@ -184,8 +190,9 @@ func _show_map() -> void:
 	view.bind(run["map"], run["path"], _open_ids(), font)
 	column.add_child(view)
 	var legend := _panel()
-	_text(legend, "せん たたかう   つよ エリート   わけ グループ   はや スピード", 14)
-	_text(legend, "やす たきび   みせ みせ   よみ かたりべ   ぬし ボス", 14)
+	_text(legend, "せん 戦う    つよ 強い    わけ 分ける", 16)
+	_text(legend, "はや 速い    やす 休む    みせ 店", 16)
+	_text(legend, "よみ 読む    ぬし 主", 16)
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 8)
 	column.add_child(row)
@@ -1122,8 +1129,14 @@ func _fresh() -> Dictionary:
 		"weak_verbs": [],
 		"yokai_found": [],
 		"bonus_relic": "",
+		"known_kanji": pack.known_kanji.duplicate(),
 		"run": null,
 	}
+
+func _bind_known() -> void:
+	if not state.has("known_kanji") or not (state["known_kanji"] is Array):
+		state["known_kanji"] = pack.known_kanji.duplicate()
+	Furigana.known = state["known_kanji"]
 
 func _save() -> void:
 	if shot != "":

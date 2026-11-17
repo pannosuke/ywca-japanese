@@ -39,7 +39,7 @@ func bind(map: Dictionary, path: Array, open_ids: Array, text_font: Font) -> voi
 	_path = path
 	_open = open_ids
 	font = text_font
-	custom_minimum_size = Vector2(500, 560)
+	custom_minimum_size = Vector2(500, 430)
 	queue_redraw()
 	call_deferred("_place")
 
@@ -56,7 +56,7 @@ func _place() -> void:
 		child.free()
 	var rows: Array = _map["rows"]
 	var width := maxf(size.x, 500.0)
-	var height := maxf(size.y, 560.0)
+	var height := maxf(size.y, 430.0)
 	var span := (height - 80) / float(maxi(rows.size() - 1, 1))
 	for r in rows.size():
 		var row: Array = rows[r]
@@ -92,7 +92,7 @@ func _draw() -> void:
 		return
 	var rows: Array = _map["rows"]
 	var width := maxf(size.x, 500.0)
-	var height := maxf(size.y, 560.0)
+	var height := maxf(size.y, 430.0)
 	var span := (height - 80) / float(maxi(rows.size() - 1, 1))
 	var points := {}
 	for r in rows.size():
