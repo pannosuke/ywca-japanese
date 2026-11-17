@@ -1,59 +1,55 @@
 # よるべん roadmap
 
-Short sessions, one hand, often offline. Study notes are never what a run can take. Gear and currency are.
+Short sessions, one hand, often offline. A run can end. The study record and the banked gems do not.
 
-The learner is a save, not a name baked into the rules. Class notes, the commute, and the hometown live in a content pack that can be swapped. There is no server in these phases.
+The learner is a save. Class notes live in a content pack. There is no server in these phases.
 
-Checkboxes: `[x]` done, `[ ]` planned. Phase 1 items that still need a later plugin are left open.
+Checkboxes: `[x]` done in the current tree, `[ ]` not built yet.
 
 ## Released
 
 - **v0.1.0** — study app. Lessons, practice, class prep, read-only AnkiDroid, furigana.
-- **v0.2.0** — forest adventure. Conjugation cave, seeded runs, relics, village shop. That build was the Kotlin app. From v0.3.0 the installable app is Godot. The Kotlin tree stays in git history and is archived in this repo so it is not the thing Obtainium installs.
+- **v0.2.0** — forest adventure on the Kotlin app. Conjugation cave, seeded runs, relics, village shop.
+- **v0.3.0** — the installable app becomes Godot. Package `dev.ericallerton.yoruben`. The Kotlin tree stays in git history under `archive/kotlin-app`.
 
-## Phase 1 — Godot 2.5D commute RPG
+v0.3.0 was a menu of study screens and a 2.5D forest. After that playtest, v0.4 replaces the loop. The package and the signing key stay.
 
-Godot is the game. 2D sprites stand in a 3D world: depth, light, fog, and a tilted camera.
+## v0.4 — one act of a deckbuilder
 
-- [x] Godot 4.x project, portrait, one-handed reach, offline
-- [x] 2.5D overworld and battle (billboards, fog, light, camera)
-- [x] Lessons, practice, and class prep carried over, with ruby furigana on every kanji
-- [x] Curriculum, words, and verbs as a swappable content pack
-- [x] Learner profile in the save. Commute and hometown come from the pack. AnkiDroid stays optional and off until a plugin exists
-- [x] Hooks only: a local friend code, and closed doors for sync, leaderboards, and a party
-- [x] Verb enemies. The group picks the type. A correct conjugation is the attack
-- [x] Stats (ATK, SPD, DEF, LUK, WIS), levels, stat points, a small skill tree
-- [x] Gear slots (weapon, shield, armor, accessory, charm), rarity, seeded affixes, loot from battles and bosses
-- [x] Cosmetics remain visual
-- [x] Consequences: a lost run drops unbanked loot and unbanked gems; wrong answers wear durability; the village repairs it; a streak is a buff; a neglected region corrupts until those verbs are reviewed. The study log is not deleted
-- [x] Resume a fight after the app is closed
-- [x] Music and effects can be muted. Subtitles and haptics stay. Ambient loops are CC0, credited, one mood per region, separate volumes
-- [x] Android export keeps package `dev.ericallerton.yoruben`, versionCode 3, one signed APK on a version tag
-- [ ] AnkiDroid read-only progress (needs an Android plugin; the pack still stores the deck and tags)
+This is the game from here on. A commute session is one act: a map, a hand of cards, a boss.
 
-## Phase 2 — memory and class day
+- [x] Title with one button, 出発. A fight on the second tap. Skippable coach marks
+- [x] Seeded map, seven rows, no crossing edges, every node reachable, boss at the top
+- [x] Node types: battle, elite tiles, group sort, speed, rest, shop, event, treasure, reading, boss
+- [x] Cards from the class pack: verbs, words, phrases, grammar. Energy, a hand of five, play-to-answer
+- [x] Rarity from use: Common, Uncommon, Rare, Ultra. Misses can drop a tier. Higher rarity pays more gems
+- [x] Pick 1 of 3 after a node. Payout screen splits base, rarity, and combo
+- [x] Relics, one weapon with durability, HP across the act, gems kept after a loss
+- [x] Yokai enemies and a binder. Graded-reader stories, furigana, tap-to-define, English hidden. 茨木童子 is the act boss
+- [x] Versioned class packs (`tools/build_card_pack.py`) and a booster when a new pack id appears
+- [x] Homework JSON, the No.89 sheet, turn-in rewards, and weak-verb cards on the next run
+- [x] Tests for the map, conjugation (including ない), rarity, payout, deck, yokai stories, drop rates, and homework
+- [x] Furigana on every kanji unless it is in the profile's `known_kanji` list. Eric's list is empty
+- [ ] Camera or OCR grading of a paper worksheet. The sheet is graded outside the app and imported as JSON until then
+- [ ] More than one act, and more than the thirteen yokai
 
-- [ ] FSRS-style respawns: weak verbs return as enemies on a schedule
-- [ ] Class-day bosses built from that lesson
-- [ ] AnkiDroid plugin, still read-only, still per learner
+## v0.5.0 — art pass
 
-## Phase 3 — village quests
+This is the next build after v0.4.0. The act stays. The pictures and the feel catch up.
 
-- [ ] NPCs give short Japanese quests that stay inside grammar the pack already covers
+- [ ] Real card frames, not a flat panel and a border
+- [ ] Foil and holo shaders by rarity, so an Ultra Rare card looks dramatically different from a Common one
+- [ ] Yokai illustrations in place of the ink silhouettes
+- [ ] Battle juice: hits, shakes, and the combo should read at a glance
 
-## Phase 4 — classmates
+## After the art pass
 
-- [ ] Share a content pack
-- [ ] Optional sync
-- [ ] Optional leaderboards
-- [ ] Co-op and friend codes that actually connect
+AnkiDroid, FSRS, and class-day bosses come after v0.5.0.
 
-## Phase 5 — polish
-
-- [ ] More biomes
-- [ ] More cosmetics
-- [ ] More original scenery
-
-## Phase 6 — speech, last
-
-- [ ] Spoken spells. Last, because a commute is often the wrong place for a microphone, and every phase before this works without one.
+- [ ] AnkiDroid read-only progress. The pack still stores the deck name and the `class::` tags. Mastery counts are shaped so a later feed can write them
+- [ ] FSRS-style respawns on top of the weak-verb cards homework already creates
+- [ ] Class-day bosses built from that day's pack
+- [ ] Village quests beyond the homework turn-in
+- [ ] Shared packs, sync, leaderboards, co-op
+- [ ] More biomes and more cosmetics
+- [ ] Speech, last. A commute is often the wrong place for a microphone

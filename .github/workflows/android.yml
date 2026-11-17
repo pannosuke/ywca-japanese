@@ -78,8 +78,8 @@ jobs:
           "$APKSIGNER" verify --verbose build/yoruben-debug.apk
           "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging build/yoruben-debug.apk | tee /tmp/badging.txt
           grep -q "name='dev.ericallerton.yoruben'" /tmp/badging.txt
-          grep -q "versionCode='3'" /tmp/badging.txt
-          grep -q "versionName='0.3.0'" /tmp/badging.txt
+          grep -q "versionCode='4'" /tmp/badging.txt
+          grep -q "versionName='0.4.0'" /tmp/badging.txt
 
   release:
     if: startsWith(github.ref, 'refs/tags/v')
@@ -164,7 +164,7 @@ jobs:
           cp build/yoruben-release.apk "yoruben-${VER}.apk"
           "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "yoruben-${VER}.apk" | tee /tmp/badging.txt
           grep -q "name='dev.ericallerton.yoruben'" /tmp/badging.txt
-          grep -q "versionCode='3'" /tmp/badging.txt
+          grep -q "versionCode='4'" /tmp/badging.txt
       - name: Publish the release
         uses: softprops/action-gh-release@v2
         with:

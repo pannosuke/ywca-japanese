@@ -1,216 +1,1092 @@
 extends Node
 
-const LOOKS := [
-	{"id": "leaf", "ruby": "わかば", "cost": 0, "color": "7dba6a"},
-	{"id": "dusk", "ruby": "ゆうやけ", "cost": 8, "color": "e08a3c"},
-	{"id": "ink", "ruby": "すみ", "cost": 8, "color": "355c7d"},
-]
+const SAVE_PATH := "user://yoruben-v4.json"
+const INK := Color("241c16")
+const PAPER := Color("f6ead2")
+const LANTERN := Color("e39a3c")
+const MOSS := Color("2f5d40")
 
 var pack: ContentPack
-var state: Dictionary
 var font: Font
-var world: Node3D
-var music: AudioStreamPlayer
-var music_id := ""
-var layer: CanvasLayer
-var veil: ColorRect
-var panel: Control
-var screen := "home"
-var timer_label: Label
-var fight_timer: Timer
+var state: Dictionary = {}
 var shot := ""
+var stage: Control
+var column: VBoxContainer
+var backdrop: Backdrop
+var flash: ColorRect
+var music: AudioStreamPlayer
+var sfx: AudioStreamPlayer
+var music_id := ""
+var correct_sfx: AudioStream
+var wrong_sfx: AudioStream
+var pending: Dictionary = {}
+var built := ""
+var speed_left := 0.0
+var speed_running := false
+var speed_label: Label
+var reading: Dictionary = {}
 
 func _ready() -> void:
 	pack = ContentPack.load_default()
+	Furigana.prepare(pack)
 	font = load("res://assets/fonts/NotoSansJP-Regular.otf")
-	state = SaveGame.load_or_new(pack.id)
-	_ensure_save_shape()
+	correct_sfx = load("res://assets/sfx/correct.wav")
+	wrong_sfx = load("res://assets/sfx/wrong.wav")
+	shot = OS.get_environment("YORUBEN_SHOT")
+	_chrome()
+	_load()
+	_bind_known()
+	if shot != "":
+		state["music"] = 0.0
+		_prepare_shot()
+		_capture()
+	else:
+		_show_title()
+
+func _process(delta: float) -> void:
+	if not speed_running:
+		return
+	speed_left -= delta
+	if speed_label != null:
+		speed_label.text = "%d" % ceili(speed_left)
+	if speed_left <= 0.0:
+		speed_running = false
+		_finish_speed()
+
+func _chrome() -> void:
+	stage = Control.new()
+	stage.set_anchors_preset(Control.PRESET_FULL_RECT)
+	stage.theme = Theme.new()
+	stage.theme.default_font = font
+	stage.theme.default_font_size = 20
+	add_child(stage)
+	backdrop = Backdrop.new()
+	stage.add_child(backdrop)
+	var margin := MarginContainer.new()
+	margin.set_anchors_preset(Control.PRESET_FULL_RECT)
+	margin.add_theme_constant_override("margin_left", 16)
+	margin.add_theme_constant_override("margin_right", 16)
+	margin.add_theme_constant_override("margin_top", 18)
+	margin.add_theme_constant_override("margin_bottom", 16)
+	stage.add_child(margin)
+	column = VBoxContainer.new()
+	column.add_theme_constant_override("separation", 10)
+	column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	column.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	margin.add_child(column)
+	flash = ColorRect.new()
+	flash.set_anchors_preset(Control.PRESET_FULL_RECT)
+	flash.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	flash.color = Color(1, 1, 1, 0)
+	stage.add_child(flash)
 	music = AudioStreamPlayer.new()
 	add_child(music)
-	fight_timer = Timer.new()
-	fight_timer.wait_time = 0.2
-	fight_timer.timeout.connect(_on_tick)
-	add_child(fight_timer)
-	fight_timer.start()
-	layer = CanvasLayer.new()
-	add_child(layer)
-	veil = ColorRect.new()
-	veil.set_anchors_preset(Control.PRESET_FULL_RECT)
-	veil.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	layer.add_child(veil)
-	panel = Control.new()
-	panel.set_anchors_preset(Control.PRESET_FULL_RECT)
-	panel.theme = _theme()
-	layer.add_child(panel)
-	shot = OS.get_environment("YORUBEN_SHOT")
-	if shot != "":
-		_apply_shot(shot)
-	else:
-		_show_home()
-		_play_music(int(state.get("region", 0)))
-	if shot != "":
-		_capture_shot()
-
-func _ensure_save_shape() -> void:
-	if not state.has("seed"):
-		state["seed"] = 20261117
-	if not state.has("floor"):
-		state["floor"] = 0
-	if not state.has("region"):
-		state["region"] = 0
-	if not state.has("cosmetics_owned"):
-		state["cosmetics_owned"] = ["leaf"]
-	if not state.has("cosmetic"):
-		state["cosmetic"] = "leaf"
-	if state.get("equipped") == null:
-		state["equipped"] = {"weapon": GearRules.starter_weapon()}
-
-func _theme() -> Theme:
-	var theme := Theme.new()
-	theme.default_font = font
-	theme.default_font_size = 22
-	var normal := StyleBoxFlat.new()
-	normal.bg_color = Color("1f6b3a")
-	normal.set_corner_radius_all(16)
-	normal.content_margin_left = 12
-	normal.content_margin_right = 12
-	normal.content_margin_top = 8
-	normal.content_margin_bottom = 8
-	theme.set_stylebox("normal", "Button", normal)
-	var hover := normal.duplicate()
-	hover.bg_color = Color("2f8a4e")
-	theme.set_stylebox("hover", "Button", hover)
-	theme.set_stylebox("pressed", "Button", hover)
-	theme.set_color("font_color", "Button", Color.WHITE)
-	theme.set_color("font_color", "Label", Color("1c2416"))
-	return theme
+	sfx = AudioStreamPlayer.new()
+	add_child(sfx)
 
 func _clear() -> void:
-	timer_label = null
-	for child in panel.get_children():
-		panel.remove_child(child)
+	speed_running = false
+	speed_label = null
+	for child in column.get_children():
+		column.remove_child(child)
 		child.free()
 
-func _shell() -> Dictionary:
-	_clear()
-	var root := VBoxContainer.new()
-	root.set_anchors_preset(Control.PRESET_FULL_RECT)
-	root.offset_left = 14
-	root.offset_top = 16
-	root.offset_right = -14
-	root.offset_bottom = -16
-	root.add_theme_constant_override("separation", 10)
-	panel.add_child(root)
-	var scroll := ScrollContainer.new()
-	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	root.add_child(scroll)
-	var body := VBoxContainer.new()
-	body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	body.custom_minimum_size = Vector2(500, 0)
-	body.add_theme_constant_override("separation", 8)
-	scroll.add_child(body)
-	var dock := VBoxContainer.new()
-	dock.add_theme_constant_override("separation", 8)
-	root.add_child(dock)
-	return {"body": body, "dock": dock}
-
-func _paper(on: bool) -> void:
-	veil.color = Color("f4e7c8") if on else Color(0, 0, 0, 0)
-	if world:
-		world.visible = not on
-
-func _set_world(kind: String) -> void:
-	if world:
-		world.queue_free()
-		world = null
-	world = WorldView.build(kind)
-	add_child(world)
-	move_child(world, 0)
-	for child in world.get_children():
-		if child is Sprite3D and child.texture != null and str(child.texture.resource_path).contains("hero"):
-			child.modulate = _look_color()
-	_paper(false)
-
-func _look_color() -> Color:
-	for look in LOOKS:
-		if look["id"] == str(state.get("cosmetic", "leaf")):
-			return Color(str(look["color"]))
-	return Color.WHITE
-
-func _card() -> VBoxContainer:
+func _panel() -> VBoxContainer:
 	var frame := PanelContainer.new()
+	frame.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	var style := StyleBoxFlat.new()
-	style.bg_color = Color(0.97, 0.93, 0.84, 0.9)
-	style.set_corner_radius_all(14)
-	style.content_margin_left = 12
-	style.content_margin_right = 12
-	style.content_margin_top = 8
-	style.content_margin_bottom = 8
+	style.bg_color = Color("f6ead2")
+	style.set_corner_radius_all(18)
+	style.set_content_margin_all(12)
 	frame.add_theme_stylebox_override("panel", style)
 	var box := VBoxContainer.new()
-	box.add_theme_constant_override("separation", 4)
+	box.add_theme_constant_override("separation", 6)
 	frame.add_child(box)
+	column.add_child(frame)
 	return box
 
-func _ruby(parent: Node, markup: String, size: int, centered := false) -> void:
-	var whole := RubyLabel.new()
-	whole.font = font
-	whole.font_size = size
-	whole.align_center = centered
-	whole.set_markup(markup)
-	if whole.custom_minimum_size.x <= 500:
-		parent.add_child(whole)
-		return
-	whole.free()
-	for chunk in markup.split(" "):
-		if chunk == "":
-			continue
-		var label := RubyLabel.new()
-		label.font = font
-		label.font_size = size
-		label.align_center = centered
-		label.set_markup(chunk)
-		parent.add_child(label)
-
-func _en(parent: Node, text: String) -> void:
-	var label := Label.new()
-	label.text = text
-	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	label.add_theme_font_size_override("font_size", 16)
-	label.add_theme_color_override("font_color", Color("5c5346"))
-	parent.add_child(label)
-
-func _plain(parent: Node, text: String, size := 20) -> Label:
-	var label := Label.new()
-	label.text = text
-	label.add_theme_font_size_override("font_size", size)
-	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+func _ruby(parent: Node, markup: String, size := 24, color := INK) -> RubyLabel:
+	var label := RubyLabel.new()
+	label.font = font
+	label.font_size = size
+	label.color = color
+	label.max_width = 500
+	label.set_markup(markup)
 	parent.add_child(label)
 	return label
 
-func _button(parent: Node, markup: String, cb: Callable) -> Button:
+func _text(parent: Node, value: String, size := 18, color := INK) -> Control:
+	var marked := Furigana.apply(value, Furigana.known)
+	if marked.find("[") == -1:
+		var label := Label.new()
+		label.text = marked
+		label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		label.add_theme_font_size_override("font_size", size)
+		label.add_theme_color_override("font_color", color)
+		parent.add_child(label)
+		return label
+	return _ruby(parent, marked, size, color)
+
+func _button(parent: Node, markup: String, fill: Color, cb: Callable, height := 72, font_size := 24) -> Button:
 	var button := Button.new()
 	button.text = ""
-	button.custom_minimum_size = Vector2(0, 72)
+	button.custom_minimum_size = Vector2(0, height)
 	button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	var style := StyleBoxFlat.new()
+	style.bg_color = fill
+	style.set_corner_radius_all(16)
+	style.set_content_margin_all(8)
+	button.add_theme_stylebox_override("normal", style)
+	button.add_theme_stylebox_override("hover", style)
+	button.add_theme_stylebox_override("pressed", style)
+	button.add_theme_stylebox_override("disabled", style)
+	var center := CenterContainer.new()
+	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	center.set_anchors_preset(Control.PRESET_FULL_RECT)
 	var label := RubyLabel.new()
 	label.font = font
-	label.font_size = 26
-	label.color = Color.WHITE
+	label.font_size = font_size
+	label.color = INK if fill == LANTERN else Color("f7efe0")
 	label.align_center = true
 	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	label.set_anchors_preset(Control.PRESET_FULL_RECT)
 	label.set_markup(markup)
-	button.add_child(label)
+	center.add_child(label)
+	button.add_child(center)
 	button.pressed.connect(cb)
 	parent.add_child(button)
 	return button
 
-func _save() -> void:
-	if shot != "":
+func _show_title() -> void:
+	_clear()
+	backdrop.set_mood("night")
+	_play_music(2)
+	var box := _panel()
+	_ruby(box, "よるべん", 52)
+	_ruby(box, "よるの べんきょう", 22)
+	_text(box, "カードで、灯りの もりを あるく。", 18, Color("5c5146"))
+	_button(column, "出発[しゅっぱつ]", LANTERN, _depart, 104, 34)
+	var track := MusicCredits.for_region(2)
+	_text(column, "%s · %s · %s" % [track["title"], track["author"], track["license"]], 13, Color("f0e2c8"))
+
+func _depart() -> void:
+	if not bool(state.get("tutorial_done", false)) and pack.unseen_packs(state["known_packs"]).is_empty():
+		pass
+	_start_run(int(Time.get_ticks_msec() % 90000) + 11)
+	_show_map()
+
+func _show_map() -> void:
+	_clear()
+	backdrop.set_mood("night")
+	_play_music(0)
+	var run: Dictionary = state["run"]
+	var head := _panel()
+	_ruby(head, "第[だい]1幕[まく]  灯[あか]りの 森[もり]", 26)
+	_text(head, "HP %d    ほたる玉 %d" % [int(run["hp"]), int(state["gems"])], 18)
+	if not bool(state.get("tutorial_done", false)) and (run["path"] as Array).is_empty():
+		_ruby(head, "ひかっている ばしょを タップ。", 20, Color("8a4b12"))
+		_button(head, "スキップ", Color("5c5146"), _skip_tutorial)
+	var view := MapView.new()
+	view.chosen.connect(_enter)
+	view.bind(run["map"], run["path"], _open_ids(), font)
+	column.add_child(view)
+	var legend := _panel()
+	_text(legend, "せん 戦う    つよ 強い    わけ 分ける", 16)
+	_text(legend, "はや 速い    やす 休む    みせ 店", 16)
+	_text(legend, "よみ 読む    ぬし 主", 16)
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 8)
+	column.add_child(row)
+	_button(row, "ずかん", MOSS, _show_collection)
+	if _pending_sheet().size() > 0:
+		_button(row, "宿題[しゅくだい]", LANTERN, _show_homework)
+
+func _skip_tutorial() -> void:
+	state["tutorial_done"] = true
+	_save()
+	_show_map()
+
+func _open_ids() -> Array:
+	var run: Dictionary = state["run"]
+	var path: Array = run["path"]
+	if path.is_empty():
+		var ids: Array = []
+		for node in run["map"]["rows"][0]:
+			ids.append(str(node["id"]))
+		return ids
+	var node := MapGen.node_by_id(run["map"], str(path[path.size() - 1]))
+	return node["next"]
+
+func _enter(node_id: String) -> void:
+	var run: Dictionary = state["run"]
+	var path: Array = run["path"]
+	path.append(node_id)
+	var node := MapGen.node_by_id(run["map"], node_id)
+	var kind := str(node["type"])
+	if kind in ["battle", "elite", "boss"]:
+		_begin_fight(node)
+	elif kind == "puzzle":
+		_begin_puzzle()
+	elif kind == "speed":
+		_begin_speed()
+	elif kind == "rest":
+		_show_rest()
+	elif kind == "shop":
+		_show_shop()
+	elif kind == "event":
+		_show_event()
+	elif kind == "treasure":
+		_grant_treasure()
+	else:
+		_begin_reading(_story_yokai())
+
+func _begin_fight(node: Dictionary) -> void:
+	var run: Dictionary = state["run"]
+	var rng := Rng.new(int(run["seed"]) + (run["path"] as Array).size() * 13)
+	var kind := str(node["type"])
+	var yokai := pack.yokai_by_id("ibaraki") if kind == "boss" else YokaiRules.for_node(kind, rng.next_index(20), pack.yokai)
+	var forms: Array = ["masu", "mashita", "masen", "te", "nai"]
+	var deck_state := CombatRules.open(run["deck"], rng)
+	run["block"] = 0
+	run["battle"] = {
+		"node_id": node["id"],
+		"node_type": kind,
+		"yokai_id": yokai["id"],
+		"form": forms[rng.next_index(forms.size())],
+		"phase": 1,
+		"enemy_hp": CombatRules.enemy_hp(kind),
+		"enemy_max": CombatRules.enemy_hp(kind),
+		"deck_state": deck_state,
+		"plays": [],
+		"combo": 0,
+		"forgiven": false,
+		"turn": 1,
+		"dropped": false,
+	}
+	pending = {}
+	_show_battle()
+
+func _show_battle() -> void:
+	_clear()
+	backdrop.set_mood("battle")
+	_play_music(1)
+	var run: Dictionary = state["run"]
+	var battle: Dictionary = run["battle"]
+	var yokai := pack.yokai_by_id(str(battle["yokai_id"]))
+	var top := _panel()
+	var art := YokaiView.new()
+	art.custom_minimum_size = Vector2(220, 180)
+	art.show_id(str(yokai["id"]))
+	top.add_child(art)
+	_ruby(top, str(yokai["ruby"]), 30)
+	_text(top, _form_name(str(battle["form"])) + "   コンボ %d" % int(battle["combo"]), 16, Color("5c5146"))
+	var bar := ProgressBar.new()
+	bar.max_value = int(battle["enemy_max"])
+	bar.value = maxi(int(battle["enemy_hp"]), 0)
+	bar.show_percentage = false
+	bar.custom_minimum_size = Vector2(0, 16)
+	top.add_child(bar)
+	_text(top, "HP %d / %d    ぼうぎょ %d    ふで %d" % [int(run["hp"]), int(run["max_hp"]), int(run["block"]), int(run["gear"])], 16)
+	if not bool(state.get("tutorial_done", false)):
+		_ruby(top, "カードを タップして、ことばを つかう。", 18, Color("8a4b12"))
+	if pending.is_empty():
+		_ruby(top, "エナジー %d" % int(battle["deck_state"]["energy"]), 20)
+		var scroll := ScrollContainer.new()
+		scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
+		scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+		scroll.custom_minimum_size = Vector2(0, 168)
+		var row := HBoxContainer.new()
+		row.add_theme_constant_override("separation", 8)
+		scroll.add_child(row)
+		for card in battle["deck_state"]["hand"]:
+			row.add_child(_card_button(card))
+		column.add_child(scroll)
+		_button(column, "ターンを おわる", Color("5c5146"), _end_player_turn)
+	else:
+		_ask_panel(top)
+
+func _card_button(card: Dictionary) -> Control:
+	var wrap := VBoxContainer.new()
+	var button := Button.new()
+	button.flat = true
+	button.custom_minimum_size = Vector2(104, 150)
+	var face := CardFace.new()
+	face.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	face.present(card, _rarity_of(str(card["id"])), font, true)
+	button.add_child(face)
+	button.pressed.connect(_select_card.bind(card))
+	wrap.add_child(button)
+	if str(card.get("verb_id", "")) in state["weak_verbs"]:
+		var tag := Label.new()
+		tag.text = "よわい"
+		tag.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		tag.add_theme_color_override("font_color", Color("f0d7a4"))
+		wrap.add_child(tag)
+	return wrap
+
+func _select_card(card: Dictionary) -> void:
+	var battle: Dictionary = state["run"]["battle"]
+	if not DeckRules.can_play(battle["deck_state"], card):
+		_shake()
 		return
-	SaveGame.write(state)
+	pending = card
+	built = ""
+	battle.erase("tiles")
+	_show_battle()
+
+func _ask_panel(parent: Node) -> void:
+	var card: Dictionary = pending
+	var battle: Dictionary = state["run"]["battle"]
+	if str(card["type"]) == "verb":
+		var verb := pack.verb_by_id(str(card["verb_id"]))
+		_ruby(parent, Conjugation.prompt(verb, str(battle["form"])), 22)
+		if str(battle["node_type"]) == "elite":
+			_tiles(parent, verb)
+			return
+		var rng := Rng.new(int(battle["turn"]) * 17 + card["ruby"].length())
+		for choice in Conjugation.choices(verb, str(battle["form"]), rng):
+			_button(column, str(choice), MOSS, _answer_verb.bind(str(choice)))
+	elif str(card["type"]) == "grammar":
+		_ruby(parent, str(card.get("cloze_ruby", card["ruby"])), 22)
+		for choice in _grammar_choices(card):
+			_button(column, str(choice), MOSS, _answer_text.bind(str(choice), str(card.get("cloze_answer", ""))))
+	else:
+		_ruby(parent, str(card["ruby"]) + " の いみは？", 22)
+		for choice in _meaning_choices(card):
+			_button(column, str(choice), MOSS, _answer_text.bind(str(choice), str(card["gloss_ja"])))
+	_button(column, "もどる", Color("5c5146"), _cancel_card)
+
+func _tiles(parent: Node, verb: Dictionary) -> void:
+	var battle: Dictionary = state["run"]["battle"]
+	var answer := Conjugation.kana(verb, str(battle["form"]))
+	if not battle.has("tiles"):
+		var tiles: Array = []
+		for i in answer.length():
+			tiles.append(answer.substr(i, 1))
+		tiles.append("ん")
+		tiles.append("っ")
+		battle["tiles"] = DeckRules.shuffle(tiles, Rng.new(answer.length() + int(battle["turn"])))
+	_text(parent, built if built != "" else "＿", 28)
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 6)
+	column.add_child(row)
+	var tiles_now: Array = battle["tiles"]
+	for piece in tiles_now:
+		var button := Button.new()
+		button.text = str(piece)
+		button.custom_minimum_size = Vector2(48, 48)
+		button.add_theme_font_size_override("font_size", 22)
+		button.pressed.connect(_type_tile.bind(str(piece)))
+		row.add_child(button)
+	_button(column, "けす", Color("5c5146"), _erase_tile)
+	_button(column, "これで 答[こた]える", LANTERN, _answer_verb.bind(built))
+
+func _type_tile(piece: String) -> void:
+	built += piece
+	_show_battle()
+
+func _erase_tile() -> void:
+	if built.length() > 0:
+		built = built.substr(0, built.length() - 1)
+	_show_battle()
+
+func _cancel_card() -> void:
+	pending = {}
+	built = ""
+	_show_battle()
+
+func _answer_verb(choice: String) -> void:
+	var card: Dictionary = pending
+	var verb := pack.verb_by_id(str(card["verb_id"]))
+	var battle: Dictionary = state["run"]["battle"]
+	_resolve(choice == Conjugation.kana(verb, str(battle["form"])))
+
+func _answer_text(choice: String, expected: String) -> void:
+	_resolve(choice == expected)
+
+func _resolve(correct: bool) -> void:
+	var card: Dictionary = pending
+	var run: Dictionary = state["run"]
+	var battle: Dictionary = run["battle"]
+	var rarity := _rarity_of(str(card["id"]))
+	var relics: Array = run["relics"]
+	var forgiven: bool = "lantern" in relics and not bool(battle["forgiven"])
+	var hit: Dictionary = CombatRules.resolve(correct, card, rarity, relics, forgiven)
+	if bool(hit["forgave"]):
+		battle["forgiven"] = true
+	state["mastery"][str(card["id"])] = RarityRules.record(_mastery(str(card["id"])), correct, 2200)
+	var dealt := int(hit["damage"])
+	if str(card["effect"]) == "strike" and int(run["gear"]) <= 0 and dealt > 0:
+		dealt = maxi(1, dealt - 1)
+	battle["enemy_hp"] = int(battle["enemy_hp"]) - dealt
+	run["block"] = int(run["block"]) + int(hit["block"])
+	if int(hit["draw"]) > 0 and not (battle["deck_state"]["draw"] as Array).is_empty():
+		battle["deck_state"]["hand"].append(battle["deck_state"]["draw"].pop_back())
+	var plays: Array = battle["plays"]
+	plays.append({"correct": correct, "rarity": rarity})
+	if correct:
+		battle["combo"] = int(battle["combo"]) + 1
+		_burst("-%d" % dealt if dealt > 0 else "よし", Color("ffd27a"), true)
+	else:
+		battle["combo"] = 0
+		run["gear"] = maxi(0, int(run["gear"]) - 1)
+		_burst("よわい", Color("f0c2b8"), false)
+	DeckRules.spend(battle["deck_state"], card)
+	pending = {}
+	built = ""
+	if int(battle["enemy_hp"]) <= 0:
+		_win_fight()
+		return
+	if int(battle["deck_state"]["energy"]) <= 0:
+		_enemy_turn()
+	else:
+		_show_battle()
+
+func _end_player_turn() -> void:
+	_enemy_turn()
+
+func _enemy_turn() -> void:
+	var run: Dictionary = state["run"]
+	var battle: Dictionary = run["battle"]
+	var attack := CombatRules.enemy_attack(str(battle["node_type"]))
+	var next_hp := CombatRules.player_hit(int(run["hp"]), attack, int(run["block"]))
+	run["hp"] = next_hp
+	run["block"] = 0
+	_shake()
+	_burst("-%d" % attack, Color("e7b1a8"), false)
+	if next_hp <= 0:
+		_defeat()
+		return
+	battle["turn"] = int(battle["turn"]) + 1
+	if str(battle["node_type"]) == "boss":
+		var ratio := float(battle["enemy_hp"]) / float(battle["enemy_max"])
+		if ratio < 0.66 and str(battle["form"]) == "masu":
+			battle["form"] = "te"
+			battle["phase"] = 2
+		elif ratio < 0.33:
+			battle["form"] = "nai"
+			battle["phase"] = 3
+	DeckRules.end_turn(battle["deck_state"])
+	DeckRules.start_turn(battle["deck_state"], Rng.new(int(run["seed"]) + int(battle["turn"]) * 9))
+	_show_battle()
+
+func _win_fight() -> void:
+	var run: Dictionary = state["run"]
+	var battle: Dictionary = run["battle"]
+	var plays: Array = battle["plays"]
+	var correct := 0
+	for play in plays:
+		if bool(play["correct"]):
+			correct += 1
+	var accuracy := 1.0 if plays.is_empty() else float(correct) / float(plays.size())
+	var chance := YokaiRules.drop_chance(str(battle["node_type"]), accuracy)
+	if YokaiRules.dropped(Rng.new(int(run["seed"]) + plays.size() + 5), chance):
+		battle["dropped"] = true
+		if str(battle["yokai_id"]) not in state["yokai_found"]:
+			state["yokai_found"].append(str(battle["yokai_id"]))
+	run["last"] = battle
+	run["battle"] = null
+	_show_reward()
+
+func _show_reward() -> void:
+	_clear()
+	var run: Dictionary = state["run"]
+	var last: Dictionary = run["last"]
+	var plays: Array = last["plays"]
+	var correct := 0
+	for play in plays:
+		if bool(play["correct"]):
+			correct += 1
+	var accuracy := 1.0 if plays.is_empty() else float(correct) / float(plays.size())
+	var box := _panel()
+	_ruby(box, "ごほうびを ひとつ", 28)
+	if not bool(state.get("tutorial_done", false)):
+		_text(box, "3まいから ひとつ。この あと たまの ないわけが 出る。", 16, Color("8a4b12"))
+	var offer: Array = RewardRules.offer(Rng.new(int(run["seed"]) + plays.size()), str(last["node_type"]), accuracy, run["deck"], run["relics"])
+	for pick in offer:
+		var label := str(pick["ruby"])
+		if str(pick["kind"]) == "gems":
+			label = "ほたる玉[だま] +%d" % int(pick["amount"])
+		_button(column, label, LANTERN, _take_reward.bind(pick))
+
+func _take_reward(pick: Dictionary) -> void:
+	var run: Dictionary = state["run"]
+	if str(pick["kind"]) == "card":
+		var card := pack.card_by_id(str(pick["id"]))
+		if not card.is_empty():
+			run["deck"].append(card)
+	elif str(pick["kind"]) == "relic":
+		if str(pick["id"]) not in run["relics"]:
+			run["relics"].append(str(pick["id"]))
+	else:
+		state["gems"] = int(state["gems"]) + int(pick.get("amount", 2))
+	state["tutorial_done"] = true
+	_show_payout()
+
+func _show_payout() -> void:
+	_clear()
+	var run: Dictionary = state["run"]
+	var last: Dictionary = run["last"]
+	var pay := PayoutRules.battle(PayoutRules.base_for(str(last["node_type"])), last["plays"], int(last["combo"]))
+	var extra := 0
+	if "firefly" in run["relics"]:
+		for play in last["plays"]:
+			if bool(play["correct"]):
+				extra += 1
+	var total := int(pay["total"]) + extra
+	state["gems"] = int(state["gems"]) + total
+	var box := _panel()
+	_ruby(box, "ほたる玉[だま]", 32)
+	_text(box, "きほん  %d" % int(pay["base"]), 22)
+	_text(box, "カードの めずらしさ  %d" % int(pay["rarity"]), 22)
+	_text(box, "コンボ  %d" % int(pay["combo"]), 22)
+	if extra > 0:
+		_text(box, "ほたるの お守り  %d" % extra, 22)
+	_ruby(box, "あわせて  %d" % total, 30)
+	if bool(last.get("dropped", false)):
+		var yokai := pack.yokai_by_id(str(last["yokai_id"]))
+		_ruby(box, str(yokai["ruby"]) + " の カードを 手[て]に いれた。", 20)
+	_save()
+	_button(column, "つづける", LANTERN, _after_payout)
+
+func _after_payout() -> void:
+	var fresh: Array = pack.unseen_packs(state["known_packs"])
+	if fresh.is_empty():
+		_show_map()
+		return
+	_show_booster(fresh[fresh.size() - 1])
+
+func _show_booster(pack_file: Dictionary) -> void:
+	_clear()
+	var box := _panel()
+	_ruby(box, "クラスの あたらしい カード", 28)
+	_ruby(box, str(pack_file.get("topic_ruby", "")), 22)
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 8)
+	var shown := 0
+	for card in pack_file["cards"]:
+		if shown >= 3:
+			break
+		if str(card["type"]) != "verb" and shown < 2:
+			continue
+		var face := CardFace.new()
+		face.present(card, "common", font, true)
+		row.add_child(face)
+		shown += 1
+	column.add_child(row)
+	for entry in pack.packs:
+		if str(entry["id"]) not in state["known_packs"]:
+			state["known_packs"].append(str(entry["id"]))
+	_save()
+	_button(column, "ひらく", LANTERN, _show_map)
+
+func _defeat() -> void:
+	_clear()
+	state["run"] = null
+	_save()
+	var box := _panel()
+	_ruby(box, "たおれた", 36)
+	_text(box, "おぼえた カードと ほたる玉は のこる。", 18)
+	_button(column, "タイトルへ", LANTERN, _show_title)
+
+func _begin_puzzle() -> void:
+	var run: Dictionary = state["run"]
+	run["puzzle_left"] = 3
+	run["puzzle_correct"] = 0
+	run["puzzle_verb"] = _next_verb()
+	_show_puzzle()
+
+func _show_puzzle() -> void:
+	_clear()
+	var run: Dictionary = state["run"]
+	var verb: Dictionary = run["puzzle_verb"]
+	var box := _panel()
+	_ruby(box, "どの グループ？", 28)
+	_ruby(box, str(verb["dict_ruby"]), 32)
+	_text(box, "グループ1 五段    グループ2 一段    グループ3 する・くる", 14, Color("5c5146"))
+	_button(column, "グループ1", MOSS, _puzzle_pick.bind("godan"))
+	_button(column, "グループ2", MOSS, _puzzle_pick.bind("ichidan"))
+	_button(column, "グループ3", MOSS, _puzzle_pick.bind("irregular"))
+
+func _puzzle_pick(group_name: String) -> void:
+	var run: Dictionary = state["run"]
+	var verb: Dictionary = run["puzzle_verb"]
+	var ok: bool = str(verb["group"]) == group_name
+	run["puzzle_correct"] = int(run["puzzle_correct"]) + (1 if ok else 0)
+	run["puzzle_left"] = int(run["puzzle_left"]) - 1
+	_burst("せいかい" if ok else "ちがい", Color("ffd27a") if ok else Color("f0c2b8"), ok)
+	if int(run["puzzle_left"]) <= 0:
+		_finish_count(int(run["puzzle_correct"]), 3, "puzzle")
+	else:
+		run["puzzle_verb"] = _next_verb()
+		_show_puzzle()
+
+func _begin_speed() -> void:
+	var run: Dictionary = state["run"]
+	run["speed_correct"] = 0
+	run["speed_asked"] = 0
+	run["speed_combo"] = 0
+	speed_left = float(RewardRules.speed_seconds(run["relics"]))
+	speed_running = true
+	_show_speed()
+
+func _show_speed() -> void:
+	_clear()
+	speed_running = true
+	var run: Dictionary = state["run"]
+	var verb := _next_verb()
+	run["speed_verb"] = verb
+	var form := "masu"
+	run["speed_form"] = form
+	var box := _panel()
+	_ruby(box, "はやく", 28)
+	speed_label = _text(box, "%d" % ceili(speed_left), 36)
+	_ruby(box, Conjugation.prompt(verb, form), 22)
+	var rng := Rng.new(int(run["speed_asked"]) + 4)
+	for choice in Conjugation.choices(verb, form, rng):
+		_button(column, str(choice), MOSS, _speed_pick.bind(str(choice)))
+
+func _speed_pick(choice: String) -> void:
+	if not speed_running:
+		return
+	var run: Dictionary = state["run"]
+	var verb: Dictionary = run["speed_verb"]
+	var ok: bool = choice == Conjugation.kana(verb, str(run["speed_form"]))
+	run["speed_asked"] = int(run["speed_asked"]) + 1
+	if ok:
+		run["speed_correct"] = int(run["speed_correct"]) + 1
+		run["speed_combo"] = int(run["speed_combo"]) + 1
+	else:
+		run["speed_combo"] = 0
+	_show_speed()
+
+func _finish_speed() -> void:
+	speed_running = false
+	var run: Dictionary = state["run"]
+	_finish_count(int(run.get("speed_correct", 0)), maxi(int(run.get("speed_asked", 1)), 1), "speed")
+
+func _finish_count(correct: int, total: int, node_type: String) -> void:
+	var plays: Array = []
+	for i in correct:
+		plays.append({"correct": true, "rarity": "common"})
+	for i in maxi(total - correct, 0):
+		plays.append({"correct": false, "rarity": "common"})
+	state["run"]["last"] = {
+		"node_type": node_type,
+		"plays": plays,
+		"combo": correct,
+		"dropped": false,
+		"yokai_id": "",
+	}
+	_show_reward()
+
+func _show_rest() -> void:
+	_clear()
+	var box := _panel()
+	_ruby(box, "焚[た]き火[び]", 32)
+	_text(box, "休むか、よわい ことばを 見なおす。", 18)
+	_button(column, "休[やす]む  HP+10", LANTERN, _rest_heal)
+	_button(column, "べんきょうする", MOSS, _rest_study)
+	if _pending_sheet().size() > 0:
+		_button(column, "宿題[しゅくだい]を 出[だ]す", LANTERN, _show_homework)
+
+func _rest_heal() -> void:
+	var run: Dictionary = state["run"]
+	run["hp"] = mini(int(run["max_hp"]), int(run["hp"]) + 10)
+	_back_to_map()
+
+func _rest_study() -> void:
+	var run: Dictionary = state["run"]
+	if not (run["deck"] as Array).is_empty():
+		var card: Dictionary = run["deck"][0]
+		for i in 2:
+			state["mastery"][str(card["id"])] = RarityRules.record(_mastery(str(card["id"])), true, 2000)
+	_back_to_map()
+
+func _show_shop() -> void:
+	_clear()
+	var box := _panel()
+	_ruby(box, "ほたるの みせ", 32)
+	_text(box, "ほたる玉 %d" % int(state["gems"]), 18)
+	_button(column, "休[やす]む  6", LANTERN, _buy_heal)
+	_button(column, "ふでを なおす  4", MOSS, _buy_repair)
+	_button(column, "よるの そで  10", Color("6b4c7a"), _buy_sleeve)
+	_button(column, "でる", Color("5c5146"), _back_to_map)
+
+func _buy_heal() -> void:
+	if int(state["gems"]) < 6:
+		_shake()
+		return
+	state["gems"] = int(state["gems"]) - 6
+	var run: Dictionary = state["run"]
+	run["hp"] = mini(int(run["max_hp"]), int(run["hp"]) + 8)
+	_save()
+	_show_shop()
+
+func _buy_repair() -> void:
+	if int(state["gems"]) < 4:
+		_shake()
+		return
+	state["gems"] = int(state["gems"]) - 4
+	state["run"]["gear"] = 6
+	_save()
+	_show_shop()
+
+func _buy_sleeve() -> void:
+	if int(state["gems"]) < 10:
+		_shake()
+		return
+	state["gems"] = int(state["gems"]) - 10
+	state["card_back"] = "night-sleeve"
+	if "night-sleeve" not in state["cosmetics"]:
+		state["cosmetics"].append("night-sleeve")
+	_save()
+	_show_shop()
+
+func _show_event() -> void:
+	_clear()
+	var box := _panel()
+	_ruby(box, "みちばたの 灯[あか]り", 28)
+	_text(box, "小さな 灯りの そばに、ぬれた ふでが おちている。", 18)
+	_button(column, "ひろう", LANTERN, _event_take)
+	_button(column, "そのまま あるく", MOSS, _event_leave)
+
+func _event_take() -> void:
+	state["run"]["hp"] = maxi(1, int(state["run"]["hp"]) - 4)
+	if "lantern" not in state["run"]["relics"]:
+		state["run"]["relics"].append("lantern")
+	_back_to_map()
+
+func _event_leave() -> void:
+	state["gems"] = int(state["gems"]) + 4
+	_back_to_map()
+
+func _grant_treasure() -> void:
+	var run: Dictionary = state["run"]
+	for relic in RewardRules.RELICS:
+		if str(relic["id"]) not in run["relics"]:
+			run["relics"].append(str(relic["id"]))
+			break
+	run["last"] = {"node_type": "treasure", "plays": [], "combo": 0, "dropped": false, "yokai_id": ""}
+	_show_payout()
+
+func _begin_reading(yokai: Dictionary) -> void:
+	var level := 1 if int(state["gems"]) >= 30 else 0
+	var story: Dictionary = YokaiRules.story_for(yokai, level)
+	reading = {"yokai": yokai, "story": story, "index": 0, "correct": 0, "show_en": false, "gloss": ""}
+	_show_reading()
+
+func _show_reading() -> void:
+	_clear()
+	var yokai: Dictionary = reading["yokai"]
+	var story: Dictionary = reading["story"]
+	var box := _panel()
+	_ruby(box, "語[かた]り部[べ]  " + str(yokai["ruby"]), 26)
+	for line in str(story["text_ruby"]).split("。"):
+		if line == "":
+			continue
+		_ruby(box, line + "。", 18)
+	var glosses: Array = story["glosses"]
+	if glosses.size() > 0:
+		var row := HBoxContainer.new()
+		row.add_theme_constant_override("separation", 6)
+		box.add_child(row)
+		for gloss in glosses:
+			var button := Button.new()
+			button.text = str(gloss["word"])
+			button.pressed.connect(_show_gloss.bind(str(gloss["ruby"])))
+			row.add_child(button)
+	if str(reading.get("gloss", "")) != "":
+		_text(box, str(reading["gloss"]), 16, Color("5c5146"))
+	if not bool(reading["show_en"]):
+		_button(box, "えいご", Color("8a8175"), _toggle_en)
+	else:
+		_text(box, str(yokai["en"]), 16, Color("5c5146"))
+	var questions: Array = story["questions"]
+	var index := int(reading["index"])
+	if index >= questions.size():
+		_finish_count(int(reading["correct"]), questions.size(), "story")
+		return
+	var question: Dictionary = questions[index]
+	_ruby(box, str(question["prompt_ruby"]), 22)
+	for choice in question["choices"]:
+		_button(column, str(choice["ruby"]), MOSS, _read_pick.bind(bool(choice["correct"])))
+
+func _show_gloss(text: String) -> void:
+	reading["gloss"] = text
+	_show_reading()
+
+func _toggle_en() -> void:
+	reading["show_en"] = true
+	_show_reading()
+
+func _read_pick(correct: bool) -> void:
+	if correct:
+		reading["correct"] = int(reading["correct"]) + 1
+		if not (state["run"]["deck"] as Array).is_empty():
+			var card: Dictionary = state["run"]["deck"][0]
+			state["mastery"][str(card["id"])] = RarityRules.record(_mastery(str(card["id"])), true, 2500)
+	reading["index"] = int(reading["index"]) + 1
+	reading["gloss"] = ""
+	_show_reading()
+
+func _show_collection() -> void:
+	_clear()
+	var box := _panel()
+	_ruby(box, "ずかん", 32)
+	_text(box, "うら: %s" % _back_name(str(state.get("card_back", "paper"))), 16, Color("5c5146"))
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 8)
+	column.add_child(row)
+	var shown := 0
+	for card in pack.cards:
+		if shown >= 4:
+			break
+		if str(card["type"]) != "verb":
+			continue
+		var face := CardFace.new()
+		face.present(card, _rarity_of(str(card["id"])), font, true)
+		row.add_child(face)
+		shown += 1
+	_ruby(box, "ようかい", 24)
+	var found: Array = state["yokai_found"]
+	if found.is_empty():
+		_text(box, "まだ いない。たたかいに 勝つと、たまに カードが おちる。", 16)
+	else:
+		for yokai_id in found:
+			var yokai := pack.yokai_by_id(str(yokai_id))
+			_button(column, str(yokai["ruby"]), MOSS, _open_yokai.bind(yokai))
+	_button(column, "もどる", Color("5c5146"), _back_from_collection)
+
+func _open_yokai(yokai: Dictionary) -> void:
+	_clear()
+	var box := _panel()
+	var art := YokaiView.new()
+	art.custom_minimum_size = Vector2(220, 180)
+	art.show_id(str(yokai["id"]))
+	box.add_child(art)
+	_ruby(box, str(yokai["ruby"]), 32)
+	for line in str(yokai["fact_ruby"]).split("。"):
+		if line != "":
+			_ruby(box, line + "。", 18)
+	_button(column, "はなしを よむ", LANTERN, _begin_reading.bind(yokai))
+	_button(column, "もどる", Color("5c5146"), _show_collection)
+
+func _show_homework() -> void:
+	_clear()
+	var sheet := _pending_sheet()
+	var box := _panel()
+	if sheet.is_empty():
+		_ruby(box, "宿題[しゅくだい]は もう 出した。", 26)
+		_button(column, "もどる", LANTERN, _back_from_collection)
+		return
+	var reward := HomeworkRules.reward_for(sheet)
+	_ruby(box, "宿題[しゅくだい]を 出[だ]す", 30)
+	_ruby(box, "%s   %s" % [str(sheet["title_ruby"]), str(sheet["teacher_ruby"])], 22)
+	_text(box, "%s    %d / %d" % [str(sheet["date"]), int(reward["correct"]), int(reward["total"])], 20)
+	for item in sheet["items"]:
+		if bool(item["correct"]):
+			continue
+		_ruby(box, str(item["prompt_ruby"]), 18)
+		_text(box, "%s → %s    %s" % [str(item["answer"]), str(item["expected"]), _error_name(str(item["error_type"]))], 16, Color("8c3a32"))
+	_ruby(box, "ほたる玉[だま] +%d" % int(reward["gems"]), 24)
+	_text(box, "できた ことばは、カードが 少し めずらしさに ちかづく。", 16)
+	if (reward["weak_verbs"] as Array).size() > 0:
+		_text(box, "まちがえた どうしは、つぎの たびで よわい カードになる。", 16)
+	_button(column, "出[だ]す", LANTERN, _turn_in_homework.bind(sheet))
+
+func _turn_in_homework(sheet: Dictionary) -> void:
+	var reward := HomeworkRules.reward_for(sheet)
+	state["gems"] = int(state["gems"]) + int(reward["gems"])
+	for card_id in reward["boost_cards"]:
+		for i in 4:
+			state["mastery"][str(card_id)] = RarityRules.record(_mastery(str(card_id)), true, 2000)
+	for verb_id in reward["weak_verbs"]:
+		if str(verb_id) not in state["weak_verbs"]:
+			state["weak_verbs"].append(str(verb_id))
+	if str(reward["cosmetic_back"]) != "":
+		state["card_back"] = str(reward["cosmetic_back"])
+		if str(reward["cosmetic_back"]) not in state["cosmetics"]:
+			state["cosmetics"].append(str(reward["cosmetic_back"]))
+	if str(reward["relic"]) != "":
+		state["bonus_relic"] = "perfect-brush"
+	state["seen_homework"].append(str(sheet["id"]))
+	_save()
+	if state.get("run") == null:
+		_show_title()
+	else:
+		_show_map()
+
+func _pending_sheet() -> Dictionary:
+	for sheet in pack.homework:
+		if str(sheet["id"]) not in state["seen_homework"]:
+			return sheet
+	return {}
+
+func _back_to_map() -> void:
+	_save()
+	_show_map()
+
+func _back_from_collection() -> void:
+	if state.get("run") == null:
+		_show_title()
+	else:
+		_show_map()
+
+func _start_run(seed_value: int) -> void:
+	var relics: Array = []
+	if str(state.get("bonus_relic", "")) != "":
+		relics.append(str(state["bonus_relic"]))
+	state["run"] = {
+		"seed": seed_value,
+		"map": MapGen.generate(seed_value),
+		"path": [],
+		"hp": CombatRules.max_hp(),
+		"max_hp": CombatRules.max_hp(),
+		"block": 0,
+		"deck": _starter(),
+		"relics": relics,
+		"gear": 6,
+		"battle": null,
+	}
+
+func _starter() -> Array:
+	var latest: Dictionary = pack.packs[pack.packs.size() - 1]
+	var deck: Array = []
+	var verbs := 0
+	var others := 0
+	for card in latest["cards"]:
+		if str(card["type"]) == "verb" and verbs < 6:
+			deck.append(card)
+			verbs += 1
+		elif str(card["type"]) in ["grammar", "noun", "adjective", "phrase"] and others < 3:
+			deck.append(card)
+			others += 1
+	for verb_id in state["weak_verbs"]:
+		var card := pack.card_by_id("verb:" + str(verb_id))
+		if card.is_empty():
+			continue
+		deck.append(card)
+		deck.append(card)
+	return deck
+
+func _next_verb() -> Dictionary:
+	var run: Dictionary = state["run"]
+	for card in run["deck"]:
+		if str(card["type"]) == "verb":
+			var verb := pack.verb_by_id(str(card["verb_id"]))
+			if not verb.is_empty():
+				run["deck"].pop_at(run["deck"].find(card))
+				run["deck"].append(card)
+				return verb
+	return pack.verbs[0]
+
+func _story_yokai() -> Dictionary:
+	var found: Array = state["yokai_found"]
+	if found.is_empty():
+		return pack.yokai[0]
+	return pack.yokai_by_id(str(found[0]))
+
+func _mastery(card_id: String) -> Dictionary:
+	var all: Dictionary = state["mastery"]
+	if not all.has(card_id):
+		all[card_id] = RarityRules.fresh(card_id)
+	return all[card_id]
+
+func _rarity_of(card_id: String) -> String:
+	return str(_mastery(card_id)["rarity"])
+
+func _back_name(back_id: String) -> String:
+	match back_id:
+		"gold-margin":
+			return "きんの ふち"
+		"night-sleeve":
+			return "よるの そで"
+		_:
+			return "かみ"
+
+func _form_name(form: String) -> String:
+	match form:
+		"mashita":
+			return "ました"
+		"masen":
+			return "ません"
+		"te":
+			return "て形"
+		"nai":
+			return "ない形"
+		_:
+			return "ます"
+
+func _error_name(kind: String) -> String:
+	match kind:
+		"dakuten":
+			return "だくてん"
+		"sokuon":
+			return "そくおん"
+		"word-choice":
+			return "ことば"
+		_:
+			return kind
+
+func _grammar_choices(card: Dictionary) -> Array:
+	var out: Array = [str(card.get("cloze_answer", ""))]
+	for other in pack.cards:
+		if str(other["type"]) != "grammar":
+			continue
+		var answer := str(other.get("cloze_answer", ""))
+		if answer != "" and answer not in out:
+			out.append(answer)
+		if out.size() >= 3:
+			break
+	return out
+
+func _meaning_choices(card: Dictionary) -> Array:
+	var out: Array = [str(card["gloss_ja"])]
+	for other in pack.cards:
+		var gloss := str(other.get("gloss_ja", ""))
+		if gloss != "" and gloss not in out:
+			out.append(gloss)
+		if out.size() >= 3:
+			break
+	return out
+
+func _burst(text: String, color: Color, good: bool) -> void:
+	_float(text, color)
+	_flash(Color(1, 0.86, 0.45, 1) if good else Color(0.7, 0.2, 0.16, 1))
+	_play_sfx(good)
+	if not good:
+		Input.vibrate_handheld(30)
+
+func _float(text: String, color: Color) -> void:
+	var label := Label.new()
+	label.text = text
+	label.position = Vector2(230, 300)
+	label.add_theme_font_size_override("font_size", 36)
+	label.add_theme_color_override("font_color", color)
+	stage.add_child(label)
+	var tween := create_tween()
+	tween.tween_property(label, "position", label.position + Vector2(0, -70), 0.55)
+	tween.parallel().tween_property(label, "modulate:a", 0.0, 0.55)
+	tween.tween_callback(label.queue_free)
+
+func _flash(color: Color) -> void:
+	flash.color = Color(color.r, color.g, color.b, 0.4)
+	var tween := create_tween()
+	tween.tween_property(flash, "color:a", 0.0, 0.28)
+
+func _shake() -> void:
+	var tween := create_tween()
+	tween.tween_property(stage, "position", Vector2(8, 0), 0.04)
+	tween.tween_property(stage, "position", Vector2(-6, 2), 0.04)
+	tween.tween_property(stage, "position", Vector2.ZERO, 0.05)
+
+func _play_sfx(good: bool) -> void:
+	var stream := correct_sfx if good else wrong_sfx
+	if stream == null or float(state.get("sfx", 0.8)) <= 0.01:
+		return
+	sfx.stream = stream
+	sfx.volume_db = linear_to_db(maxf(float(state["sfx"]), 0.001))
+	sfx.play()
 
 func _play_music(index: int) -> void:
 	var track := MusicCredits.for_region(index)
@@ -220,7 +1096,7 @@ func _play_music(index: int) -> void:
 		music_id = ""
 		return
 	if music_id != str(track["id"]):
-		var stream: AudioStream = load(track["file"])
+		var stream: AudioStream = load(str(track["file"]))
 		if stream is AudioStreamOggVorbis:
 			stream = stream.duplicate()
 			stream.loop = true
@@ -230,645 +1106,122 @@ func _play_music(index: int) -> void:
 	if not music.playing:
 		music.play()
 
-func _show_home() -> void:
-	screen = "home"
-	_paper(true)
-	var ui := _shell()
-	_ruby(ui.body, "よるべん", 40)
-	_ruby(ui.body, str(pack.title_ruby), 22)
-	_status(ui.body)
-	_en(ui.body, "Study notes stay. Only unbanked gear and gems are at stake.")
-	_ruby(ui.body, "AnkiDroid は つぎの だんかい。パックの デッキめいは のこしてある。", 18)
-	if state.get("run") != null:
-		_button(ui.dock, "つづき", _show_battle)
-	_button(ui.dock, "もり", _show_overworld)
-	_button(ui.dock, "たたかう", _start_or_resume)
-	_button(ui.dock, "レッスン", _show_lessons)
-	_button(ui.dock, "れんしゅう", _show_practice_menu)
-	_button(ui.dock, "じゅんび", _show_prep)
-	_button(ui.dock, "そうび", _show_loot)
-	_button(ui.dock, "きろく", _show_sheet)
-
-func _status(parent: Node) -> void:
-	var totals := StatRules.totals(state)
-	var run = state.get("run")
-	var hp := StatRules.max_hp(totals) if run == null else int(run.get("player_hp", 0))
-	_plain(parent, "Lv %d   HP %d   ほたる玉 %d   つづけ %d" % [
-		StatRules.level(int(state["xp"])), hp, int(state["gems"]), int(state["streak"])
-	])
-	if int(state.get("unbanked_gems", 0)) > 0 or (state.get("pouch") != null and state["pouch"].size() > 0):
-		_ruby(parent, "あずけてない たからが ある", 18)
-
-func _show_overworld() -> void:
-	screen = "overworld"
-	_set_world("overworld")
-	_play_music(int(state.get("region", 0)))
-	var ui := _shell()
-	var card := _card()
-	ui.body.add_child(card.get_parent())
-	_ruby(card, "灯[あか]りの 森[もり]", 34)
-	var lessons := pack.lessons_sorted()
-	var corrupt: Array = Consequences.corrupt_dates(state, int(Time.get_unix_time_from_system()))
-	var index := clampi(int(state.get("region", 0)), 0, maxi(lessons.size() - 1, 0))
-	if lessons.size() > 0:
-		var lesson: Dictionary = lessons[index]
-		_ruby(card, str(lesson.get("topic_ruby", lesson["date"])), 24)
-		_en(card, "%s  %s" % [lesson["date"], lesson.get("topic_en", "")])
-		if str(lesson["date"]) in corrupt:
-			_ruby(card, "この くいきは くもっている。ふくしゅうするまで かげが ふかい。", 20)
-	var track := MusicCredits.for_region(index)
-	_ruby(card, str(track["use_ruby"]), 18)
-	_button(ui.dock, "あるく", _walk)
-	_button(ui.dock, "たたかう", _fight_region)
-	_button(ui.dock, "さと", _show_loot)
-	_button(ui.dock, "いえ", _show_home)
-
-func _walk() -> void:
-	var count := pack.lessons_sorted().size()
-	if count == 0:
+func _load() -> void:
+	state = _fresh()
+	if shot != "" or not FileAccess.file_exists(SAVE_PATH):
 		return
-	state["region"] = (int(state.get("region", 0)) + 1) % count
-	_save()
-	_show_overworld()
+	var parsed = JSON.parse_string(FileAccess.get_file_as_string(SAVE_PATH))
+	if typeof(parsed) == TYPE_DICTIONARY:
+		state = parsed
 
-func _fight_region() -> void:
-	var lessons := pack.lessons_sorted()
-	var boss := false
-	var pool: Array = pack.verbs
-	if lessons.size() > 0:
-		var lesson: Dictionary = lessons[clampi(int(state.get("region", 0)), 0, lessons.size() - 1)]
-		var dated: Array = []
-		for verb in pack.verbs:
-			if str(verb.get("lesson_date", "")) == str(lesson["date"]):
-				dated.append(verb)
-		if dated.size() > 0:
-			pool = dated
-		boss = str(lesson["date"]) in Consequences.corrupt_dates(state, int(Time.get_unix_time_from_system()))
-	_begin_fight(pool, boss)
-
-func _start_or_resume() -> void:
-	if state.get("run") != null:
-		_show_battle()
-		return
-	_begin_fight(pack.verbs, int(state.get("floor", 0)) > 0 and int(state["floor"]) % 4 == 0)
-
-func _begin_fight(pool: Array, boss: bool) -> void:
-	if pool.is_empty():
-		return
-	var rng := Rng.new((int(state["seed"]) ^ (int(state.get("floor", 0)) * 97) ^ int(Time.get_unix_time_from_system())) & 0x7fffffff)
-	var verb: Dictionary = pool[rng.next_index(pool.size())]
-	var forms: Array = Conjugation.covered_forms(pack.lessons)
-	var form: String = forms[rng.next_index(forms.size())]
-	var totals := StatRules.totals(state)
-	var player := StatRules.max_hp(totals)
-	var enemy := StatRules.enemy_hp(str(verb["group"]), boss)
-	state["floor"] = int(state.get("floor", 0)) + 1
-	state["run"] = {
-		"verb_id": verb["id"],
-		"form": form,
-		"choices": Conjugation.choices(verb, form, rng),
-		"answer": Conjugation.kana(verb, form),
-		"enemy_hp": enemy,
-		"enemy_max": enemy,
-		"player_hp": player,
-		"player_max": player,
-		"boss": boss,
-		"left": StatRules.seconds(totals, state["skills"]),
-		"seconds": StatRules.seconds(totals, state["skills"]),
-		"subtitle_ruby": "",
-		"subtitle_en": "",
-		"resolved": false,
-		"loot_ruby": "",
+func _fresh() -> Dictionary:
+	return {
+		"pack_id": pack.id,
+		"music": 0.7,
+		"sfx": 0.8,
+		"gems": 0,
+		"mastery": {},
+		"known_packs": [],
+		"seen_homework": [],
+		"cosmetics": ["paper"],
+		"card_back": "paper",
+		"tutorial_done": false,
+		"weak_verbs": [],
+		"yokai_found": [],
+		"bonus_relic": "",
+		"known_kanji": pack.known_kanji.duplicate(),
+		"run": null,
 	}
-	_save()
-	_show_battle()
 
-func _show_battle() -> void:
-	screen = "battle"
-	var run = state.get("run")
-	if run == null:
-		_show_home()
+func _bind_known() -> void:
+	if not state.has("known_kanji") or not (state["known_kanji"] is Array):
+		state["known_kanji"] = pack.known_kanji.duplicate()
+	Furigana.known = state["known_kanji"]
+
+func _save() -> void:
+	if shot != "":
 		return
-	_set_world("battle")
-	var verb := pack.verb_by_id(str(run["verb_id"]))
-	WorldView.tint_enemy(world, str(verb.get("group", "godan")))
-	_play_music(int(state.get("region", 0)))
-	var ui := _shell()
-	var card := _card()
-	ui.body.add_child(card.get_parent())
-	var totals := StatRules.totals(state)
-	if int(totals["wis"]) >= 3 or "wisdom" in state["skills"]:
-		_ruby(card, StatRules.enemy_ruby(str(verb["group"])), 18)
-	_ruby(card, Conjugation.prompt(verb, str(run["form"])), 28, true)
-	_plain(card, "てき %d/%d    じぶん %d/%d" % [int(run["enemy_hp"]), int(run["enemy_max"]), int(run["player_hp"]), int(run["player_max"])])
-	timer_label = _plain(card, "%d" % int(ceil(float(run["left"]))), 28)
-	if str(run.get("subtitle_ruby", "")) != "":
-		_ruby(card, str(run["subtitle_ruby"]), 18)
-		_en(card, str(run.get("subtitle_en", "")))
-	if str(run.get("loot_ruby", "")) != "":
-		_ruby(card, "てに いれた: " + str(run["loot_ruby"]), 20)
-	if bool(run.get("resolved", false)):
-		if int(run["player_hp"]) <= 0:
-			_button(ui.dock, "いえ", _show_home)
-		elif int(run["enemy_hp"]) <= 0:
-			_button(ui.dock, "さとで あずける", _bank_and_village)
-			_button(ui.dock, "つぎの てき", _start_or_resume)
-		else:
-			_button(ui.dock, "つぎ", _next_question)
-		_button(ui.dock, "もどる", _show_home)
+	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	if file == null:
 		return
-	for choice in run["choices"]:
-		_button(ui.dock, str(choice), _resolve.bind(str(choice)))
+	file.store_string(JSON.stringify(state))
 
-func _on_tick() -> void:
-	if screen != "battle" or timer_label == null:
-		return
-	var run = state.get("run")
-	if run == null or bool(run.get("resolved", false)):
-		return
-	run["left"] = float(run["left"]) - 0.2
-	timer_label.text = "%d" % int(ceil(maxf(float(run["left"]), 0)))
-	if float(run["left"]) <= 0:
-		_resolve("")
+func _prepare_shot() -> void:
+	match shot:
+		"map":
+			_start_run(17)
+			_show_map()
+		"battle":
+			_start_run(17)
+			_begin_fight(state["run"]["map"]["rows"][0][0])
+		"yokai":
+			_start_run(21)
+			var node: Dictionary = state["run"]["map"]["rows"][0][0].duplicate(true)
+			node["type"] = "elite"
+			_begin_fight(node)
+		"cards":
+			_show_compare()
+		"collection":
+			_seed_collection()
+			_show_collection()
+		"payout":
+			_start_run(17)
+			state["run"]["last"] = {
+				"node_type": "elite",
+				"plays": [
+					{"correct": true, "rarity": "ultra"},
+					{"correct": true, "rarity": "rare"},
+					{"correct": false, "rarity": "common"},
+					{"correct": true, "rarity": "uncommon"},
+				],
+				"combo": 6,
+				"dropped": true,
+				"yokai_id": "kappa",
+			}
+			state["yokai_found"] = ["kappa"]
+			_show_payout()
+		"reading":
+			_start_run(17)
+			_begin_reading(pack.yokai_by_id("kappa"))
+		"yokai_card":
+			state["yokai_found"] = ["kappa"]
+			_open_yokai(pack.yokai_by_id("kappa"))
+		"homework":
+			_show_homework()
+		_:
+			_show_title()
 
-func _resolve(choice: String) -> void:
-	var run = state.get("run")
-	if run == null or bool(run.get("resolved", false)):
-		return
-	var verb := pack.verb_by_id(str(run["verb_id"]))
-	var correct := choice == str(run["answer"])
-	var now := int(Time.get_unix_time_from_system())
-	SaveGame.touch_day(state, SaveGame.tokyo_day(now))
-	Consequences.note_review(state, verb, correct, now)
-	var totals := StatRules.totals(state)
-	var explained := Conjugation.explain(verb, str(run["form"]))
-	run["subtitle_ruby"] = explained["ruby"]
-	run["subtitle_en"] = explained["en"]
-	run["resolved"] = true
-	if correct:
-		run["enemy_hp"] = int(run["enemy_hp"]) - StatRules.attack_damage(totals, str(run["form"]), state["skills"])
-		state["xp"] = int(state["xp"]) + StatRules.xp_gain(totals, true, state["skills"])
-		if int(run["enemy_hp"]) <= 0:
-			run["enemy_hp"] = 0
-			state["unbanked_gems"] = int(state.get("unbanked_gems", 0)) + (6 if bool(run["boss"]) else 3)
-			var loot := GearRules.roll(int(state["seed"]), str(verb["id"]), int(state["floor"]), int(totals["luk"]), bool(run["boss"]))
-			if not loot.is_empty():
-				state["pouch"].append(loot)
-				run["loot_ruby"] = loot["name_ruby"]
-	else:
-		Input.vibrate_handheld(40)
-		run["player_hp"] = int(run["player_hp"]) - StatRules.hurt(totals, state["skills"])
-		Consequences.wear_equipped(state)
-		state["xp"] = int(state["xp"]) + 1
-		if int(run["player_hp"]) <= 0:
-			run["player_hp"] = 0
-			Consequences.die(state)
-	_save()
-	_show_battle()
+func _show_compare() -> void:
+	_clear()
+	var box := _panel()
+	_ruby(box, "おなじ ことば、ちがう めずらしさ", 24)
+	var card := pack.card_by_id("verb:miru")
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 12)
+	column.add_child(row)
+	var common := CardFace.new()
+	common.present(card, "common", font, false)
+	var ultra := CardFace.new()
+	ultra.present(card, "ultra", font, false)
+	row.add_child(common)
+	row.add_child(ultra)
+	_text(box, "コモンは うすい わく。ウルトラは あつい 金の わく。", 16)
 
-func _next_question() -> void:
-	var run = state.get("run")
-	if run == null:
-		_start_or_resume()
-		return
-	var verb := pack.verb_by_id(str(run["verb_id"]))
-	var rng := Rng.new((int(state["seed"]) ^ int(Time.get_unix_time_from_system()) ^ int(run["enemy_hp"])) & 0x7fffffff)
-	var forms: Array = Conjugation.covered_forms(pack.lessons)
-	var form: String = forms[rng.next_index(forms.size())]
-	var totals := StatRules.totals(state)
-	run["form"] = form
-	run["choices"] = Conjugation.choices(verb, form, rng)
-	run["answer"] = Conjugation.kana(verb, form)
-	run["left"] = StatRules.seconds(totals, state["skills"])
-	run["resolved"] = false
-	run["subtitle_ruby"] = ""
-	run["subtitle_en"] = ""
-	_save()
-	_show_battle()
+func _seed_collection() -> void:
+	state["yokai_found"] = ["kappa", "tengu", "kitsune"]
+	var card := pack.card_by_id("verb:miru")
+	if not card.is_empty():
+		var mastered := RarityRules.fresh(str(card["id"]))
+		for i in 12:
+			mastered = RarityRules.record(mastered, true, 2000)
+		state["mastery"][str(card["id"])] = mastered
 
-func _bank_and_village() -> void:
-	Consequences.bank(state)
-	state["run"] = null
-	_save()
-	_show_loot()
-
-func _show_sheet() -> void:
-	screen = "sheet"
-	_paper(true)
-	var ui := _shell()
-	var totals := StatRules.totals(state)
-	_ruby(ui.body, "きろく", 34)
-	_plain(ui.body, "Lv %d    けいけん %d    ふりわけ %d" % [StatRules.level(int(state["xp"])), int(state["xp"]), StatRules.unspent(int(state["xp"]), int(state["points_spent"]))])
-	_plain(ui.body, "ATK %d   SPD %d   DEF %d   LUK %d   WIS %d" % [totals["atk"], totals["spd"], totals["def"], totals["luk"], totals["wis"]])
-	_en(ui.body, "ATK is conjugation power. SPD is time. DEF softens a miss. LUK is loot. WIS is hints and XP. A streak of 3 adds DEF and WIS.")
-	_ruby(ui.body, "ともだち コード " + SocialHooks.friend_code(str(state.get("profile_id", "local"))), 20)
-	_en(ui.body, "Sync, leaderboards, and co-op are not connected.")
-	for stat in StatRules.STATS:
-		_button(ui.body, stat + " を あげる", _spend_stat.bind(stat))
-	for skill_id in StatRules.SKILLS.keys():
-		var owned: bool = skill_id in state["skills"]
-		var label: String = StatRules.SKILLS[skill_id]["ruby"]
-		if owned:
-			_ruby(ui.body, label + " を もっている", 20)
-		else:
-			_button(ui.body, label, _spend_skill.bind(skill_id))
-	_ruby(ui.body, "みため", 24)
-	for look in LOOKS:
-		var have: bool = look["id"] in state["cosmetics_owned"]
-		if have:
-			_button(ui.body, str(look["ruby"]), _equip_look.bind(str(look["id"])))
-		else:
-			_button(ui.body, str(look["ruby"]) + "  %d" % int(look["cost"]), _buy_look.bind(str(look["id"])))
-	_ruby(ui.body, "おんりょう", 24)
-	_volume(ui.body, "music")
-	_volume(ui.body, "sfx")
-	_button(ui.dock, "おんがくの クレジット", _show_credits)
-	_button(ui.dock, "いえ", _show_home)
-
-func _volume(parent: Node, key: String) -> void:
-	_plain(parent, key)
-	var slider := HSlider.new()
-	slider.min_value = 0
-	slider.max_value = 1
-	slider.step = 0.05
-	slider.value = float(state.get(key, 0.7))
-	slider.custom_minimum_size = Vector2(0, 48)
-	slider.value_changed.connect(_set_volume.bind(key))
-	parent.add_child(slider)
-
-func _set_volume(value: float, key: String) -> void:
-	state[key] = value
-	_save()
-	if key == "music":
-		music_id = ""
-		_play_music(int(state.get("region", 0)))
-
-func _spend_stat(stat: String) -> void:
-	if StatRules.unspent(int(state["xp"]), int(state["points_spent"])) < 1:
-		return
-	state["base"][stat] = int(state["base"][stat]) + 1
-	state["points_spent"] = int(state["points_spent"]) + 1
-	_save()
-	_show_sheet()
-
-func _spend_skill(skill_id: String) -> void:
-	if skill_id in state["skills"]:
-		return
-	if StatRules.unspent(int(state["xp"]), int(state["points_spent"])) < 1:
-		return
-	state["skills"].append(skill_id)
-	state["points_spent"] = int(state["points_spent"]) + 1
-	_save()
-	_show_sheet()
-
-func _buy_look(look_id: String) -> void:
-	for look in LOOKS:
-		if look["id"] != look_id:
-			continue
-		if look_id in state["cosmetics_owned"]:
-			_equip_look(look_id)
-			return
-		if int(state["gems"]) < int(look["cost"]):
-			return
-		state["gems"] = int(state["gems"]) - int(look["cost"])
-		state["cosmetics_owned"].append(look_id)
-		state["cosmetic"] = look_id
-		_save()
-		_show_sheet()
-
-func _equip_look(look_id: String) -> void:
-	state["cosmetic"] = look_id
-	_save()
-	_show_sheet()
-
-func _show_loot() -> void:
-	screen = "loot"
-	_paper(true)
-	var ui := _shell()
-	_ruby(ui.body, "灯[あか]りの 里[さと]", 34)
-	_plain(ui.body, "ほたる玉 %d    みあずけ %d" % [int(state["gems"]), int(state.get("unbanked_gems", 0))])
-	_ruby(ui.body, "そうび", 24)
-	for slot in GearRules.SLOTS:
-		if state["equipped"].has(slot):
-			_item_row(ui.body, state["equipped"][slot], true)
-		else:
-			_ruby(ui.body, slot, 18)
-	if state["pouch"].size() > 0:
-		_ruby(ui.body, "もちあるき", 24)
-		for item in state["pouch"]:
-			_item_row(ui.body, item, false)
-		_button(ui.body, "あずける", _do_bank)
-	if state["inventory"].size() > 0:
-		_ruby(ui.body, "くら", 24)
-		for item in state["inventory"]:
-			_item_row(ui.body, item, false)
-			_button(ui.body, "そうびする", _equip_item.bind(str(item["id"])))
-	_button(ui.dock, "いえ", _show_home)
-
-func _item_row(parent: Node, item: Dictionary, equipped: bool) -> void:
-	_ruby(parent, str(item["name_ruby"]), 22)
-	var affix := ""
-	for key in item["affixes"].keys():
-		affix += "%s+%s " % [key, str(item["affixes"][key])]
-	_plain(parent, "%s  %s  たいきゅう %d/%d%s" % [item["slot"], item["rarity"], int(item["durability"]), int(item["max_durability"]), "  そうびちゅう" if equipped else ""])
-	_plain(parent, affix)
-	if int(item["durability"]) < int(item["max_durability"]):
-		_button(parent, "しゅうり %d" % GearRules.repair_cost(item), _repair_item.bind(str(item["id"])))
-
-func _do_bank() -> void:
-	Consequences.bank(state)
-	_save()
-	_show_loot()
-
-func _repair_item(item_id: String) -> void:
-	Consequences.repair(state, item_id)
-	_save()
-	_show_loot()
-
-func _equip_item(item_id: String) -> void:
-	var found: Dictionary = {}
-	var rest: Array = []
-	for item in state["inventory"]:
-		if item["id"] == item_id and found.is_empty():
-			found = item
-		else:
-			rest.append(item)
-	if found.is_empty():
-		return
-	var slot := str(found["slot"])
-	if state["equipped"].has(slot):
-		rest.append(state["equipped"][slot])
-	state["inventory"] = rest
-	state["equipped"][slot] = found
-	_save()
-	_show_loot()
-
-func _show_lessons() -> void:
-	screen = "lessons"
-	_paper(true)
-	var ui := _shell()
-	_ruby(ui.body, "レッスン", 34)
-	for lesson in pack.lessons_sorted():
-		_button(ui.body, "%s  %s" % [lesson["date"], lesson.get("topic_ruby", "")], _show_lesson.bind(str(lesson["id"])))
-	_button(ui.dock, "いえ", _show_home)
-
-func _show_lesson(lesson_id: String) -> void:
-	screen = "lesson"
-	_paper(true)
-	var ui := _shell()
-	for lesson in pack.lessons:
-		if str(lesson["id"]) != lesson_id:
-			continue
-		_ruby(ui.body, str(lesson.get("topic_ruby", lesson["date"])), 28)
-		_en(ui.body, "%s  %s" % [lesson["date"], lesson.get("topic_en", "")])
-		for point in lesson.get("grammar", []):
-			_ruby(ui.body, str(point.get("pattern_ruby", "")), 22)
-			_ruby(ui.body, str(point.get("explanation_ja", "")), 18)
-			_en(ui.body, str(point.get("explanation_en", "")))
-			if str(point.get("example_ruby", "")) != "":
-				_ruby(ui.body, str(point["example_ruby"]), 20)
-		for word in pack.words:
-			if str(word.get("lesson_date", "")) == str(lesson["date"]):
-				_ruby(ui.body, str(word.get("ruby", word.get("id", ""))), 20)
-				if str(word.get("gloss_ja", "")) != "":
-					_ruby(ui.body, str(word["gloss_ja"]), 16)
-				_en(ui.body, str(word.get("gloss_en", "")))
-	_button(ui.dock, "レッスン", _show_lessons)
-	_button(ui.dock, "いえ", _show_home)
-
-func _show_practice_menu() -> void:
-	screen = "practice"
-	_paper(true)
-	var ui := _shell()
-	_ruby(ui.body, "れんしゅう", 34)
-	_en(ui.body, "Practice records the review and does not wear gear. The forest is where a miss costs durability.")
-	_button(ui.dock, "かつよう", _start_drill.bind("verb"))
-	_button(ui.dock, "クラスの もんだい", _start_drill.bind("class"))
-	_button(ui.dock, "いえ", _show_home)
-
-func _start_drill(kind: String) -> void:
-	var rng := Rng.new(int(Time.get_unix_time_from_system()) & 0x7fffffff)
-	var card := {}
-	if kind == "verb":
-		var verb: Dictionary = pack.verbs[rng.next_index(pack.verbs.size())]
-		var forms: Array = Conjugation.covered_forms(pack.lessons)
-		var form: String = forms[rng.next_index(forms.size())]
-		card = {
-			"kind": "verb",
-			"verb_id": verb["id"],
-			"form": form,
-			"prompt": Conjugation.prompt(verb, form),
-			"choices": Conjugation.choices(verb, form, rng),
-			"answer": Conjugation.kana(verb, form),
-			"explain_ruby": "",
-			"explain_en": "",
-		}
-	else:
-		card = _class_card(rng)
-	card["resolved"] = false
-	card["picked"] = ""
-	state["drill"] = card
-	_show_drill()
-
-func _class_card(rng: Rng) -> Dictionary:
-	var cards: Array = []
-	for spot in pack.profile.get("weak_spots", []):
-		for item in spot.get("items", []):
-			if str(item.get("mode", "")) != "mc":
-				continue
-			var choices: Array = []
-			var answer := ""
-			for choice in item.get("choices", []):
-				choices.append(str(choice.get("ruby", choice.get("en", ""))))
-				if str(choice.get("id", "")) == str(item.get("answer_id", "")):
-					answer = str(choice.get("ruby", choice.get("en", "")))
-			cards.append({
-				"kind": "class",
-				"verb_id": "",
-				"prompt": str(item.get("prompt_ruby", "")),
-				"choices": choices,
-				"answer": answer,
-				"explain_ruby": str(item.get("explain_ruby", "")),
-				"explain_en": str(item.get("explain_en", "")),
-			})
-	for lesson in pack.lessons:
-		for point in lesson.get("grammar", []):
-			if str(point.get("cloze_answer", "")) == "":
-				continue
-			cards.append({
-				"kind": "class",
-				"verb_id": "",
-				"prompt": str(point.get("cloze_ruby", point.get("pattern_ruby", ""))),
-				"choices": [],
-				"answer": str(point["cloze_answer"]),
-				"explain_ruby": str(point.get("explanation_ja", "")),
-				"explain_en": str(point.get("explanation_en", "")),
-				"pool": "cloze",
-			})
-	if cards.is_empty():
-		return {"kind": "class", "verb_id": "", "prompt": "もんだいが ない", "choices": ["つぎ"], "answer": "つぎ", "explain_ruby": "", "explain_en": ""}
-	var card: Dictionary = cards[rng.next_index(cards.size())]
-	if card.get("pool", "") == "cloze":
-		var answers: Array = [card["answer"]]
-		for lesson in pack.lessons:
-			for point in lesson.get("grammar", []):
-				var other := str(point.get("cloze_answer", ""))
-				if other != "" and other not in answers:
-					answers.append(other)
-		var picked: Array = []
-		while picked.size() < 3 and answers.size() > 1:
-			var guess: String = answers[rng.next_index(answers.size())]
-			if guess != card["answer"] and guess not in picked:
-				picked.append(guess)
-		picked.append(card["answer"])
-		var shuffled: Array = []
-		while picked.size() > 0:
-			shuffled.append(picked.pop_at(rng.next_index(picked.size())))
-		card["choices"] = shuffled
-	return card
-
-func _show_drill() -> void:
-	screen = "drill"
-	_paper(true)
-	var card: Dictionary = state.get("drill", {})
-	var ui := _shell()
-	_ruby(ui.body, "れんしゅう", 28)
-	_ruby(ui.body, str(card.get("prompt", "")), 26)
-	if bool(card.get("resolved", false)):
-		var ok: bool = str(card.get("picked", "")) == str(card.get("answer", ""))
-		_ruby(ui.body, "せいかい" if ok else "こたえ: " + str(card.get("answer", "")), 22)
-		if str(card.get("explain_ruby", "")) != "":
-			_ruby(ui.body, str(card["explain_ruby"]), 18)
-			_en(ui.body, str(card.get("explain_en", "")))
-		_button(ui.dock, "つぎ", _start_drill.bind(str(card.get("kind", "verb"))))
-	else:
-		for choice in card.get("choices", []):
-			_button(ui.dock, str(choice), _answer_drill.bind(str(choice)))
-	_button(ui.dock, "いえ", _show_home)
-
-func _answer_drill(choice: String) -> void:
-	var card: Dictionary = state.get("drill", {})
-	if bool(card.get("resolved", false)):
-		return
-	card["picked"] = choice
-	card["resolved"] = true
-	var ok: bool = choice == str(card.get("answer", ""))
-	if not ok:
-		Input.vibrate_handheld(30)
-	if str(card.get("kind", "")) == "verb":
-		var verb := pack.verb_by_id(str(card.get("verb_id", "")))
-		var now := int(Time.get_unix_time_from_system())
-		SaveGame.touch_day(state, SaveGame.tokyo_day(now))
-		Consequences.note_review(state, verb, ok, now)
-		var explained := Conjugation.explain(verb, str(card.get("form", "masu")))
-		card["explain_ruby"] = explained["ruby"]
-		card["explain_en"] = explained["en"]
-		state["xp"] = int(state["xp"]) + (StatRules.xp_gain(StatRules.totals(state), true, state["skills"]) if ok else 1)
-	state["drill"] = card
-	_save()
-	_show_drill()
-
-func _show_prep() -> void:
-	screen = "prep"
-	_paper(true)
-	var ui := _shell()
-	_ruby(ui.body, "じゅんび", 34)
-	var today := SaveGame.tokyo_day(int(Time.get_unix_time_from_system()))
-	var weekday := _tokyo_weekday(int(Time.get_unix_time_from_system()))
-	_plain(ui.body, today + "  " + weekday)
-	for row in pack.profile.get("schedule", []):
-		if str(row.get("weekday", "")) != weekday and not _is_next(str(row.get("weekday", "")), weekday):
-			continue
-		_ruby(ui.body, "%s  %s–%s  %s" % [row["weekday"], row["start"], row["end"], row.get("focus_ruby", "")], 22)
-		_en(ui.body, str(row.get("focus_en", "")))
-	_ruby(ui.body, str(pack.profile["commute"]["summary_ruby"]), 20)
-	_en(ui.body, str(pack.profile["commute"]["summary_en"]))
-	_ruby(ui.body, "また みる ところ", 24)
-	for spot in pack.profile.get("weak_spots", []):
-		_ruby(ui.body, str(spot.get("title_ruby", "")), 20)
-		_ruby(ui.body, str(spot.get("reminder_ja", "")), 16)
-		_en(ui.body, str(spot.get("reminder_en", "")))
-	_ruby(ui.body, "Anki の デッキは パックに のこしてある。よみとりは つぎの だんかい。", 18)
-	_button(ui.dock, "いえ", _show_home)
-
-func _tokyo_weekday(unix: int) -> String:
-	var shifted: Dictionary = Time.get_datetime_dict_from_unix_time(unix + 9 * 3600)
-	return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][int(shifted.weekday)]
-
-func _is_next(row_day: String, today: String) -> bool:
-	var order := ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-	var from := order.find(today)
-	var to := order.find(row_day)
-	if from < 0 or to < 0:
-		return false
-	var gap := (to - from + 7) % 7
-	return gap > 0 and gap <= 3
-
-func _show_credits() -> void:
-	screen = "credits"
-	_paper(true)
-	var ui := _shell()
-	_ruby(ui.body, "おんがく", 34)
-	for track in MusicCredits.TRACKS:
-		_ruby(ui.body, str(track["use_ruby"]), 24)
-		_plain(ui.body, "%s — %s" % [track["title"], track["author"]])
-		_plain(ui.body, str(track["license"]))
-		_en(ui.body, str(track["source"]))
-	_ruby(ui.body, "フォント", 24)
-	_plain(ui.body, "Noto Sans JP — SIL Open Font License")
-	_en(ui.body, "https://github.com/notofonts/noto-cjk")
-	_button(ui.dock, "きろく", _show_sheet)
-	_button(ui.dock, "いえ", _show_home)
-
-func _apply_shot(which: String) -> void:
-	state = SaveGame.fresh(pack.id)
-	_ensure_save_shape()
-	state["xp"] = 45
-	state["streak"] = 3
-	state["gems"] = 11
-	state["region"] = 2
-	if which == "battle":
-		state["base"]["wis"] = 3
-		var verb := pack.verb_by_id("kaku")
-		var rng := Rng.new(17)
-		state["run"] = {
-			"verb_id": "kaku",
-			"form": "te",
-			"choices": Conjugation.choices(verb, "te", rng),
-			"answer": Conjugation.kana(verb, "te"),
-			"enemy_hp": 24,
-			"enemy_max": 24,
-			"player_hp": 14,
-			"player_max": 14,
-			"boss": false,
-			"left": 16,
-			"seconds": 16,
-			"subtitle_ruby": "",
-			"subtitle_en": "",
-			"resolved": false,
-			"loot_ruby": "",
-		}
-		_show_battle()
-	elif which == "sheet":
-		_show_sheet()
-	elif which == "loot":
-		var loot := GearRules.roll(17, "kaku", 2, 4, true)
-		state["inventory"] = [loot]
-		state["pouch"] = [GearRules.roll(19, "iku", 1, 2, true)]
-		state["unbanked_gems"] = 3
-		_show_loot()
-	elif which == "credits":
-		_show_credits()
-	else:
-		_show_overworld()
-	_play_music(int(state.get("region", 0)))
-
-func _capture_shot() -> void:
+func _capture() -> void:
 	await get_tree().process_frame
 	await get_tree().process_frame
-	await get_tree().create_timer(0.45).timeout
-	var image := get_viewport().get_texture().get_image()
+	await get_tree().process_frame
+	await get_tree().create_timer(0.55).timeout
 	var path := OS.get_environment("YORUBEN_SHOT_PATH")
-	if path != "":
-		image.save_png(path)
+	var image := get_viewport().get_texture().get_image()
+	image.save_png(path)
 	get_tree().quit()

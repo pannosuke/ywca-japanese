@@ -29,6 +29,15 @@ func test_ruby_keeps_a_reading_on_the_kanji() -> void:
 	var pack := ContentPack.load_default()
 	assert_true(Conjugation.ruby(pack.verb_by_id("kaku"), "te").begins_with("書[か]"))
 
+func test_plain_negative() -> void:
+	var pack := ContentPack.load_default()
+	assert_eq(Conjugation.kana(pack.verb_by_id("iku"), "nai"), "いかない")
+	assert_eq(Conjugation.kana(pack.verb_by_id("au"), "nai"), "あわない")
+	assert_eq(Conjugation.kana(pack.verb_by_id("miru"), "nai"), "みない")
+	assert_eq(Conjugation.kana(pack.verb_by_id("kuru"), "nai"), "こない")
+	assert_eq(Conjugation.kana(pack.verb_by_id("suru"), "nai"), "しない")
+	assert_eq(Conjugation.kana(pack.verb_by_id("nomu"), "nai"), "のまない")
+
 func test_covered_forms_follow_the_pack() -> void:
 	var pack := ContentPack.load_default()
 	var forms := Conjugation.covered_forms(pack.lessons)

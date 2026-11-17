@@ -1,0 +1,1248 @@
+{
+  "schema": 1,
+  "yokai": [
+    {
+      "id": "kappa",
+      "tier": "normal",
+      "ruby": "河童[かっぱ]",
+      "en": "A river child with a dish of water on its head.",
+      "fact_ruby": "川[かわ]に すむ ようかいです。あたまの さらの 水[みず]が いのちです。",
+      "stories": [
+        {
+          "level": 0,
+          "text_ruby": "かっぱは 川[かわ]に すんでいます。あたまの 上[うえ]に、みずの さらが あります。さらの 水[みず]が なくなると、かっぱは よわくなります。きゅうりが 大[だい]好[す]きです。",
+          "questions": [
+            {
+              "prompt_ruby": "かっぱは どこに すんでいますか。",
+              "choices": [
+                {
+                  "ruby": "川[かわ]",
+                  "correct": true
+                },
+                {
+                  "ruby": "山[やま]",
+                  "correct": false
+                },
+                {
+                  "ruby": "うみ",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "あたまの 上[うえ]に なにが ありますか。",
+              "choices": [
+                {
+                  "ruby": "みずの さら",
+                  "correct": true
+                },
+                {
+                  "ruby": "ぼうし",
+                  "correct": false
+                },
+                {
+                  "ruby": "つの",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "なにが すきですか。",
+              "choices": [
+                {
+                  "ruby": "きゅうり",
+                  "correct": true
+                },
+                {
+                  "ruby": "パン",
+                  "correct": false
+                },
+                {
+                  "ruby": "おちゃ",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "さら",
+              "ruby": "うすくて ひらたい うつわ"
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "text_ruby": "ある 日[ひ]、りょこうの 人[ひと]が 川[かわ]の そばで やすみました。かっぱが でてきて、きゅうりを くださいと いいました。人[ひと]は きゅうりを あげました。かっぱは うれしそうに、川[かわ]へ かえりました。さらの 水[みず]を こぼさないで ください。",
+          "questions": [
+            {
+              "prompt_ruby": "人[ひと]は どこで やすみましたか。",
+              "choices": [
+                {
+                  "ruby": "川[かわ]の そば",
+                  "correct": true
+                },
+                {
+                  "ruby": "やまの 上[うえ]",
+                  "correct": false
+                },
+                {
+                  "ruby": "えきの なか",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "かっぱは なにを くださいと いいましたか。",
+              "choices": [
+                {
+                  "ruby": "きゅうり",
+                  "correct": true
+                },
+                {
+                  "ruby": "おちゃ",
+                  "correct": false
+                },
+                {
+                  "ruby": "ぼうし",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "人[ひと]は どう しましたか。",
+              "choices": [
+                {
+                  "ruby": "きゅうりを あげた",
+                  "correct": true
+                },
+                {
+                  "ruby": "にげた",
+                  "correct": false
+                },
+                {
+                  "ruby": "ねた",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "さらの 水[みず]は どう しますか。",
+              "choices": [
+                {
+                  "ruby": "こぼさない",
+                  "correct": true
+                },
+                {
+                  "ruby": "すてる",
+                  "correct": false
+                },
+                {
+                  "ruby": "のむ",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "こぼす",
+              "ruby": "いれものから 中[なか]の ものを おとす"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tengu",
+      "tier": "elite",
+      "ruby": "天狗[てんぐ]",
+      "en": "A mountain spirit with a long nose.",
+      "fact_ruby": "山[やま]の ようかいです。はなが ながくて、かぜを おこします。",
+      "stories": [
+        {
+          "level": 0,
+          "text_ruby": "てんぐは 山[やま]に すんでいます。はなが とても ながいです。かぜを おこすことが できます。えらい てんぐは あかい 顔[かお]を しています。",
+          "questions": [
+            {
+              "prompt_ruby": "てんぐは どこに いますか。",
+              "choices": [
+                {
+                  "ruby": "山[やま]",
+                  "correct": true
+                },
+                {
+                  "ruby": "うみ",
+                  "correct": false
+                },
+                {
+                  "ruby": "まち",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "てんぐの はなは どうですか。",
+              "choices": [
+                {
+                  "ruby": "ながい",
+                  "correct": true
+                },
+                {
+                  "ruby": "みじかい",
+                  "correct": false
+                },
+                {
+                  "ruby": "ない",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "えらい てんぐの 顔[かお]は なに いろですか。",
+              "choices": [
+                {
+                  "ruby": "あかい",
+                  "correct": true
+                },
+                {
+                  "ruby": "あおい",
+                  "correct": false
+                },
+                {
+                  "ruby": "きいろい",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "えらい",
+              "ruby": "つよい。うえの 人[ひと]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kitsune",
+      "tier": "elite",
+      "ruby": "狐[きつね]",
+      "en": "A fox that can trick people. Nine tails is the old one.",
+      "fact_ruby": "としを とると しっぽが ふえます。九尾[きゅうび]は とても としを とった 狐[きつね]です。",
+      "stories": [
+        {
+          "level": 0,
+          "text_ruby": "きつねは もりに すんでいます。ひとを だますことが とくいです。としを とると、しっぽが ふえます。九尾[きゅうび]の きつねは とても つよいです。",
+          "questions": [
+            {
+              "prompt_ruby": "きつねは なにが とくいですか。",
+              "choices": [
+                {
+                  "ruby": "ひとを だますこと",
+                  "correct": true
+                },
+                {
+                  "ruby": "ごはんを つくること",
+                  "correct": false
+                },
+                {
+                  "ruby": "うみを およぐこと",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "としを とると なにが ふえますか。",
+              "choices": [
+                {
+                  "ruby": "しっぽ",
+                  "correct": true
+                },
+                {
+                  "ruby": "みみ",
+                  "correct": false
+                },
+                {
+                  "ruby": "はな",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "九尾[きゅうび]は どんな きつねですか。",
+              "choices": [
+                {
+                  "ruby": "とても つよい",
+                  "correct": true
+                },
+                {
+                  "ruby": "まだ こども",
+                  "correct": false
+                },
+                {
+                  "ruby": "しっぽが ない",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "だます",
+              "ruby": "うそを ついて、ひとを まどわす"
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "text_ruby": "よる、きつねは 女[おんな]の 人[ひと]の かおになりました。みちを あるいて、たびびとに こんにちはと いいました。たびびとは しっぽを みて、きつねだと わかりました。九尾[きゅうび]の きつねは しっぽが たくさん あります。だまさないで ください。",
+          "questions": [
+            {
+              "prompt_ruby": "きつねは なにに なりましたか。",
+              "choices": [
+                {
+                  "ruby": "女[おんな]の 人[ひと]",
+                  "correct": true
+                },
+                {
+                  "ruby": "でんしゃ",
+                  "correct": false
+                },
+                {
+                  "ruby": "せんせい",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "たびびとは なにを みて わかりましたか。",
+              "choices": [
+                {
+                  "ruby": "しっぽ",
+                  "correct": true
+                },
+                {
+                  "ruby": "ぼうし",
+                  "correct": false
+                },
+                {
+                  "ruby": "くつ",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "九尾[きゅうび]の しっぽは どうですか。",
+              "choices": [
+                {
+                  "ruby": "たくさん ある",
+                  "correct": true
+                },
+                {
+                  "ruby": "ない",
+                  "correct": false
+                },
+                {
+                  "ruby": "みじかい ひとつ",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "たびびと",
+              "ruby": "りょこうを している 人[ひと]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tanuki",
+      "tier": "normal",
+      "ruby": "狸[たぬき]",
+      "en": "A raccoon dog that drums on its belly.",
+      "fact_ruby": "しっぽが 大[おお]きくて、おなかを たいこのように たたきます。",
+      "stories": [
+        {
+          "level": 0,
+          "text_ruby": "たぬきは しっぽが 大[おお]きいです。おなかを たいこのように たたいて、よるに うたいます。ばけて、人[ひと]の 顔[かお]を します。ちょっと いたずらです。",
+          "questions": [
+            {
+              "prompt_ruby": "たぬきは なにを たたきますか。",
+              "choices": [
+                {
+                  "ruby": "おなか",
+                  "correct": true
+                },
+                {
+                  "ruby": "つくえ",
+                  "correct": false
+                },
+                {
+                  "ruby": "たいこ",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "いつ うたいますか。",
+              "choices": [
+                {
+                  "ruby": "よる",
+                  "correct": true
+                },
+                {
+                  "ruby": "あさ",
+                  "correct": false
+                },
+                {
+                  "ruby": "ひる",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "ばけると なにを しますか。",
+              "choices": [
+                {
+                  "ruby": "人[ひと]の 顔[かお]",
+                  "correct": true
+                },
+                {
+                  "ruby": "魚[さかな]",
+                  "correct": false
+                },
+                {
+                  "ruby": "でんしゃ",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "ばける",
+              "ruby": "ほかの ものの 形[かたち]に なる"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rokuro",
+      "tier": "elite",
+      "ruby": "ろくろ首[くび]",
+      "en": "A person whose neck stretches at night.",
+      "fact_ruby": "ひるは ふつうの 人[ひと]です。よるに 首[くび]が ながくなります。",
+      "stories": [
+        {
+          "level": 0,
+          "text_ruby": "ろくろ首[くび]は、よるに 首[くび]が ながくなります。ひるは ふつうの 人[ひと]です。ながい 首[くび]で、となりの へやを のぞきます。みんな わるい ようかいでは ありません。",
+          "questions": [
+            {
+              "prompt_ruby": "首[くび]が ながくなるのは いつですか。",
+              "choices": [
+                {
+                  "ruby": "よる",
+                  "correct": true
+                },
+                {
+                  "ruby": "ひる",
+                  "correct": false
+                },
+                {
+                  "ruby": "あさ",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "ひるの ろくろ首[くび]は どうですか。",
+              "choices": [
+                {
+                  "ruby": "ふつうの 人[ひと]",
+                  "correct": true
+                },
+                {
+                  "ruby": "くびが ない",
+                  "correct": false
+                },
+                {
+                  "ruby": "とり",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "ながい 首[くび]で なにを しますか。",
+              "choices": [
+                {
+                  "ruby": "となりの へやを のぞく",
+                  "correct": true
+                },
+                {
+                  "ruby": "ごはんを たべる",
+                  "correct": false
+                },
+                {
+                  "ruby": "でる",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "のぞく",
+              "ruby": "こっそり 見[み]る"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "karakasa",
+      "tier": "normal",
+      "ruby": "唐傘[からかさ]",
+      "en": "An old umbrella that grew one eye and one leg.",
+      "fact_ruby": "古[ふる]い 傘[かさ]が ばけた ものです。目[め]が ひとつ、足[あし]が ひとつです。",
+      "stories": [
+        {
+          "level": 0,
+          "text_ruby": "唐傘[からかさ]は、古[ふる]い 傘[かさ]が ばけた ものです。目[め]が ひとつ、足[あし]が ひとつ あります。雨[あめ]の よるに、みちで ぴょんぴょん します。びっくり させたくて、あそびたがります。",
+          "questions": [
+            {
+              "prompt_ruby": "唐傘[からかさ]は なにが ばけた ものですか。",
+              "choices": [
+                {
+                  "ruby": "古[ふる]い 傘[かさ]",
+                  "correct": true
+                },
+                {
+                  "ruby": "古[ふる]い くつ",
+                  "correct": false
+                },
+                {
+                  "ruby": "ねこ",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "目[め]は いくつ ありますか。",
+              "choices": [
+                {
+                  "ruby": "ひとつ",
+                  "correct": true
+                },
+                {
+                  "ruby": "ふたつ",
+                  "correct": false
+                },
+                {
+                  "ruby": "ない",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "雨[あめ]の よるに なにを しますか。",
+              "choices": [
+                {
+                  "ruby": "ぴょんぴょん する",
+                  "correct": true
+                },
+                {
+                  "ruby": "ねる",
+                  "correct": false
+                },
+                {
+                  "ruby": "がっこうへ いく",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "ぴょんぴょん",
+              "ruby": "ちいさく とぶ ようす"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kodama",
+      "tier": "normal",
+      "ruby": "木霊[こだま]",
+      "en": "The voice that answers you in an old forest.",
+      "fact_ruby": "古[ふる]い 木[き]の たましいです。よぶと、おなじ ことばが かえって きます。",
+      "stories": [
+        {
+          "level": 0,
+          "text_ruby": "木霊[こだま]は 木[き]の こえです。もりで よぶと、おなじ ことばが かえって きます。古[ふる]い 木[き]に、たましいが います。その 木[き]を きるのは、よくないことです。",
+          "questions": [
+            {
+              "prompt_ruby": "もりで よぶと どう なりますか。",
+              "choices": [
+                {
+                  "ruby": "おなじ ことばが かえって くる",
+                  "correct": true
+                },
+                {
+                  "ruby": "しずかになる",
+                  "correct": false
+                },
+                {
+                  "ruby": "雨[あめ]が ふる",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "たましいは どこに いますか。",
+              "choices": [
+                {
+                  "ruby": "古[ふる]い 木[き]",
+                  "correct": true
+                },
+                {
+                  "ruby": "でんしゃ",
+                  "correct": false
+                },
+                {
+                  "ruby": "つくえ",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "その 木[き]を きるのは どうですか。",
+              "choices": [
+                {
+                  "ruby": "よくない",
+                  "correct": true
+                },
+                {
+                  "ruby": "とても いい",
+                  "correct": false
+                },
+                {
+                  "ruby": "しゅくだい",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "たましい",
+              "ruby": "ものの こころ。めに みえない いのち"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yuki",
+      "tier": "elite",
+      "ruby": "雪[ゆき]女[おんな]",
+      "en": "A woman who comes on snowy nights.",
+      "fact_ruby": "雪[ゆき]の よるに きます。しろい 着物[きもの]で、さむい 息[いき]を はきます。",
+      "stories": [
+        {
+          "level": 0,
+          "text_ruby": "雪[ゆき]女[おんな]は 雪[ゆき]の よるに きます。しろい 着物[きもの]を きています。さむい 息[いき]で、ひとを こおらせます。あたたかい へやに 入[はい]ると、とけて しまいます。",
+          "questions": [
+            {
+              "prompt_ruby": "雪[ゆき]女[おんな]は いつ きますか。",
+              "choices": [
+                {
+                  "ruby": "雪[ゆき]の よる",
+                  "correct": true
+                },
+                {
+                  "ruby": "なつの ひる",
+                  "correct": false
+                },
+                {
+                  "ruby": "あさのごはん",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "きている ものは なに いろですか。",
+              "choices": [
+                {
+                  "ruby": "しろい",
+                  "correct": true
+                },
+                {
+                  "ruby": "くろい",
+                  "correct": false
+                },
+                {
+                  "ruby": "あかい",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "あたたかい へやに 入[はい]ると どう なりますか。",
+              "choices": [
+                {
+                  "ruby": "とける",
+                  "correct": true
+                },
+                {
+                  "ruby": "おどる",
+                  "correct": false
+                },
+                {
+                  "ruby": "ねる",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "こおる",
+              "ruby": "さむくて、みずが かたい 氷[こおり]に なる"
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "text_ruby": "ゆきの よる、雪[ゆき]女[おんな]が みちばたに いました。しろい きものを きて、さむそうな かおです。あるいて きた 人[ひと]に、ここは さむいですと いいました。人[ひと]は ありがとうと いって、いえに かえりました。ゆきの 日[ひ]は、ひとりで やまへ いかないで ください。",
+          "questions": [
+            {
+              "prompt_ruby": "雪[ゆき]女[おんな]は どんな よるに いましたか。",
+              "choices": [
+                {
+                  "ruby": "ゆきの よる",
+                  "correct": true
+                },
+                {
+                  "ruby": "あつい ひる",
+                  "correct": false
+                },
+                {
+                  "ruby": "はれの あさ",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "きものは なに いろですか。",
+              "choices": [
+                {
+                  "ruby": "しろい",
+                  "correct": true
+                },
+                {
+                  "ruby": "あかい",
+                  "correct": false
+                },
+                {
+                  "ruby": "くろい",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "人[ひと]は どこへ かえりましたか。",
+              "choices": [
+                {
+                  "ruby": "いえ",
+                  "correct": true
+                },
+                {
+                  "ruby": "うみ",
+                  "correct": false
+                },
+                {
+                  "ruby": "がっこう",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "みちばた",
+              "ruby": "みちの そば"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kuchisake",
+      "tier": "elite",
+      "ruby": "口[くち]裂[さ]け女[おんな]",
+      "en": "She asks if she is pretty.",
+      "fact_ruby": "「わたし、きれい？」と きく はなしの 女[おんな]です。よるの みちで あいます。",
+      "stories": [
+        {
+          "level": 0,
+          "text_ruby": "口[くち]裂[さ]け女[おんな]は 「わたし、きれい？」と ききます。「はい」と こたえると、はさみを 出[だ]します。「ふつう」と こたえると、こまって かえります。よる、ひとりで あるくときは 気[き]を つけて ください。",
+          "questions": [
+            {
+              "prompt_ruby": "女[おんな]は なにを ききますか。",
+              "choices": [
+                {
+                  "ruby": "わたし、きれい？",
+                  "correct": true
+                },
+                {
+                  "ruby": "いま なんじ？",
+                  "correct": false
+                },
+                {
+                  "ruby": "なまえは？",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "「ふつう」と こたえると どう なりますか。",
+              "choices": [
+                {
+                  "ruby": "こまって かえる",
+                  "correct": true
+                },
+                {
+                  "ruby": "はさみを 出[だ]す",
+                  "correct": false
+                },
+                {
+                  "ruby": "うたう",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "いつ 気[き]を つけますか。",
+              "choices": [
+                {
+                  "ruby": "よる、ひとりで あるくとき",
+                  "correct": true
+                },
+                {
+                  "ruby": "がっこうの ひる",
+                  "correct": false
+                },
+                {
+                  "ruby": "ごはんの とき",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "はさみ",
+              "ruby": "かみを きる どうぐ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nurarihyon",
+      "tier": "boss",
+      "ruby": "ぬらりひょん",
+      "en": "An old man who slips into a house and is treated as a guest.",
+      "fact_ruby": "いえの 中[なか]に すっと 入[はい]る ようかいです。お客[きゃく]だと おもわれて、お茶[ちゃ]を のみます。",
+      "stories": [
+        {
+          "level": 0,
+          "text_ruby": "ぬらりひょんは いえの 中[なか]に、すっと 入[はい]ります。人[ひと]の おじいさんに 見[み]えます。いえの 人[ひと]は、なぜか お客[きゃく]だと おもいます。お茶[ちゃ]を のんで、また すっと 出[で]て いきます。",
+          "questions": [
+            {
+              "prompt_ruby": "ぬらりひょんは どこに 入[はい]りますか。",
+              "choices": [
+                {
+                  "ruby": "いえの 中[なか]",
+                  "correct": true
+                },
+                {
+                  "ruby": "うみ",
+                  "correct": false
+                },
+                {
+                  "ruby": "そら",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "どんな 人[ひと]に 見[み]えますか。",
+              "choices": [
+                {
+                  "ruby": "おじいさん",
+                  "correct": true
+                },
+                {
+                  "ruby": "こども",
+                  "correct": false
+                },
+                {
+                  "ruby": "ねこ",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "いえの 人[ひと]は なんと おもいますか。",
+              "choices": [
+                {
+                  "ruby": "お客[きゃく]だ",
+                  "correct": true
+                },
+                {
+                  "ruby": "せんせいだ",
+                  "correct": false
+                },
+                {
+                  "ruby": "でんしゃだ",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "すっと",
+              "ruby": "おとが しないで、すぐに"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "azuki",
+      "tier": "normal",
+      "ruby": "小豆[あずき]洗[あら]い",
+      "en": "You hear someone washing red beans by the river.",
+      "fact_ruby": "川[かわ]で 小豆[あずき]を あらう おとが します。うたも きこえます。",
+      "stories": [
+        {
+          "level": 0,
+          "text_ruby": "小豆[あずき]洗[あら]いは、川[かわ]で 小豆[あずき]を あらう おとが します。「小豆[あずき] 洗[あら]おうか。人[ひと]は 取[と]って 食[く]おうか」と うたいます。こわい うたですが、小豆[あずき]が すきな ようかいです。おとが きこえても、ちかづかないで ください。",
+          "questions": [
+            {
+              "prompt_ruby": "おとは どこから きますか。",
+              "choices": [
+                {
+                  "ruby": "川[かわ]",
+                  "correct": true
+                },
+                {
+                  "ruby": "がっこう",
+                  "correct": false
+                },
+                {
+                  "ruby": "えき",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "なにを あらっていますか。",
+              "choices": [
+                {
+                  "ruby": "小豆[あずき]",
+                  "correct": true
+                },
+                {
+                  "ruby": "さら",
+                  "correct": false
+                },
+                {
+                  "ruby": "ふく",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "おとが きこえたら どう しますか。",
+              "choices": [
+                {
+                  "ruby": "ちかづかない",
+                  "correct": true
+                },
+                {
+                  "ruby": "すぐに いく",
+                  "correct": false
+                },
+                {
+                  "ruby": "いっしょに うたう",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "小豆[あずき]",
+              "ruby": "あかい まめ。あまい あずに する"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hyotan",
+      "tier": "normal",
+      "ruby": "瓢箪[ひょうたん]",
+      "en": "A small child carrying a gourd.",
+      "fact_ruby": "ちいさい こどもが 瓢箪[ひょうたん]を もって あるきます。ころぶと 水[みず]が でます。",
+      "stories": [
+        {
+          "level": 0,
+          "text_ruby": "瓢箪[ひょうたん]の こぞうは、ちいさい こどもです。瓢箪[ひょうたん]を もって、みちを あるきます。ころぶと、中[なか]から 水[みず]が でます。わるい ことは しません。ちょっと いたずらです。",
+          "questions": [
+            {
+              "prompt_ruby": "こぞうは なにを もっていますか。",
+              "choices": [
+                {
+                  "ruby": "瓢箪[ひょうたん]",
+                  "correct": true
+                },
+                {
+                  "ruby": "ほん",
+                  "correct": false
+                },
+                {
+                  "ruby": "でんしゃ",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "ころぶと なにが でますか。",
+              "choices": [
+                {
+                  "ruby": "水[みず]",
+                  "correct": true
+                },
+                {
+                  "ruby": "火[ひ]",
+                  "correct": false
+                },
+                {
+                  "ruby": "おかね",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "この ようかいは どんな こどもですか。",
+              "choices": [
+                {
+                  "ruby": "ちょっと いたずら",
+                  "correct": true
+                },
+                {
+                  "ruby": "とても こわい おに",
+                  "correct": false
+                },
+                {
+                  "ruby": "せんせい",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "いたずら",
+              "ruby": "わるい ことでは ない、ちいさい あそび"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ibaraki",
+      "tier": "boss",
+      "ruby": "茨木[いばらき]童子[どうじ]",
+      "en": "A strong oni tied to Ibaraki in Osaka. Act boss.",
+      "fact_ruby": "大阪[おおさか]の 茨木[いばらき]に ゆかりの ある 鬼[おに]です。つのが あって、ちからが あります。",
+      "stories": [
+        {
+          "level": 0,
+          "text_ruby": "茨木[いばらき]童子[どうじ]は、大阪[おおさか]の 茨木[いばらき]に ゆかりの ある つよい 鬼[おに]です。むかし、しゅてんどうじの なかま でした。つのが あって、ちからが とても あります。この もりの ぬしとして、さいごの たたかいに でて きます。",
+          "questions": [
+            {
+              "prompt_ruby": "茨木[いばらき]童子[どうじ]は なんですか。",
+              "choices": [
+                {
+                  "ruby": "つよい 鬼[おに]",
+                  "correct": true
+                },
+                {
+                  "ruby": "かわの さかな",
+                  "correct": false
+                },
+                {
+                  "ruby": "でんしゃ",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "どこに ゆかりが ありますか。",
+              "choices": [
+                {
+                  "ruby": "大阪[おおさか]の 茨木[いばらき]",
+                  "correct": true
+                },
+                {
+                  "ruby": "うみの むこう",
+                  "correct": false
+                },
+                {
+                  "ruby": "がっこうの としょかん",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "あたまには なにが ありますか。",
+              "choices": [
+                {
+                  "ruby": "つの",
+                  "correct": true
+                },
+                {
+                  "ruby": "さら",
+                  "correct": false
+                },
+                {
+                  "ruby": "ぼうし",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "この もりでは どんな 役[やく]ですか。",
+              "choices": [
+                {
+                  "ruby": "ぬし。さいごの たたかい",
+                  "correct": true
+                },
+                {
+                  "ruby": "みせの 人[ひと]",
+                  "correct": false
+                },
+                {
+                  "ruby": "せんせい",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "ゆかり",
+              "ruby": "その ばしょと ふかい かんけい"
+            },
+            {
+              "word": "ぬし",
+              "ruby": "その ばしょで いちばん つよい もの"
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "text_ruby": "茨木[いばらき]童子[どうじ]は つよい 鬼[おに]です。つのが ふたつ あります。むかし、しゅてんどうじと なかま でした。いまは この もりの おくに います。あなたが ことばを おぼえると、童子[どうじ]に たてます。こわいですが、はなしを よく よんで ください。",
+          "questions": [
+            {
+              "prompt_ruby": "童子[どうじ]の つのは いくつですか。",
+              "choices": [
+                {
+                  "ruby": "ふたつ",
+                  "correct": true
+                },
+                {
+                  "ruby": "ない",
+                  "correct": false
+                },
+                {
+                  "ruby": "みっつ",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "むかしの なかまは だれですか。",
+              "choices": [
+                {
+                  "ruby": "しゅてんどうじ",
+                  "correct": true
+                },
+                {
+                  "ruby": "かっぱ",
+                  "correct": false
+                },
+                {
+                  "ruby": "せんせい",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "いま どこに いますか。",
+              "choices": [
+                {
+                  "ruby": "もりの おく",
+                  "correct": true
+                },
+                {
+                  "ruby": "えき",
+                  "correct": false
+                },
+                {
+                  "ruby": "うみ",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "prompt_ruby": "たてるには なにを しますか。",
+              "choices": [
+                {
+                  "ruby": "ことばを おぼえる",
+                  "correct": true
+                },
+                {
+                  "ruby": "ねる",
+                  "correct": false
+                },
+                {
+                  "ruby": "にげる",
+                  "correct": false
+                }
+              ]
+            }
+          ],
+          "glosses": [
+            {
+              "word": "おく",
+              "ruby": "いちばん なか、とおくの ところ"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
