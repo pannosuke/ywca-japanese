@@ -1,0 +1,446 @@
+{
+  "schema_version": 1,
+  "student": "Eric Allerton",
+  "city_ruby": "茨木[いばらき]市[し]",
+  "city_en": "Ibaraki-shi, Osaka",
+  "school_ruby": "大阪[おおさか]YWCA 日本語[にほんご]学科[がっか]",
+  "school_en": "Osaka YWCA, Japanese department, evening class 2. Tue and Fri 19:00–20:30.",
+  "anki_deck": "YWCA",
+  "anki_tag_prefix": "class::",
+  "kanji_study": "not_started",
+  "commute": {
+    "summary_ruby": "JRの A[エー]線[せん]で、茨木駅[いばらきえき]から 大阪駅[おおさかえき]まで。快速[かいそく]に 間[ま]に 合[あ]えば 快速[かいそく]。おりたら、地下[ちか]の 出口[でぐち] M16 から Eストリートを 歩[ある]いて YWCA。",
+    "summary_en": "JR A-line from Ibaraki Station to Osaka Station. The rapid, if he catches it. Then underground exit M16 and E Street to the YWCA."
+  },
+  "schedule": [
+    {
+      "weekday": "Tue",
+      "start": "19:00",
+      "end": "20:30",
+      "teacher_id": "tsuji",
+      "focus_en": "dialogues",
+      "focus_ruby": "かいわ"
+    },
+    {
+      "weekday": "Fri",
+      "start": "19:00",
+      "end": "20:30",
+      "teacher_id": "ouchi",
+      "focus_en": "grammar worksheets",
+      "focus_ruby": "ぶんぽうの プリント"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "tsuji",
+      "name_ruby": "ツジ",
+      "name_en": "Tsuji",
+      "honorific_ruby": "せんせい"
+    },
+    {
+      "id": "ouchi",
+      "name_ruby": "大内[おおうち]",
+      "name_en": "Ōuchi",
+      "honorific_ruby": "せんせい"
+    }
+  ],
+  "weak_spots": [
+    {
+      "id": "hima",
+      "title_ruby": "暇[ひま]と 退屈[たいくつ]",
+      "reminder_ja": "ひま は いそがしくない。たいくつ は bored。",
+      "reminder_en": "ひま means free, not busy. Bored is たいくつ.",
+      "weight": 4,
+      "word_ids": [
+        "暇な"
+      ],
+      "items": [
+        {
+          "id": "w-hima-mc",
+          "mode": "mc",
+          "prompt_ruby": "暇[ひま]な",
+          "prompt_en": "Pick the meaning.",
+          "explain_ruby": "暇[ひま]は いそがしくない。bored は 退屈[たいくつ]。",
+          "explain_en": "Free, not busy. Bored is たいくつ.",
+          "choices": [
+            {
+              "id": "free",
+              "ruby": "いそがしくない",
+              "en": "free; not busy"
+            },
+            {
+              "id": "bored",
+              "ruby": "することが なくて、あきる",
+              "en": "bored"
+            },
+            {
+              "id": "sleepy",
+              "ruby": "ねむい",
+              "en": "sleepy"
+            },
+            {
+              "id": "strict",
+              "ruby": "きびしい",
+              "en": "strict"
+            }
+          ],
+          "answer_id": "free",
+          "accept": [],
+          "mistakes": [],
+          "lesson_date": "2026-10-27"
+        },
+        {
+          "id": "w-taikutsu-mc",
+          "mode": "mc",
+          "prompt_ruby": "退屈[たいくつ]",
+          "prompt_en": "This is the word for bored. It is not ひま.",
+          "explain_ruby": "退屈[たいくつ]が bored。暇[ひま]は じかんが ある、ということ。",
+          "explain_en": "たいくつ is bored. ひま is having time.",
+          "choices": [
+            {
+              "id": "bored",
+              "ruby": "あきて、たいくつ",
+              "en": "bored"
+            },
+            {
+              "id": "free",
+              "ruby": "いそがしくない",
+              "en": "free; not busy"
+            },
+            {
+              "id": "easy",
+              "ruby": "らく",
+              "en": "easy"
+            },
+            {
+              "id": "fun",
+              "ruby": "おもしろい",
+              "en": "fun"
+            }
+          ],
+          "answer_id": "bored",
+          "accept": [],
+          "mistakes": [],
+          "lesson_date": "2026-10-27"
+        },
+        {
+          "id": "w-hima-fill",
+          "mode": "fill",
+          "prompt_ruby": "いそがしくない。じかんが ある。",
+          "prompt_en": "Type the word in kana.",
+          "explain_ruby": "暇[ひま]。たいくつでは ない。",
+          "explain_en": "ひま. Not たいくつ.",
+          "choices": [],
+          "answer_id": "",
+          "accept": [
+            "ひま",
+            "ひまな"
+          ],
+          "mistakes": [
+            {
+              "answer": "たいくつ",
+              "hint_en": "たいくつ is bored. Free, not busy, is ひま."
+            }
+          ],
+          "lesson_date": "2026-10-27"
+        }
+      ]
+    },
+    {
+      "id": "price",
+      "title_ruby": "物価[ぶっか]と 値段[ねだん]",
+      "reminder_ja": "ぶっか は まち ぜんたい。ねだん は ひとつの もの。",
+      "reminder_en": "ぶっか is prices in general. ねだん is the price of one thing.",
+      "weight": 4,
+      "word_ids": [
+        "物価",
+        "値段"
+      ],
+      "items": [
+        {
+          "id": "w-bukka-mc",
+          "mode": "mc",
+          "prompt_ruby": "物価[ぶっか]",
+          "prompt_en": "Which meaning fits?",
+          "explain_ruby": "物価[ぶっか]は まち ぜんたいの ねだん。ひとつの ものは 値段[ねだん]。",
+          "explain_en": "Cost of living, prices in general. One item is ねだん.",
+          "choices": [
+            {
+              "id": "general",
+              "ruby": "まち ぜんたいの ねだん",
+              "en": "prices in general"
+            },
+            {
+              "id": "one",
+              "ruby": "ひとつの ものの ねだん",
+              "en": "price of one item"
+            },
+            {
+              "id": "actual",
+              "ruby": "じっさい",
+              "en": "actually"
+            },
+            {
+              "id": "cheap",
+              "ruby": "やすい",
+              "en": "cheap"
+            }
+          ],
+          "answer_id": "general",
+          "accept": [],
+          "mistakes": [],
+          "lesson_date": "2026-11-10"
+        },
+        {
+          "id": "w-nedan-mc",
+          "mode": "mc",
+          "prompt_ruby": "値段[ねだん]",
+          "prompt_en": "Which meaning fits?",
+          "explain_ruby": "値段[ねだん]は その ひとつの ねだん。まち ぜんたいは 物価[ぶっか]。",
+          "explain_en": "The price of one thing. The general level is ぶっか.",
+          "choices": [
+            {
+              "id": "one",
+              "ruby": "ひとつの ものの ねだん",
+              "en": "price of one item"
+            },
+            {
+              "id": "general",
+              "ruby": "まち ぜんたいの ねだん",
+              "en": "prices in general"
+            },
+            {
+              "id": "wallet",
+              "ruby": "おかね",
+              "en": "money"
+            },
+            {
+              "id": "high",
+              "ruby": "たかい",
+              "en": "expensive"
+            }
+          ],
+          "answer_id": "one",
+          "accept": [],
+          "mistakes": [],
+          "lesson_date": "2026-11-10"
+        },
+        {
+          "id": "w-bukka-fill",
+          "mode": "fill",
+          "prompt_ruby": "まち ぜんたいで、ものの ねだんが たかいか やすいか。",
+          "prompt_en": "Type the reading.",
+          "explain_ruby": "物価[ぶっか]。",
+          "explain_en": "ぶっか.",
+          "choices": [],
+          "answer_id": "",
+          "accept": [
+            "ぶっか"
+          ],
+          "mistakes": [
+            {
+              "answer": "ねだん",
+              "hint_en": "ねだん is one item. Prices in general are ぶっか."
+            }
+          ],
+          "lesson_date": "2026-11-10"
+        },
+        {
+          "id": "w-nedan-fill",
+          "mode": "fill",
+          "prompt_ruby": "その ひとつの ものの ねだん。",
+          "prompt_en": "Type the reading.",
+          "explain_ruby": "値段[ねだん]。",
+          "explain_en": "ねだん.",
+          "choices": [],
+          "answer_id": "",
+          "accept": [
+            "ねだん"
+          ],
+          "mistakes": [
+            {
+              "answer": "ぶっか",
+              "hint_en": "ぶっか is the general level. One item is ねだん."
+            }
+          ],
+          "lesson_date": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "id": "small-kana",
+      "title_ruby": "ちいさい かな（ディ）",
+      "reminder_ja": "ディ は ちいさい ィ。ジ では ない。サンディエゴ。",
+      "reminder_en": "ディ uses a small ィ. San Diego is サンディエゴ, not サンジエゴ.",
+      "weight": 4,
+      "word_ids": [],
+      "items": [
+        {
+          "id": "w-di-mc",
+          "mode": "mc",
+          "prompt_ruby": "サンディエゴの 「di」は どれ？",
+          "prompt_en": "The small-kana combo.",
+          "explain_ruby": "ちいさい ィ を つかう。ディ。",
+          "explain_en": "Small ィ: ディ, not ジ.",
+          "choices": [
+            {
+              "id": "di",
+              "ruby": "ディ",
+              "en": "small ィ"
+            },
+            {
+              "id": "ji",
+              "ruby": "ジ",
+              "en": "big ジ"
+            },
+            {
+              "id": "di2",
+              "ruby": "ヂ",
+              "en": "another big kana"
+            },
+            {
+              "id": "dei",
+              "ruby": "でい",
+              "en": "で + big い"
+            }
+          ],
+          "answer_id": "di",
+          "accept": [],
+          "mistakes": [],
+          "lesson_date": "2026-10-16"
+        },
+        {
+          "id": "w-sd-mc",
+          "mode": "mc",
+          "prompt_ruby": "アメリカの まち。どれが サンディエゴ？",
+          "prompt_en": "Pick the spelling from class.",
+          "explain_ruby": "サンディエゴ。ディ を おおきく しない。",
+          "explain_en": "サンディエゴ.",
+          "choices": [
+            {
+              "id": "right",
+              "ruby": "サンディエゴ",
+              "en": "small ィ"
+            },
+            {
+              "id": "ji",
+              "ruby": "サンジエゴ",
+              "en": "big ジ"
+            },
+            {
+              "id": "di",
+              "ruby": "サンヂエゴ",
+              "en": "ヂ"
+            },
+            {
+              "id": "hira",
+              "ruby": "さんじえご",
+              "en": "no small kana"
+            }
+          ],
+          "answer_id": "right",
+          "accept": [],
+          "mistakes": [],
+          "lesson_date": "2026-10-16"
+        },
+        {
+          "id": "w-sd-fill",
+          "mode": "fill",
+          "prompt_ruby": "アメリカの ____ から きました。",
+          "prompt_en": "San Diego, the way it was corrected in class.",
+          "explain_ruby": "サンディエゴ。",
+          "explain_en": "サンディエゴ.",
+          "choices": [],
+          "answer_id": "",
+          "accept": [
+            "サンディエゴ"
+          ],
+          "mistakes": [
+            {
+              "answer": "サンジエゴ",
+              "hint_en": "Small ィ. ディ, not ジ."
+            },
+            {
+              "answer": "さんじえご",
+              "hint_en": "Small ィ. サンディエゴ."
+            }
+          ],
+          "lesson_date": "2026-10-16"
+        }
+      ]
+    },
+    {
+      "id": "omoshirokatta",
+      "title_ruby": "おもしろかった",
+      "reminder_ja": "おもしろい の かこは おもしろかった。ろ を けさない。",
+      "reminder_en": "Past of おもしろい is おもしろかった. The ろ stays.",
+      "weight": 4,
+      "word_ids": [],
+      "items": [
+        {
+          "id": "w-omo-mc",
+          "mode": "mc",
+          "prompt_ruby": "えいがは ____ です。おもしろい の かこ。",
+          "prompt_en": "Pick the past tense.",
+          "explain_ruby": "おもしろかった。ろ が のこる。",
+          "explain_en": "おもしろかった. The ろ stays.",
+          "choices": [
+            {
+              "id": "right",
+              "ruby": "おもしろかった",
+              "en": "the ろ stays"
+            },
+            {
+              "id": "drop",
+              "ruby": "おもしかった",
+              "en": "missing ろ"
+            },
+            {
+              "id": "datta",
+              "ruby": "おもしろいだった",
+              "en": "だった does not attach"
+            },
+            {
+              "id": "ku",
+              "ruby": "おもしろくかった",
+              "en": "extra く"
+            }
+          ],
+          "answer_id": "right",
+          "accept": [],
+          "mistakes": [],
+          "lesson_date": "2026-10-30"
+        },
+        {
+          "id": "w-omo-fill",
+          "mode": "fill",
+          "prompt_ruby": "きのうの えいがは ____。",
+          "prompt_en": "How was the movie? Past of おもしろい.",
+          "explain_ruby": "おもしろかった。おもしかった では ない。",
+          "explain_en": "おもしろかった, not おもしかった.",
+          "choices": [],
+          "answer_id": "",
+          "accept": [
+            "おもしろかった",
+            "おもしろかったです"
+          ],
+          "mistakes": [
+            {
+              "answer": "おもしかった",
+              "hint_en": "The ろ stays. おもしろい → おもしろかった."
+            },
+            {
+              "answer": "おもしかったです",
+              "hint_en": "The ろ stays. おもしろい → おもしろかった."
+            },
+            {
+              "answer": "おもしろいだった",
+              "hint_en": "い-adjectives do not take だった. おもしろい → おもしろかった."
+            }
+          ],
+          "lesson_date": "2026-10-30"
+        }
+      ]
+    }
+  ]
+}

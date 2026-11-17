@@ -4,12 +4,22 @@ Evening-class companion for Eric Allerton's Japanese at Osaka YWCA, evening clas
 
 Kanji study has not started. Every kanji on screen has furigana above it. Definitions are short Japanese, in the style of a children's dictionary, with a smaller English line underneath.
 
+## Progress
+
+Version 0.3.0 is the Godot game. Phase 1 is in: the 2.5D commute RPG, study screens, gear, loot, and consequences. AnkiDroid reading, memory scheduling, village quests, classmate play, extra biomes, and speech are still ahead. Speech is last.
+
+The checklist, including v0.1.0 and v0.2.0, is in [ROADMAP.md](ROADMAP.md). Releases are listed in [CHANGELOG.md](CHANGELOG.md).
+
 ## Screens
 
-1. **レッスン** — class sessions by date and teacher. Each one opens onto the words, the grammar point (pattern, explanation, example), and his notes.
-2. **れんしゅう** — short Japanese-first drills, multiple choice and fill-in, on grammar patterns and the words marked `study`. The mix leans toward the spots that actually tripped him up: ひま vs たいくつ, 物価 vs 値段, small kana such as ディ, and おもしろかった (the ろ stays). Results stay on the phone in Room.
-3. **すすみ** — reads the AnkiDroid deck `YWCA` through the AnkiDroid content provider and shows per-lesson card counts for tags such as `class::2026-10-27`, next to the quiz tally. Read-only. If AnkiDroid is missing or the permission is denied, the screen says so and the quiz tally still works.
-4. **じゅんび** — a pre-class brief (last class, what to look at again, and the trip to YWCA) and a post-class debrief. Debriefs are stored on the phone and can be written out as JSON.
+The home screen opens the forest, a fight, lessons, practice, class prep, gear, and the character record. Fights resume from the save. Practice records a review and does not wear gear. A lost fight drops only what was not banked at the village.
+
+1. **レッスン** — class sessions by date. Each one opens onto the words and the grammar point (pattern, explanation, example).
+2. **れんしゅう** — conjugation drills, plus the class questions (weak spots and worksheet blanks). The mix still includes ひま vs たいくつ, 物価 vs 値段, small kana such as ディ, and おもしろかった (the ろ stays).
+3. **じゅんび** — the next class and the trip, read from the content pack.
+4. **きろく / そうび** — stats, skills, volumes, cosmetics, loot, and repair. Cosmetics are visual. They do not lock a lesson.
+
+AnkiDroid is not read in this build. The pack still has the deck name `YWCA` and the `class::` tags. Reading them needs an Android plugin and is phase 2.
 
 ## His commute
 
@@ -23,11 +33,14 @@ The Chinese word 頻率 on the 20 October sheet was the teacher's gloss for Chin
 
 Bundled assets, schema version 1:
 
-- `app/src/main/assets/data/profile.json` — student, school, schedule, commute, weak spots
-- `app/src/main/assets/data/lessons.json` — one object per class
-- `app/src/main/assets/data/words.json` — the word bank (`study` or `known`)
+- `content/packs/ywca-evening/profile.json` — student, school, schedule, commute, weak spots
+- `content/packs/ywca-evening/lessons.json` — one object per class
+- `content/packs/ywca-evening/words.json` — the word bank (`study` or `known`)
+- `content/packs/ywca-evening/verbs.json` — the conjugation list
 
-Japanese in those files uses Anki brackets when a word has kanji: `夕日[ゆうひ]`, `厳[きび]しい`. Gloss fields (`gloss_ja`, `explanation_ja`, `reminder_ja`) are kana only, so a dropped-in file cannot show a bare kanji by accident. `tools/build_assets.py` rebuilds the assets from `tools/source/` and checks those rules. To add a class later, edit the JSON (or the source export plus the script) and ship a new release. Obtainium will not see asset edits until a release exists.
+The Kotlin copies of those files are archived with the old app. `tools/build_assets.py` from that tree is at `archive/kotlin-app/tools/build_assets.py`.
+
+Japanese in those files uses Anki brackets when a word has kanji: `夕日[ゆうひ]`, `厳[きび]しい`. Gloss fields (`gloss_ja`, `explanation_ja`, `reminder_ja`) are kana only, so a dropped-in file cannot show a bare kanji by accident. To add a class later, edit the pack JSON and ship a new release. Obtainium will not see asset edits until a release exists.
 
 A lesson object looks like this:
 
@@ -49,11 +62,16 @@ Words point at a lesson with `lesson_date`. `status` is `study` or `known`.
 
 ## Build
 
-Android Studio, or the command line. JDK 17. `minSdk` 26, `targetSdk` 35. His phone is a Galaxy S24 Ultra on Android 14 or newer.
+Godot 4.7.2. Open the project, or from a machine that has the editor:
 
 ```bash
-./gradlew lint test assembleDebug
+godot --headless --path . --import --quit
+godot --headless --path . -s addons/gut/gut_cmdln.gd -gdir=res://tests -gprefix=test_ -gexit
 ```
+
+The Android export preset is `Android` in `export_presets.cfg`. Package `dev.ericallerton.yoruben`, version name `0.3.0`, version code `3`, arm64-v8a only. The preset exports an unsigned APK. CI signs it. Bump `version/code` and `version/name` there, and `config/version` in `project.godot`, before the next tag.
+
+The previous Kotlin project is in `archive/kotlin-app`. It is not the CI build.
 
 ## Obtainium
 
@@ -114,23 +132,24 @@ The tag workflow runs lint and tests, builds a signed release APK, and attaches 
 
 Re-run the failed workflow after the secrets exist, or push the same tag again (`git push origin v0.1.0` cannot repeat a tag; delete the remote tag first only if no release was published, or move on to `v0.1.1`).
 
-The installed app is `0.2.0` (`versionCode` 2). Bump both in `app/build.gradle.kts` before the next tag. Tags are pushed by hand after merge.
+The Godot export is `0.3.0` (`versionCode` 3). Bump `export_presets.cfg` before the next tag. Tags are pushed by hand after merge.
 
 ## AnkiDroid
 
-The progress screen uses the official content provider (`content://com.ichi2.anki.flashcards`, permission `com.ichi2.anki.permission.READ_WRITE_DATABASE`), requested at runtime. It queries decks, notes, and cards. It never writes. Notes are matched on the `class::YYYY-MM-DD` tag. Deck names `YWCA` and `YWCA::…` are the ones that count.
-
-Anki's review "due" value is not a calendar date unless you also know the collection's day cutoff, which this provider does not expose. The screen shows queue counts instead: new, learning, review, suspended.
+0.1.0 and 0.2.0 read the deck through the content provider (`content://com.ichi2.anki.flashcards`, permission `com.ichi2.anki.permission.READ_WRITE_DATABASE`). That screen is not in the Godot build yet. The pack still names the deck `YWCA` and the tags `class::YYYY-MM-DD`. The plugin is phase 2, and it stays read-only.
 
 ## 灯森
 
-Version 0.2.0 adds a forest-and-parchment adventure on top of the class screens. The map's regions are the lesson dates. The conjugation cave drills verb groups, ます, ません, ました, ませんでした, and the て-form, using the class verbs first. A run is a short descent: choose a room, spend hearts on wrong answers, and pick up relics that only change that run. Gems (ほたる玉) earned from drills and runs buy original outfits, frames, titles, and chimes in the village shop. Nothing in the shop locks a lesson, the Anki screen, or the conjugation drills. There are no purchases for real money.
+Version 0.3.0 is the same forest, now a 2.5D Godot scene. Regions are the lesson dates. A fight asks for ます, ません, ました, ませんでした, or the て-form, using the class verbs. Plain past (た) stays out of normal fights. Covered polite forms follow the lesson sheets.
 
-Plain past (た) stays in an optional preview room. Covered polite forms follow the lesson sheets.
+Gems are still ほたる玉. Wrong answers wear the equipped gear. The village repairs it and banks the pouch. A streak of three days adds defense and wisdom. A region clouds over when a verb from that lesson was missed, or when a correct answer is more than seven days old and a miss is on record. Reviewing it clears the cloud. Dying drops the pouch and unbanked gems. It does not delete the study log, the bank, or equipped gear.
+
+Outfits are visual. Nothing in the village locks a lesson or a drill. There are no purchases for real money. Music is the three CC0 loops in `assets/music/CREDITS.md`.
 
 ## Known gaps
 
-- `v0.1.0` is already released. `v0.2.0` is tagged by hand after this branch merges.
+- `v0.1.0` and `v0.2.0` are already released. `v0.3.0` is tagged by hand after this branch merges. Do not push the tag from CI.
+- AnkiDroid progress, FSRS-style respawns, class-day bosses, village quests, shared packs, and speech input are not in this build. See [ROADMAP.md](ROADMAP.md).
 - Lesson 8's date (2026-11-13) and Ōuchi-sensei are inferred from the Friday worksheet, not from a printed header.
 - New lessons are a new build and release, not an in-app import.
 - The Japanese glosses were written for this app. They are not copied from a published dictionary.
