@@ -63,10 +63,11 @@ jobs:
             echo "::error::Add Actions secrets KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_ALIAS, and KEY_PASSWORD. See README. An unsigned APK is not published, so a later signed build can still be the first Obtainium install."
             exit 1
           fi
-          echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/yoruben-release.jks"
+          printf '%s' "$KEYSTORE_BASE64" | tr -d '[:space:]' | base64 -d > "$RUNNER_TEMP/yoruben-release.p12"
+          test -s "$RUNNER_TEMP/yoruben-release.p12"
       - name: Build the signed release APK
         env:
-          KEYSTORE_FILE: ${{ runner.temp }}/yoruben-release.jks
+          KEYSTORE_FILE: ${{ runner.temp }}/yoruben-release.p12
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}

@@ -9,7 +9,10 @@
 .externalNativeBuild/
 .cxx/
 *.jks
+*.p12
+*.pem
 *.keystore
+signing/
 *.b64
 keystore.b64
 *.apk
