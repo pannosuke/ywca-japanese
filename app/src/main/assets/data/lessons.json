@@ -1,0 +1,831 @@
+{
+  "schema_version": 1,
+  "lessons": [
+    {
+      "id": "2026-10-16",
+      "date": "2026-10-16",
+      "weekday": "Fri",
+      "teacher_id": "ouchi",
+      "teacher_inferred": false,
+      "date_inferred": false,
+      "anki_tag": "class::2026-10-16",
+      "topic_ruby": "自己紹介[じこしょうかい]",
+      "topic_en": "Self-introduction: name, country, city, how you get around, job, birthday.",
+      "source": "Osaka YWCA 日本語学科 Evening Class 2 worksheet; handout boxes No.2, No.3, No.5",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "grammar": [
+        {
+          "id": "g-1016-01",
+          "pattern_ruby": "〜と よんでください",
+          "explanation_ja": "なまえを、こう よんでね、と おねがいする。",
+          "explanation_en": "Please call me ~.",
+          "example_ruby": "エリックと よんでください。",
+          "example_en": "Please call me Eric.",
+          "cloze_ruby": "エリックと ____。",
+          "cloze_answer": "よんでください",
+          "cloze_accept": [
+            "よんでください",
+            "よんでください。"
+          ],
+          "cloze_hint_en": "Please call me Eric."
+        },
+        {
+          "id": "g-1016-02",
+          "pattern_ruby": "[くに]の [まち]から きました",
+          "explanation_ja": "くにの まちから きた、と いう。",
+          "explanation_en": "I came from (city) in (country).",
+          "example_ruby": "アメリカの サンディエゴから きました。",
+          "example_en": "I came from San Diego, in the US.",
+          "cloze_ruby": "アメリカの ____ から きました。",
+          "cloze_answer": "サンディエゴ",
+          "cloze_accept": [
+            "サンディエゴ"
+          ],
+          "cloze_hint_en": "San Diego. Small ディ, not ジ.",
+          "weak_spot_id": "small-kana",
+          "mistakes": [
+            {
+              "answer": "サンジエゴ",
+              "hint_en": "Small ィ. ディ, not a big ジ."
+            },
+            {
+              "answer": "さんじえご",
+              "hint_en": "Small ィ. サンディエゴ."
+            }
+          ]
+        },
+        {
+          "id": "g-1016-03",
+          "pattern_ruby": "いつ 日本[にほん]に きましたか",
+          "explanation_ja": "きた ときを きく。こたえる ときは 「〜ねんに きました」。",
+          "explanation_en": "When did you come to Japan? / I came in ~.",
+          "example_ruby": "2020ねんに きました。",
+          "example_en": "I came in 2020.",
+          "cloze_ruby": "2020ねんに ____。",
+          "cloze_answer": "きました",
+          "cloze_accept": [
+            "きました",
+            "きました。"
+          ],
+          "cloze_hint_en": "I came in 2020."
+        },
+        {
+          "id": "g-1016-04",
+          "pattern_ruby": "[のりもの]で 行[い]きます",
+          "explanation_ja": "で は、のりもの。エリックは JRの エーせんで、いばらきえきから おおさかえきまで いく。",
+          "explanation_en": "で marks the transport. Eric rides the JR A-line from Ibaraki Station to Osaka Station.",
+          "example_ruby": "A[エー]線[せん]で、茨木駅[いばらきえき]から 大阪駅[おおさかえき]まで 行[い]きます。",
+          "example_en": "I go from Ibaraki Station to Osaka Station on the A-line.",
+          "cloze_ruby": "茨木駅[いばらきえき]から 大阪駅[おおさかえき]まで、____ で 行[い]きます。",
+          "cloze_answer": "でんしゃ",
+          "cloze_accept": [
+            "でんしゃ",
+            "電車"
+          ],
+          "cloze_hint_en": "By train, from Ibaraki Station to Osaka Station."
+        },
+        {
+          "id": "g-1016-05",
+          "pattern_ruby": "すみません、書[か]いてください",
+          "explanation_ja": "クラスで、じを かいて、と たのむ。",
+          "explanation_en": "Excuse me, please write it down.",
+          "example_ruby": "すみません、書[か]いてください。",
+          "example_en": "Excuse me, please write it.",
+          "cloze_ruby": "すみません、____。",
+          "cloze_answer": "かいてください",
+          "cloze_accept": [
+            "かいてください",
+            "書いてください"
+          ],
+          "cloze_hint_en": "Excuse me, please write it."
+        }
+      ],
+      "notes": [
+        "City spelling on the sheet: サンディエゴ. The small ディ (not ジ) was the sticking point.",
+        "The classmate table got filled in."
+      ]
+    },
+    {
+      "id": "2026-10-20",
+      "date": "2026-10-20",
+      "weekday": "Tue",
+      "teacher_id": "tsuji",
+      "teacher_inferred": false,
+      "date_inferred": false,
+      "anki_tag": "class::2026-10-20",
+      "topic_ruby": "趣味[しゅみ]と 映画[えいが]",
+      "topic_en": "Hobbies, what kind of movies you watch, and how often.",
+      "source": "別科【かいわ】 dialogue No.6 'どんな映画を見ますか' (handwritten number 20) + Tsuji handwritten worksheet No.6",
+      "pages": [
+        5,
+        6
+      ],
+      "grammar": [
+        {
+          "id": "g-1020-01",
+          "pattern_ruby": "Nの 趣味[しゅみ]は なんですか",
+          "explanation_ja": "その ひとの しゅみを きく。",
+          "explanation_en": "What is (someone)'s hobby?",
+          "example_ruby": "Bさんの 趣味[しゅみ]は なんですか。",
+          "example_en": "What is your hobby?",
+          "cloze_ruby": "Bさんの ____ は なんですか。",
+          "cloze_answer": "しゅみ",
+          "cloze_accept": [
+            "しゅみ",
+            "趣味"
+          ],
+          "cloze_hint_en": "What is your hobby?"
+        },
+        {
+          "id": "g-1020-02",
+          "pattern_ruby": "どんな Nを Vますか",
+          "explanation_ja": "どんな しゅるいか、きく。",
+          "explanation_en": "What kind of N do you V?",
+          "example_ruby": "どんな 映画[えいが]を 見[み]ますか。",
+          "example_en": "What kind of movies do you watch?",
+          "cloze_ruby": "どんな えいがを ____ か。",
+          "cloze_answer": "みます",
+          "cloze_accept": [
+            "みます",
+            "見ます"
+          ],
+          "cloze_hint_en": "What kind of movies do you watch?"
+        },
+        {
+          "id": "g-1020-03",
+          "pattern_ruby": "いつも・よく・時々[ときどき] / あまり・全然[ぜんぜん]",
+          "explanation_ja": "いつも、よく、ときどき は する かたち。あまり と ぜんぜん は ない かたち。",
+          "explanation_en": "Always, often, and sometimes take ます. あまり and ぜんぜん need a negative.",
+          "example_ruby": "わたしは あまり 映画[えいが]を 見[み]ません。",
+          "example_en": "I don't watch movies much.",
+          "cloze_ruby": "わたしは あまり えいがを ____。",
+          "cloze_answer": "みません",
+          "cloze_accept": [
+            "みません",
+            "見ません"
+          ],
+          "cloze_hint_en": "I don't watch movies much."
+        },
+        {
+          "id": "g-1020-04",
+          "pattern_ruby": "Nも です",
+          "explanation_ja": "も は、おなじ、わたしも、という とき。",
+          "explanation_en": "も means also / too.",
+          "example_ruby": "わたしも です。",
+          "example_en": "Me too.",
+          "cloze_ruby": "わたし____ です。",
+          "cloze_answer": "も",
+          "cloze_accept": [
+            "も"
+          ],
+          "cloze_hint_en": "Me too."
+        }
+      ],
+      "notes": [
+        "The sheet header had a Chinese gloss, 頻率[ピンリュー], for the Chinese-speaking classmates. The Japanese word is 頻度[ひんど]. That gloss is not one of Eric's mistakes."
+      ]
+    },
+    {
+      "id": "2026-10-23",
+      "date": "2026-10-23",
+      "weekday": "Fri",
+      "teacher_id": "ouchi",
+      "teacher_inferred": false,
+      "date_inferred": false,
+      "anki_tag": "class::2026-10-23",
+      "topic_ruby": "さそいと じかん",
+      "topic_en": "Invitations, clock times, and the past tense of verbs.",
+      "source": "Dialogue No.34 'ごはん、食べませんか' (handwritten 97) + Evening Class 2 worksheet No.34 + worksheet 第7課 (ぶんぽう1-2, with ねむい dialogue)",
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "grammar": [
+        {
+          "id": "g-1023-01",
+          "pattern_ruby": "Vませんか",
+          "explanation_ja": "いっしょに しない、と さそう。",
+          "explanation_en": "Invitation: won't you ~?",
+          "example_ruby": "一緒[いっしょ]に ご飯[はん]を 食[た]べませんか。",
+          "example_en": "Won't you have a meal with me?",
+          "cloze_ruby": "いっしょに ごはんを ____。",
+          "cloze_answer": "たべませんか",
+          "cloze_accept": [
+            "たべませんか",
+            "食べませんか"
+          ],
+          "cloze_hint_en": "Won't you have a meal with me?"
+        },
+        {
+          "id": "g-1023-02",
+          "pattern_ruby": "ええ、そうしましょう / Vましょう",
+          "explanation_ja": "さそいに のる。しましょう、は いっしょに やろう。",
+          "explanation_en": "Accepting, or let's ~.",
+          "example_ruby": "ハンバーガーを 食[た]べましょう。",
+          "example_en": "Let's eat hamburgers.",
+          "cloze_ruby": "ハンバーガーを ____。",
+          "cloze_answer": "たべましょう",
+          "cloze_accept": [
+            "たべましょう",
+            "食べましょう"
+          ],
+          "cloze_hint_en": "Let's eat hamburgers."
+        },
+        {
+          "id": "g-1023-03",
+          "pattern_ruby": "Nは どうですか",
+          "explanation_ja": "これを どう、と ていあんする。",
+          "explanation_en": "How about N?",
+          "example_ruby": "あそこの レストランは どうですか。",
+          "example_en": "How about that restaurant?",
+          "cloze_ruby": "あそこの レストランは ____。",
+          "cloze_answer": "どうですか",
+          "cloze_accept": [
+            "どうですか"
+          ],
+          "cloze_hint_en": "How about that restaurant?"
+        },
+        {
+          "id": "g-1023-04",
+          "pattern_ruby": "すみません、Nは ちょっと…",
+          "explanation_ja": "はっきり いわず、ことわる。",
+          "explanation_en": "A soft no, trailing off.",
+          "example_ruby": "すみません、寿司[すし]は ちょっと…",
+          "example_en": "Sorry, sushi is a bit…",
+          "cloze_ruby": "すみません、すしは ____",
+          "cloze_answer": "ちょっと…",
+          "cloze_accept": [
+            "ちょっと…",
+            "ちょっと",
+            "ちょっと..."
+          ],
+          "cloze_hint_en": "Sorry, sushi is a bit…"
+        },
+        {
+          "id": "g-1023-05",
+          "pattern_ruby": "[じかん]に V",
+          "explanation_ja": "じこく、ひづけ には に を つける。きのう、まいにち、らいしゅう には に を つけない。〜ごろ は その あたり。",
+          "explanation_en": "に marks clock times and dates. きのう, まいにち, らいしゅう take no に.",
+          "example_ruby": "毎日[まいにち] 11じに 寝[ね]ます。",
+          "example_en": "I go to bed at 11 every day.",
+          "cloze_ruby": "まいにち 11じ____ ねます。",
+          "cloze_answer": "に",
+          "cloze_accept": [
+            "に"
+          ],
+          "cloze_hint_en": "I go to bed at 11 every day."
+        },
+        {
+          "id": "g-1023-06",
+          "pattern_ruby": "〜から 〜まで",
+          "explanation_ja": "はじめと おわり。",
+          "explanation_en": "From ~ until ~.",
+          "example_ruby": "12じから 4じまで 勉強[べんきょう]しました。",
+          "example_en": "I studied from 12 to 4.",
+          "cloze_ruby": "12じ____ 4じまで べんきょうしました。",
+          "cloze_answer": "から",
+          "cloze_accept": [
+            "から"
+          ],
+          "cloze_hint_en": "I studied from 12 to 4."
+        },
+        {
+          "id": "g-1023-07",
+          "pattern_ruby": "Vました / Vませんでした",
+          "explanation_ja": "ます は いまや これから。ました は むかし。",
+          "explanation_en": "Non-past versus past.",
+          "example_ruby": "昨夜[ゆうべ] 11じに 寝[ね]ました。",
+          "example_en": "I went to bed at 11 last night.",
+          "cloze_ruby": "ゆうべ 11じに ____。",
+          "cloze_answer": "ねました",
+          "cloze_accept": [
+            "ねました",
+            "寝ました"
+          ],
+          "cloze_hint_en": "I went to bed at 11 last night."
+        },
+        {
+          "id": "g-1023-08",
+          "pattern_ruby": "Nではありません",
+          "explanation_ja": "それは Nでは ない、と ていせいする。",
+          "explanation_en": "Correcting: it is not N.",
+          "example_ruby": "昨日[きのう]では ありません。今朝[けさ]、4じに 寝[ね]ました。",
+          "example_en": "Not yesterday. I went to bed at 4 this morning.",
+          "cloze_ruby": "きのう____ ありません。",
+          "cloze_answer": "では",
+          "cloze_accept": [
+            "では",
+            "じゃ"
+          ],
+          "cloze_hint_en": "Not yesterday. I went to bed at 4 this morning."
+        }
+      ],
+      "notes": [
+        "He wrote 'last night' next to 昨夜[ゆうべ].",
+        "エリック is written at the top of dialogue No.34."
+      ]
+    },
+    {
+      "id": "2026-10-27",
+      "date": "2026-10-27",
+      "weekday": "Tue",
+      "teacher_id": "tsuji",
+      "teacher_inferred": false,
+      "date_inferred": false,
+      "anki_tag": "class::2026-10-27",
+      "topic_ruby": "形容詞[けいようし]",
+      "topic_en": "い- and な-adjectives, and describing a place.",
+      "source": "Dialogues No.213 'きれいな花!' (handwritten 101), No.167 '大阪はどうですか' (207), No.205 '万里の長城が有名です' (42); Eric's handwritten board notes 形容詞 + No.167 practice sheet",
+      "pages": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "grammar": [
+        {
+          "id": "g-1027-01",
+          "pattern_ruby": "Aい / Aな + N",
+          "explanation_ja": "なまえの まえ。い-けいようしは そのまま。な-けいようしは な を つける。",
+          "explanation_en": "Before a noun: い-adjectives as they are, な-adjectives add な.",
+          "example_ruby": "綺麗[きれい]な 花[はな]ですね。",
+          "example_en": "What a pretty flower.",
+          "cloze_ruby": "____ はなですね。",
+          "cloze_answer": "きれいな",
+          "cloze_accept": [
+            "きれいな",
+            "綺麗な"
+          ],
+          "cloze_hint_en": "What a pretty flower."
+        },
+        {
+          "id": "g-1027-02",
+          "pattern_ruby": "Aいです → Aくないです",
+          "explanation_ja": "い-けいようしの ひてい。い を くないです に する。",
+          "explanation_en": "Negative of an い-adjective.",
+          "example_ruby": "暑[あつ]くないです。",
+          "example_en": "It is not hot.",
+          "cloze_ruby": "あつ____です。",
+          "cloze_answer": "くない",
+          "cloze_accept": [
+            "くない"
+          ],
+          "cloze_hint_en": "It is not hot."
+        },
+        {
+          "id": "g-1027-03",
+          "pattern_ruby": "Aなです → Aじゃありません",
+          "explanation_ja": "な-けいようしの ひてい。な は つけない。",
+          "explanation_en": "Negative of a な-adjective.",
+          "example_ruby": "元気[げんき]じゃ ありません。",
+          "example_en": "I am not well.",
+          "cloze_ruby": "げんき____ ありません。",
+          "cloze_answer": "じゃ",
+          "cloze_accept": [
+            "じゃ",
+            "では"
+          ],
+          "cloze_hint_en": "I am not well."
+        },
+        {
+          "id": "g-1027-04",
+          "pattern_ruby": "Nは どうですか",
+          "explanation_ja": "かんそうを きく。",
+          "explanation_en": "Asking for an impression.",
+          "example_ruby": "大阪[おおさか]は どうですか。",
+          "example_en": "How is Osaka?",
+          "cloze_ruby": "おおさかは ____。",
+          "cloze_answer": "どうですか",
+          "cloze_accept": [
+            "どうですか"
+          ],
+          "cloze_hint_en": "How is Osaka?"
+        },
+        {
+          "id": "g-1027-05",
+          "pattern_ruby": "Nが 有名[ゆうめい]です / Nに あります",
+          "explanation_ja": "で しられている、と ばしょを いう。",
+          "explanation_en": "Famous for ~, or located in ~.",
+          "example_ruby": "万里[ばんり]の 長城[ちょうじょう]が 有名[ゆうめい]です。",
+          "example_en": "The Great Wall is famous.",
+          "cloze_ruby": "ばんりの ちょうじょうが ____。",
+          "cloze_answer": "ゆうめいです",
+          "cloze_accept": [
+            "ゆうめいです",
+            "有名です"
+          ],
+          "cloze_hint_en": "The Great Wall is famous."
+        }
+      ],
+      "notes": [
+        "Board words he marked: 厳[きび]しい, 親切[しんせつ]な, 楽[らく]な, 暇[ひま]な, 北東[ほくとう].",
+        "暇[ひま] means free, not busy. He had glossed ひまな as bored. Bored is 退屈[たいくつ].",
+        "From the board, he also copied 形容詞[けいようし], 花[はな], 高[たか]い, and 元気[げんき]."
+      ]
+    },
+    {
+      "id": "2026-10-30",
+      "date": "2026-10-30",
+      "weekday": "Fri",
+      "teacher_id": "ouchi",
+      "teacher_inferred": false,
+      "date_inferred": false,
+      "anki_tag": "class::2026-10-30",
+      "topic_ruby": "形容詞[けいようし]の かこと 方位[ほうい]",
+      "topic_en": "Past tense of adjectives, and compass directions.",
+      "source": "Evening Class 2 worksheets No.205 (ぶんぽう1-2 + れんしゅう with 方位 compass) and No.97 (past adjectives, れんしゅう1-3); dialogue No.97 'どうでしたか'",
+      "pages": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "grammar": [
+        {
+          "id": "g-1030-01",
+          "pattern_ruby": "N1は どんな N2ですか",
+          "explanation_ja": "どんな しゅるいか きいて、A の N2 で こたえる。",
+          "explanation_en": "What kind of N2 is N1?",
+          "example_ruby": "京都[きょうと]は どんな 町[まち]ですか。古[ふる]い 町[まち]です。",
+          "example_en": "What kind of town is Kyoto? An old town.",
+          "cloze_ruby": "きょうとは どんな ____ ですか。",
+          "cloze_answer": "まち",
+          "cloze_accept": [
+            "まち",
+            "町"
+          ],
+          "cloze_hint_en": "What kind of town is Kyoto? An old town."
+        },
+        {
+          "id": "g-1030-02",
+          "pattern_ruby": "Aい → Aかったです / Aくなかったです",
+          "explanation_ja": "い-けいようしの かこ。いい は よかった。おもしろい は おもしろかった。ろ を けさない。",
+          "explanation_en": "Past of い-adjectives. いい → よかった. おもしろい → おもしろかった. The ろ stays.",
+          "example_ruby": "映画[えいが]は おもしろかったです。",
+          "example_en": "The movie was interesting.",
+          "cloze_ruby": "えいがは ____ です。",
+          "cloze_answer": "おもしろかった",
+          "cloze_accept": [
+            "おもしろかった",
+            "おもしろかったです"
+          ],
+          "cloze_hint_en": "The movie was interesting.",
+          "weak_spot_id": "omoshirokatta",
+          "mistakes": [
+            {
+              "answer": "おもしかった",
+              "hint_en": "The ろ stays. おもしろい → おもしろかった."
+            },
+            {
+              "answer": "おもしかったです",
+              "hint_en": "The ろ stays. おもしろい → おもしろかった."
+            },
+            {
+              "answer": "おもしろいだった",
+              "hint_en": "い-adjectives do not take だった. おもしろい → おもしろかった."
+            }
+          ]
+        },
+        {
+          "id": "g-1030-03",
+          "pattern_ruby": "Aな → Aでした / Aじゃありませんでした",
+          "explanation_ja": "な-けいようしの かこ。な は つけない。",
+          "explanation_en": "Past of な-adjectives.",
+          "example_ruby": "暇[ひま]でした。",
+          "example_en": "I was free (not busy).",
+          "cloze_ruby": "きのうは ____。",
+          "cloze_answer": "ひまでした",
+          "cloze_accept": [
+            "ひまでした",
+            "暇でした"
+          ],
+          "cloze_hint_en": "I was free, not busy.",
+          "weak_spot_id": "hima",
+          "mistakes": [
+            {
+              "answer": "たいくつでした",
+              "hint_en": "たいくつ is bored. Free, not busy, is ひま."
+            }
+          ]
+        },
+        {
+          "id": "g-1030-04",
+          "pattern_ruby": "どうでしたか",
+          "explanation_ja": "かこの かんそうを きく。",
+          "explanation_en": "How was it?",
+          "example_ruby": "デートは どうでしたか。",
+          "example_en": "How was the date?",
+          "cloze_ruby": "デートは ____。",
+          "cloze_answer": "どうでしたか",
+          "cloze_accept": [
+            "どうでしたか"
+          ],
+          "cloze_hint_en": "How was the date?"
+        }
+      ],
+      "notes": [
+        "He wrote 夕日[ゆうひ] for sunset.",
+        "He wrote 親切[しんせつ]な at the top of one sheet.",
+        "On the past-tense drill he wrote おもしかった and おもしくなかった. おもしろい keeps the ろ: おもしろかった."
+      ]
+    },
+    {
+      "id": "2026-11-06",
+      "date": "2026-11-06",
+      "weekday": "Fri",
+      "teacher_id": "ouchi",
+      "teacher_inferred": false,
+      "date_inferred": false,
+      "anki_tag": "class::2026-11-06",
+      "topic_ruby": "くらべる",
+      "topic_en": "Comparisons and the weather.",
+      "source": "Dialogue No.204 '大阪より暖かいです' (handwritten 34) + Evening Class 2 worksheet No.204 (ぶんぽう1-4)",
+      "pages": [
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "grammar": [
+        {
+          "id": "g-1106-01",
+          "pattern_ruby": "N1は N2より Aです",
+          "explanation_ja": "N1の ほうが、もっと A。",
+          "explanation_en": "N1 is more A than N2.",
+          "example_ruby": "北海道[ほっかいどう]は 大阪[おおさか]より 寒[さむ]いです。",
+          "example_en": "Hokkaido is colder than Osaka.",
+          "cloze_ruby": "ほっかいどうは おおさか____ さむいです。",
+          "cloze_answer": "より",
+          "cloze_accept": [
+            "より"
+          ],
+          "cloze_hint_en": "Hokkaido is colder than Osaka."
+        },
+        {
+          "id": "g-1106-02",
+          "pattern_ruby": "N1と N2と どちらが Aですか",
+          "explanation_ja": "ふたつを くらべる。こたえる ときは、Nのほうが Aです。",
+          "explanation_en": "Which of the two is more A?",
+          "example_ruby": "北海道[ほっかいどう]の 方[ほう]が 寒[さむ]いです。",
+          "example_en": "Hokkaido is colder.",
+          "cloze_ruby": "ほっかいどうの ____ が さむいです。",
+          "cloze_answer": "ほう",
+          "cloze_accept": [
+            "ほう",
+            "方"
+          ],
+          "cloze_hint_en": "Hokkaido is colder."
+        },
+        {
+          "id": "g-1106-03",
+          "pattern_ruby": "どちらが 好[す]きですか",
+          "explanation_ja": "ふたつの どちらが すきか。りょうほう なら どちらも。",
+          "explanation_en": "Which do you prefer? どちらも = both.",
+          "example_ruby": "寿司[すし]の 方[ほう]が 好[す]きです。",
+          "example_en": "I prefer sushi.",
+          "cloze_ruby": "すしの ほうが ____。",
+          "cloze_answer": "すきです",
+          "cloze_accept": [
+            "すきです",
+            "好きです"
+          ],
+          "cloze_hint_en": "I prefer sushi."
+        },
+        {
+          "id": "g-1106-04",
+          "pattern_ruby": "Nと 同[おな]じぐらいです",
+          "explanation_ja": "くらべて、ほとんど おなじ。",
+          "explanation_en": "About the same as N.",
+          "example_ruby": "大阪[おおさか]と 同[おな]じぐらいです。",
+          "example_en": "About the same as Osaka.",
+          "cloze_ruby": "おおさかと ____ です。",
+          "cloze_answer": "おなじぐらい",
+          "cloze_accept": [
+            "おなじぐらい",
+            "同じぐらい"
+          ],
+          "cloze_hint_en": "About the same as Osaka."
+        },
+        {
+          "id": "g-1106-05",
+          "pattern_ruby": "[グループ]の 中[なか]で なにが 一番[いちばん] Aですか",
+          "explanation_ja": "その なかで、もっとも。",
+          "explanation_en": "The superlative inside a group.",
+          "example_ruby": "果物[くだもの]の 中[なか]で なにが 一番[いちばん] 好[す]きですか。",
+          "example_en": "Which fruit do you like best?",
+          "cloze_ruby": "くだものの なかで なにが ____ すきですか。",
+          "cloze_answer": "いちばん",
+          "cloze_accept": [
+            "いちばん",
+            "一番"
+          ],
+          "cloze_hint_en": "Which fruit do you like best?"
+        }
+      ],
+      "notes": [
+        "He wrote どこか for somewhere.",
+        "He wrote 低[ひく]い under 富士山[ふじさん] in the height drill."
+      ]
+    },
+    {
+      "id": "2026-11-10",
+      "date": "2026-11-10",
+      "weekday": "Tue",
+      "teacher_id": "tsuji",
+      "teacher_inferred": false,
+      "date_inferred": false,
+      "anki_tag": "class::2026-11-10",
+      "topic_ruby": "欲[ほ]しいと たい",
+      "topic_en": "Wanting a thing, and wanting to do something.",
+      "source": "Dialogue No.176 '古い町が見たいです' (handwritten 367) + Tsuji worksheet No.176 (ほしい / 〜たい) + pair-interview table",
+      "pages": [
+        29,
+        30,
+        31
+      ],
+      "grammar": [
+        {
+          "id": "g-1110-01",
+          "pattern_ruby": "Nが 欲[ほ]しいです",
+          "explanation_ja": "ものが ほしい。い-けいようしと おなじ かたち。ほしくないです、も。",
+          "explanation_en": "Want a thing. It behaves like an い-adjective.",
+          "example_ruby": "車[くるま]が 欲[ほ]しいです。",
+          "example_en": "I want a car.",
+          "cloze_ruby": "くるまが ____。",
+          "cloze_answer": "ほしいです",
+          "cloze_accept": [
+            "ほしいです",
+            "欲しいです"
+          ],
+          "cloze_hint_en": "I want a car."
+        },
+        {
+          "id": "g-1110-02",
+          "pattern_ruby": "Vます の なかご + たいです",
+          "explanation_ja": "することを したい。を が が に なる ことが ある。",
+          "explanation_en": "Want to do. を can become が.",
+          "example_ruby": "日本[にほん]の 古[ふる]い 町[まち]が 見[み]たいです。",
+          "example_en": "I want to see an old Japanese town.",
+          "cloze_ruby": "ふるい まちが ____。",
+          "cloze_answer": "みたいです",
+          "cloze_accept": [
+            "みたいです",
+            "見たいです"
+          ],
+          "cloze_hint_en": "I want to see an old Japanese town."
+        },
+        {
+          "id": "g-1110-03",
+          "pattern_ruby": "[ばしょ]に 行[い]きたいです",
+          "explanation_ja": "そこへ いきたい。",
+          "explanation_en": "Want to go to ~.",
+          "example_ruby": "京都[きょうと]に 行[い]きたいです。",
+          "example_en": "I want to go to Kyoto.",
+          "cloze_ruby": "きょうとに ____。",
+          "cloze_answer": "いきたいです",
+          "cloze_accept": [
+            "いきたいです",
+            "行きたいです"
+          ],
+          "cloze_hint_en": "I want to go to Kyoto."
+        },
+        {
+          "id": "g-1110-04",
+          "pattern_ruby": "どこかに Vませんか",
+          "explanation_ja": "ばしょを きめず さそう。どこに いきましょうか、は ばしょを きく。",
+          "explanation_en": "Invite someone out, or ask where.",
+          "example_ruby": "一緒[いっしょ]に どこかに 行[い]きませんか。",
+          "example_en": "Shall we go somewhere together?",
+          "cloze_ruby": "いっしょに ____ いきませんか。",
+          "cloze_answer": "どこかに",
+          "cloze_accept": [
+            "どこかに"
+          ],
+          "cloze_hint_en": "Shall we go somewhere together?"
+        }
+      ],
+      "notes": [
+        "物価[ぶっか] is prices in general. 値段[ねだん] is the price of one thing. He had circled the two, unsure which was which.",
+        "On the たい chart he changed にいきます to にいきたいです. 実際[じっさい] means actually."
+      ]
+    },
+    {
+      "id": "2026-11-13",
+      "date": "2026-11-13",
+      "weekday": "Fri",
+      "teacher_id": "ouchi",
+      "teacher_inferred": true,
+      "date_inferred": true,
+      "anki_tag": "class::2026-11-13",
+      "topic_ruby": "て形[けい]",
+      "topic_en": "Verb groups, the te-form, and てください.",
+      "source": "Dialogues No.45 'この電車は吹田に止まりますか' (handwritten 152) and No.89 'ボールペンを貸してください' (377) + te-form worksheets (動詞のて形, ぶんぽう1 instructions, ぶんぽう2 requests)",
+      "pages": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "grammar": [
+        {
+          "id": "g-1113-01",
+          "pattern_ruby": "どうしの グループ 1・2・3",
+          "explanation_ja": "1は かきます の ような i-ます。2は たべます、みます の ような もの。3は します と きます。",
+          "explanation_en": "Group 1 〜i-ます, group 2 〜e-ます (and some 〜i-ます), group 3 します and きます.",
+          "example_ruby": "書[か]きます、食[た]べます、します。",
+          "example_en": "write, eat, do.",
+          "cloze_ruby": "たべます は グループ ____。",
+          "cloze_answer": "2",
+          "cloze_accept": [
+            "2",
+            "に",
+            "２"
+          ],
+          "cloze_hint_en": "write, eat, do."
+        },
+        {
+          "id": "g-1113-02",
+          "pattern_ruby": "て形[けい]の ルール",
+          "explanation_ja": "き→いて、ぎ→いで、い・ち・り→って、み・に・び→んで、し→して。いきます は いって。",
+          "explanation_en": "Te-form sound changes. いきます is いって.",
+          "example_ruby": "飲[の]みます → 飲[の]んで。",
+          "example_en": "drink → te-form.",
+          "cloze_ruby": "のみます → ____。",
+          "cloze_answer": "のんで",
+          "cloze_accept": [
+            "のんで",
+            "飲んで"
+          ],
+          "cloze_hint_en": "drink → te-form."
+        },
+        {
+          "id": "g-1113-03",
+          "pattern_ruby": "Vてください",
+          "explanation_ja": "してください、と せつめいする。",
+          "explanation_en": "Please do ~ (an instruction).",
+          "example_ruby": "薬[くすり]を 飲[の]んでください。",
+          "example_en": "Please take the medicine.",
+          "cloze_ruby": "くすりを ____。",
+          "cloze_answer": "のんでください",
+          "cloze_accept": [
+            "のんでください",
+            "飲んでください"
+          ],
+          "cloze_hint_en": "Please take the medicine."
+        },
+        {
+          "id": "g-1113-04",
+          "pattern_ruby": "すみません、Vてください",
+          "explanation_ja": "ていねいに たのむ。",
+          "explanation_en": "A polite request.",
+          "example_ruby": "すみません、ペンを 貸[か]してください。",
+          "example_en": "Excuse me, could you lend me a pen?",
+          "cloze_ruby": "すみません、ペンを ____。",
+          "cloze_answer": "かしてください",
+          "cloze_accept": [
+            "かしてください",
+            "貸してください"
+          ],
+          "cloze_hint_en": "Excuse me, could you lend me a pen?"
+        },
+        {
+          "id": "g-1113-05",
+          "pattern_ruby": "Nは [ばしょ]に 止[と]まりますか",
+          "explanation_ja": "その のりものが、そこで とまるか きく。エリックの れっしゃが とまる えきは、じぶんが いった ものだけ。いばらきえきから おおさかえきまで。",
+          "explanation_en": "Does it stop at ~? For Eric's own train, only the stations he named: Ibaraki Station to Osaka Station.",
+          "example_ruby": "この 快速[かいそく]は 大阪駅[おおさかえき]に 止[と]まりますか。",
+          "example_en": "Does this rapid stop at Osaka Station?",
+          "cloze_ruby": "この かいそくは おおさかえきに ____ か。",
+          "cloze_answer": "とまります",
+          "cloze_accept": [
+            "とまります",
+            "止まります"
+          ],
+          "cloze_hint_en": "Does this rapid stop at Osaka Station?"
+        }
+      ],
+      "notes": [
+        "Memory aid he wrote for one te-form row: い、ち、り → って.",
+        "He wrote 写真[しゃしん] above the photo request.",
+        "The te-form drill was nearly all correct.",
+        "The handout's train dialogue uses station names from the worksheet. Eric's own ride is only what he described: the JR A[エー]線[せん] from 茨木駅[いばらきえき] to 大阪駅[おおさかえき], the 快速[かいそく] when he catches it, then the underground exit M16 and E Street to the YWCA. He has not named the stations in between."
+      ]
+    }
+  ]
+}
