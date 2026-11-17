@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -31,6 +32,14 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import dev.ericallerton.yoruben.YorubenApp
+import dev.ericallerton.yoruben.ui.adventure.CaveScreen
+import dev.ericallerton.yoruben.ui.adventure.DrillScreen
+import dev.ericallerton.yoruben.ui.adventure.MapScreen
+import dev.ericallerton.yoruben.ui.adventure.RunScreen
+import dev.ericallerton.yoruben.ui.adventure.ShopScreen
+import dev.ericallerton.yoruben.ui.adventure.SongsScreen
+import dev.ericallerton.yoruben.ui.adventure.VillageScreen
+import dev.ericallerton.yoruben.ui.adventure.WardrobeScreen
 import dev.ericallerton.yoruben.ui.lessons.LessonDetailScreen
 import dev.ericallerton.yoruben.ui.lessons.LessonsScreen
 import dev.ericallerton.yoruben.ui.practice.PracticeHome
@@ -43,6 +52,7 @@ private data class Tab(val route: String, val label: String, val icon: ImageVect
 private val tabs = listOf(
     Tab("lessons", "レッスン", Icons.Filled.List),
     Tab("practice", "れんしゅう", Icons.Filled.Edit),
+    Tab("map", "もり", Icons.Filled.Home),
     Tab("progress", "すすみ", Icons.Filled.Star),
     Tab("prep", "じゅんび", Icons.Filled.DateRange),
 )
@@ -67,7 +77,11 @@ fun YorubenRoot(startRoute: String) {
     val showBar = route in tabs.map { it.route }
     val title = when {
         route.startsWith("lesson/") -> "レッスン"
-        route.startsWith("quiz/") -> "ドリル"
+        route.startsWith("quiz/") || route.startsWith("drill") -> "ドリル"
+        route.startsWith("run") -> "ぼうけん"
+        route == "shop" || route == "wardrobe" -> "みせ"
+        route == "songs" -> "ふえ"
+        route == "cave" || route == "village" -> "もり"
         else -> "よるべん"
     }
     Scaffold(
@@ -147,6 +161,56 @@ fun YorubenRoot(startRoute: String) {
                 "prep",
                 deepLinks = listOf(navDeepLink { uriPattern = "yoruben://open/prep" }),
             ) { PrepScreen() }
+            composable(
+                "map",
+                deepLinks = listOf(navDeepLink { uriPattern = "yoruben://open/map" }),
+            ) {
+                MapScreen(
+                    curriculum,
+                    onVillage = { nav.navigate("village") },
+                    onCave = { nav.navigate("cave") },
+                    onSongs = { nav.navigate("songs") },
+                    onRegion = { date -> nav.navigate("drill/region-$date") },
+                )
+            }
+            composable("village") {
+                VillageScreen(
+                    onShop = { nav.navigate("shop") },
+                    onWardrobe = { nav.navigate("wardrobe") },
+                    onRun = { nav.navigate("run") },
+                )
+            }
+            composable("cave") {
+                CaveScreen(
+                    onDrill = { mode -> nav.navigate("drill/$mode") },
+                    onRun = { nav.navigate("run") },
+                    onSongs = { nav.navigate("songs") },
+                )
+            }
+            composable(
+                "drill/{mode}",
+                arguments = listOf(navArgument("mode") { type = NavType.StringType }),
+                deepLinks = listOf(navDeepLink { uriPattern = "yoruben://open/drill/{mode}" }),
+            ) { entry ->
+                DrillScreen(entry.arguments?.getString("mode") ?: "group1")
+            }
+            composable(
+                "run",
+                deepLinks = listOf(navDeepLink { uriPattern = "yoruben://open/run" }),
+            ) { RunScreen("play") }
+            composable(
+                "run/{demo}",
+                arguments = listOf(navArgument("demo") { type = NavType.StringType }),
+                deepLinks = listOf(navDeepLink { uriPattern = "yoruben://open/run/{demo}" }),
+            ) { entry ->
+                RunScreen(entry.arguments?.getString("demo") ?: "play")
+            }
+            composable(
+                "shop",
+                deepLinks = listOf(navDeepLink { uriPattern = "yoruben://open/shop" }),
+            ) { ShopScreen(onWardrobe = { nav.navigate("wardrobe") }) }
+            composable("wardrobe") { WardrobeScreen() }
+            composable("songs") { SongsScreen() }
         }
     }
 }

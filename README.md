@@ -114,7 +114,7 @@ The tag workflow runs lint and tests, builds a signed release APK, and attaches 
 
 Re-run the failed workflow after the secrets exist, or push the same tag again (`git push origin v0.1.0` cannot repeat a tag; delete the remote tag first only if no release was published, or move on to `v0.1.1`).
 
-Version name in the app is `0.1.0` (`versionCode` 1). Bump both in `app/build.gradle.kts` before the next tag.
+The installed app is `0.2.0` (`versionCode` 2). Bump both in `app/build.gradle.kts` before the next tag. Tags are pushed by hand after merge.
 
 ## AnkiDroid
 
@@ -122,9 +122,15 @@ The progress screen uses the official content provider (`content://com.ichi2.ank
 
 Anki's review "due" value is not a calendar date unless you also know the collection's day cutoff, which this provider does not expose. The screen shows queue counts instead: new, learning, review, suspended.
 
+## 灯森
+
+Version 0.2.0 adds a forest-and-parchment adventure on top of the class screens. The map's regions are the lesson dates. The conjugation cave drills verb groups, ます, ません, ました, ませんでした, and the て-form, using the class verbs first. A run is a short descent: choose a room, spend hearts on wrong answers, and pick up relics that only change that run. Gems (ほたる玉) earned from drills and runs buy original outfits, frames, titles, and chimes in the village shop. Nothing in the shop locks a lesson, the Anki screen, or the conjugation drills. There are no purchases for real money.
+
+Plain past (た) stays in an optional preview room. Covered polite forms follow the lesson sheets.
+
 ## Known gaps
 
-- No signed `v0.1.0` APK until the four secrets above exist and the tag is pushed.
+- `v0.1.0` is already released. `v0.2.0` is tagged by hand after this branch merges.
 - Lesson 8's date (2026-11-13) and Ōuchi-sensei are inferred from the Friday worksheet, not from a printed header.
 - New lessons are a new build and release, not an in-app import.
 - The Japanese glosses were written for this app. They are not copied from a published dictionary.

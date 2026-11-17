@@ -40,6 +40,7 @@ import dev.ericallerton.yoruben.core.LessonAnkiStats
 import dev.ericallerton.yoruben.core.dateRuby
 import dev.ericallerton.yoruben.data.db.QuizResultEntity
 import dev.ericallerton.yoruben.ui.FuriganaText
+import dev.ericallerton.yoruben.ui.adventure.AdventureStats
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -94,6 +95,7 @@ fun ProgressScreen(vm: ProgressViewModel = viewModel()) {
                 style = MaterialTheme.typography.bodyMedium,
             )
         }
+        item { AdventureStats() }
         item { QuizSummaryCard(ui.results, curriculum.profile.weakSpots.map { it.id to it.titleRuby }) }
         item {
             AnkiHeader(ui.anki, onRequest = { permission.launch(AnkiDroidReader.PERMISSION) }, onSettings = {
