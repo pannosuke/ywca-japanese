@@ -21,6 +21,9 @@ var correct_sfx: AudioStream
 var wrong_sfx: AudioStream
 var pending: Dictionary = {}
 var built := ""
+var guide: Dictionary = {}
+var fly_from := Vector2.INF
+var fly_piece := ""
 var speed_left := 0.0
 var speed_running := false
 var speed_label: Label
@@ -128,6 +131,9 @@ func _text(parent: Node, value: String, size := 18, color := INK) -> Control:
 	return _ruby(parent, marked, size, color)
 
 func _button(parent: Node, markup: String, fill: Color, cb: Callable, height := 72, font_size := 24) -> Button:
+	if markup.length() > 48:
+		font_size = mini(font_size, 16)
+		height = maxi(height, 120)
 	var button := Button.new()
 	button.text = ""
 	button.custom_minimum_size = Vector2(0, height)
@@ -148,6 +154,7 @@ func _button(parent: Node, markup: String, fill: Color, cb: Callable, height := 
 	label.font_size = font_size
 	label.color = INK if fill == LANTERN else Color("f7efe0")
 	label.align_center = true
+	label.max_width = 460
 	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	label.set_markup(markup)
 	center.add_child(label)
@@ -164,7 +171,13 @@ func _show_title() -> void:
 	_ruby(box, "よるべん", 52)
 	_ruby(box, "よるの べんきょう", 22)
 	_text(box, "カードで、灯りの もりを あるく。", 18, Color("5c5146"))
-	_button(column, "出発[しゅっぱつ]", LANTERN, _depart, 104, 34)
+	if not bool(state.get("tutorial_done", false)):
+		_text(box, "さきに あそびかた。カードを タップして、もじを ならべる。", 16, Color("8a4b12"))
+		_button(column, "あそびかた", LANTERN, func() -> void: _begin_guide(true), 88, 28)
+		_button(column, "出発[しゅっぱつ]", Color("6a3b12"), _depart, 80, 28)
+	else:
+		_button(column, "出発[しゅっぱつ]", LANTERN, _depart, 88, 30)
+		_button(column, "あそびかた", MOSS, func() -> void: _begin_guide(true), 64, 20)
 	var track := MusicCredits.for_region(2)
 	_text(column, "%s · %s · %s" % [track["title"], track["author"], track["license"]], 13, Color("f0e2c8"))
 
@@ -218,10 +231,14 @@ func _open_ids() -> Array:
 
 func _enter(node_id: String) -> void:
 	var run: Dictionary = state["run"]
-	var path: Array = run["path"]
-	path.append(node_id)
 	var node := MapGen.node_by_id(run["map"], node_id)
 	var kind := str(node["type"])
+	if kind in ["battle", "elite", "boss"] and not bool(state.get("tutorial_done", false)):
+		state["guide_node"] = node_id
+		_begin_guide(false)
+		return
+	var path: Array = run["path"]
+	path.append(node_id)
 	if kind in ["battle", "elite", "boss"]:
 		_begin_fight(node)
 	elif kind == "puzzle":
@@ -265,6 +282,167 @@ func _begin_fight(node: Dictionary) -> void:
 	pending = {}
 	_show_battle()
 
+func _begin_guide(from_title: bool) -> void:
+	var verb := pack.verb_by_id("miru")
+	var answer := Conjugation.kana(verb, "masu")
+	guide = {
+		"from_title": from_title,
+		"phase": "pick",
+		"form": "masu",
+		"built": "",
+		"tiles": ChallengeRules.tiles(answer, Rng.new(4)),
+		"notice": "",
+		"pulse": true,
+	}
+	_show_guide()
+
+func _show_guide() -> void:
+	_clear()
+	backdrop.set_mood("battle")
+	_play_music(1)
+	var phase := str(guide["phase"])
+	var yokai := pack.yokai_by_id("yuki")
+	var top := _panel()
+	_ruby(top, str(yokai["ruby"]), 26)
+	_text(top, "つぎの こうげき %d" % CombatRules.enemy_attack("battle"), 16, Color("8a4b12"))
+	_text(top, "HP %d    れんしゅう" % CombatRules.max_hp(), 16)
+	var step := 1
+	if phase == "spell":
+		step = 3 if str(guide["built"]).length() == Conjugation.kana(pack.verb_by_id("miru"), "masu").length() else 2
+	elif phase == "end" or phase == "done":
+		step = 3
+	_step_hints(top, step)
+	if str(guide.get("notice", "")) != "":
+		_text(top, str(guide["notice"]), 16, Color("8a2a1a"))
+	if phase == "pick":
+		_ruby(top, "この カードを タップ。", 18, Color("8a4b12"))
+		var row := HBoxContainer.new()
+		row.alignment = BoxContainer.ALIGNMENT_CENTER
+		column.add_child(row)
+		row.add_child(_guide_card())
+	elif phase == "spell":
+		var bank: Array = guide["tiles"]
+		var pad := _make_pad(pack.verb_by_id("miru"), "masu", str(guide["built"]), bank, bool(guide["pulse"]))
+		pad.typed.connect(_guide_type)
+		pad.erased.connect(_guide_erase)
+		pad.submitted.connect(_guide_submit)
+		column.add_child(pad)
+		guide["pulse"] = false
+	elif phase == "end":
+		var dealt := CombatRules.strike_damage(true, "common", [], "ichidan")
+		_text(column, "こうげき %d が あたった。" % dealt, 18)
+		_text(column, "ターンを おわる と、あいてが %d こうげきする。" % CombatRules.enemy_attack("battle"), 16, Color("8a4b12"))
+		var gap := Control.new()
+		gap.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		column.add_child(gap)
+		_button(column, "ターンを おわる", Color("6a3b12"), _guide_end, 88, 26)
+	else:
+		_text(column, "HP が %d へった。ぼうぎょが あると、へりかたが すくない。" % CombatRules.enemy_attack("battle"), 18)
+		_text(column, "わかった。タイトルの あそびかた で、もう いちど。", 16)
+		_button(column, "わかった", LANTERN, _finish_guide, 80, 24)
+	if phase != "done":
+		_button(column, "スキップ", Color("5c5146"), _skip_guide, 52, 16)
+
+func _guide_card() -> Control:
+	var card := pack.card_by_id("verb:miru")
+	var button := Button.new()
+	button.flat = true
+	button.custom_minimum_size = Vector2(150, 200)
+	var face := CardFace.new()
+	face.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	face.present(card, "common", font, true)
+	face.set_playable(true)
+	button.add_child(face)
+	button.pressed.connect(func() -> void:
+		guide["phase"] = "spell"
+		guide["notice"] = ""
+		_show_guide()
+	)
+	return button
+
+func _guide_type(piece: String, origin: Vector2) -> void:
+	var bank: Array = guide["tiles"]
+	if bank.find(piece) < 0:
+		return
+	guide["tiles"] = ChallengeRules.take(bank, piece)
+	guide["built"] = str(guide["built"]) + piece
+	guide["notice"] = ""
+	guide["pulse"] = false
+	fly_from = origin
+	fly_piece = piece
+	_show_guide()
+
+func _guide_erase() -> void:
+	var text := str(guide["built"])
+	if text.length() == 0:
+		return
+	var piece := text.substr(text.length() - 1, 1)
+	guide["built"] = text.substr(0, text.length() - 1)
+	guide["tiles"] = ChallengeRules.untake(guide["tiles"], piece)
+	guide["notice"] = ""
+	_show_guide()
+
+func _guide_submit(answer: String) -> void:
+	var verb := pack.verb_by_id("miru")
+	var expected := Conjugation.kana(verb, "masu")
+	if answer.length() < expected.length():
+		guide["notice"] = "はこを ぜんぶ うめて。"
+		_show_guide()
+		return
+	if not ChallengeRules.accepts(answer, verb, "masu"):
+		guide["notice"] = "じゅんばんが ちがう。けすで もどせる。"
+		_shake()
+		_show_guide()
+		return
+	guide["phase"] = "end"
+	guide["notice"] = ""
+	_show_guide()
+
+func _guide_end() -> void:
+	guide["phase"] = "done"
+	guide["notice"] = ""
+	_show_guide()
+
+func _finish_guide() -> void:
+	var from_title := bool(guide.get("from_title", true))
+	var node_id := str(state.get("guide_node", ""))
+	guide = {}
+	state["tutorial_done"] = true
+	state["guide_node"] = ""
+	if not from_title and node_id != "" and state.get("run") != null:
+		state["run"]["path"].append(node_id)
+		_save()
+		_show_map()
+		return
+	_save()
+	_show_title()
+
+func _skip_guide() -> void:
+	var from_title := bool(guide.get("from_title", true))
+	guide = {}
+	state["tutorial_done"] = true
+	state["guide_node"] = ""
+	_save()
+	if not from_title and state.get("run") != null:
+		_show_map()
+	else:
+		_show_title()
+
+func _step_hints(parent: Node, active: int) -> void:
+	var lines := ["1. カードを タップ", "2. もじを タップして つくる", "3. これで答[こた]える"]
+	for i in lines.size():
+		var here := i + 1 == active
+		_ruby(parent, lines[i], 17 if here else 14, Color("8a4b12") if here else Color("5c5146"))
+
+func _make_pad(verb: Dictionary, form: String, text: String, bank: Array, pulse: bool) -> SpellPad:
+	var pad := SpellPad.new()
+	pad.fly_from = fly_from
+	pad.fly_piece = fly_piece
+	fly_piece = ""
+	fly_from = Vector2.INF
+	pad.present(verb, form, text, bank, font, pulse)
+	return pad
+
 func _show_battle() -> void:
 	_clear()
 	backdrop.set_mood("battle")
@@ -273,48 +451,68 @@ func _show_battle() -> void:
 	var battle: Dictionary = run["battle"]
 	var yokai := pack.yokai_by_id(str(battle["yokai_id"]))
 	var top := _panel()
-	var art := YokaiView.new()
-	art.custom_minimum_size = Vector2(220, 180)
-	art.show_id(str(yokai["id"]))
-	top.add_child(art)
-	_ruby(top, str(yokai["ruby"]), 30)
-	_text(top, _form_name(str(battle["form"])) + "   コンボ %d" % int(battle["combo"]), 16, Color("5c5146"))
+	if pending.is_empty():
+		var art := YokaiView.new()
+		art.custom_minimum_size = Vector2(140, 96)
+		art.show_id(str(yokai["id"]))
+		top.add_child(art)
+	_ruby(top, str(yokai["ruby"]), 26)
+	_text(top, "つぎの こうげき %d    コンボ %d" % [CombatRules.enemy_attack(str(battle["node_type"])), int(battle["combo"])], 16, Color("8a4b12"))
 	var bar := ProgressBar.new()
 	bar.max_value = int(battle["enemy_max"])
 	bar.value = maxi(int(battle["enemy_hp"]), 0)
 	bar.show_percentage = false
-	bar.custom_minimum_size = Vector2(0, 16)
+	bar.custom_minimum_size = Vector2(0, 14)
 	top.add_child(bar)
 	_text(top, "HP %d / %d    ぼうぎょ %d    ふで %d" % [int(run["hp"]), int(run["max_hp"]), int(run["block"]), int(run["gear"])], 16)
-	if not bool(state.get("tutorial_done", false)):
-		_ruby(top, "カードを タップして、ことばを つかう。", 18, Color("8a4b12"))
+	var step := 1
+	if not pending.is_empty() and ChallengeRules.kind(pending) == "spell":
+		var verb := pack.verb_by_id(str(pending["verb_id"]))
+		var answer := Conjugation.kana(verb, str(battle["form"]))
+		step = 3 if built.length() == answer.length() else 2
+	elif not pending.is_empty():
+		step = 2
+	_step_hints(top, step)
 	if pending.is_empty():
-		_ruby(top, "エナジー %d" % int(battle["deck_state"]["energy"]), 20)
+		_text(top, "いまの かたち：%s" % ChallengeRules.ask_plain(str(battle["form"])), 16)
+		_text(top, "ことばの カードは、いみを えらぶ。", 14, Color("5c5146"))
+		_ruby(top, "エナジー %d" % int(battle["deck_state"]["energy"]), 18)
 		var scroll := ScrollContainer.new()
 		scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
 		scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-		scroll.custom_minimum_size = Vector2(0, 168)
+		scroll.custom_minimum_size = Vector2(0, 210)
 		var row := HBoxContainer.new()
 		row.add_theme_constant_override("separation", 8)
 		scroll.add_child(row)
 		for card in battle["deck_state"]["hand"]:
-			row.add_child(_card_button(card))
+			row.add_child(_card_button(card, battle))
 		column.add_child(scroll)
-		_button(column, "ターンを おわる", Color("5c5146"), _end_player_turn)
+		var gap := Control.new()
+		gap.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		column.add_child(gap)
+		_text(column, "おすと、あいてが こうげきする。", 14, Color("f0e2c8"))
+		_button(column, "ターンを おわる", Color("6a3b12"), _end_player_turn, 80, 24)
 	else:
 		_ask_panel(top)
 
-func _card_button(card: Dictionary) -> Control:
+func _card_button(card: Dictionary, battle: Dictionary) -> Control:
 	var wrap := VBoxContainer.new()
 	var button := Button.new()
 	button.flat = true
-	button.custom_minimum_size = Vector2(104, 150)
+	button.custom_minimum_size = Vector2(116, 200)
 	var face := CardFace.new()
 	face.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var playable := DeckRules.can_play(battle["deck_state"], card)
 	face.present(card, _rarity_of(str(card["id"])), font, true)
+	face.set_playable(playable)
 	button.add_child(face)
 	button.pressed.connect(_select_card.bind(card))
 	wrap.add_child(button)
+	if playable:
+		var mark := ColorRect.new()
+		mark.custom_minimum_size = Vector2(72, 5)
+		mark.color = LANTERN
+		wrap.add_child(mark)
 	if str(card.get("verb_id", "")) in state["weak_verbs"]:
 		var tag := Label.new()
 		tag.text = "よわい"
@@ -336,72 +534,72 @@ func _select_card(card: Dictionary) -> void:
 func _ask_panel(parent: Node) -> void:
 	var card: Dictionary = pending
 	var battle: Dictionary = state["run"]["battle"]
-	if str(card["type"]) == "verb":
+	if ChallengeRules.kind(card) == "spell":
 		var verb := pack.verb_by_id(str(card["verb_id"]))
-		_ruby(parent, Conjugation.prompt(verb, str(battle["form"])), 22)
-		if str(battle["node_type"]) == "elite":
-			_tiles(parent, verb)
-			return
-		var rng := Rng.new(int(battle["turn"]) * 17 + card["ruby"].length())
-		for choice in Conjugation.choices(verb, str(battle["form"]), rng):
-			_button(column, str(choice), MOSS, _answer_verb.bind(str(choice)))
-	elif str(card["type"]) == "grammar":
-		_ruby(parent, str(card.get("cloze_ruby", card["ruby"])), 22)
+		var form := str(battle["form"])
+		var answer := Conjugation.kana(verb, form)
+		if not battle.has("tiles"):
+			battle["tiles"] = ChallengeRules.tiles(answer, Rng.new(answer.length() + int(battle["turn"])))
+		var pulse := not bool(battle.get("tiles_seen", false))
+		battle["tiles_seen"] = true
+		var bank: Array = battle["tiles"]
+		var pad := _make_pad(verb, form, built, bank, pulse)
+		pad.typed.connect(_type_tile)
+		pad.erased.connect(_erase_tile)
+		pad.submitted.connect(_answer_verb)
+		column.add_child(pad)
+		_button(column, "もどる", Color("5c5146"), _cancel_card, 52, 16)
+		return
+	if str(card["type"]) == "grammar":
+		_ruby(parent, str(card.get("cloze_ruby", card["ruby"])), 20)
 		for choice in _grammar_choices(card):
-			_button(column, str(choice), MOSS, _answer_text.bind(str(choice), str(card.get("cloze_answer", ""))))
+			_button(column, str(choice), MOSS, _answer_text.bind(str(choice), str(card.get("cloze_answer", ""))), 88, 16)
 	else:
-		_ruby(parent, str(card["ruby"]) + " の いみは？", 22)
+		_ruby(parent, str(card["ruby"]) + " の いみは？", 20)
+		_text(parent, "この カードは もじを ならべない。いみを タップ。", 15, Color("8a4b12"))
 		for choice in _meaning_choices(card):
-			_button(column, str(choice), MOSS, _answer_text.bind(str(choice), str(card["gloss_ja"])))
-	_button(column, "もどる", Color("5c5146"), _cancel_card)
+			_button(column, str(choice), MOSS, _answer_text.bind(str(choice), str(card["gloss_ja"])), 110, 16)
+	_button(column, "もどる", Color("5c5146"), _cancel_card, 52, 16)
 
-func _tiles(parent: Node, verb: Dictionary) -> void:
+func _type_tile(piece: String, origin: Vector2) -> void:
 	var battle: Dictionary = state["run"]["battle"]
-	var answer := Conjugation.kana(verb, str(battle["form"]))
-	if not battle.has("tiles"):
-		var tiles: Array = []
-		for i in answer.length():
-			tiles.append(answer.substr(i, 1))
-		tiles.append("ん")
-		tiles.append("っ")
-		battle["tiles"] = DeckRules.shuffle(tiles, Rng.new(answer.length() + int(battle["turn"])))
-	_text(parent, built if built != "" else "＿", 28)
-	var row := HBoxContainer.new()
-	row.add_theme_constant_override("separation", 6)
-	column.add_child(row)
-	var tiles_now: Array = battle["tiles"]
-	for piece in tiles_now:
-		var button := Button.new()
-		button.text = str(piece)
-		button.custom_minimum_size = Vector2(48, 48)
-		button.add_theme_font_size_override("font_size", 22)
-		button.pressed.connect(_type_tile.bind(str(piece)))
-		row.add_child(button)
-	_button(column, "けす", Color("5c5146"), _erase_tile)
-	_button(column, "これで 答[こた]える", LANTERN, _answer_verb.bind(built))
-
-func _type_tile(piece: String) -> void:
+	var bank: Array = battle["tiles"]
+	if bank.find(piece) < 0:
+		return
+	battle["tiles"] = ChallengeRules.take(bank, piece)
 	built += piece
+	fly_from = origin
+	fly_piece = piece
 	_show_battle()
 
 func _erase_tile() -> void:
-	if built.length() > 0:
-		built = built.substr(0, built.length() - 1)
+	if built.length() == 0:
+		return
+	var battle: Dictionary = state["run"]["battle"]
+	var piece := built.substr(built.length() - 1, 1)
+	built = built.substr(0, built.length() - 1)
+	battle["tiles"] = ChallengeRules.untake(battle["tiles"], piece)
 	_show_battle()
 
 func _cancel_card() -> void:
 	pending = {}
 	built = ""
+	var battle: Dictionary = state["run"]["battle"]
+	battle.erase("tiles")
 	_show_battle()
 
 func _answer_verb(choice: String) -> void:
 	var card: Dictionary = pending
 	var verb := pack.verb_by_id(str(card["verb_id"]))
 	var battle: Dictionary = state["run"]["battle"]
-	_resolve(choice == Conjugation.kana(verb, str(battle["form"])))
+	var expected := Conjugation.kana(verb, str(battle["form"]))
+	if choice.length() < expected.length():
+		_shake()
+		return
+	_resolve(ChallengeRules.accepts(choice, verb, str(battle["form"])))
 
 func _answer_text(choice: String, expected: String) -> void:
-	_resolve(choice == expected)
+	_resolve(ChallengeRules.normalize(choice) == ChallengeRules.normalize(expected))
 
 func _resolve(correct: bool) -> void:
 	var card: Dictionary = pending
@@ -433,6 +631,7 @@ func _resolve(correct: bool) -> void:
 	DeckRules.spend(battle["deck_state"], card)
 	pending = {}
 	built = ""
+	battle.erase("tiles")
 	if int(battle["enemy_hp"]) <= 0:
 		_win_fight()
 		return
@@ -650,7 +849,7 @@ func _speed_pick(choice: String) -> void:
 		return
 	var run: Dictionary = state["run"]
 	var verb: Dictionary = run["speed_verb"]
-	var ok: bool = choice == Conjugation.kana(verb, str(run["speed_form"]))
+	var ok: bool = ChallengeRules.accepts(choice, verb, str(run["speed_form"]))
 	run["speed_asked"] = int(run["speed_asked"]) + 1
 	if ok:
 		run["speed_correct"] = int(run["speed_correct"]) + 1
@@ -1004,19 +1203,6 @@ func _back_name(back_id: String) -> String:
 		_:
 			return "かみ"
 
-func _form_name(form: String) -> String:
-	match form:
-		"mashita":
-			return "ました"
-		"masen":
-			return "ません"
-		"te":
-			return "て形"
-		"nai":
-			return "ない形"
-		_:
-			return "ます"
-
 func _error_name(kind: String) -> String:
 	match kind:
 		"dakuten":
@@ -1153,7 +1339,28 @@ func _prepare_shot() -> void:
 			_show_map()
 		"battle":
 			_start_run(17)
+			state["tutorial_done"] = true
 			_begin_fight(state["run"]["map"]["rows"][0][0])
+		"tutorial":
+			state["tutorial_done"] = false
+			_begin_guide(true)
+			guide["phase"] = "spell"
+			guide["pulse"] = true
+			_show_guide()
+		"spell":
+			_start_run(17)
+			state["tutorial_done"] = true
+			var node: Dictionary = state["run"]["map"]["rows"][0][0].duplicate(true)
+			node["type"] = "elite"
+			_begin_fight(node)
+			var battle: Dictionary = state["run"]["battle"]
+			battle["yokai_id"] = "yuki"
+			battle["form"] = "mashita"
+			battle["node_type"] = "elite"
+			pending = pack.card_by_id("verb:oyogu")
+			built = ""
+			battle.erase("tiles")
+			_show_battle()
 		"yokai":
 			_start_run(21)
 			var node: Dictionary = state["run"]["map"]["rows"][0][0].duplicate(true)

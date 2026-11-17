@@ -6,7 +6,7 @@ Every kanji on screen has furigana unless that character is in the profile's `kn
 
 ## Core loop
 
-The title has one button, 出発. The first tap opens the map. The first node is a battle, so the second tap is a fight. A short coach mark explains the map, the hand, and the reward, and it can be skipped.
+The title has 出発 and あそびかた. あそびかた is one practice turn against 雪女: tap the card, tap kana into the empty boxes, tap これで答える, then end the turn. It can be replayed from the title. The first fight on a profile is that lesson. A short coach mark on the map can still be skipped.
 
 Each act is a seeded map of seven rows. The bottom row is the start. The top node is the boss. Rows have two to four nodes, edges do not cross, and every node can be reached. Tap an adjacent node to move. The path you took stays lit.
 
@@ -14,8 +14,8 @@ Node types:
 
 | Node | What you do |
 | --- | --- |
-| せん | Turn-based fight. Play cards. |
-| つよ | Same fight, but a verb is built from kana tiles. |
+| せん | Turn-based fight. A verb is spelled with kana tiles, one box per character. |
+| つよ | The same fight, with a stronger enemy. |
 | わけ | Sort a verb into group 1, 2, or 3. |
 | はや | Answer as many ます forms as you can before the clock ends. |
 | やす | Heal, or study a card. A finished homework sheet can be turned in here. |
@@ -31,7 +31,7 @@ HP carries for the act. The act ends when you fall or when the boss falls. Gems 
 
 Every word, verb, and grammar point in the evening pack is a card. The face shows the word with furigana, a type, a cost, and an effect.
 
-- A verb strikes. Playing it means conjugating into the form the enemy is asking for.
+- A verb strikes. Playing it means spelling the form the enemy is asking for. The prompt says to tap the tiles. Some of the tiles are decoys. A word, phrase, or adjective asks for the meaning instead, never a verb form.
 - A grammar card is a cloze. A correct answer draws or blocks.
 - Anything else asks for the meaning and wards.
 
