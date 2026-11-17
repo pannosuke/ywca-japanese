@@ -17,4 +17,7 @@ signing/
 keystore.b64
 *.apk
 *.aab
+.godot/
+/android/
+archive/**/build/
 .kotlin/

@@ -1,0 +1,371 @@
+[
+  {
+    "id": "miru",
+    "dict_ruby": "見[み]る",
+    "dict_kana": "みる",
+    "group": "ichidan",
+    "gloss_en": "watch; see",
+    "lesson_date": "2026-10-20",
+    "from_curriculum": true
+  },
+  {
+    "id": "taberu",
+    "dict_ruby": "食[た]べる",
+    "dict_kana": "たべる",
+    "group": "ichidan",
+    "gloss_en": "eat",
+    "lesson_date": "2026-10-23",
+    "from_curriculum": true
+  },
+  {
+    "id": "hairu",
+    "dict_ruby": "入[はい]る",
+    "dict_kana": "はいる",
+    "group": "godan",
+    "gloss_en": "enter",
+    "lesson_date": "2026-10-23",
+    "from_curriculum": true
+  },
+  {
+    "id": "ryokou",
+    "dict_ruby": "旅行[りょこう]する",
+    "dict_kana": "りょこうする",
+    "group": "irregular",
+    "gloss_en": "travel",
+    "lesson_date": "2026-10-23",
+    "from_curriculum": true
+  },
+  {
+    "id": "asobu",
+    "dict_ruby": "遊[あそ]ぶ",
+    "dict_kana": "あそぶ",
+    "group": "godan",
+    "gloss_en": "play; hang out",
+    "lesson_date": "2026-10-23",
+    "from_curriculum": true
+  },
+  {
+    "id": "neru",
+    "dict_ruby": "寝[ね]る",
+    "dict_kana": "ねる",
+    "group": "ichidan",
+    "gloss_en": "sleep",
+    "lesson_date": "2026-10-23",
+    "from_curriculum": true
+  },
+  {
+    "id": "okiru",
+    "dict_ruby": "起[お]きる",
+    "dict_kana": "おきる",
+    "group": "ichidan",
+    "gloss_en": "get up",
+    "lesson_date": "2026-10-23",
+    "from_curriculum": true
+  },
+  {
+    "id": "hataraku",
+    "dict_ruby": "働[はたら]く",
+    "dict_kana": "はたらく",
+    "group": "godan",
+    "gloss_en": "work",
+    "lesson_date": "2026-10-23",
+    "from_curriculum": true
+  },
+  {
+    "id": "benkyou",
+    "dict_ruby": "勉強[べんきょう]する",
+    "dict_kana": "べんきょうする",
+    "group": "irregular",
+    "gloss_en": "study",
+    "lesson_date": "2026-10-23",
+    "from_curriculum": true
+  },
+  {
+    "id": "kekkon",
+    "dict_ruby": "結婚[けっこん]する",
+    "dict_kana": "けっこんする",
+    "group": "irregular",
+    "gloss_en": "get married",
+    "lesson_date": "2026-10-23",
+    "from_curriculum": true
+  },
+  {
+    "id": "nomu",
+    "dict_ruby": "飲[の]む",
+    "dict_kana": "のむ",
+    "group": "godan",
+    "gloss_en": "drink",
+    "lesson_date": "2026-10-23",
+    "from_curriculum": true
+  },
+  {
+    "id": "au",
+    "dict_ruby": "会[あ]う",
+    "dict_kana": "あう",
+    "group": "godan",
+    "gloss_en": "meet",
+    "lesson_date": "2026-10-30",
+    "from_curriculum": true
+  },
+  {
+    "id": "noboru",
+    "dict_ruby": "登[のぼ]る",
+    "dict_kana": "のぼる",
+    "group": "godan",
+    "gloss_en": "climb",
+    "lesson_date": "2026-10-30",
+    "from_curriculum": true
+  },
+  {
+    "id": "tomaru",
+    "dict_ruby": "止[と]まる",
+    "dict_kana": "とまる",
+    "group": "godan",
+    "gloss_en": "stop",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "noru",
+    "dict_ruby": "乗[の]る",
+    "dict_kana": "のる",
+    "group": "godan",
+    "gloss_en": "ride",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "oriru",
+    "dict_ruby": "降[お]りる",
+    "dict_kana": "おりる",
+    "group": "ichidan",
+    "gloss_en": "get off",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "kasu",
+    "dict_ruby": "貸[か]す",
+    "dict_kana": "かす",
+    "group": "godan",
+    "gloss_en": "lend",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "kaku",
+    "dict_ruby": "書[か]く",
+    "dict_kana": "かく",
+    "group": "godan",
+    "gloss_en": "write",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "oyogu",
+    "dict_ruby": "泳[およ]ぐ",
+    "dict_kana": "およぐ",
+    "group": "godan",
+    "gloss_en": "swim",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "motsu",
+    "dict_ruby": "持[も]つ",
+    "dict_kana": "もつ",
+    "group": "godan",
+    "gloss_en": "hold",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "kaeru",
+    "dict_ruby": "帰[かえ]る",
+    "dict_kana": "かえる",
+    "group": "godan",
+    "gloss_en": "go home",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "shinu",
+    "dict_ruby": "死[し]ぬ",
+    "dict_kana": "しぬ",
+    "group": "godan",
+    "gloss_en": "die",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "hanasu",
+    "dict_ruby": "話[はな]す",
+    "dict_kana": "はなす",
+    "group": "godan",
+    "gloss_en": "speak",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "akeru",
+    "dict_ruby": "開[あ]ける",
+    "dict_kana": "あける",
+    "group": "ichidan",
+    "gloss_en": "open",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "shimeru",
+    "dict_ruby": "閉[し]める",
+    "dict_kana": "しめる",
+    "group": "ichidan",
+    "gloss_en": "close",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "kiku",
+    "dict_ruby": "聞[き]く",
+    "dict_kana": "きく",
+    "group": "godan",
+    "gloss_en": "listen",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "dasu",
+    "dict_ruby": "出[だ]す",
+    "dict_kana": "だす",
+    "group": "godan",
+    "gloss_en": "take out",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "yomu",
+    "dict_ruby": "読[よ]む",
+    "dict_kana": "よむ",
+    "group": "godan",
+    "gloss_en": "read",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "miseru",
+    "dict_ruby": "見[み]せる",
+    "dict_kana": "みせる",
+    "group": "ichidan",
+    "gloss_en": "show",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "kiru",
+    "dict_ruby": "切[き]る",
+    "dict_kana": "きる",
+    "group": "godan",
+    "gloss_en": "cut",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "tsukeru",
+    "dict_ruby": "付[つ]ける",
+    "dict_kana": "つける",
+    "group": "ichidan",
+    "gloss_en": "turn on",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "kesu",
+    "dict_ruby": "消[け]す",
+    "dict_kana": "けす",
+    "group": "godan",
+    "gloss_en": "turn off",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "toru",
+    "dict_ruby": "撮[と]る",
+    "dict_kana": "とる",
+    "group": "godan",
+    "gloss_en": "take a photo",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "oshieru",
+    "dict_ruby": "教[おし]える",
+    "dict_kana": "おしえる",
+    "group": "ichidan",
+    "gloss_en": "teach",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "okuru",
+    "dict_ruby": "送[おく]る",
+    "dict_kana": "おくる",
+    "group": "godan",
+    "gloss_en": "send",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "hiku",
+    "dict_ruby": "弾[ひ]く",
+    "dict_kana": "ひく",
+    "group": "godan",
+    "gloss_en": "play an instrument",
+    "lesson_date": "2026-11-13",
+    "from_curriculum": true
+  },
+  {
+    "id": "iku",
+    "dict_ruby": "行[い]く",
+    "dict_kana": "いく",
+    "group": "godan",
+    "gloss_en": "go",
+    "lesson_date": null,
+    "from_curriculum": false
+  },
+  {
+    "id": "kuru",
+    "dict_ruby": "来[く]る",
+    "dict_kana": "くる",
+    "group": "irregular",
+    "gloss_en": "come",
+    "lesson_date": null,
+    "from_curriculum": false
+  },
+  {
+    "id": "suru",
+    "dict_ruby": "する",
+    "dict_kana": "する",
+    "group": "irregular",
+    "gloss_en": "do",
+    "lesson_date": null,
+    "from_curriculum": false
+  },
+  {
+    "id": "kau",
+    "dict_ruby": "買[か]う",
+    "dict_kana": "かう",
+    "group": "godan",
+    "gloss_en": "buy",
+    "lesson_date": null,
+    "from_curriculum": false
+  },
+  {
+    "id": "matsu",
+    "dict_ruby": "待[ま]つ",
+    "dict_kana": "まつ",
+    "group": "godan",
+    "gloss_en": "wait",
+    "lesson_date": null,
+    "from_curriculum": false
+  }
+]
