@@ -38,6 +38,7 @@ import dev.ericallerton.yoruben.core.AnswerCheck
 import dev.ericallerton.yoruben.core.AttemptRecord
 import dev.ericallerton.yoruben.core.QuizFactory
 import dev.ericallerton.yoruben.core.QuizItem
+import dev.ericallerton.yoruben.core.Rewards
 import dev.ericallerton.yoruben.core.quizMode
 import dev.ericallerton.yoruben.data.db.QuizResultEntity
 import dev.ericallerton.yoruben.ui.FuriganaText
@@ -128,6 +129,10 @@ class PracticeViewModel(app: Application) : AndroidViewModel(app) {
                     expected = item.answerId ?: item.accept.firstOrNull().orEmpty(),
                     atEpochMs = System.currentTimeMillis(),
                 ),
+            )
+            getApplication<YorubenApp>().game.grant(
+                if (correct) Rewards.DRILL_CORRECT else 0,
+                if (correct) Rewards.XP_CORRECT else Rewards.XP_WRONG,
             )
         }
     }
