@@ -369,6 +369,69 @@
       "gloss_ja": "ときを まつ",
       "gloss_en": "wait",
       "lesson_id": ""
+    },
+    {
+      "id": "suwaru",
+      "ruby": "座[すわ]る",
+      "kana": "すわる",
+      "group": "godan",
+      "gloss_ja": "いすに こしを おろす。",
+      "gloss_en": "sit",
+      "lesson_id": "2026-11-17"
+    },
+    {
+      "id": "tsukau",
+      "ruby": "使[つか]う",
+      "kana": "つかう",
+      "group": "godan",
+      "gloss_ja": "ものを やくに たてる。",
+      "gloss_en": "use",
+      "lesson_id": "2026-11-17"
+    },
+    {
+      "id": "arau",
+      "ruby": "洗[あら]う",
+      "kana": "あらう",
+      "group": "godan",
+      "gloss_ja": "みずで きれいに する。",
+      "gloss_en": "wash",
+      "lesson_id": "2026-11-17"
+    },
+    {
+      "id": "haku",
+      "ruby": "履[は]く",
+      "kana": "はく",
+      "group": "godan",
+      "gloss_ja": "ズボンや くつを あしに つける。",
+      "gloss_en": "put on (pants, shoes)",
+      "lesson_id": "2026-11-17"
+    },
+    {
+      "id": "kakeru",
+      "ruby": "掛[か]ける",
+      "kana": "かける",
+      "group": "ichidan",
+      "gloss_ja": "めがねを かおに つける。",
+      "gloss_en": "wear (glasses); hang",
+      "lesson_id": "2026-11-17"
+    },
+    {
+      "id": "harau",
+      "ruby": "払[はら]う",
+      "kana": "はらう",
+      "group": "godan",
+      "gloss_ja": "おかねを わたす。",
+      "gloss_en": "pay",
+      "lesson_id": "2026-11-17"
+    },
+    {
+      "id": "deru",
+      "ruby": "出[で]る",
+      "kana": "でる",
+      "group": "ichidan",
+      "gloss_ja": "なかから そとへ いく。",
+      "gloss_en": "go out; leave (でて, not でって)",
+      "lesson_id": "2026-11-17"
     }
   ]
 }

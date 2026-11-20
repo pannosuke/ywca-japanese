@@ -1,0 +1,247 @@
+{
+  "schema": 1,
+  "id": "hw168-result",
+  "worksheet_id": "hw168",
+  "date": "2026-11-17",
+  "teacher_id": "tsuji",
+  "title_ruby": "しゅくだい どうぞ 〜てください",
+  "note": "Homework for 11/17 (新No.168), graded by Grok Bot before he handed it in: 25/26. Miss: すわて → すわって (small っ). Judgment calls counted right: ありがとう to an older host (ありがとうございます is more polite), and きます in the table could be 着ます or 来ます (both give きて).",
+  "correct": 25,
+  "total": 26,
+  "items": [
+    {
+      "id": "hw168-1a",
+      "prompt_ruby": "わあ、____！(looks tasty)",
+      "expected": "おいしそうですね",
+      "answer": "おいしそうですね",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw168-1b",
+      "prompt_ruby": "____？(what is that?)",
+      "expected": "それは なんですか",
+      "answer": "それは、なんですか",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw168-1c",
+      "prompt_ruby": "けさ、コンビニ（__）",
+      "expected": "で",
+      "answer": "で",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw168-1d",
+      "prompt_ruby": "けさ、コンビニで ____。(bought)",
+      "expected": "かいました",
+      "answer": "かいました",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw168-1e",
+      "prompt_ruby": "____よ。(it's tasty)",
+      "expected": "おいしいです",
+      "answer": "おいしいです",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw168-1f",
+      "prompt_ruby": "____ たべてください。",
+      "expected": "どうぞ",
+      "answer": "どうぞ",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw168-1g",
+      "prompt_ruby": "どうぞ ____ください。(eat)",
+      "expected": "たべて",
+      "answer": "たべて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "taberu"
+    },
+    {
+      "id": "hw168-1h",
+      "prompt_ruby": "わあ、____。(thanks)",
+      "expected": "ありがとうございます",
+      "answer": "ありがとうございます",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw168-1i",
+      "prompt_ruby": "____。(before eating)",
+      "expected": "いただきます",
+      "answer": "いただきます",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw168-2-1a",
+      "prompt_ruby": "どうぞ、____ください。(sit)",
+      "expected": "すわって",
+      "answer": "すわて",
+      "correct": false,
+      "error_type": "sokuon",
+      "verb_id": "suwaru"
+    },
+    {
+      "id": "hw168-2-1b",
+      "prompt_ruby": "(to an older host) ____。",
+      "expected": "ありがとうございます",
+      "answer": "ありがとう",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw168-2-2a",
+      "prompt_ruby": "どうぞ、____ください。(come in)",
+      "expected": "はいって",
+      "answer": "はいって",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "hairu"
+    },
+    {
+      "id": "hw168-2-2b",
+      "prompt_ruby": "はい、____。",
+      "expected": "ありがとう",
+      "answer": "ありがとう",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw168-2-3a",
+      "prompt_ruby": "どうぞ、____ください。(the towel)",
+      "expected": "つかって",
+      "answer": "つかって",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "tsukau"
+    },
+    {
+      "id": "hw168-2-3b",
+      "prompt_ruby": "____。",
+      "expected": "ありがとう",
+      "answer": "ありがとう",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw168-t-arau",
+      "prompt_ruby": "あらいます → て形[けい]",
+      "expected": "あらって",
+      "answer": "あらって",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "arau"
+    },
+    {
+      "id": "hw168-t-tsukau",
+      "prompt_ruby": "つかいます → て形[けい]",
+      "expected": "つかって",
+      "answer": "つかって",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "tsukau"
+    },
+    {
+      "id": "hw168-t-haku",
+      "prompt_ruby": "はきます → て形[けい]",
+      "expected": "はいて",
+      "answer": "はいて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "haku"
+    },
+    {
+      "id": "hw168-t-hiku",
+      "prompt_ruby": "ひきます → て形[けい]",
+      "expected": "ひいて",
+      "answer": "ひいて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "hiku"
+    },
+    {
+      "id": "hw168-t-nomu",
+      "prompt_ruby": "のみます → て形[けい]",
+      "expected": "のんで",
+      "answer": "のんで",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "nomu"
+    },
+    {
+      "id": "hw168-t-hairu",
+      "prompt_ruby": "はいります → て形[けい]",
+      "expected": "はいって",
+      "answer": "はいって",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "hairu"
+    },
+    {
+      "id": "hw168-t-suwaru",
+      "prompt_ruby": "すわります → て形[けい]",
+      "expected": "すわって",
+      "answer": "すわって",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "suwaru"
+    },
+    {
+      "id": "hw168-t-miru",
+      "prompt_ruby": "みます → て形[けい]",
+      "expected": "みて",
+      "answer": "みて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "miru"
+    },
+    {
+      "id": "hw168-t-taberu",
+      "prompt_ruby": "たべます → て形[けい]",
+      "expected": "たべて",
+      "answer": "たべて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "taberu"
+    },
+    {
+      "id": "hw168-t-kakeru",
+      "prompt_ruby": "かけます → て形[けい]",
+      "expected": "かけて",
+      "answer": "かけて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "kakeru"
+    },
+    {
+      "id": "hw168-t-kimasu",
+      "prompt_ruby": "きます → て形[けい]",
+      "expected": "きて",
+      "answer": "きて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    }
+  ]
+}

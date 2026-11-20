@@ -7,113 +7,43 @@
   "lesson_id": "2026-11-13",
   "items": [
     {
-      "id": "ok-kaku",
-      "prompt_ruby": "なまえを ____ ください",
-      "expected": "かいて",
+      "id": "no89-1a",
+      "prompt_ruby": "Bさん、____。(get B's attention)",
+      "expected": "すみません",
       "accept": [
-        "かいて"
+        "すみません"
       ],
-      "verb_id": "kaku",
+      "verb_id": "",
       "kind": "fill_blank"
     },
     {
-      "id": "ok-yomu",
-      "prompt_ruby": "ほんを ____ ください",
-      "expected": "よんで",
+      "id": "no89-1b",
+      "prompt_ruby": "ちょっと ボールペンを ____ください。",
+      "expected": "かして",
       "accept": [
-        "よんで"
+        "かして"
       ],
-      "verb_id": "yomu",
+      "verb_id": "kasu",
       "kind": "fill_blank"
     },
     {
-      "id": "ok-nomu",
-      "prompt_ruby": "みずを ____ ください",
-      "expected": "のんで",
+      "id": "no89-1c",
+      "prompt_ruby": "はい、____。(here you go)",
+      "expected": "どうぞ",
       "accept": [
-        "のんで"
+        "どうぞ"
       ],
-      "verb_id": "nomu",
-      "kind": "fill_blank"
-    },
-    {
-      "id": "ok-miru",
-      "prompt_ruby": "えいがを ____ ください",
-      "expected": "みて",
-      "accept": [
-        "みて"
-      ],
-      "verb_id": "miru",
-      "kind": "fill_blank"
-    },
-    {
-      "id": "ok-taberu",
-      "prompt_ruby": "パンを ____ ください",
-      "expected": "たべて",
-      "accept": [
-        "たべて"
-      ],
-      "verb_id": "taberu",
+      "verb_id": "",
       "kind": "fill_blank"
     },
     {
       "id": "ok-kiku",
-      "prompt_ruby": "おんがくを ____ ください",
+      "prompt_ruby": "CDを ____ ください",
       "expected": "きいて",
       "accept": [
         "きいて"
       ],
       "verb_id": "kiku",
-      "kind": "fill_blank"
-    },
-    {
-      "id": "ok-asobu",
-      "prompt_ruby": "こうえんで ____ ください",
-      "expected": "あそんで",
-      "accept": [
-        "あそんで"
-      ],
-      "verb_id": "asobu",
-      "kind": "fill_blank"
-    },
-    {
-      "id": "ok-okiru",
-      "prompt_ruby": "はやく ____ ください",
-      "expected": "おきて",
-      "accept": [
-        "おきて"
-      ],
-      "verb_id": "okiru",
-      "kind": "fill_blank"
-    },
-    {
-      "id": "ok-neru",
-      "prompt_ruby": "もう ____ ください",
-      "expected": "ねて",
-      "accept": [
-        "ねて"
-      ],
-      "verb_id": "neru",
-      "kind": "fill_blank"
-    },
-    {
-      "id": "ok-kuru",
-      "prompt_ruby": "ここに ____ ください",
-      "expected": "きて",
-      "accept": [
-        "きて"
-      ],
-      "verb_id": "kuru",
-      "kind": "fill_blank"
-    },
-    {
-      "id": "ok-suru",
-      "prompt_ruby": "しゅくだいを ____ ください",
-      "expected": "して",
-      "accept": [
-        "して"
-      ],
-      "verb_id": "suru",
       "kind": "fill_blank"
     },
     {
@@ -127,6 +57,36 @@
       "kind": "fill_blank"
     },
     {
+      "id": "ok-nomu",
+      "prompt_ruby": "くすりを ____ ください",
+      "expected": "のんで",
+      "accept": [
+        "のんで"
+      ],
+      "verb_id": "nomu",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "no89-miseru",
+      "prompt_ruby": "パスポートを ____ ください",
+      "expected": "みせて",
+      "accept": [
+        "みせて"
+      ],
+      "verb_id": "miseru",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "no89-akeru-kuchi",
+      "prompt_ruby": "くちを ____ ください",
+      "expected": "あけて",
+      "accept": [
+        "あけて"
+      ],
+      "verb_id": "akeru",
+      "kind": "fill_blank"
+    },
+    {
       "id": "miss-iku",
       "prompt_ruby": "くうこうへ ____ ください",
       "expected": "いって",
@@ -137,13 +97,43 @@
       "kind": "fill_blank"
     },
     {
+      "id": "no89-akeru-doa",
+      "prompt_ruby": "すみません、ドアを ____ ください",
+      "expected": "あけて",
+      "accept": [
+        "あけて"
+      ],
+      "verb_id": "akeru",
+      "kind": "fill_blank"
+    },
+    {
       "id": "miss-hanasu",
-      "prompt_ruby": "ゆっくり ____ ください",
+      "prompt_ruby": "すみません、ゆっくり ____ ください",
       "expected": "はなして",
       "accept": [
         "はなして"
       ],
       "verb_id": "hanasu",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "no89-toru",
+      "prompt_ruby": "すみません、しゃしんを ____ ください",
+      "expected": "とって",
+      "accept": [
+        "とって"
+      ],
+      "verb_id": "toru",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "no89-motsu",
+      "prompt_ruby": "すみません、____ ください (carry the bags)",
+      "expected": "もって",
+      "accept": [
+        "もって"
+      ],
+      "verb_id": "motsu",
       "kind": "fill_blank"
     }
   ]

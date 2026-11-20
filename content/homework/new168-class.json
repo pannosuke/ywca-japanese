@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "id": "new168-class-result",
+  "worksheet_id": "new168-class",
+  "date": "2026-11-17",
+  "teacher_id": "tsuji",
+  "title_ruby": "動詞[どうし]－て形[けい] ください",
+  "note": "In-class sheet 新No.168, 11/17, not teacher-marked. All 10 blanks right. He also wrote でって under ② (でます → でて), counted here as a miss so the 出ます/出します pair gets drilled.",
+  "correct": 10,
+  "total": 11,
+  "items": [
+    {
+      "id": "c168-1",
+      "prompt_ruby": "（おちゃを）____ ください。",
+      "expected": "のんで",
+      "answer": "のんで",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "nomu"
+    },
+    {
+      "id": "c168-2",
+      "prompt_ruby": "どうぞ、（なかに）____ ください。",
+      "expected": "はいって",
+      "answer": "はいって",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "hairu"
+    },
+    {
+      "id": "c168-3",
+      "prompt_ruby": "どうぞ、（くるまに）____ ください。",
+      "expected": "のって",
+      "answer": "のって",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "noru"
+    },
+    {
+      "id": "c168-4",
+      "prompt_ruby": "この かさを ____ ください。",
+      "expected": "つかって",
+      "answer": "つかって",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "tsukau"
+    },
+    {
+      "id": "c168-5",
+      "prompt_ruby": "どうぞ、（いすに）____ ください。",
+      "expected": "すわって",
+      "answer": "すわって",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "suwaru"
+    },
+    {
+      "id": "c168-6",
+      "prompt_ruby": "うちに ____ ください。",
+      "expected": "きて",
+      "answer": "きて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "kuru"
+    },
+    {
+      "id": "c168-7",
+      "prompt_ruby": "〈レストランで〉どうぞ ____ ください。",
+      "expected": "たべて",
+      "answer": "たべて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "taberu"
+    },
+    {
+      "id": "c168-9",
+      "prompt_ruby": "〈いざかやで〉どうぞ ____ ください。",
+      "expected": "のんで",
+      "answer": "のんで",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "nomu"
+    },
+    {
+      "id": "c168-7b",
+      "prompt_ruby": "どうぞ たべてください。― ____。(before eating)",
+      "expected": "いただきます",
+      "answer": "いただきます",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "c168-9b",
+      "prompt_ruby": "ビールは、____…。(no thanks)",
+      "expected": "ちょっと",
+      "answer": "ちょっと",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "c168-deru",
+      "prompt_ruby": "でます → ____ ください (extra note he wrote)",
+      "expected": "でて",
+      "answer": "でって",
+      "correct": false,
+      "error_type": "sokuon",
+      "verb_id": "deru"
+    }
+  ]
+}

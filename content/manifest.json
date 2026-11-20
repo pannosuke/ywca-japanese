@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": 1,
+  "version": 2,
   "files": [
     "profile.json",
     "lessons.json",
@@ -15,6 +15,15 @@
     "quizzes/class-2026-11-13.json",
     "readers/commute.json",
     "readers/please.json",
+    "worksheets/no176.json",
+    "worksheets/new168-class.json",
+    "worksheets/hw168.json",
+    "homework/no176.json",
+    "homework/new168-class.json",
+    "homework/hw168.json",
+    "quizzes/class-2026-11-17.json",
+    "readers/anpan-douzo.json",
+    "readers/koube-hokkaidou.json",
     "deck.json"
   ]
 }

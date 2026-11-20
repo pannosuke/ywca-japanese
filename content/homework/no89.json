@@ -5,108 +5,45 @@
   "date": "2026-11-13",
   "teacher_id": "ouchi",
   "title_ruby": "てください",
-  "note": "11/14。ミスは だす、いく、はなす。",
-  "correct": 11,
-  "total": 14,
+  "note": "No.89, handed in 11/17. Graded by Grok Bot: 10/13. ゆっくり おしえて is now a miss because the 11/17 class quiz expects はなして. Teacher marks not back yet.",
+  "correct": 10,
+  "total": 13,
   "items": [
     {
-      "id": "ok-kaku",
-      "prompt_ruby": "なまえを ____ ください",
-      "expected": "かいて",
-      "answer": "かいて",
+      "id": "no89-1a",
+      "prompt_ruby": "Bさん、____。(get B's attention)",
+      "expected": "すみません",
+      "answer": "すみません",
       "correct": true,
       "error_type": "",
-      "verb_id": "kaku"
+      "verb_id": ""
     },
     {
-      "id": "ok-yomu",
-      "prompt_ruby": "ほんを ____ ください",
-      "expected": "よんで",
-      "answer": "よんで",
+      "id": "no89-1b",
+      "prompt_ruby": "ちょっと ボールペンを ____ください。",
+      "expected": "かして",
+      "answer": "かして",
       "correct": true,
       "error_type": "",
-      "verb_id": "yomu"
+      "verb_id": "kasu"
     },
     {
-      "id": "ok-nomu",
-      "prompt_ruby": "みずを ____ ください",
-      "expected": "のんで",
-      "answer": "のんで",
+      "id": "no89-1c",
+      "prompt_ruby": "はい、____。(here you go)",
+      "expected": "どうぞ",
+      "answer": "どうぞ",
       "correct": true,
       "error_type": "",
-      "verb_id": "nomu"
-    },
-    {
-      "id": "ok-miru",
-      "prompt_ruby": "えいがを ____ ください",
-      "expected": "みて",
-      "answer": "みて",
-      "correct": true,
-      "error_type": "",
-      "verb_id": "miru"
-    },
-    {
-      "id": "ok-taberu",
-      "prompt_ruby": "パンを ____ ください",
-      "expected": "たべて",
-      "answer": "たべて",
-      "correct": true,
-      "error_type": "",
-      "verb_id": "taberu"
+      "verb_id": ""
     },
     {
       "id": "ok-kiku",
-      "prompt_ruby": "おんがくを ____ ください",
+      "prompt_ruby": "CDを ____ ください",
       "expected": "きいて",
       "answer": "きいて",
       "correct": true,
       "error_type": "",
       "verb_id": "kiku"
-    },
-    {
-      "id": "ok-asobu",
-      "prompt_ruby": "こうえんで ____ ください",
-      "expected": "あそんで",
-      "answer": "あそんで",
-      "correct": true,
-      "error_type": "",
-      "verb_id": "asobu"
-    },
-    {
-      "id": "ok-okiru",
-      "prompt_ruby": "はやく ____ ください",
-      "expected": "おきて",
-      "answer": "おきて",
-      "correct": true,
-      "error_type": "",
-      "verb_id": "okiru"
-    },
-    {
-      "id": "ok-neru",
-      "prompt_ruby": "もう ____ ください",
-      "expected": "ねて",
-      "answer": "ねて",
-      "correct": true,
-      "error_type": "",
-      "verb_id": "neru"
-    },
-    {
-      "id": "ok-kuru",
-      "prompt_ruby": "ここに ____ ください",
-      "expected": "きて",
-      "answer": "きて",
-      "correct": true,
-      "error_type": "",
-      "verb_id": "kuru"
-    },
-    {
-      "id": "ok-suru",
-      "prompt_ruby": "しゅくだいを ____ ください",
-      "expected": "して",
-      "answer": "して",
-      "correct": true,
-      "error_type": "",
-      "verb_id": "suru"
     },
     {
       "id": "miss-dasu",
@@ -118,6 +55,33 @@
       "verb_id": "dasu"
     },
     {
+      "id": "ok-nomu",
+      "prompt_ruby": "くすりを ____ ください",
+      "expected": "のんで",
+      "answer": "のんで",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "nomu"
+    },
+    {
+      "id": "no89-miseru",
+      "prompt_ruby": "パスポートを ____ ください",
+      "expected": "みせて",
+      "answer": "みせて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "miseru"
+    },
+    {
+      "id": "no89-akeru-kuchi",
+      "prompt_ruby": "くちを ____ ください",
+      "expected": "あけて",
+      "answer": "あけて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "akeru"
+    },
+    {
       "id": "miss-iku",
       "prompt_ruby": "くうこうへ ____ ください",
       "expected": "いって",
@@ -127,13 +91,40 @@
       "verb_id": "iku"
     },
     {
+      "id": "no89-akeru-doa",
+      "prompt_ruby": "すみません、ドアを ____ ください",
+      "expected": "あけて",
+      "answer": "あけて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "akeru"
+    },
+    {
       "id": "miss-hanasu",
-      "prompt_ruby": "ゆっくり ____ ください",
+      "prompt_ruby": "すみません、ゆっくり ____ ください",
       "expected": "はなして",
       "answer": "おしえて",
       "correct": false,
       "error_type": "word-choice",
       "verb_id": "hanasu"
+    },
+    {
+      "id": "no89-toru",
+      "prompt_ruby": "すみません、しゃしんを ____ ください",
+      "expected": "とって",
+      "answer": "とって",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "toru"
+    },
+    {
+      "id": "no89-motsu",
+      "prompt_ruby": "すみません、____ ください (carry the bags)",
+      "expected": "もって",
+      "answer": "もって",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "motsu"
     }
   ]
 }
