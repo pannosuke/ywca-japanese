@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.5.0
+
+Not tagged in this pull request. `versionCode` is 6, so Obtainium can replace 0.4.1 in place. Package name stays `dev.ericallerton.yoruben`.
+
+- The deckbuilder is archived under `archive/godot-game`. The installed app is review, quiz, conjugation, reading, and stats, in Kotlin and Jetpack Compose. AnkiDroid's API is a ContentProvider, and the screens are lists and forms.
+- Review reads the due cards in the AnkiDroid deck `YWCA` and sends Again, Hard, Good, and Easy back. Without AnkiDroid, or if the permission is refused, `content/deck.json` is reviewed with FSRS on the phone.
+- Quiz is 5 to 10 questions from the deck, worksheets, graded homework, and class quizzes. A miss is asked once more, then weighted up.
+- Conjugation covers ます, ません, ました, ませんでした, dictionary form, て-form, てください, and the adjective forms class has reached. Answers are typed, or built from tiles. The rule names the verb group, including 行く. Weak forms are asked more often.
+- Readers are bundled stories with 3 to 5 questions. Scores are kept.
+- Stats shows the streak, retention, today's count, accuracy by lesson, source, form, and verb group, the weakest items, and homework scores. Share progress sends a JSON file. Data is stored with a profile id. The screen does not switch profiles.
+- A worksheet with an answer key can be filled in and graded on the phone. No.89 stays 11 of 14, with the three misses kept.
+- Content is versioned JSON under `content/`, described in `content/SCHEMA.md`. On launch the app fetches `content/manifest.json` from `main` and caches it. A test checks the schema, furigana on display text, and conjugation answers against the rule engine and `exceptions.json`.
+
 ## 0.4.1
 
 Not tagged in this pull request. `versionCode` is 5. Package name stays `dev.ericallerton.yoruben`.

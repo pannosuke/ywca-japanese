@@ -1,101 +1,39 @@
-# よるべん — design
+# Design
 
-v0.4 is a one-act deckbuilder. A session is a walk through a lantern forest. Words from class are the cards.
+0.5.0 is a study tool. Paper, ink, and one quiet accent. No mascot, no score fireworks, no chrome that does not answer something.
 
-Every kanji on screen has furigana unless that character is in the profile's `known_kanji` list. Eric's list is empty, because kanji study has not started. Buttons, the map, cards, stories, and homework all go through one helper, `Furigana.apply`.
+The game is in `archive/godot-game`. This file describes the app that replaced it.
 
-## Core loop
+## Palette
 
-The title has 出発 and あそびかた. あそびかた is one practice turn against 雪女: tap the card, tap kana into the empty boxes, tap これで答える, then end the turn. It can be replayed from the title. The first fight on a profile is that lesson. A short coach mark on the map can still be skipped.
+Light is warm paper `#F4F1EA` and ink `#1A1916`. The accent is `#2C4A3E`, used for the primary button, a selected filter, and a correct answer. Incorrect is `#7A3E36`, and only then.
 
-Each act is a seeded map of seven rows. The bottom row is the start. The top node is the boss. Rows have two to four nodes, edges do not cross, and every node can be reached. Tap an adjacent node to move. The path you took stays lit.
+Dark follows the phone. The page is `#11110F`, the ink is `#F3EFE6`, and the accent is `#B7CBBF`. Incorrect is `#E0B2A8`.
 
-Node types:
+There is no second brand color and no card shadow. Rows are separated by a hairline.
 
-| Node | What you do |
-| --- | --- |
-| せん | Turn-based fight. A verb is spelled with kana tiles, one box per character. |
-| つよ | The same fight, with a stronger enemy. |
-| わけ | Sort a verb into group 1, 2, or 3. |
-| はや | Answer as many ます forms as you can before the clock ends. |
-| やす | Heal, or study a card. A finished homework sheet can be turned in here. |
-| みせ | Spend ほたる玉 on a heal, a repair, or a sleeve. |
-| はなし | A short risk and a short reward. |
-| たま | A relic. |
-| よみ | Read a yokai story and answer it. |
-| ぬし | The act boss, 茨木童子. The form changes as its health falls. |
+## Type
 
-HP carries for the act. The act ends when you fall or when the boss falls. Gems and mastery stay either way. The save is `user://yoruben-v4.json`, so a v0.3 save is left alone.
+Noto Sans JP. Titles are 32sp with room under them. Body is 18sp on a 30sp line. Furigana is 11sp in the muted ink, close to the character, present and not loud. A kanji with no reading does not ship. The check scans display fields and the Kotlin sources.
 
-## Cards and rarity
+Chrome is English. Japanese is the material being studied.
 
-Every word, verb, and grammar point in the evening pack is a card. The face shows the word with furigana, a type, a cost, and an effect.
+## Home
 
-- A verb strikes. Playing it means spelling the form the enemy is asking for. The prompt says to tap the tiles. Some of the tiles are decoys. A word, phrase, or adjective asks for the meaning instead, never a verb form.
-- A grammar card is a cloze. A correct answer draws or blocks.
-- Anything else asks for the meaning and wards.
+Five rows, in this order: Review, Quiz, Conjugation, Read, Stats. Each row has one true subtitle: a due count, a weak count, or the fact that there is no streak yet. **Start review** sits at the bottom, in the thumb's reach. The same zone holds Show answer, the four grades, Check, Next, Grade, and Share progress.
 
-A turn gives 3 energy and a hand of 5. A correct strike deals 7 plus a rarity bonus. A miss deals 2, and the card is still marked as a miss. The relic ともしび lets the first miss of a fight land at full strength. The gem payout still pays the rarity bonus only for a real correct answer.
+## Motion
 
-Rarity is Common, Uncommon, Rare, Ultra. A card records uses, correct answers, and speed.
+A revealed answer and a correct or incorrect line fade in over a short moment. Nothing else moves.
 
-- Uncommon: 4 uses, accuracy at least 0.75
-- Rare: 8 uses, accuracy at least 0.85
-- Ultra: 12 uses, accuracy at least 0.9, average under 6 seconds
+## Review
 
-Three misses in a row drop one tier, never below Common. Higher rarity hits harder and pays more gems when the answer was correct: 1, 2, 4, or 7. The fields are plain counts so a later Anki or FSRS feed can write them. That feed is not in this version.
+The word, then the meaning, the Japanese definition, the sentence, and the English. Again, Hard, Good, and Easy match Anki. Good is the filled button. A sideways swipe grades Again or Good, and the screen says so.
 
-After a fight you pick 1 of 3 rewards. The offer leans toward cards, and a harder node or a clean fight leans further. New class packs open as a small booster the first time they are seen. The first departure is not blocked by that.
+## Feedback
 
-## Economy
+Correct or Incorrect, then the expected answer when it was wrong, then the rule in one sentence. Counts are the numbers that happened. An empty queue says that nothing is due.
 
-ほたる玉 are the only currency. A fight pays a base (3, or 6 for an elite, 10 for the boss, 4 for a treasure), plus the rarity gems of correct cards, plus one gem for every three combo. The payout screen lists those lines. Gems from a payout are kept even if a later fight ends the run. The shop spends them. There is no real-money shop.
+## Offline
 
-One weapon, 木のふで, starts at 6 durability. A wrong answer wears it. At 0, strikes lose a point of damage. The shop repairs it.
-
-Relics in this act: ともしび (one forgiven miss), とけい (+5 seconds on a speed node), にだん (group-2 strikes hit twice), ほたる (+1 gem per correct card).
-
-## Yokai
-
-Enemies are public-domain yokai, drawn in the game. No copied character art. Minor fights are small yokai, elites are mid ones, and the act boss is 茨木童子. A win can drop that yokai into the binder. Bosses always drop. Elites drop more often than a normal fight, and a clean fight raises the chance.
-
-A yokai card has the name with furigana, the drawing, a short fact, and a graded-reader story. Stories are level 0, and 河童, 狐, 雪女, and 茨木童子 also have a level 1 story that opens once 30 gems have been earned. English is behind a button. A gloss word can be tapped. The reading node asks the story's questions. A correct answer also marks a deck card toward its next rarity.
-
-## Content pipeline
-
-Class notes stay in the pack. Rule scripts do not name a student.
-
-```bash
-python3 tools/build_card_pack.py
-```
-
-That reads `lessons.json`, `words.json`, and `verbs.json` and writes `content/packs/ywca-evening/releases/ywca-YYYY-MM-DD.json` plus `catalog.json`. A kanji with no `[reading]` fails the build. After a class, add the lesson and run the script, then ship a release. The game treats a new pack id as the booster.
-
-`python3 tools/write_yokai.py` rewrites `yokai.json` from the story source. Thirteen yokai are in the pack.
-
-## Homework
-
-Real worksheets are graded outside the app for now. A later version may photograph a sheet. The result is JSON in the pack:
-
-```json
-{
-  "worksheet_id": "No.89",
-  "date": "2026-11-13",
-  "teacher_ruby": "大内[おおうち]",
-  "items": [
-    {"prompt_ruby": "…", "expected": "だして", "answer": "たして", "correct": false, "error_type": "dakuten", "verb_id": "dasu", "card_id": "verb:dasu"}
-  ]
-}
-```
-
-`error_type` is a short tag such as `dakuten`, `sokuon`, or `word-choice`. The score is the count of items, not a separate number.
-
-The first sheet is `content/packs/ywca-evening/homework/no89.json`. Eric named three misses and eleven right answers, and first said 11/13. The file keeps every named item, so the counted score is 11 of 14. The misses are 出す (dakuten: たして for だして), 行く (sokuon: いて for いって), and 話す (word choice: おしえて for はなして).
-
-Turning the sheet in at the campfire, or from the map, pays `4 + 2 × correct` gems. Each correct card takes four successful reviews, which is enough to lift a new card to Uncommon. Each missed verb is added to the next run twice, and the hand marks it よわい. A perfect sheet also grants the card back きんの ふち and the relic 満点のふで. No.89 is not perfect.
-
-The turn-in is not on the way to the first battle. 出発 still opens the map, and the glowing node is still the fight.
-
-## Multi-user
-
-The pack can be swapped. The save stores mastery, gems, relics, and which packs and homework sheets were already seen. Nothing in `scripts/rules` names Eric or the commute. Another learner is another pack and another save.
+The bundled JSON is enough. A newer manifest from GitHub is cached and used next time, including with no network.

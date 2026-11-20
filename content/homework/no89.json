@@ -1,0 +1,139 @@
+{
+  "schema": 1,
+  "id": "no89-result",
+  "worksheet_id": "no89",
+  "date": "2026-11-13",
+  "teacher_id": "ouchi",
+  "title_ruby": "てください",
+  "note": "11/14。ミスは だす、いく、はなす。",
+  "correct": 11,
+  "total": 14,
+  "items": [
+    {
+      "id": "ok-kaku",
+      "prompt_ruby": "なまえを ____ ください",
+      "expected": "かいて",
+      "answer": "かいて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "kaku"
+    },
+    {
+      "id": "ok-yomu",
+      "prompt_ruby": "ほんを ____ ください",
+      "expected": "よんで",
+      "answer": "よんで",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "yomu"
+    },
+    {
+      "id": "ok-nomu",
+      "prompt_ruby": "みずを ____ ください",
+      "expected": "のんで",
+      "answer": "のんで",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "nomu"
+    },
+    {
+      "id": "ok-miru",
+      "prompt_ruby": "えいがを ____ ください",
+      "expected": "みて",
+      "answer": "みて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "miru"
+    },
+    {
+      "id": "ok-taberu",
+      "prompt_ruby": "パンを ____ ください",
+      "expected": "たべて",
+      "answer": "たべて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "taberu"
+    },
+    {
+      "id": "ok-kiku",
+      "prompt_ruby": "おんがくを ____ ください",
+      "expected": "きいて",
+      "answer": "きいて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "kiku"
+    },
+    {
+      "id": "ok-asobu",
+      "prompt_ruby": "こうえんで ____ ください",
+      "expected": "あそんで",
+      "answer": "あそんで",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "asobu"
+    },
+    {
+      "id": "ok-okiru",
+      "prompt_ruby": "はやく ____ ください",
+      "expected": "おきて",
+      "answer": "おきて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "okiru"
+    },
+    {
+      "id": "ok-neru",
+      "prompt_ruby": "もう ____ ください",
+      "expected": "ねて",
+      "answer": "ねて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "neru"
+    },
+    {
+      "id": "ok-kuru",
+      "prompt_ruby": "ここに ____ ください",
+      "expected": "きて",
+      "answer": "きて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "kuru"
+    },
+    {
+      "id": "ok-suru",
+      "prompt_ruby": "しゅくだいを ____ ください",
+      "expected": "して",
+      "answer": "して",
+      "correct": true,
+      "error_type": "",
+      "verb_id": "suru"
+    },
+    {
+      "id": "miss-dasu",
+      "prompt_ruby": "しゅくだいを ____ ください",
+      "expected": "だして",
+      "answer": "たして",
+      "correct": false,
+      "error_type": "dakuten",
+      "verb_id": "dasu"
+    },
+    {
+      "id": "miss-iku",
+      "prompt_ruby": "くうこうへ ____ ください",
+      "expected": "いって",
+      "answer": "いて",
+      "correct": false,
+      "error_type": "sokuon",
+      "verb_id": "iku"
+    },
+    {
+      "id": "miss-hanasu",
+      "prompt_ruby": "ゆっくり ____ ください",
+      "expected": "はなして",
+      "answer": "おしえて",
+      "correct": false,
+      "error_type": "word-choice",
+      "verb_id": "hanasu"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "id": "class-2026-11-13",
+  "lesson_id": "2026-11-13",
+  "title_ruby": "てください",
+  "items": [
+    {
+      "id": "q1",
+      "kind": "choose_form",
+      "prompt_ruby": "書[か]く の て形[けい] は？",
+      "answer": "かいて",
+      "choices": [
+        "かいて",
+        "かって",
+        "かいてください",
+        "かいた"
+      ]
+    },
+    {
+      "id": "q2",
+      "kind": "choose_form",
+      "prompt_ruby": "行[い]く の て形[けい] は？",
+      "answer": "いって",
+      "choices": [
+        "いて",
+        "いって",
+        "いいた",
+        "いくて"
+      ]
+    },
+    {
+      "id": "q3",
+      "kind": "choose_form",
+      "prompt_ruby": "出[だ]す の て形[けい] は？",
+      "answer": "だして",
+      "choices": [
+        "たして",
+        "だして",
+        "だって",
+        "でて"
+      ]
+    },
+    {
+      "id": "q4",
+      "kind": "fill_blank",
+      "prompt_ruby": "みずを ____ ください",
+      "answer": "のんで",
+      "choices": []
+    },
+    {
+      "id": "q5",
+      "kind": "meaning_to_word",
+      "prompt_ruby": "to read",
+      "answer": "よむ",
+      "choices": [
+        "よむ",
+        "のむ",
+        "かく",
+        "きく"
+      ]
+    }
+  ]
+}

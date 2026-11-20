@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "forms": [
+    {
+      "id": "masu",
+      "label_ruby": "ます",
+      "prompt_ruby": "じしょけい を ます に",
+      "applies_to": "verb",
+      "enabled": true
+    },
+    {
+      "id": "dict",
+      "label_ruby": "じしょけい",
+      "prompt_ruby": "ます を じしょけい に",
+      "applies_to": "verb",
+      "enabled": true
+    },
+    {
+      "id": "masen",
+      "label_ruby": "ません",
+      "prompt_ruby": "じしょけい を ません に",
+      "applies_to": "verb",
+      "enabled": true
+    },
+    {
+      "id": "mashita",
+      "label_ruby": "ました",
+      "prompt_ruby": "じしょけい を ました に",
+      "applies_to": "verb",
+      "enabled": true
+    },
+    {
+      "id": "masen_deshita",
+      "label_ruby": "ませんでした",
+      "prompt_ruby": "じしょけい を ませんでした に",
+      "applies_to": "verb",
+      "enabled": true
+    },
+    {
+      "id": "te",
+      "label_ruby": "て形[けい]",
+      "prompt_ruby": "じしょけい を て形[けい] に",
+      "applies_to": "verb",
+      "enabled": true
+    },
+    {
+      "id": "te_kudasai",
+      "label_ruby": "てください",
+      "prompt_ruby": "じしょけい を てください に",
+      "applies_to": "verb",
+      "enabled": true
+    },
+    {
+      "id": "i_negative",
+      "label_ruby": "くない",
+      "prompt_ruby": "いけいようし を くない に",
+      "applies_to": "i-adjective",
+      "enabled": true
+    },
+    {
+      "id": "i_past",
+      "label_ruby": "かった",
+      "prompt_ruby": "いけいようし を かった に",
+      "applies_to": "i-adjective",
+      "enabled": true
+    },
+    {
+      "id": "i_past_negative",
+      "label_ruby": "くなかった",
+      "prompt_ruby": "いけいようし を くなかった に",
+      "applies_to": "i-adjective",
+      "enabled": true
+    },
+    {
+      "id": "na_negative",
+      "label_ruby": "じゃない",
+      "prompt_ruby": "なけいようし を じゃない に",
+      "applies_to": "na-adjective",
+      "enabled": true
+    },
+    {
+      "id": "na_past",
+      "label_ruby": "だった",
+      "prompt_ruby": "なけいようし を だった に",
+      "applies_to": "na-adjective",
+      "enabled": true
+    },
+    {
+      "id": "na_past_negative",
+      "label_ruby": "じゃなかった",
+      "prompt_ruby": "なけいようし を じゃなかった に",
+      "applies_to": "na-adjective",
+      "enabled": true
+    }
+  ]
+}
