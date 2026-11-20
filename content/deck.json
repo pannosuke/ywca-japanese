@@ -1,0 +1,1217 @@
+{
+  "schema": 1,
+  "deck_name": "YWCA",
+  "note_type": "YWCA Vocab",
+  "cards": [
+    {
+      "id": "vocab:夕日",
+      "lesson_id": "2026-10-30",
+      "word": "夕日[ゆうひ]",
+      "definition": "ひが しずむ ときの、あかい おひさま。",
+      "meaning": "sunset; setting sun",
+      "sentence": "夕日[ゆうひ]が きれいです。",
+      "sentence_en": "The sunset is pretty.",
+      "note": "No.97 dialogue (p20) + note on No.205 worksheet (p18)"
+    },
+    {
+      "id": "vocab:万里の長城",
+      "lesson_id": "2026-10-27",
+      "word": "万里[ばんり]の 長城[ちょうじょう]",
+      "definition": "ちゅうごくの きたの ほうに ある、とても ながい かべ。",
+      "meaning": "the Great Wall of China",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.205 dialogue (p17)"
+    },
+    {
+      "id": "vocab:北東",
+      "lesson_id": "2026-10-27",
+      "word": "北東[ほくとう]",
+      "definition": "きたと ひがしの あいだの ほう。",
+      "meaning": "northeast",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "Board notes (p15) + No.205 dialogue (p17)"
+    },
+    {
+      "id": "vocab:厳しい",
+      "lesson_id": "2026-10-27",
+      "word": "厳[きび]しい",
+      "definition": "ルールや ことばが きつくて、ゆるくない。",
+      "meaning": "strict; severe",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "Board notes (p15)"
+    },
+    {
+      "id": "vocab:親切な",
+      "lesson_id": "2026-10-27",
+      "word": "親切[しんせつ]な",
+      "definition": "ひとが やさしくて、よく てつだって くれる。",
+      "meaning": "kind",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "Board notes (p15)"
+    },
+    {
+      "id": "vocab:楽な",
+      "lesson_id": "2026-10-27",
+      "word": "楽[らく]な",
+      "definition": "らくで、つかれにくい。むずかしくない。",
+      "meaning": "easy; comfortable",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "Board notes (p15)"
+    },
+    {
+      "id": "vocab:暇な",
+      "lesson_id": "2026-10-27",
+      "word": "暇[ひま]な",
+      "definition": "いそがしくない。じかんが ある。",
+      "meaning": "free; not busy",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "Board notes (p15)"
+    },
+    {
+      "id": "vocab:生活",
+      "lesson_id": "2026-10-27",
+      "word": "生活[せいかつ]",
+      "definition": "まいにちの くらし。",
+      "meaning": "life; lifestyle; daily living",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.167 practice (p16)"
+    },
+    {
+      "id": "vocab:匂い",
+      "lesson_id": "2026-10-27",
+      "word": "匂[にお]い",
+      "definition": "はなで かんじる もの。いい においも、ふつうの においも。",
+      "meaning": "smell (pleasant or neutral)",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.213 dialogue (p13)"
+    },
+    {
+      "id": "vocab:昨夜",
+      "lesson_id": "2026-10-23",
+      "word": "昨夜[ゆうべ]",
+      "definition": "きのうの よる。",
+      "meaning": "last night",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p11)"
+    },
+    {
+      "id": "vocab:看護師",
+      "lesson_id": "2026-10-16",
+      "word": "看護師[かんごし]",
+      "definition": "びょういんで、ぐあいの わるい ひとの せわを する ひと。",
+      "meaning": "nurse",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "おしごと sheet (p3)"
+    },
+    {
+      "id": "vocab:通訳",
+      "lesson_id": "2026-10-16",
+      "word": "通訳[つうやく]",
+      "definition": "はなしている ことばを、ほかの ことばに かえる ひと。",
+      "meaning": "interpreter (spoken language)",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "おしごと sheet (p3)"
+    },
+    {
+      "id": "vocab:警官",
+      "lesson_id": "2026-10-16",
+      "word": "警官[けいかん]",
+      "definition": "まちの あんぜんを まもる ひと。",
+      "meaning": "police officer",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "おしごと sheet (p3)"
+    },
+    {
+      "id": "vocab:物価",
+      "lesson_id": "2026-11-10",
+      "word": "物価[ぶっか]",
+      "definition": "まち ぜんたいで、ものの ねだんが たかいか やすいか。",
+      "meaning": "prices; cost of living (in general)",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.176 dialogue top notes (p29)"
+    },
+    {
+      "id": "vocab:値段",
+      "lesson_id": "2026-11-10",
+      "word": "値段[ねだん]",
+      "definition": "その ひとつの ものの ねだん。",
+      "meaning": "price (of a specific item)",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.176 dialogue top notes (p29)"
+    },
+    {
+      "id": "vocab:実際",
+      "lesson_id": "2026-11-10",
+      "word": "実際[じっさい]",
+      "definition": "そう かもしれない、では なく、ほんとに。",
+      "meaning": "actually; in reality",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.176 dialogue top notes (p29)"
+    },
+    {
+      "id": "vocab:どこか",
+      "lesson_id": "2026-11-06",
+      "word": "どこか",
+      "definition": "ばしょは ひとつに きまっていない。「どこか へ いく」。",
+      "meaning": "somewhere",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.204 worksheet note (p25)"
+    },
+    {
+      "id": "vocab:低い",
+      "lesson_id": "2026-11-06",
+      "word": "低[ひく]い",
+      "definition": "たかさが すくない。たかい の はんたい。",
+      "meaning": "low; short (in height)",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.204 worksheet note (p25)"
+    },
+    {
+      "id": "vocab:自己紹介",
+      "lesson_id": "2026-10-16",
+      "word": "自己紹介[じこしょうかい]",
+      "definition": "じぶんの なまえや くらしを、ひとに はなす こと。",
+      "meaning": "self-introduction",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 じこしょうかい (p1-2,4)"
+    },
+    {
+      "id": "vocab:名前",
+      "lesson_id": "2026-10-16",
+      "word": "名前[なまえ]",
+      "definition": "その ひとや ものを よぶ なまえ。",
+      "meaning": "name",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 じこしょうかい (p1-2,4)"
+    },
+    {
+      "id": "vocab:国",
+      "lesson_id": "2026-10-16",
+      "word": "国[くに]",
+      "definition": "にほんや アメリカの ような、おおきな くに。",
+      "meaning": "country",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 じこしょうかい (p1-2,4)"
+    },
+    {
+      "id": "vocab:町",
+      "lesson_id": "2026-10-16",
+      "word": "町[まち]",
+      "definition": "ひとが すむ まち。",
+      "meaning": "town; city",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 じこしょうかい (p1-2,4)"
+    },
+    {
+      "id": "vocab:フルネーム",
+      "lesson_id": "2026-10-16",
+      "word": "フルネーム",
+      "definition": "みょうじと なまえ、ぜんぶ。",
+      "meaning": "full name",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 じこしょうかい (p1-2,4)"
+    },
+    {
+      "id": "vocab:ニックネーム",
+      "lesson_id": "2026-10-16",
+      "word": "ニックネーム",
+      "definition": "ともだちが よぶ、みじかい なまえ。",
+      "meaning": "nickname",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 じこしょうかい (p1-2,4)"
+    },
+    {
+      "id": "vocab:お宅",
+      "lesson_id": "2026-10-16",
+      "word": "お 宅[たく]",
+      "definition": "あいての いえを、ていねいに いう ことば。",
+      "meaning": "(your) home (polite)",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 じこしょうかい (p1-2,4)"
+    },
+    {
+      "id": "vocab:電車",
+      "lesson_id": "2026-10-16",
+      "word": "電車[でんしゃ]",
+      "definition": "レールの うえを はしる のりもの。",
+      "meaning": "train",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 じこしょうかい (p1-2,4)"
+    },
+    {
+      "id": "vocab:仕事",
+      "lesson_id": "2026-10-16",
+      "word": "仕事[しごと]",
+      "definition": "おかねを もらう ために する こと。",
+      "meaning": "work; job",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 じこしょうかい (p1-2,4)"
+    },
+    {
+      "id": "vocab:誕生日",
+      "lesson_id": "2026-10-16",
+      "word": "誕生日[たんじょうび]",
+      "definition": "その ひとが うまれた ひ。",
+      "meaning": "birthday",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 じこしょうかい (p1-2,4)"
+    },
+    {
+      "id": "vocab:〜歳",
+      "lesson_id": "2026-10-16",
+      "word": "〜 歳[さい]",
+      "definition": "なんさいか、という かぞえかた。",
+      "meaning": "~ years old",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 じこしょうかい (p1-2,4)"
+    },
+    {
+      "id": "vocab:書いてください",
+      "lesson_id": "2026-10-16",
+      "word": "書[か]いてください",
+      "definition": "じを かいて、と おねがいする とき。",
+      "meaning": "please write (it)",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 じこしょうかい (p1-2,4)"
+    },
+    {
+      "id": "vocab:先生",
+      "lesson_id": "2026-10-16",
+      "word": "先生[せんせい]",
+      "definition": "クラスで おしえて くれる ひと。",
+      "meaning": "teacher",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 おしごとは なんですか (p3)"
+    },
+    {
+      "id": "vocab:学生",
+      "lesson_id": "2026-10-16",
+      "word": "学生[がくせい]",
+      "definition": "がっこうで べんきょうしている ひと。",
+      "meaning": "student",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 おしごとは なんですか (p3)"
+    },
+    {
+      "id": "vocab:医者",
+      "lesson_id": "2026-10-16",
+      "word": "医者[いしゃ]",
+      "definition": "びょうきを みて くれる ひと。",
+      "meaning": "doctor",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 おしごとは なんですか (p3)"
+    },
+    {
+      "id": "vocab:歯医者",
+      "lesson_id": "2026-10-16",
+      "word": "歯医者[はいしゃ]",
+      "definition": "はの いしゃ。",
+      "meaning": "dentist",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 おしごとは なんですか (p3)"
+    },
+    {
+      "id": "vocab:主婦",
+      "lesson_id": "2026-10-16",
+      "word": "主婦[しゅふ]",
+      "definition": "いえの ことを おもに する ひと。",
+      "meaning": "housewife; homemaker",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 おしごとは なんですか (p3)"
+    },
+    {
+      "id": "vocab:会社員",
+      "lesson_id": "2026-10-16",
+      "word": "会社員[かいしゃいん]",
+      "definition": "かいしゃで はたらく ひと。",
+      "meaning": "company employee",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 おしごとは なんですか (p3)"
+    },
+    {
+      "id": "vocab:店員",
+      "lesson_id": "2026-10-16",
+      "word": "店員[てんいん]",
+      "definition": "みせで ものを うる ひと。",
+      "meaning": "shop clerk",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 おしごとは なんですか (p3)"
+    },
+    {
+      "id": "vocab:駅員",
+      "lesson_id": "2026-10-16",
+      "word": "駅員[えきいん]",
+      "definition": "えきで はたらく ひと。",
+      "meaning": "station attendant",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 おしごとは なんですか (p3)"
+    },
+    {
+      "id": "vocab:歌手",
+      "lesson_id": "2026-10-16",
+      "word": "歌手[かしゅ]",
+      "definition": "うたを うたう しごとを する ひと。",
+      "meaning": "singer",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.2/3/5 おしごとは なんですか (p3)"
+    },
+    {
+      "id": "vocab:趣味",
+      "lesson_id": "2026-10-20",
+      "word": "趣味[しゅみ]",
+      "definition": "しごとでは なく、すきで する こと。",
+      "meaning": "hobby",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.6 dialogue どんな映画を見ますか (p5)"
+    },
+    {
+      "id": "vocab:映画",
+      "lesson_id": "2026-10-20",
+      "word": "映画[えいが]",
+      "definition": "おおきい がめんで みる はなし。",
+      "meaning": "movie",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.6 dialogue どんな映画を見ますか (p5)"
+    },
+    {
+      "id": "vocab:見ます",
+      "lesson_id": "2026-10-20",
+      "word": "見[み]ます",
+      "definition": "めで みる。えいがを みる、とも。",
+      "meaning": "watch; see",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.6 dialogue どんな映画を見ますか (p5)"
+    },
+    {
+      "id": "vocab:香港",
+      "lesson_id": "2026-10-20",
+      "word": "香港[ほんこん]",
+      "definition": "ホンコン。ちゅうごくの みなみの まち。",
+      "meaning": "Hong Kong",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.6 dialogue どんな映画を見ますか (p5)"
+    },
+    {
+      "id": "vocab:ラブストーリー",
+      "lesson_id": "2026-10-20",
+      "word": "ラブストーリー",
+      "definition": "こいの はなし。",
+      "meaning": "love story",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.6 dialogue どんな映画を見ますか (p5)"
+    },
+    {
+      "id": "vocab:好き",
+      "lesson_id": "2026-10-20",
+      "word": "好[す]き",
+      "definition": "それが いい、と おもう きもち。",
+      "meaning": "like",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.6 dialogue どんな映画を見ますか (p5)"
+    },
+    {
+      "id": "vocab:頻度",
+      "lesson_id": "2026-10-20",
+      "word": "頻度[ひんど]",
+      "definition": "どのくらいの あいだに、なんかい するか。",
+      "meaning": "frequency",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.6 Tsuji worksheet (p6)"
+    },
+    {
+      "id": "vocab:いつも",
+      "lesson_id": "2026-10-20",
+      "word": "いつも",
+      "definition": "どの ときも。ずっと そうする。",
+      "meaning": "always",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.6 Tsuji worksheet (p6)"
+    },
+    {
+      "id": "vocab:よく",
+      "lesson_id": "2026-10-20",
+      "word": "よく",
+      "definition": "おおくの ときに。たびたび。",
+      "meaning": "often",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.6 Tsuji worksheet (p6)"
+    },
+    {
+      "id": "vocab:時々",
+      "lesson_id": "2026-10-20",
+      "word": "時々[ときどき]",
+      "definition": "いつもでは ないが、なんどか。",
+      "meaning": "sometimes",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.6 Tsuji worksheet (p6)"
+    },
+    {
+      "id": "vocab:あまり〜ません",
+      "lesson_id": "2026-10-20",
+      "word": "あまり〜ません",
+      "definition": "「あまり」と、ない かたち。すこししか しない。",
+      "meaning": "not very (often/much)",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.6 Tsuji worksheet (p6)"
+    },
+    {
+      "id": "vocab:全然〜ません",
+      "lesson_id": "2026-10-20",
+      "word": "全然[ぜんぜん]〜ません",
+      "definition": "「ぜんぜん」と、ない かたち。いちども しない。",
+      "meaning": "not at all; never",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.6 Tsuji worksheet (p6)"
+    },
+    {
+      "id": "vocab:お腹が空きました",
+      "lesson_id": "2026-10-23",
+      "word": "お 腹[なか]が 空[す]きました",
+      "definition": "おなかが すいた、と いう とき。",
+      "meaning": "I'm hungry",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.34 dialogue ごはん、食べませんか (p7)"
+    },
+    {
+      "id": "vocab:ご飯",
+      "lesson_id": "2026-10-23",
+      "word": "ご 飯[はん]",
+      "definition": "りょうりした こめ。しょくじの ことも いう。",
+      "meaning": "meal; cooked rice",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.34 dialogue ごはん、食べませんか (p7)"
+    },
+    {
+      "id": "vocab:食べます",
+      "lesson_id": "2026-10-23",
+      "word": "食[た]べます",
+      "definition": "くちに いれて たべる。",
+      "meaning": "eat",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.34 dialogue ごはん、食べませんか (p7)"
+    },
+    {
+      "id": "vocab:レストラン",
+      "lesson_id": "2026-10-23",
+      "word": "レストラン",
+      "definition": "がいしゅつして ごはんを たべる みせ。",
+      "meaning": "restaurant",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.34 dialogue ごはん、食べませんか (p7)"
+    },
+    {
+      "id": "vocab:入ります",
+      "lesson_id": "2026-10-23",
+      "word": "入[はい]ります",
+      "definition": "なかへ はいる。",
+      "meaning": "enter",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.34 dialogue ごはん、食べませんか (p7)"
+    },
+    {
+      "id": "vocab:一緒に",
+      "lesson_id": "2026-10-23",
+      "word": "一緒[いっしょ]に",
+      "definition": "ひとりでは なく、だれかと。",
+      "meaning": "together",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.34 worksheet (p8-9)"
+    },
+    {
+      "id": "vocab:ハンバーガー",
+      "lesson_id": "2026-10-23",
+      "word": "ハンバーガー",
+      "definition": "パンに にくを はさんだ たべもの。",
+      "meaning": "hamburger",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.34 worksheet (p8-9)"
+    },
+    {
+      "id": "vocab:寿司",
+      "lesson_id": "2026-10-23",
+      "word": "寿司[すし]",
+      "definition": "さかななどを こめと あわせた たべもの。",
+      "meaning": "sushi",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.34 worksheet (p8-9)"
+    },
+    {
+      "id": "vocab:ラーメン",
+      "lesson_id": "2026-10-23",
+      "word": "ラーメン",
+      "definition": "あじの ついた スープの めん。",
+      "meaning": "ramen",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.34 worksheet (p8-9)"
+    },
+    {
+      "id": "vocab:旅行します",
+      "lesson_id": "2026-10-23",
+      "word": "旅行[りょこう]します",
+      "definition": "とおくへ あそびに いく。",
+      "meaning": "travel",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.34 worksheet (p8-9)"
+    },
+    {
+      "id": "vocab:京都",
+      "lesson_id": "2026-10-23",
+      "word": "京都[きょうと]",
+      "definition": "きょうと。ふるい まちで しられる。",
+      "meaning": "Kyoto",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.34 worksheet (p8-9)"
+    },
+    {
+      "id": "vocab:遊びます",
+      "lesson_id": "2026-10-23",
+      "word": "遊[あそ]びます",
+      "definition": "たのしむ。スポーツを する、とも。",
+      "meaning": "play; hang out",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.34 worksheet (p8-9)"
+    },
+    {
+      "id": "vocab:テニス",
+      "lesson_id": "2026-10-23",
+      "word": "テニス",
+      "definition": "ラケットで ボールを うつ スポーツ。",
+      "meaning": "tennis",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.34 worksheet (p8-9)"
+    },
+    {
+      "id": "vocab:ちょっと…",
+      "lesson_id": "2026-10-23",
+      "word": "ちょっと…",
+      "definition": "はっきり いやと いわず、ことわる ときの ことば。",
+      "meaning": "that's a bit… (soft refusal)",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "No.34 worksheet (p8-9)"
+    },
+    {
+      "id": "vocab:眠い",
+      "lesson_id": "2026-10-23",
+      "word": "眠[ねむ]い",
+      "definition": "ねたい きもち。",
+      "meaning": "sleepy",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "vocab:寝ます",
+      "lesson_id": "2026-10-23",
+      "word": "寝[ね]ます",
+      "definition": "ベッドに はいって ねる。",
+      "meaning": "sleep; go to bed",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "vocab:遅い",
+      "lesson_id": "2026-10-23",
+      "word": "遅[おそ]い",
+      "definition": "じかんが おそい。スピードが おそい、とも。",
+      "meaning": "late; slow",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "vocab:起きます",
+      "lesson_id": "2026-10-23",
+      "word": "起[お]きます",
+      "definition": "ねた あと、おきる。",
+      "meaning": "get up; wake up",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "vocab:働きます",
+      "lesson_id": "2026-10-23",
+      "word": "働[はたら]きます",
+      "definition": "しごとを する。",
+      "meaning": "work",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "vocab:勉強します",
+      "lesson_id": "2026-10-23",
+      "word": "勉強[べんきょう]します",
+      "definition": "あたらしい ことを ならう。",
+      "meaning": "study",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "vocab:授業",
+      "lesson_id": "2026-10-23",
+      "word": "授業[じゅぎょう]",
+      "definition": "がっこうの クラスの じかん。",
+      "meaning": "class; lesson",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "vocab:〜ごろ",
+      "lesson_id": "2026-10-23",
+      "word": "〜ごろ",
+      "definition": "その じかんの あたり。「7じごろ」。",
+      "meaning": "around (a time)",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "vocab:毎日",
+      "lesson_id": "2026-10-23",
+      "word": "毎日[まいにち]",
+      "definition": "いちにち いちにち、ぜんぶ。",
+      "meaning": "every day",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "vocab:毎週",
+      "lesson_id": "2026-10-23",
+      "word": "毎週[まいしゅう]",
+      "definition": "いっしゅうかん ごとに。",
+      "meaning": "every week",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "vocab:毎月",
+      "lesson_id": "2026-10-23",
+      "word": "毎月[まいつき]",
+      "definition": "ひとつき ごとに。",
+      "meaning": "every month",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "vocab:昨日",
+      "lesson_id": "2026-10-23",
+      "word": "昨日[きのう]",
+      "definition": "きょうの まえの ひ。",
+      "meaning": "yesterday",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "vocab:今日",
+      "lesson_id": "2026-10-23",
+      "word": "今日[きょう]",
+      "definition": "いまの この ひ。",
+      "meaning": "today",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "vocab:明日",
+      "lesson_id": "2026-10-23",
+      "word": "明日[あした]",
+      "definition": "きょうの つぎの ひ。",
+      "meaning": "tomorrow",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "vocab:今朝",
+      "lesson_id": "2026-10-23",
+      "word": "今朝[けさ]",
+      "definition": "きょうの あさ。",
+      "meaning": "this morning",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "第7課 worksheet (p10-12)"
+    },
+    {
+      "id": "verb:miru",
+      "lesson_id": "2026-10-20",
+      "word": "見[み]る",
+      "definition": "ものを みる",
+      "meaning": "watch; see",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "ichidan"
+    },
+    {
+      "id": "verb:taberu",
+      "lesson_id": "2026-10-23",
+      "word": "食[た]べる",
+      "definition": "ごはんを たべる",
+      "meaning": "eat",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "ichidan"
+    },
+    {
+      "id": "verb:hairu",
+      "lesson_id": "2026-10-23",
+      "word": "入[はい]る",
+      "definition": "なかに はいる",
+      "meaning": "enter",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:ryokou",
+      "lesson_id": "2026-10-23",
+      "word": "旅行[りょこう]する",
+      "definition": "たびを する",
+      "meaning": "travel",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "irregular"
+    },
+    {
+      "id": "verb:asobu",
+      "lesson_id": "2026-10-23",
+      "word": "遊[あそ]ぶ",
+      "definition": "あそぶ",
+      "meaning": "play; hang out",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:neru",
+      "lesson_id": "2026-10-23",
+      "word": "寝[ね]る",
+      "definition": "ねむる",
+      "meaning": "sleep",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "ichidan"
+    },
+    {
+      "id": "verb:okiru",
+      "lesson_id": "2026-10-23",
+      "word": "起[お]きる",
+      "definition": "ねむりから おきる",
+      "meaning": "get up",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "ichidan"
+    },
+    {
+      "id": "verb:hataraku",
+      "lesson_id": "2026-10-23",
+      "word": "働[はたら]く",
+      "definition": "しごとを する",
+      "meaning": "work",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:benkyou",
+      "lesson_id": "2026-10-23",
+      "word": "勉強[べんきょう]する",
+      "definition": "べんきょうする",
+      "meaning": "study",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "irregular"
+    },
+    {
+      "id": "verb:kekkon",
+      "lesson_id": "2026-10-23",
+      "word": "結婚[けっこん]する",
+      "definition": "けっこんする",
+      "meaning": "get married",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "irregular"
+    },
+    {
+      "id": "verb:nomu",
+      "lesson_id": "2026-10-23",
+      "word": "飲[の]む",
+      "definition": "のみものを のむ",
+      "meaning": "drink",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:au",
+      "lesson_id": "2026-10-30",
+      "word": "会[あ]う",
+      "definition": "ひとに あう",
+      "meaning": "meet",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:noboru",
+      "lesson_id": "2026-10-30",
+      "word": "登[のぼ]る",
+      "definition": "うえに のぼる",
+      "meaning": "climb",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:tomaru",
+      "lesson_id": "2026-11-13",
+      "word": "止[と]まる",
+      "definition": "うごきが とまる",
+      "meaning": "stop",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:noru",
+      "lesson_id": "2026-11-13",
+      "word": "乗[の]る",
+      "definition": "のりものに のる",
+      "meaning": "ride",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:oriru",
+      "lesson_id": "2026-11-13",
+      "word": "降[お]りる",
+      "definition": "のりものから おりる",
+      "meaning": "get off",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "ichidan"
+    },
+    {
+      "id": "verb:kasu",
+      "lesson_id": "2026-11-13",
+      "word": "貸[か]す",
+      "definition": "ものを かす",
+      "meaning": "lend",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:kaku",
+      "lesson_id": "2026-11-13",
+      "word": "書[か]く",
+      "definition": "じを かく",
+      "meaning": "write",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:oyogu",
+      "lesson_id": "2026-11-13",
+      "word": "泳[およ]ぐ",
+      "definition": "みずを およぐ",
+      "meaning": "swim",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:motsu",
+      "lesson_id": "2026-11-13",
+      "word": "持[も]つ",
+      "definition": "てに もつ",
+      "meaning": "hold",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:kaeru",
+      "lesson_id": "2026-11-13",
+      "word": "帰[かえ]る",
+      "definition": "いえに かえる",
+      "meaning": "go home",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:shinu",
+      "lesson_id": "2026-11-13",
+      "word": "死[し]ぬ",
+      "definition": "いのちが おわる",
+      "meaning": "die",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:hanasu",
+      "lesson_id": "2026-11-13",
+      "word": "話[はな]す",
+      "definition": "はなしを する",
+      "meaning": "speak",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:akeru",
+      "lesson_id": "2026-11-13",
+      "word": "開[あ]ける",
+      "definition": "ドアを あける",
+      "meaning": "open",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "ichidan"
+    },
+    {
+      "id": "verb:shimeru",
+      "lesson_id": "2026-11-13",
+      "word": "閉[し]める",
+      "definition": "ドアを しめる",
+      "meaning": "close",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "ichidan"
+    },
+    {
+      "id": "verb:kiku",
+      "lesson_id": "2026-11-13",
+      "word": "聞[き]く",
+      "definition": "みみで きく",
+      "meaning": "listen",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:dasu",
+      "lesson_id": "2026-11-13",
+      "word": "出[だ]す",
+      "definition": "なかから だす",
+      "meaning": "take out",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:yomu",
+      "lesson_id": "2026-11-13",
+      "word": "読[よ]む",
+      "definition": "ほんを よむ",
+      "meaning": "read",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:miseru",
+      "lesson_id": "2026-11-13",
+      "word": "見[み]せる",
+      "definition": "ひとに みせる",
+      "meaning": "show",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "ichidan"
+    },
+    {
+      "id": "verb:kiru",
+      "lesson_id": "2026-11-13",
+      "word": "切[き]る",
+      "definition": "ものを きる",
+      "meaning": "cut",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:tsukeru",
+      "lesson_id": "2026-11-13",
+      "word": "付[つ]ける",
+      "definition": "でんきを つける",
+      "meaning": "turn on",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "ichidan"
+    },
+    {
+      "id": "verb:kesu",
+      "lesson_id": "2026-11-13",
+      "word": "消[け]す",
+      "definition": "でんきを けす",
+      "meaning": "turn off",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:toru",
+      "lesson_id": "2026-11-13",
+      "word": "撮[と]る",
+      "definition": "しゃしんを とる",
+      "meaning": "take a photo",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:oshieru",
+      "lesson_id": "2026-11-13",
+      "word": "教[おし]える",
+      "definition": "だれかに おしえる",
+      "meaning": "teach",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "ichidan"
+    },
+    {
+      "id": "verb:okuru",
+      "lesson_id": "2026-11-13",
+      "word": "送[おく]る",
+      "definition": "おくって わたす",
+      "meaning": "send",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:hiku",
+      "lesson_id": "2026-11-13",
+      "word": "弾[ひ]く",
+      "definition": "がっきを ひく",
+      "meaning": "play an instrument",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:iku",
+      "lesson_id": "",
+      "word": "行[い]く",
+      "definition": "どこかへ いく",
+      "meaning": "go",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:kuru",
+      "lesson_id": "",
+      "word": "来[く]る",
+      "definition": "ここへ くる",
+      "meaning": "come",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "irregular"
+    },
+    {
+      "id": "verb:suru",
+      "lesson_id": "",
+      "word": "する",
+      "definition": "なにかを する",
+      "meaning": "do",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "irregular"
+    },
+    {
+      "id": "verb:kau",
+      "lesson_id": "",
+      "word": "買[か]う",
+      "definition": "かねで かう",
+      "meaning": "buy",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    },
+    {
+      "id": "verb:matsu",
+      "lesson_id": "",
+      "word": "待[ま]つ",
+      "definition": "ときを まつ",
+      "meaning": "wait",
+      "sentence": "",
+      "sentence_en": "",
+      "note": "godan"
+    }
+  ]
+}

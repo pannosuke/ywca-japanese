@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "lessons": [
+    {
+      "id": "2026-10-16",
+      "date": "2026-10-16",
+      "teacher_id": "ouchi",
+      "topic_ruby": "自己紹介[じこしょうかい]",
+      "topic_en": "Self-introduction: name, country, city, how you get around, job, birthday.",
+      "anki_tag": "class::2026-10-16"
+    },
+    {
+      "id": "2026-10-20",
+      "date": "2026-10-20",
+      "teacher_id": "tsuji",
+      "topic_ruby": "趣味[しゅみ]と 映画[えいが]",
+      "topic_en": "Hobbies, what kind of movies you watch, and how often.",
+      "anki_tag": "class::2026-10-20"
+    },
+    {
+      "id": "2026-10-23",
+      "date": "2026-10-23",
+      "teacher_id": "ouchi",
+      "topic_ruby": "さそいと じかん",
+      "topic_en": "Invitations, clock times, and the past tense of verbs.",
+      "anki_tag": "class::2026-10-23"
+    },
+    {
+      "id": "2026-10-27",
+      "date": "2026-10-27",
+      "teacher_id": "tsuji",
+      "topic_ruby": "形容詞[けいようし]",
+      "topic_en": "い- and な-adjectives, and describing a place.",
+      "anki_tag": "class::2026-10-27"
+    },
+    {
+      "id": "2026-10-30",
+      "date": "2026-10-30",
+      "teacher_id": "ouchi",
+      "topic_ruby": "形容詞[けいようし]の かこと 方位[ほうい]",
+      "topic_en": "Past tense of adjectives, and compass directions.",
+      "anki_tag": "class::2026-10-30"
+    },
+    {
+      "id": "2026-11-06",
+      "date": "2026-11-06",
+      "teacher_id": "ouchi",
+      "topic_ruby": "くらべる",
+      "topic_en": "Comparisons and the weather.",
+      "anki_tag": "class::2026-11-06"
+    },
+    {
+      "id": "2026-11-10",
+      "date": "2026-11-10",
+      "teacher_id": "tsuji",
+      "topic_ruby": "欲[ほ]しいと たい",
+      "topic_en": "Wanting a thing, and wanting to do something.",
+      "anki_tag": "class::2026-11-10"
+    },
+    {
+      "id": "2026-11-13",
+      "date": "2026-11-13",
+      "teacher_id": "ouchi",
+      "topic_ruby": "て形[けい]",
+      "topic_en": "Verb groups, the te-form, and てください.",
+      "anki_tag": "class::2026-11-13"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "eric",
+  "display_name": "Eric",
+  "known_kanji": [],
+  "deck_name": "YWCA",
+  "note_type": "YWCA Vocab",
+  "note_fields": [
+    "Word",
+    "Definition",
+    "Meaning",
+    "Sentence",
+    "SentenceEN",
+    "Note"
+  ]
+}

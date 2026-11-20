@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "adjectives": [
+    {
+      "id": "takai",
+      "kind": "i",
+      "ruby": "高[たか]い",
+      "kana": "たかい",
+      "gloss_ja": "ねだんが おおい。せが たかい。",
+      "gloss_en": "expensive; tall",
+      "lesson_id": "2026-10-30"
+    },
+    {
+      "id": "hikui",
+      "kind": "i",
+      "ruby": "低[ひく]い",
+      "kana": "ひくい",
+      "gloss_ja": "せが ひくい。ねだんが すくない。",
+      "gloss_en": "low; cheap",
+      "lesson_id": "2026-10-30"
+    },
+    {
+      "id": "samui",
+      "kind": "i",
+      "ruby": "寒[さむ]い",
+      "kana": "さむい",
+      "gloss_ja": "きおんが ひくい。",
+      "gloss_en": "cold",
+      "lesson_id": "2026-10-30"
+    },
+    {
+      "id": "atsui",
+      "kind": "i",
+      "ruby": "暑[あつ]い",
+      "kana": "あつい",
+      "gloss_ja": "きおんが たかい。",
+      "gloss_en": "hot (weather)",
+      "lesson_id": "2026-10-30"
+    },
+    {
+      "id": "atatakai",
+      "kind": "i",
+      "ruby": "暖[あたた]かい",
+      "kana": "あたたかい",
+      "gloss_ja": "すこし あつい。",
+      "gloss_en": "warm",
+      "lesson_id": "2026-10-30"
+    },
+    {
+      "id": "furui",
+      "kind": "i",
+      "ruby": "古[ふる]い",
+      "kana": "ふるい",
+      "gloss_ja": "ながい あいだ つかった。",
+      "gloss_en": "old (thing)",
+      "lesson_id": "2026-10-30"
+    },
+    {
+      "id": "ookii",
+      "kind": "i",
+      "ruby": "大[おお]きい",
+      "kana": "おおきい",
+      "gloss_ja": "サイズが おおきい。",
+      "gloss_en": "big",
+      "lesson_id": "2026-10-30"
+    },
+    {
+      "id": "yuumei",
+      "kind": "na",
+      "ruby": "有名[ゆうめい]",
+      "kana": "ゆうめい",
+      "gloss_ja": "たくさんの ひとが しっている。",
+      "gloss_en": "famous",
+      "lesson_id": "2026-10-27"
+    },
+    {
+      "id": "suki",
+      "kind": "na",
+      "ruby": "好[す]き",
+      "kana": "すき",
+      "gloss_ja": "いいと おもう。",
+      "gloss_en": "liked",
+      "lesson_id": "2026-10-20"
+    },
+    {
+      "id": "kirai",
+      "kind": "na",
+      "ruby": "嫌[きら]い",
+      "kana": "きらい",
+      "gloss_ja": "よくないと おもう。",
+      "gloss_en": "disliked",
+      "lesson_id": "2026-10-20"
+    },
+    {
+      "id": "shizuka",
+      "kind": "na",
+      "ruby": "静[しず]か",
+      "kana": "しずか",
+      "gloss_ja": "おとが すくない。",
+      "gloss_en": "quiet",
+      "lesson_id": "2026-10-30"
+    }
+  ]
+}

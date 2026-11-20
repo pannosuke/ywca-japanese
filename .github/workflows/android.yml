@@ -27,59 +27,17 @@ jobs:
       - name: Install SDK packages
         run: |
           yes | sdkmanager --licenses >/dev/null || true
-          sdkmanager --install "build-tools;35.0.0"
-      - name: Install Godot 4.7.2
+          sdkmanager --install "platforms;android-35" "build-tools;35.0.0" "platform-tools"
+      - name: Test and build a debug APK
         run: |
-          curl -fsSL -o /tmp/godot.zip https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
-          unzip -q /tmp/godot.zip -d "$RUNNER_TEMP/godot"
-          echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
-          chmod +x "$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64"
-          ln -sf "$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64" "$RUNNER_TEMP/godot/godot"
-      - name: Import the project and run tests
-        run: |
-          godot --headless --path . --import --quit
-          godot --headless --path . -s addons/gut/gut_cmdln.gd -gdir=res://tests -gprefix=test_ -gexit
-      - name: Cache export templates
-        uses: actions/cache@v4
-        with:
-          path: ~/.local/share/godot/export_templates/4.7.2.stable
-          key: godot-export-templates-4.7.2-stable
-      - name: Install export templates
-        run: |
-          dest="$HOME/.local/share/godot/export_templates/4.7.2.stable"
-          if [ ! -f "$dest/android_debug.apk" ]; then
-            curl -fsSL -o /tmp/templates.tpz https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz
-            rm -rf /tmp/godot-templates
-            unzip -q /tmp/templates.tpz -d /tmp/godot-templates
-            mkdir -p "$dest"
-            cp -a /tmp/godot-templates/templates/. "$dest/"
-          fi
-          test -f "$dest/android_debug.apk"
-      - name: Point Godot at Java and the Android SDK
-        run: |
-          java_home="${JAVA_HOME:-/usr/lib/jvm/java-21-openjdk-amd64}"
-          sdk="${ANDROID_HOME:-$ANDROID_SDK_ROOT}"
-          cfg="$HOME/.config/godot/editor_settings-4.7.tres"
-          test -f "$cfg"
-          sed -i "s|^export/android/java_sdk_path = .*|export/android/java_sdk_path = \"$java_home\"|" "$cfg"
-          sed -i "s|^export/android/android_sdk_path = .*|export/android/android_sdk_path = \"$sdk\"|" "$cfg"
-          grep -q "java_sdk_path = \"$java_home\"" "$cfg"
-          test -x "$java_home/bin/java"
-          test -d "$sdk/platform-tools"
-      - name: Export a debug APK and check the package
-        run: |
-          mkdir -p build
-          keytool -genkeypair -keystore "$RUNNER_TEMP/debug.p12" -storetype PKCS12 -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 -storepass android -keypass android -dname "CN=yoruben-debug"
-          godot --headless --path . --export-debug Android build/yoruben-debug.apk
-          test -s build/yoruben-debug.apk
-          APKSIGNER="$ANDROID_HOME/build-tools/35.0.0/apksigner"
-          test -x "$APKSIGNER"
-          "$APKSIGNER" sign --ks "$RUNNER_TEMP/debug.p12" --ks-type PKCS12 --ks-pass pass:android --key-pass pass:android --ks-key-alias androiddebugkey build/yoruben-debug.apk
-          "$APKSIGNER" verify --verbose build/yoruben-debug.apk
-          "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging build/yoruben-debug.apk | tee /tmp/badging.txt
+          chmod +x ./gradlew
+          ./gradlew testDebugUnitTest assembleDebug --stacktrace
+          APK=app/build/outputs/apk/debug/app-debug.apk
+          test -s "$APK"
+          "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$APK" | tee /tmp/badging.txt
           grep -q "name='dev.ericallerton.yoruben'" /tmp/badging.txt
-          grep -q "versionCode='5'" /tmp/badging.txt
-          grep -q "versionName='0.4.1'" /tmp/badging.txt
+          grep -q "versionCode='6'" /tmp/badging.txt
+          grep -q "versionName='0.5.0'" /tmp/badging.txt
 
   release:
     if: startsWith(github.ref, 'refs/tags/v')
@@ -98,30 +56,7 @@ jobs:
       - name: Install SDK packages
         run: |
           yes | sdkmanager --licenses >/dev/null || true
-          sdkmanager --install "build-tools;35.0.0"
-      - name: Install Godot 4.7.2
-        run: |
-          curl -fsSL -o /tmp/godot.zip https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
-          unzip -q /tmp/godot.zip -d "$RUNNER_TEMP/godot"
-          echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
-          chmod +x "$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64"
-          ln -sf "$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64" "$RUNNER_TEMP/godot/godot"
-      - name: Cache export templates
-        uses: actions/cache@v4
-        with:
-          path: ~/.local/share/godot/export_templates/4.7.2.stable
-          key: godot-export-templates-4.7.2-stable
-      - name: Install export templates
-        run: |
-          dest="$HOME/.local/share/godot/export_templates/4.7.2.stable"
-          if [ ! -f "$dest/android_release.apk" ]; then
-            curl -fsSL -o /tmp/templates.tpz https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz
-            rm -rf /tmp/godot-templates
-            unzip -q /tmp/templates.tpz -d /tmp/godot-templates
-            mkdir -p "$dest"
-            cp -a /tmp/godot-templates/templates/. "$dest/"
-          fi
-          test -f "$dest/android_release.apk"
+          sdkmanager --install "platforms;android-35" "build-tools;35.0.0" "platform-tools"
       - name: Decode the release keystore
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
@@ -132,20 +67,9 @@ jobs:
           fi
           printf '%s' "$KEYSTORE_BASE64" | tr -d '[:space:]' | base64 -d > "$RUNNER_TEMP/yoruben-release.p12"
           test -s "$RUNNER_TEMP/yoruben-release.p12"
-      - name: Import the project
-        run: godot --headless --path . --import --quit
-      - name: Point Godot at Java and the Android SDK
-        run: |
-          java_home="${JAVA_HOME:-/usr/lib/jvm/java-21-openjdk-amd64}"
-          sdk="${ANDROID_HOME:-$ANDROID_SDK_ROOT}"
-          cfg="$HOME/.config/godot/editor_settings-4.7.tres"
-          test -f "$cfg"
-          sed -i "s|^export/android/java_sdk_path = .*|export/android/java_sdk_path = \"$java_home\"|" "$cfg"
-          sed -i "s|^export/android/android_sdk_path = .*|export/android/android_sdk_path = \"$sdk\"|" "$cfg"
-          test -x "$java_home/bin/java"
-          test -d "$sdk/platform-tools"
-      - name: Export and sign one release APK
+      - name: Build and verify the signed release
         env:
+          KEYSTORE_FILE: ${{ runner.temp }}/yoruben-release.p12
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
@@ -154,17 +78,17 @@ jobs:
             echo "::error::KEYSTORE_PASSWORD, KEY_ALIAS, and KEY_PASSWORD are required. An unsigned APK is not published."
             exit 1
           fi
-          mkdir -p build
-          godot --headless --path . --export-release Android "build/yoruben-release.apk"
-          test -s build/yoruben-release.apk
-          APKSIGNER="$ANDROID_HOME/build-tools/35.0.0/apksigner"
-          "$APKSIGNER" sign --ks "$RUNNER_TEMP/yoruben-release.p12" --ks-type PKCS12 --ks-pass env:KEYSTORE_PASSWORD --key-pass env:KEY_PASSWORD --ks-key-alias "$KEY_ALIAS" build/yoruben-release.apk
-          "$APKSIGNER" verify build/yoruben-release.apk
+          chmod +x ./gradlew
+          ./gradlew assembleRelease --stacktrace
+          APK=app/build/outputs/apk/release/app-release.apk
+          test -s "$APK"
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify "$APK"
           VER="${GITHUB_REF_NAME#v}"
-          cp build/yoruben-release.apk "yoruben-${VER}.apk"
+          cp "$APK" "yoruben-${VER}.apk"
           "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "yoruben-${VER}.apk" | tee /tmp/badging.txt
           grep -q "name='dev.ericallerton.yoruben'" /tmp/badging.txt
-          grep -q "versionCode='5'" /tmp/badging.txt
+          grep -q "versionCode='6'" /tmp/badging.txt
+          grep -q "versionName='0.5.0'" /tmp/badging.txt
       - name: Publish the release
         uses: softprops/action-gh-release@v2
         with:

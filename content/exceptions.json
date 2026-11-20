@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "notes": "These override the ordinary rule. The test fails if the conjugator disagrees.",
+  "verbs": {
+    "いく": {
+      "group": "godan",
+      "te": "いって",
+      "te_kudasai": "いってください",
+      "ta": "いった",
+      "masu": "いきます"
+    },
+    "だす": {
+      "group": "godan",
+      "te": "だして",
+      "te_kudasai": "だしてください"
+    },
+    "する": {
+      "group": "irregular",
+      "te": "して",
+      "te_kudasai": "してください",
+      "masu": "します",
+      "masen": "しません"
+    },
+    "くる": {
+      "group": "irregular",
+      "te": "きて",
+      "te_kudasai": "きてください",
+      "masu": "きます",
+      "masen": "きません"
+    },
+    "みる": {
+      "group": "ichidan",
+      "te": "みて",
+      "masu": "みます"
+    },
+    "のむ": {
+      "group": "godan",
+      "te": "のんで",
+      "masu": "のみます"
+    },
+    "かく": {
+      "group": "godan",
+      "te": "かいて",
+      "masu": "かきます"
+    },
+    "はなす": {
+      "group": "godan",
+      "te": "はなして"
+    }
+  }
+}

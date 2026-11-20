@@ -1,0 +1,374 @@
+{
+  "schema": 1,
+  "verbs": [
+    {
+      "id": "miru",
+      "ruby": "見[み]る",
+      "kana": "みる",
+      "group": "ichidan",
+      "gloss_ja": "ものを みる",
+      "gloss_en": "watch; see",
+      "lesson_id": "2026-10-20"
+    },
+    {
+      "id": "taberu",
+      "ruby": "食[た]べる",
+      "kana": "たべる",
+      "group": "ichidan",
+      "gloss_ja": "ごはんを たべる",
+      "gloss_en": "eat",
+      "lesson_id": "2026-10-23"
+    },
+    {
+      "id": "hairu",
+      "ruby": "入[はい]る",
+      "kana": "はいる",
+      "group": "godan",
+      "gloss_ja": "なかに はいる",
+      "gloss_en": "enter",
+      "lesson_id": "2026-10-23"
+    },
+    {
+      "id": "ryokou",
+      "ruby": "旅行[りょこう]する",
+      "kana": "りょこうする",
+      "group": "irregular",
+      "gloss_ja": "たびを する",
+      "gloss_en": "travel",
+      "lesson_id": "2026-10-23"
+    },
+    {
+      "id": "asobu",
+      "ruby": "遊[あそ]ぶ",
+      "kana": "あそぶ",
+      "group": "godan",
+      "gloss_ja": "あそぶ",
+      "gloss_en": "play; hang out",
+      "lesson_id": "2026-10-23"
+    },
+    {
+      "id": "neru",
+      "ruby": "寝[ね]る",
+      "kana": "ねる",
+      "group": "ichidan",
+      "gloss_ja": "ねむる",
+      "gloss_en": "sleep",
+      "lesson_id": "2026-10-23"
+    },
+    {
+      "id": "okiru",
+      "ruby": "起[お]きる",
+      "kana": "おきる",
+      "group": "ichidan",
+      "gloss_ja": "ねむりから おきる",
+      "gloss_en": "get up",
+      "lesson_id": "2026-10-23"
+    },
+    {
+      "id": "hataraku",
+      "ruby": "働[はたら]く",
+      "kana": "はたらく",
+      "group": "godan",
+      "gloss_ja": "しごとを する",
+      "gloss_en": "work",
+      "lesson_id": "2026-10-23"
+    },
+    {
+      "id": "benkyou",
+      "ruby": "勉強[べんきょう]する",
+      "kana": "べんきょうする",
+      "group": "irregular",
+      "gloss_ja": "べんきょうする",
+      "gloss_en": "study",
+      "lesson_id": "2026-10-23"
+    },
+    {
+      "id": "kekkon",
+      "ruby": "結婚[けっこん]する",
+      "kana": "けっこんする",
+      "group": "irregular",
+      "gloss_ja": "けっこんする",
+      "gloss_en": "get married",
+      "lesson_id": "2026-10-23"
+    },
+    {
+      "id": "nomu",
+      "ruby": "飲[の]む",
+      "kana": "のむ",
+      "group": "godan",
+      "gloss_ja": "のみものを のむ",
+      "gloss_en": "drink",
+      "lesson_id": "2026-10-23"
+    },
+    {
+      "id": "au",
+      "ruby": "会[あ]う",
+      "kana": "あう",
+      "group": "godan",
+      "gloss_ja": "ひとに あう",
+      "gloss_en": "meet",
+      "lesson_id": "2026-10-30"
+    },
+    {
+      "id": "noboru",
+      "ruby": "登[のぼ]る",
+      "kana": "のぼる",
+      "group": "godan",
+      "gloss_ja": "うえに のぼる",
+      "gloss_en": "climb",
+      "lesson_id": "2026-10-30"
+    },
+    {
+      "id": "tomaru",
+      "ruby": "止[と]まる",
+      "kana": "とまる",
+      "group": "godan",
+      "gloss_ja": "うごきが とまる",
+      "gloss_en": "stop",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "noru",
+      "ruby": "乗[の]る",
+      "kana": "のる",
+      "group": "godan",
+      "gloss_ja": "のりものに のる",
+      "gloss_en": "ride",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "oriru",
+      "ruby": "降[お]りる",
+      "kana": "おりる",
+      "group": "ichidan",
+      "gloss_ja": "のりものから おりる",
+      "gloss_en": "get off",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "kasu",
+      "ruby": "貸[か]す",
+      "kana": "かす",
+      "group": "godan",
+      "gloss_ja": "ものを かす",
+      "gloss_en": "lend",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "kaku",
+      "ruby": "書[か]く",
+      "kana": "かく",
+      "group": "godan",
+      "gloss_ja": "じを かく",
+      "gloss_en": "write",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "oyogu",
+      "ruby": "泳[およ]ぐ",
+      "kana": "およぐ",
+      "group": "godan",
+      "gloss_ja": "みずを およぐ",
+      "gloss_en": "swim",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "motsu",
+      "ruby": "持[も]つ",
+      "kana": "もつ",
+      "group": "godan",
+      "gloss_ja": "てに もつ",
+      "gloss_en": "hold",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "kaeru",
+      "ruby": "帰[かえ]る",
+      "kana": "かえる",
+      "group": "godan",
+      "gloss_ja": "いえに かえる",
+      "gloss_en": "go home",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "shinu",
+      "ruby": "死[し]ぬ",
+      "kana": "しぬ",
+      "group": "godan",
+      "gloss_ja": "いのちが おわる",
+      "gloss_en": "die",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "hanasu",
+      "ruby": "話[はな]す",
+      "kana": "はなす",
+      "group": "godan",
+      "gloss_ja": "はなしを する",
+      "gloss_en": "speak",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "akeru",
+      "ruby": "開[あ]ける",
+      "kana": "あける",
+      "group": "ichidan",
+      "gloss_ja": "ドアを あける",
+      "gloss_en": "open",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "shimeru",
+      "ruby": "閉[し]める",
+      "kana": "しめる",
+      "group": "ichidan",
+      "gloss_ja": "ドアを しめる",
+      "gloss_en": "close",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "kiku",
+      "ruby": "聞[き]く",
+      "kana": "きく",
+      "group": "godan",
+      "gloss_ja": "みみで きく",
+      "gloss_en": "listen",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "dasu",
+      "ruby": "出[だ]す",
+      "kana": "だす",
+      "group": "godan",
+      "gloss_ja": "なかから だす",
+      "gloss_en": "take out",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "yomu",
+      "ruby": "読[よ]む",
+      "kana": "よむ",
+      "group": "godan",
+      "gloss_ja": "ほんを よむ",
+      "gloss_en": "read",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "miseru",
+      "ruby": "見[み]せる",
+      "kana": "みせる",
+      "group": "ichidan",
+      "gloss_ja": "ひとに みせる",
+      "gloss_en": "show",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "kiru",
+      "ruby": "切[き]る",
+      "kana": "きる",
+      "group": "godan",
+      "gloss_ja": "ものを きる",
+      "gloss_en": "cut",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "tsukeru",
+      "ruby": "付[つ]ける",
+      "kana": "つける",
+      "group": "ichidan",
+      "gloss_ja": "でんきを つける",
+      "gloss_en": "turn on",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "kesu",
+      "ruby": "消[け]す",
+      "kana": "けす",
+      "group": "godan",
+      "gloss_ja": "でんきを けす",
+      "gloss_en": "turn off",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "toru",
+      "ruby": "撮[と]る",
+      "kana": "とる",
+      "group": "godan",
+      "gloss_ja": "しゃしんを とる",
+      "gloss_en": "take a photo",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "oshieru",
+      "ruby": "教[おし]える",
+      "kana": "おしえる",
+      "group": "ichidan",
+      "gloss_ja": "だれかに おしえる",
+      "gloss_en": "teach",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "okuru",
+      "ruby": "送[おく]る",
+      "kana": "おくる",
+      "group": "godan",
+      "gloss_ja": "おくって わたす",
+      "gloss_en": "send",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "hiku",
+      "ruby": "弾[ひ]く",
+      "kana": "ひく",
+      "group": "godan",
+      "gloss_ja": "がっきを ひく",
+      "gloss_en": "play an instrument",
+      "lesson_id": "2026-11-13"
+    },
+    {
+      "id": "iku",
+      "ruby": "行[い]く",
+      "kana": "いく",
+      "group": "godan",
+      "gloss_ja": "どこかへ いく",
+      "gloss_en": "go",
+      "lesson_id": ""
+    },
+    {
+      "id": "kuru",
+      "ruby": "来[く]る",
+      "kana": "くる",
+      "group": "irregular",
+      "gloss_ja": "ここへ くる",
+      "gloss_en": "come",
+      "lesson_id": ""
+    },
+    {
+      "id": "suru",
+      "ruby": "する",
+      "kana": "する",
+      "group": "irregular",
+      "gloss_ja": "なにかを する",
+      "gloss_en": "do",
+      "lesson_id": ""
+    },
+    {
+      "id": "kau",
+      "ruby": "買[か]う",
+      "kana": "かう",
+      "group": "godan",
+      "gloss_ja": "かねで かう",
+      "gloss_en": "buy",
+      "lesson_id": ""
+    },
+    {
+      "id": "matsu",
+      "ruby": "待[ま]つ",
+      "kana": "まつ",
+      "group": "godan",
+      "gloss_ja": "ときを まつ",
+      "gloss_en": "wait",
+      "lesson_id": ""
+    }
+  ]
+}

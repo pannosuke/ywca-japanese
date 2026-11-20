@@ -1,0 +1,477 @@
+{
+  "schema": 1,
+  "points": [
+    {
+      "id": "g-1016-01",
+      "lesson_id": "2026-10-16",
+      "pattern_ruby": "〜と よんでください",
+      "cloze_ruby": "エリックと ____。",
+      "answer": "よんでください",
+      "accept": [
+        "よんでください",
+        "よんでください。"
+      ],
+      "gloss_en": "Please call me ~."
+    },
+    {
+      "id": "g-1016-02",
+      "lesson_id": "2026-10-16",
+      "pattern_ruby": "[くに]の [まち]から きました",
+      "cloze_ruby": "アメリカの ____ から きました。",
+      "answer": "サンディエゴ",
+      "accept": [
+        "サンディエゴ"
+      ],
+      "gloss_en": "I came from (city) in (country)."
+    },
+    {
+      "id": "g-1016-03",
+      "lesson_id": "2026-10-16",
+      "pattern_ruby": "いつ 日本[にほん]に きましたか",
+      "cloze_ruby": "2020ねんに ____。",
+      "answer": "きました",
+      "accept": [
+        "きました",
+        "きました。"
+      ],
+      "gloss_en": "When did you come to Japan? / I came in ~."
+    },
+    {
+      "id": "g-1016-04",
+      "lesson_id": "2026-10-16",
+      "pattern_ruby": "[のりもの]で 行[い]きます",
+      "cloze_ruby": "茨木駅[いばらきえき]から 大阪駅[おおさかえき]まで、____ で 行[い]きます。",
+      "answer": "でんしゃ",
+      "accept": [
+        "でんしゃ",
+        "電車"
+      ],
+      "gloss_en": "で marks the transport. Eric rides the JR A-line from Ibaraki Station to Osaka Station."
+    },
+    {
+      "id": "g-1016-05",
+      "lesson_id": "2026-10-16",
+      "pattern_ruby": "すみません、書[か]いてください",
+      "cloze_ruby": "すみません、____。",
+      "answer": "かいてください",
+      "accept": [
+        "かいてください",
+        "書いてください"
+      ],
+      "gloss_en": "Excuse me, please write it down."
+    },
+    {
+      "id": "g-1020-01",
+      "lesson_id": "2026-10-20",
+      "pattern_ruby": "Nの 趣味[しゅみ]は なんですか",
+      "cloze_ruby": "Bさんの ____ は なんですか。",
+      "answer": "しゅみ",
+      "accept": [
+        "しゅみ",
+        "趣味"
+      ],
+      "gloss_en": "What is (someone)'s hobby?"
+    },
+    {
+      "id": "g-1020-02",
+      "lesson_id": "2026-10-20",
+      "pattern_ruby": "どんな Nを Vますか",
+      "cloze_ruby": "どんな えいがを ____ か。",
+      "answer": "みます",
+      "accept": [
+        "みます",
+        "見ます"
+      ],
+      "gloss_en": "What kind of N do you V?"
+    },
+    {
+      "id": "g-1020-03",
+      "lesson_id": "2026-10-20",
+      "pattern_ruby": "いつも・よく・時々[ときどき] / あまり・全然[ぜんぜん]",
+      "cloze_ruby": "わたしは あまり えいがを ____。",
+      "answer": "みません",
+      "accept": [
+        "みません",
+        "見ません"
+      ],
+      "gloss_en": "Always, often, and sometimes take ます. あまり and ぜんぜん need a negative."
+    },
+    {
+      "id": "g-1020-04",
+      "lesson_id": "2026-10-20",
+      "pattern_ruby": "Nも です",
+      "cloze_ruby": "わたし____ です。",
+      "answer": "も",
+      "accept": [
+        "も"
+      ],
+      "gloss_en": "も means also / too."
+    },
+    {
+      "id": "g-1023-01",
+      "lesson_id": "2026-10-23",
+      "pattern_ruby": "Vませんか",
+      "cloze_ruby": "いっしょに ごはんを ____。",
+      "answer": "たべませんか",
+      "accept": [
+        "たべませんか",
+        "食べませんか"
+      ],
+      "gloss_en": "Invitation: won't you ~?"
+    },
+    {
+      "id": "g-1023-02",
+      "lesson_id": "2026-10-23",
+      "pattern_ruby": "ええ、そうしましょう / Vましょう",
+      "cloze_ruby": "ハンバーガーを ____。",
+      "answer": "たべましょう",
+      "accept": [
+        "たべましょう",
+        "食べましょう"
+      ],
+      "gloss_en": "Accepting, or let's ~."
+    },
+    {
+      "id": "g-1023-03",
+      "lesson_id": "2026-10-23",
+      "pattern_ruby": "Nは どうですか",
+      "cloze_ruby": "あそこの レストランは ____。",
+      "answer": "どうですか",
+      "accept": [
+        "どうですか"
+      ],
+      "gloss_en": "How about N?"
+    },
+    {
+      "id": "g-1023-04",
+      "lesson_id": "2026-10-23",
+      "pattern_ruby": "すみません、Nは ちょっと…",
+      "cloze_ruby": "すみません、すしは ____",
+      "answer": "ちょっと…",
+      "accept": [
+        "ちょっと…",
+        "ちょっと",
+        "ちょっと..."
+      ],
+      "gloss_en": "A soft no, trailing off."
+    },
+    {
+      "id": "g-1023-05",
+      "lesson_id": "2026-10-23",
+      "pattern_ruby": "[じかん]に V",
+      "cloze_ruby": "まいにち 11じ____ ねます。",
+      "answer": "に",
+      "accept": [
+        "に"
+      ],
+      "gloss_en": "に marks clock times and dates. きのう, まいにち, らいしゅう take no に."
+    },
+    {
+      "id": "g-1023-06",
+      "lesson_id": "2026-10-23",
+      "pattern_ruby": "〜から 〜まで",
+      "cloze_ruby": "12じ____ 4じまで べんきょうしました。",
+      "answer": "から",
+      "accept": [
+        "から"
+      ],
+      "gloss_en": "From ~ until ~."
+    },
+    {
+      "id": "g-1023-07",
+      "lesson_id": "2026-10-23",
+      "pattern_ruby": "Vました / Vませんでした",
+      "cloze_ruby": "ゆうべ 11じに ____。",
+      "answer": "ねました",
+      "accept": [
+        "ねました",
+        "寝ました"
+      ],
+      "gloss_en": "Non-past versus past."
+    },
+    {
+      "id": "g-1023-08",
+      "lesson_id": "2026-10-23",
+      "pattern_ruby": "Nではありません",
+      "cloze_ruby": "きのう____ ありません。",
+      "answer": "では",
+      "accept": [
+        "では",
+        "じゃ"
+      ],
+      "gloss_en": "Correcting: it is not N."
+    },
+    {
+      "id": "g-1027-01",
+      "lesson_id": "2026-10-27",
+      "pattern_ruby": "Aい / Aな + N",
+      "cloze_ruby": "____ はなですね。",
+      "answer": "きれいな",
+      "accept": [
+        "きれいな",
+        "綺麗な"
+      ],
+      "gloss_en": "Before a noun: い-adjectives as they are, な-adjectives add な."
+    },
+    {
+      "id": "g-1027-02",
+      "lesson_id": "2026-10-27",
+      "pattern_ruby": "Aいです → Aくないです",
+      "cloze_ruby": "あつ____です。",
+      "answer": "くない",
+      "accept": [
+        "くない"
+      ],
+      "gloss_en": "Negative of an い-adjective."
+    },
+    {
+      "id": "g-1027-03",
+      "lesson_id": "2026-10-27",
+      "pattern_ruby": "Aなです → Aじゃありません",
+      "cloze_ruby": "げんき____ ありません。",
+      "answer": "じゃ",
+      "accept": [
+        "じゃ",
+        "では"
+      ],
+      "gloss_en": "Negative of a な-adjective."
+    },
+    {
+      "id": "g-1027-04",
+      "lesson_id": "2026-10-27",
+      "pattern_ruby": "Nは どうですか",
+      "cloze_ruby": "おおさかは ____。",
+      "answer": "どうですか",
+      "accept": [
+        "どうですか"
+      ],
+      "gloss_en": "Asking for an impression."
+    },
+    {
+      "id": "g-1027-05",
+      "lesson_id": "2026-10-27",
+      "pattern_ruby": "Nが 有名[ゆうめい]です / Nに あります",
+      "cloze_ruby": "ばんりの ちょうじょうが ____。",
+      "answer": "ゆうめいです",
+      "accept": [
+        "ゆうめいです",
+        "有名です"
+      ],
+      "gloss_en": "Famous for ~, or located in ~."
+    },
+    {
+      "id": "g-1030-01",
+      "lesson_id": "2026-10-30",
+      "pattern_ruby": "N1は どんな N2ですか",
+      "cloze_ruby": "きょうとは どんな ____ ですか。",
+      "answer": "まち",
+      "accept": [
+        "まち",
+        "町"
+      ],
+      "gloss_en": "What kind of N2 is N1?"
+    },
+    {
+      "id": "g-1030-02",
+      "lesson_id": "2026-10-30",
+      "pattern_ruby": "Aい → Aかったです / Aくなかったです",
+      "cloze_ruby": "えいがは ____ です。",
+      "answer": "おもしろかった",
+      "accept": [
+        "おもしろかった",
+        "おもしろかったです"
+      ],
+      "gloss_en": "Past of い-adjectives. いい → よかった. おもしろい → おもしろかった. The ろ stays."
+    },
+    {
+      "id": "g-1030-03",
+      "lesson_id": "2026-10-30",
+      "pattern_ruby": "Aな → Aでした / Aじゃありませんでした",
+      "cloze_ruby": "きのうは ____。",
+      "answer": "ひまでした",
+      "accept": [
+        "ひまでした",
+        "暇でした"
+      ],
+      "gloss_en": "Past of な-adjectives."
+    },
+    {
+      "id": "g-1030-04",
+      "lesson_id": "2026-10-30",
+      "pattern_ruby": "どうでしたか",
+      "cloze_ruby": "デートは ____。",
+      "answer": "どうでしたか",
+      "accept": [
+        "どうでしたか"
+      ],
+      "gloss_en": "How was it?"
+    },
+    {
+      "id": "g-1106-01",
+      "lesson_id": "2026-11-06",
+      "pattern_ruby": "N1は N2より Aです",
+      "cloze_ruby": "ほっかいどうは おおさか____ さむいです。",
+      "answer": "より",
+      "accept": [
+        "より"
+      ],
+      "gloss_en": "N1 is more A than N2."
+    },
+    {
+      "id": "g-1106-02",
+      "lesson_id": "2026-11-06",
+      "pattern_ruby": "N1と N2と どちらが Aですか",
+      "cloze_ruby": "ほっかいどうの ____ が さむいです。",
+      "answer": "ほう",
+      "accept": [
+        "ほう",
+        "方"
+      ],
+      "gloss_en": "Which of the two is more A?"
+    },
+    {
+      "id": "g-1106-03",
+      "lesson_id": "2026-11-06",
+      "pattern_ruby": "どちらが 好[す]きですか",
+      "cloze_ruby": "すしの ほうが ____。",
+      "answer": "すきです",
+      "accept": [
+        "すきです",
+        "好きです"
+      ],
+      "gloss_en": "Which do you prefer? どちらも = both."
+    },
+    {
+      "id": "g-1106-04",
+      "lesson_id": "2026-11-06",
+      "pattern_ruby": "Nと 同[おな]じぐらいです",
+      "cloze_ruby": "おおさかと ____ です。",
+      "answer": "おなじぐらい",
+      "accept": [
+        "おなじぐらい",
+        "同じぐらい"
+      ],
+      "gloss_en": "About the same as N."
+    },
+    {
+      "id": "g-1106-05",
+      "lesson_id": "2026-11-06",
+      "pattern_ruby": "[グループ]の 中[なか]で なにが 一番[いちばん] Aですか",
+      "cloze_ruby": "くだものの なかで なにが ____ すきですか。",
+      "answer": "いちばん",
+      "accept": [
+        "いちばん",
+        "一番"
+      ],
+      "gloss_en": "The superlative inside a group."
+    },
+    {
+      "id": "g-1110-01",
+      "lesson_id": "2026-11-10",
+      "pattern_ruby": "Nが 欲[ほ]しいです",
+      "cloze_ruby": "くるまが ____。",
+      "answer": "ほしいです",
+      "accept": [
+        "ほしいです",
+        "欲しいです"
+      ],
+      "gloss_en": "Want a thing. It behaves like an い-adjective."
+    },
+    {
+      "id": "g-1110-02",
+      "lesson_id": "2026-11-10",
+      "pattern_ruby": "Vます の なかご + たいです",
+      "cloze_ruby": "ふるい まちが ____。",
+      "answer": "みたいです",
+      "accept": [
+        "みたいです",
+        "見たいです"
+      ],
+      "gloss_en": "Want to do. を can become が."
+    },
+    {
+      "id": "g-1110-03",
+      "lesson_id": "2026-11-10",
+      "pattern_ruby": "[ばしょ]に 行[い]きたいです",
+      "cloze_ruby": "きょうとに ____。",
+      "answer": "いきたいです",
+      "accept": [
+        "いきたいです",
+        "行きたいです"
+      ],
+      "gloss_en": "Want to go to ~."
+    },
+    {
+      "id": "g-1110-04",
+      "lesson_id": "2026-11-10",
+      "pattern_ruby": "どこかに Vませんか",
+      "cloze_ruby": "いっしょに ____ いきませんか。",
+      "answer": "どこかに",
+      "accept": [
+        "どこかに"
+      ],
+      "gloss_en": "Invite someone out, or ask where."
+    },
+    {
+      "id": "g-1113-01",
+      "lesson_id": "2026-11-13",
+      "pattern_ruby": "どうしの グループ 1・2・3",
+      "cloze_ruby": "たべます は グループ ____。",
+      "answer": "2",
+      "accept": [
+        "2",
+        "に",
+        "２"
+      ],
+      "gloss_en": "Group 1 〜i-ます, group 2 〜e-ます (and some 〜i-ます), group 3 します and きます."
+    },
+    {
+      "id": "g-1113-02",
+      "lesson_id": "2026-11-13",
+      "pattern_ruby": "て形[けい]の ルール",
+      "cloze_ruby": "のみます → ____。",
+      "answer": "のんで",
+      "accept": [
+        "のんで",
+        "飲んで"
+      ],
+      "gloss_en": "Te-form sound changes. いきます is いって."
+    },
+    {
+      "id": "g-1113-03",
+      "lesson_id": "2026-11-13",
+      "pattern_ruby": "Vてください",
+      "cloze_ruby": "くすりを ____。",
+      "answer": "のんでください",
+      "accept": [
+        "のんでください",
+        "飲んでください"
+      ],
+      "gloss_en": "Please do ~ (an instruction)."
+    },
+    {
+      "id": "g-1113-04",
+      "lesson_id": "2026-11-13",
+      "pattern_ruby": "すみません、Vてください",
+      "cloze_ruby": "すみません、ペンを ____。",
+      "answer": "かしてください",
+      "accept": [
+        "かしてください",
+        "貸してください"
+      ],
+      "gloss_en": "A polite request."
+    },
+    {
+      "id": "g-1113-05",
+      "lesson_id": "2026-11-13",
+      "pattern_ruby": "Nは [ばしょ]に 止[と]まりますか",
+      "cloze_ruby": "この かいそくは おおさかえきに ____ か。",
+      "answer": "とまります",
+      "accept": [
+        "とまります",
+        "止まります"
+      ],
+      "gloss_en": "Does it stop at ~? For Eric's own train, only the stations he named: Ibaraki Station to Osaka Station."
+    }
+  ]
+}

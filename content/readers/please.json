@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "id": "please",
+  "level": 1,
+  "title_ruby": "てください",
+  "lesson_id": "2026-11-13",
+  "body_ruby": "せんせいは 「なまえを 書[か]いてください」と いいました。エリックは なまえを 書[か]きました。つぎに 「ほんを 読[よ]んでください」と いいました。ともだちは 「ここに 来[き]てください」と いいました。エリックは いすの ところへ 行[い]きました。",
+  "questions": [
+    {
+      "id": "p1",
+      "prompt_ruby": "せんせいは なにを かきましたか。",
+      "choices": [
+        {
+          "ruby": "なまえ",
+          "correct": true
+        },
+        {
+          "ruby": "ほん",
+          "correct": false
+        },
+        {
+          "ruby": "え",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "prompt_ruby": "つぎに なにを しますか。",
+      "choices": [
+        {
+          "ruby": "ほんを よむ",
+          "correct": true
+        },
+        {
+          "ruby": "みずを のむ",
+          "correct": false
+        },
+        {
+          "ruby": "ねる",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "prompt_ruby": "ともだちは なにを いいましたか。",
+      "choices": [
+        {
+          "ruby": "ここに きてください",
+          "correct": true
+        },
+        {
+          "ruby": "かえってください",
+          "correct": false
+        },
+        {
+          "ruby": "ねてください",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "prompt_ruby": "エリックは どこまで いきましたか。",
+      "choices": [
+        {
+          "ruby": "いす",
+          "correct": true
+        },
+        {
+          "ruby": "えき",
+          "correct": false
+        },
+        {
+          "ruby": "いえ",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "prompt_ruby": "「行[い]く」の て形[けい] は どれですか。",
+      "choices": [
+        {
+          "ruby": "いって",
+          "correct": true
+        },
+        {
+          "ruby": "いて",
+          "correct": false
+        },
+        {
+          "ruby": "いいた",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}

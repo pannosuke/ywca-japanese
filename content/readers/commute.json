@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "id": "commute",
+  "level": 0,
+  "title_ruby": "えきまで",
+  "lesson_id": "2026-11-13",
+  "body_ruby": "エリックは えきへ 行[い]きます。でんしゃに 乗[の]ります。おおさかで 降[お]ります。クラスは 7じです。",
+  "questions": [
+    {
+      "id": "c1",
+      "prompt_ruby": "エリックは なにに のりますか。",
+      "choices": [
+        {
+          "ruby": "でんしゃ",
+          "correct": true
+        },
+        {
+          "ruby": "ひこうき",
+          "correct": false
+        },
+        {
+          "ruby": "じてんしゃ",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "prompt_ruby": "どこで おりますか。",
+      "choices": [
+        {
+          "ruby": "おおさか",
+          "correct": true
+        },
+        {
+          "ruby": "いえ",
+          "correct": false
+        },
+        {
+          "ruby": "くうこう",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "prompt_ruby": "クラスは なんじですか。",
+      "choices": [
+        {
+          "ruby": "7じ",
+          "correct": true
+        },
+        {
+          "ruby": "9じ",
+          "correct": false
+        },
+        {
+          "ruby": "6じ",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}
