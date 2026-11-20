@@ -1212,6 +1212,46 @@
       "sentence": "",
       "sentence_en": "",
       "note": "godan"
+    },
+    {
+      "id": "vocab:履きます",
+      "lesson_id": "2026-11-17",
+      "word": "履[は]きます",
+      "definition": "ズボンや くつ、くつしたを足[あし]に つけること。",
+      "meaning": "put on; wear (pants, shoes, socks: below the waist)",
+      "sentence": "今朝[けさ]、左[ひだり]と右[みぎ]で ちがう色[いろ]の くつしたを履[は]いて、茨木駅[いばらきえき]から快速[かいそく]に乗[の]りました！",
+      "sentence_en": "This morning I put on mismatched socks and got on the rapid at Ibaraki Station!",
+      "note": "着[き]ます は上[うえ]（シャツ・ジャケット）、履[は]きます は下[した]（ズボン・スカート・くつ）、かけます は めがね。て形[けい]:履[は]いて（き→いて、グループ1）。"
+    },
+    {
+      "id": "vocab:掛けます",
+      "lesson_id": "2026-11-17",
+      "word": "掛[か]けます",
+      "definition": "めがねや サングラスを顔[かお]に つけること。かべに ものを つるす ときにも使[つか]う。",
+      "meaning": "wear (glasses, sunglasses); hang",
+      "sentence": "サングラスを掛[か]けて、茨木駅[いばらきえき]から快速[かいそく]に乗[の]ります。かっこいいでしょう？",
+      "sentence_en": "I put on my sunglasses and get on the rapid at Ibaraki Station. Cool, right?",
+      "note": "めがね・サングラスは「かけます」。同[おな]じ音[おと]で「電話[でんわ]を かけます」（make a call）も ある。て形[けい]:掛[か]けて（グループ2）。"
+    },
+    {
+      "id": "vocab:払います",
+      "lesson_id": "2026-11-17",
+      "word": "払[はら]います",
+      "definition": "買[か]った ものの お金[かね]を わたすこと。",
+      "meaning": "pay",
+      "sentence": "大阪駅[おおさかえき]の コンビニで あんパンを二[ふた]つ買[か]いました。ICOCAで払[はら]いました！",
+      "sentence_en": "I bought two anpan at a convenience store in Osaka Station. I paid with my ICOCA!",
+      "note": "「〜で払[はら]います」: カードで、現金[げんきん]で、ICOCAで。て形[けい]:払[はら]って（い→って、グループ1）。"
+    },
+    {
+      "id": "vocab:子守唄",
+      "lesson_id": "2026-11-17",
+      "word": "子守唄[こもりうた]",
+      "definition": "小[ちい]さい子[こ]どもを ねかせる ときに うたう、やさしい歌[うた]。",
+      "meaning": "lullaby",
+      "sentence": "帰[かえ]りの電車[でんしゃ]は静[しず]かです。ゆれは子守唄[こもりうた]ですね。茨木駅[いばらきえき]で降[お]りるのを わすれないで！",
+      "sentence_en": "The train home is quiet. The rocking is a lullaby. Don't forget to get off at Ibaraki Station!",
+      "note": "ねむる ための歌[うた]（lullaby）。子[こ]どもの歌[うた] ぜんぶは「童謡[どうよう]」（children's songs）。子守[こもり]＝子[こ]どもの せわ、唄[うた]＝うた。"
     }
   ]
 }

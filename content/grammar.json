@@ -472,6 +472,122 @@
         "止まります"
       ],
       "gloss_en": "Does it stop at ~? For Eric's own train, only the stations he named: Ibaraki Station to Osaka Station."
+    },
+    {
+      "id": "g-1117-01",
+      "lesson_id": "2026-11-17",
+      "pattern_ruby": "どうぞ Vてください",
+      "cloze_ruby": "どうぞ、ここに ____。(sit)",
+      "answer": "すわってください",
+      "accept": [
+        "すわってください",
+        "座ってください"
+      ],
+      "gloss_en": "Offering a seat. Small っ: すわって, not すわて."
+    },
+    {
+      "id": "g-1117-02",
+      "lesson_id": "2026-11-17",
+      "pattern_ruby": "どうぞ Vてください",
+      "cloze_ruby": "どうぞ、なかに ____。(come in)",
+      "answer": "はいってください",
+      "accept": [
+        "はいってください",
+        "入ってください"
+      ],
+      "gloss_en": "Inviting someone in. はいる is group 1: はいって."
+    },
+    {
+      "id": "g-1117-03",
+      "lesson_id": "2026-11-17",
+      "pattern_ruby": "それは 何[なん]ですか",
+      "cloze_ruby": "それは ____ですか。(what)",
+      "answer": "なん",
+      "accept": [
+        "なん",
+        "なに",
+        "何"
+      ],
+      "gloss_en": "Asking what the thing near the listener is."
+    },
+    {
+      "id": "g-1117-04",
+      "lesson_id": "2026-11-17",
+      "pattern_ruby": "[ばしょ]で Vました",
+      "cloze_ruby": "けさ、コンビニ __ あんパンを かいました。",
+      "answer": "で",
+      "accept": [
+        "で"
+      ],
+      "gloss_en": "で marks where an action happens."
+    },
+    {
+      "id": "g-1117-05",
+      "lesson_id": "2026-11-17",
+      "pattern_ruby": "おいしそうですね",
+      "cloze_ruby": "わあ、____ですね。(looks tasty)",
+      "answer": "おいしそう",
+      "accept": [
+        "おいしそう"
+      ],
+      "gloss_en": "Looks ~ (from how it looks)."
+    },
+    {
+      "id": "g-1117-06",
+      "lesson_id": "2026-11-17",
+      "pattern_ruby": "Nは ちょっと…",
+      "cloze_ruby": "ビールは、____…。(politely say no)",
+      "answer": "ちょっと",
+      "accept": [
+        "ちょっと"
+      ],
+      "gloss_en": "Declining an offer politely."
+    },
+    {
+      "id": "g-1117-07",
+      "lesson_id": "2026-11-17",
+      "pattern_ruby": "いただきます",
+      "cloze_ruby": "ありがとうございます。____。(before eating)",
+      "answer": "いただきます",
+      "accept": [
+        "いただきます"
+      ],
+      "gloss_en": "Said before you eat."
+    },
+    {
+      "id": "g-1117-08",
+      "lesson_id": "2026-11-17",
+      "pattern_ruby": "おめでとうございます",
+      "cloze_ruby": "たんじょうび、____ございます。",
+      "answer": "おめでとう",
+      "accept": [
+        "おめでとう"
+      ],
+      "gloss_en": "Happy birthday."
+    },
+    {
+      "id": "g-1117-09",
+      "lesson_id": "2026-11-17",
+      "pattern_ruby": "出[だ]します → だして",
+      "cloze_ruby": "しゅくだいを ____ください。(だします)",
+      "answer": "だして",
+      "accept": [
+        "だして",
+        "出して"
+      ],
+      "gloss_en": "出[だ]す is group 1: す→して. Keep the ゛: だして, not たして."
+    },
+    {
+      "id": "g-1117-10",
+      "lesson_id": "2026-11-17",
+      "pattern_ruby": "出[で]ます → でて",
+      "cloze_ruby": "ここから ____ください。(でます)",
+      "answer": "でて",
+      "accept": [
+        "でて",
+        "出て"
+      ],
+      "gloss_en": "出[で]る is group 2: drop ます, add て. でて, not でって."
     }
   ]
 }

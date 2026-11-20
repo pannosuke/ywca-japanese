@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "id": "koube-hokkaidou",
+  "level": 1,
+  "title_ruby": "こうべと ほっかいどう",
+  "lesson_id": "2026-11-17",
+  "body_ruby": "きんようびの じゅぎょうの あと、エリックさんは ともだちと はなしました。「らいしゅうの にちようび、いっしょに こうべに いきませんか。」「いいですね！こうべで なにが したいですか。」「ふるい まちが みたいです。それから、おいしい にほんりょうりが たべたいです。」「いいですね。わたしは らいねん ほっかいどうに りょこうに いきたいです。」「ほっかいどうは ちょっと さむいですよ。」「だから、あつい コートを かいます！」",
+  "questions": [
+    {
+      "id": "k1",
+      "prompt_ruby": "いつ こうべに いきますか。",
+      "choices": [
+        {
+          "ruby": "あした",
+          "correct": false
+        },
+        {
+          "ruby": "らいしゅうの にちようび",
+          "correct": true
+        },
+        {
+          "ruby": "らいねん",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "k2",
+      "prompt_ruby": "エリックさんは こうべで なにが みたいですか。",
+      "choices": [
+        {
+          "ruby": "ふるい まち",
+          "correct": true
+        },
+        {
+          "ruby": "えいが",
+          "correct": false
+        },
+        {
+          "ruby": "コンビニ",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "k3",
+      "prompt_ruby": "ともだちは らいねん どこに りょこうに いきたいですか。",
+      "choices": [
+        {
+          "ruby": "ほかいどう",
+          "correct": false
+        },
+        {
+          "ruby": "ほっかいど",
+          "correct": false
+        },
+        {
+          "ruby": "ほっかいどう",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "k4",
+      "prompt_ruby": "「together」は どれですか。",
+      "choices": [
+        {
+          "ruby": "いしょうに",
+          "correct": false
+        },
+        {
+          "ruby": "いっしょに",
+          "correct": true
+        },
+        {
+          "ruby": "いっしょうに",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "k5",
+      "prompt_ruby": "「trip」は どれですか。",
+      "choices": [
+        {
+          "ruby": "りょこう",
+          "correct": true
+        },
+        {
+          "ruby": "りょうこう",
+          "correct": false
+        },
+        {
+          "ruby": "りよこう",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}

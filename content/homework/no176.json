@@ -1,0 +1,121 @@
+{
+  "schema": 1,
+  "id": "no176-result",
+  "worksheet_id": "no176",
+  "date": "2026-11-10",
+  "teacher_id": "tsuji",
+  "title_ruby": "〜たいです",
+  "note": "No.176, returned 11/17 with Tsuji's red marks. 9/12, all misses spelling: いっしょ (small っ), こうべ, ほっかいどう, りょこう (long vowels). Tsuji also rewrote his み twice.",
+  "correct": 9,
+  "total": 12,
+  "items": [
+    {
+      "id": "no176-1-1",
+      "prompt_ruby": "Bさん、あした ____か。",
+      "expected": "いそがしいです",
+      "answer": "いそがしいです",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "no176-1-2",
+      "prompt_ruby": "B: ____。(not really)",
+      "expected": "いいえ、べつに",
+      "answer": "いいえ、べつに",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "no176-1-3",
+      "prompt_ruby": "じゃあ、いっしょに どこかに ____か。",
+      "expected": "いきません",
+      "answer": "いきません",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "no176-1-4",
+      "prompt_ruby": "いいですよ。どこに ____か。",
+      "expected": "いきましょう",
+      "answer": "いきましょう",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "no176-1-5",
+      "prompt_ruby": "わたしは にほんの ふるい まちが ____。",
+      "expected": "みたいです",
+      "answer": "みたいです",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "no176-1-6",
+      "prompt_ruby": "じゃあ、きょうとは ____。おいしい にほんりょうりの みせも あります。",
+      "expected": "どうですか",
+      "answer": "どうですか",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "no176-1-7",
+      "prompt_ruby": "へえ、____。",
+      "expected": "いいですね",
+      "answer": "いいですね",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "no176-2-1",
+      "prompt_ruby": "あした ____。(want to do?)",
+      "expected": "なにを したいですか",
+      "answer": "なにを したいですか",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "no176-2-2",
+      "prompt_ruby": "あさって えいがを ____。",
+      "expected": "みたいです",
+      "answer": "みたいです",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "no176-2-3",
+      "prompt_ruby": "らいしゅう ____ ____に いきませんか。(together / Kobe)",
+      "expected": "いっしょに こうべ",
+      "answer": "いしょうに こべ",
+      "correct": false,
+      "error_type": "long-vowel",
+      "verb_id": ""
+    },
+    {
+      "id": "no176-2-4",
+      "prompt_ruby": "にほんで ____が みたいです。(Hokkaido)",
+      "expected": "ほっかいどう",
+      "answer": "ほっかいど",
+      "correct": false,
+      "error_type": "long-vowel",
+      "verb_id": ""
+    },
+    {
+      "id": "no176-2-5",
+      "prompt_ruby": "らいねん アメリカ ____に いきたいです。(a trip)",
+      "expected": "りょこう",
+      "answer": "りょうこう",
+      "correct": false,
+      "error_type": "long-vowel",
+      "verb_id": ""
+    }
+  ]
+}

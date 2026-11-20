@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "id": "class-2026-11-17",
+  "lesson_id": "2026-11-17",
+  "title_ruby": "まいにちテスト",
+  "items": [
+    {
+      "id": "q1",
+      "kind": "choose_form",
+      "prompt_ruby": "「____の ふつうに のってください」(next)",
+      "answer": "つぎ",
+      "choices": [
+        "つぎ",
+        "すぎ",
+        "つき",
+        "すき"
+      ]
+    },
+    {
+      "id": "q2",
+      "kind": "choose_form",
+      "prompt_ruby": "「ちょっと ____を かしてください」(ballpoint pen)",
+      "answer": "ボールペン",
+      "choices": [
+        "ボールペン",
+        "ボールべん",
+        "ボールベン",
+        "ボールぺん"
+      ]
+    },
+    {
+      "id": "q3",
+      "kind": "fill_blank",
+      "prompt_ruby": "CDを ____ください。",
+      "answer": "きいて",
+      "choices": []
+    },
+    {
+      "id": "q4",
+      "kind": "fill_blank",
+      "prompt_ruby": "すみません、ドアを ____ください。",
+      "answer": "あけて",
+      "choices": []
+    },
+    {
+      "id": "q5",
+      "kind": "fill_blank",
+      "prompt_ruby": "すみません、ゆっくり ____ください。",
+      "answer": "はなして",
+      "choices": []
+    }
+  ],
+  "correct": 3,
+  "total": 5
+}

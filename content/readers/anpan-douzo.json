@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "id": "anpan-douzo",
+  "level": 1,
+  "title_ruby": "あんパン、どうぞ",
+  "lesson_id": "2026-11-17",
+  "body_ruby": "かようびの ゆうがた、エリックさんは 茨木駅[いばらきえき]の コンビニで あんパンを ふたつ かいました。ICOCAで はらいました。快速[かいそく]で 大阪駅[おおさかえき]に いきました。YWCAで ツジせんせいに あいました。「せんせい、これ、あんパンです。どうぞ たべてください。」「わあ、おいしそうですね。ありがとうございます。いただきます。」せんせいは「おいしいです！」と いいました。それから、「エリックさんも どうぞ すわってください。おちゃを のんでください。」と いいました。",
+  "questions": [
+    {
+      "id": "a1",
+      "prompt_ruby": "エリックさんは どこで あんパンを かいましたか。",
+      "choices": [
+        {
+          "ruby": "茨木駅[いばらきえき]の コンビニ",
+          "correct": true
+        },
+        {
+          "ruby": "大阪駅[おおさかえき]の スーパー",
+          "correct": false
+        },
+        {
+          "ruby": "YWCA",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "prompt_ruby": "あんパンを いくつ かいましたか。",
+      "choices": [
+        {
+          "ruby": "ひとつ",
+          "correct": false
+        },
+        {
+          "ruby": "ふたつ",
+          "correct": true
+        },
+        {
+          "ruby": "みっつ",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "a3",
+      "prompt_ruby": "なにで はらいましたか。",
+      "choices": [
+        {
+          "ruby": "ICOCA",
+          "correct": true
+        },
+        {
+          "ruby": "カード",
+          "correct": false
+        },
+        {
+          "ruby": "おかね",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "a4",
+      "prompt_ruby": "せんせいは たべる まえに なんと いいましたか。",
+      "choices": [
+        {
+          "ruby": "いただきます",
+          "correct": true
+        },
+        {
+          "ruby": "おめでとうございます",
+          "correct": false
+        },
+        {
+          "ruby": "ちょっと…",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "a5",
+      "prompt_ruby": "「すわります」の て形[けい]は どれですか。",
+      "choices": [
+        {
+          "ruby": "すわて",
+          "correct": false
+        },
+        {
+          "ruby": "すわって",
+          "correct": true
+        },
+        {
+          "ruby": "すわんで",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}

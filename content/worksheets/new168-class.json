@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "id": "new168-class",
+  "date": "2026-11-17",
+  "teacher_id": "tsuji",
+  "title_ruby": "動詞[どうし]－て形[けい] ください",
+  "lesson_id": "2026-11-17",
+  "items": [
+    {
+      "id": "c168-1",
+      "prompt_ruby": "（おちゃを）____ ください。",
+      "expected": "のんで",
+      "accept": [
+        "のんで"
+      ],
+      "verb_id": "nomu",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "c168-2",
+      "prompt_ruby": "どうぞ、（なかに）____ ください。",
+      "expected": "はいって",
+      "accept": [
+        "はいって"
+      ],
+      "verb_id": "hairu",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "c168-3",
+      "prompt_ruby": "どうぞ、（くるまに）____ ください。",
+      "expected": "のって",
+      "accept": [
+        "のって"
+      ],
+      "verb_id": "noru",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "c168-4",
+      "prompt_ruby": "この かさを ____ ください。",
+      "expected": "つかって",
+      "accept": [
+        "つかって"
+      ],
+      "verb_id": "tsukau",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "c168-5",
+      "prompt_ruby": "どうぞ、（いすに）____ ください。",
+      "expected": "すわって",
+      "accept": [
+        "すわって"
+      ],
+      "verb_id": "suwaru",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "c168-6",
+      "prompt_ruby": "うちに ____ ください。",
+      "expected": "きて",
+      "accept": [
+        "きて"
+      ],
+      "verb_id": "kuru",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "c168-7",
+      "prompt_ruby": "〈レストランで〉どうぞ ____ ください。",
+      "expected": "たべて",
+      "accept": [
+        "たべて"
+      ],
+      "verb_id": "taberu",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "c168-9",
+      "prompt_ruby": "〈いざかやで〉どうぞ ____ ください。",
+      "expected": "のんで",
+      "accept": [
+        "のんで"
+      ],
+      "verb_id": "nomu",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "c168-7b",
+      "prompt_ruby": "どうぞ たべてください。― ____。(before eating)",
+      "expected": "いただきます",
+      "accept": [
+        "いただきます"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "c168-9b",
+      "prompt_ruby": "ビールは、____…。(no thanks)",
+      "expected": "ちょっと",
+      "accept": [
+        "ちょっと"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    }
+  ]
+}

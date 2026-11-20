@@ -1,0 +1,278 @@
+{
+  "schema": 1,
+  "id": "hw168",
+  "date": "2026-11-17",
+  "teacher_id": "tsuji",
+  "title_ruby": "しゅくだい どうぞ 〜てください",
+  "lesson_id": "2026-11-17",
+  "items": [
+    {
+      "id": "hw168-1a",
+      "prompt_ruby": "わあ、____！(looks tasty)",
+      "expected": "おいしそうですね",
+      "accept": [
+        "おいしそうですね",
+        "おいしそう"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-1b",
+      "prompt_ruby": "____？(what is that?)",
+      "expected": "それは なんですか",
+      "accept": [
+        "それはなんですか",
+        "それは、なんですか",
+        "それはなに",
+        "それはなんですか？"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-1c",
+      "prompt_ruby": "けさ、コンビニ（__）",
+      "expected": "で",
+      "accept": [
+        "で"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-1d",
+      "prompt_ruby": "けさ、コンビニで ____。(bought)",
+      "expected": "かいました",
+      "accept": [
+        "かいました"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-1e",
+      "prompt_ruby": "____よ。(it's tasty)",
+      "expected": "おいしいです",
+      "accept": [
+        "おいしいです"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-1f",
+      "prompt_ruby": "____ たべてください。",
+      "expected": "どうぞ",
+      "accept": [
+        "どうぞ"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-1g",
+      "prompt_ruby": "どうぞ ____ください。(eat)",
+      "expected": "たべて",
+      "accept": [
+        "たべて"
+      ],
+      "verb_id": "taberu",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-1h",
+      "prompt_ruby": "わあ、____。(thanks)",
+      "expected": "ありがとうございます",
+      "accept": [
+        "ありがとうございます"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-1i",
+      "prompt_ruby": "____。(before eating)",
+      "expected": "いただきます",
+      "accept": [
+        "いただきます"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-2-1a",
+      "prompt_ruby": "どうぞ、____ください。(sit)",
+      "expected": "すわって",
+      "accept": [
+        "すわって"
+      ],
+      "verb_id": "suwaru",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-2-1b",
+      "prompt_ruby": "(to an older host) ____。",
+      "expected": "ありがとうございます",
+      "accept": [
+        "ありがとうございます",
+        "ありがとう",
+        "しつれいします"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-2-2a",
+      "prompt_ruby": "どうぞ、____ください。(come in)",
+      "expected": "はいって",
+      "accept": [
+        "はいって"
+      ],
+      "verb_id": "hairu",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-2-2b",
+      "prompt_ruby": "はい、____。",
+      "expected": "ありがとう",
+      "accept": [
+        "ありがとう",
+        "ありがとうございます"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-2-3a",
+      "prompt_ruby": "どうぞ、____ください。(the towel)",
+      "expected": "つかって",
+      "accept": [
+        "つかって"
+      ],
+      "verb_id": "tsukau",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-2-3b",
+      "prompt_ruby": "____。",
+      "expected": "ありがとう",
+      "accept": [
+        "ありがとう",
+        "ありがとうございます"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-t-arau",
+      "prompt_ruby": "あらいます → て形[けい]",
+      "expected": "あらって",
+      "accept": [
+        "あらって"
+      ],
+      "verb_id": "arau",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-t-tsukau",
+      "prompt_ruby": "つかいます → て形[けい]",
+      "expected": "つかって",
+      "accept": [
+        "つかって"
+      ],
+      "verb_id": "tsukau",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-t-haku",
+      "prompt_ruby": "はきます → て形[けい]",
+      "expected": "はいて",
+      "accept": [
+        "はいて"
+      ],
+      "verb_id": "haku",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-t-hiku",
+      "prompt_ruby": "ひきます → て形[けい]",
+      "expected": "ひいて",
+      "accept": [
+        "ひいて"
+      ],
+      "verb_id": "hiku",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-t-nomu",
+      "prompt_ruby": "のみます → て形[けい]",
+      "expected": "のんで",
+      "accept": [
+        "のんで"
+      ],
+      "verb_id": "nomu",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-t-hairu",
+      "prompt_ruby": "はいります → て形[けい]",
+      "expected": "はいって",
+      "accept": [
+        "はいって"
+      ],
+      "verb_id": "hairu",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-t-suwaru",
+      "prompt_ruby": "すわります → て形[けい]",
+      "expected": "すわって",
+      "accept": [
+        "すわって"
+      ],
+      "verb_id": "suwaru",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-t-miru",
+      "prompt_ruby": "みます → て形[けい]",
+      "expected": "みて",
+      "accept": [
+        "みて"
+      ],
+      "verb_id": "miru",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-t-taberu",
+      "prompt_ruby": "たべます → て形[けい]",
+      "expected": "たべて",
+      "accept": [
+        "たべて"
+      ],
+      "verb_id": "taberu",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-t-kakeru",
+      "prompt_ruby": "かけます → て形[けい]",
+      "expected": "かけて",
+      "accept": [
+        "かけて"
+      ],
+      "verb_id": "kakeru",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw168-t-kimasu",
+      "prompt_ruby": "きます → て形[けい]",
+      "expected": "きて",
+      "accept": [
+        "きて"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    }
+  ]
+}
