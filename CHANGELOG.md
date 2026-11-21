@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.5.1
+
+Not tagged in this pull request. `versionCode` is 7, so Obtainium can replace 0.5.0 in place. Package name stays `dev.ericallerton.yoruben`. The release is signed with the same keystore as 0.5.0.
+
+- A conjugation explanation names the direction. ます → 辞書形 no longer shows the ます rule. て, た, ない, ます, ません, ました, and ませんでした each say what to change, and a verb that ends in る but is an u-verb says so. 行く stays the って exception.
+- 旅行する, 勉強する, and 結婚する conjugate as する. They were being treated as u-verbs that end in る.
+- A typed answer accepts kana or the kanji spelling of that card: 座る and すわる, 座って, 行って, 来ない. Spaces and full-width characters are ignored. Tiles stay kana.
+- た and ない are drilled, with the same group rules.
+- In a story, each question is labeled. A tapped choice stays selected. After Check, the correct choice is marked, and a wrong tap is marked too. Each choice is a full-width row.
+- Furigana stays on the same line as the kana that follows it.
+
 ## 0.5.0
 
 Not tagged in this pull request. `versionCode` is 6, so Obtainium can replace 0.4.1 in place. Package name stays `dev.ericallerton.yoruben`.

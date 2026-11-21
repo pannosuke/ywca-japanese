@@ -51,6 +51,20 @@
       "enabled": true
     },
     {
+      "id": "ta",
+      "label_ruby": "た形[けい]",
+      "prompt_ruby": "じしょけい を た形[けい] に",
+      "applies_to": "verb",
+      "enabled": true
+    },
+    {
+      "id": "nai",
+      "label_ruby": "ない",
+      "prompt_ruby": "じしょけい を ない に",
+      "applies_to": "verb",
+      "enabled": true
+    },
+    {
       "id": "i_negative",
       "label_ruby": "くない",
       "prompt_ruby": "いけいようし を くない に",

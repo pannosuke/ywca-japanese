@@ -6,14 +6,18 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -33,8 +37,11 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -405,7 +412,7 @@ fun DrillScreen(
                 Verdict(ui.verdict == true)
                 if (ui.verdict == false) {
                     Spacer(Modifier.height(8.dp))
-                    Text(ui.expected, style = MaterialTheme.typography.headlineMedium)
+                    MaybeRuby(ui.expected, MaterialTheme.typography.headlineMedium, known)
                 }
                 Spacer(Modifier.height(16.dp))
                 MaybeRuby(ui.rule, MaterialTheme.typography.bodyLarge, known)
@@ -452,27 +459,20 @@ fun ReadScreen(ui: ReadUi, known: Set<Char>, onClose: () -> Unit, onPick: (Int, 
         MaybeRuby(ui.body, MaterialTheme.typography.bodyLarge.copy(lineHeight = 32.sp), known)
         Spacer(Modifier.height(36.dp))
         Quiet("Questions")
-        Spacer(Modifier.height(8.dp))
         ui.questions.forEachIndexed { qIndex, question ->
-            Spacer(Modifier.height(20.dp))
-            MaybeRuby(question.prompt, MaterialTheme.typography.titleMedium, known)
+            Spacer(Modifier.height(28.dp))
+            Quiet("Question ${qIndex + 1}")
             Spacer(Modifier.height(8.dp))
+            MaybeRuby(question.prompt, MaterialTheme.typography.titleLarge, known)
+            Spacer(Modifier.height(16.dp))
             question.choices.forEachIndexed { cIndex, choice ->
-                val color = when {
-                    question.checked && cIndex == question.correct -> MaterialTheme.colorScheme.primary
-                    question.checked && cIndex == question.picked && cIndex != question.correct -> MaterialTheme.colorScheme.error
-                    cIndex == question.picked -> MaterialTheme.colorScheme.primary
-                    else -> MaterialTheme.colorScheme.onBackground
+                val mark = when {
+                    question.checked && cIndex == question.correct -> ChoiceMark.Correct
+                    question.checked && cIndex == question.picked -> ChoiceMark.Wrong
+                    !question.checked && cIndex == question.picked -> ChoiceMark.Selected
+                    else -> ChoiceMark.None
                 }
-                MaybeRuby(
-                    choice,
-                    MaterialTheme.typography.bodyLarge.copy(color = color),
-                    known,
-                    Modifier
-                        .fillMaxWidth()
-                        .clickable(enabled = !question.checked) { onPick(qIndex, cIndex) }
-                        .padding(vertical = 10.dp),
-                )
+                ReadChoice(choice, known, mark, enabled = !question.checked) { onPick(qIndex, cIndex) }
             }
         }
         if (ui.score != null) {
@@ -657,6 +657,68 @@ private fun Close(onClose: () -> Unit) {
 @Composable
 private fun Quiet(text: String) {
     Text(text, color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.bodyMedium)
+}
+
+private enum class ChoiceMark { None, Selected, Correct, Wrong }
+
+@Composable
+private fun ReadChoice(
+    text: String,
+    known: Set<Char>,
+    mark: ChoiceMark,
+    enabled: Boolean,
+    onClick: () -> Unit,
+) {
+    val scheme = MaterialTheme.colorScheme
+    val wash = when (mark) {
+        ChoiceMark.Selected, ChoiceMark.Correct -> scheme.primary.copy(alpha = 0.12f)
+        ChoiceMark.Wrong -> scheme.error.copy(alpha = 0.14f)
+        ChoiceMark.None -> Color.Transparent
+    }
+    val ink = when (mark) {
+        ChoiceMark.Selected, ChoiceMark.Correct -> scheme.primary
+        ChoiceMark.Wrong -> scheme.error
+        ChoiceMark.None -> scheme.onBackground
+    }
+    val bar = when (mark) {
+        ChoiceMark.None -> Color.Transparent
+        ChoiceMark.Wrong -> scheme.error
+        else -> scheme.primary
+    }
+    val label = when (mark) {
+        ChoiceMark.Selected -> "Selected"
+        ChoiceMark.Correct -> "Correct"
+        ChoiceMark.Wrong -> "Incorrect"
+        ChoiceMark.None -> ""
+    }
+    Column(Modifier.fillMaxWidth()) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .heightIn(min = 56.dp)
+                .background(wash)
+                .clickable(enabled = enabled, role = Role.RadioButton, onClick = onClick),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Box(Modifier.padding(start = 2.dp).width(3.dp).height(28.dp).background(bar))
+            Column(
+                Modifier
+                    .weight(1f)
+                    .padding(start = 14.dp, end = 12.dp, top = 14.dp, bottom = 14.dp),
+            ) {
+                MaybeRuby(text, MaterialTheme.typography.bodyLarge.copy(color = ink), known)
+            }
+            if (label.isNotEmpty()) {
+                Text(
+                    label,
+                    color = ink,
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier.padding(end = 2.dp),
+                )
+            }
+        }
+        Hairline()
+    }
 }
 
 @Composable

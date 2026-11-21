@@ -38,6 +38,36 @@ object Ruby {
         return out
     }
 
+    /**
+     * Chunks that must stay on one line. A kanji and the kana after it stay
+     * together, and a space ends a chunk so the line can wrap there.
+     */
+    fun words(markup: String, known: Set<Char> = emptySet()): List<List<RubyPiece>> {
+        val out = mutableListOf<MutableList<RubyPiece>>()
+        var current = mutableListOf<RubyPiece>()
+        fun flush() {
+            if (current.isEmpty()) return
+            out += current
+            current = mutableListOf()
+        }
+        for (piece in parse(markup, known)) {
+            if (piece.reading.isNotEmpty()) {
+                current += piece
+                continue
+            }
+            for (token in Regex("\\s+|\\S+").findAll(piece.base).map { it.value }) {
+                if (token.any { it.isWhitespace() }) {
+                    if (current.isNotEmpty()) current += RubyPiece(" ", "")
+                    flush()
+                } else {
+                    current += RubyPiece(token, "")
+                }
+            }
+        }
+        flush()
+        return out
+    }
+
     /** Kanji runs that are shown without a reading and are not entirely known. */
     fun bareKanji(text: String, known: Set<Char> = emptySet()): List<String> {
         val found = mutableListOf<String>()

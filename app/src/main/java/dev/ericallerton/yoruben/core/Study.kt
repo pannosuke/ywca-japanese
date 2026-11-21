@@ -149,6 +149,7 @@ data class DrillPrompt(
     val formLabel: String,
     val prompt: String,
     val answer: String,
+    val answerRuby: String,
     val accept: List<String>,
     val ruleRuby: String,
     val ruleEn: String,
@@ -458,18 +459,22 @@ class Study(val content: StudyContent, progress: ProgressFile) {
         val answer = Conjugator.answer(verb.kana, group, form.id)
         val (rule, en) = Conjugator.rule(verb.kana, group, form.id)
         val shown = if (form.id == "dict") rubyMasu(verb) else verb.ruby
+        val answerRuby = Conjugator.spellRuby(verb.ruby, verb.kana, answer)
         return DrillPrompt(
             verb.id, shown, verb.kana, form.id, form.labelRuby, form.promptRuby,
-            answer, Conjugator.accepts(verb.kana, group, form.id), rule, en, verb.group, verb.lessonId,
+            answer, answerRuby, Conjugator.accepts(verb.kana, group, form.id, verb.ruby),
+            rule, en, verb.group, verb.lessonId,
         )
     }
 
     private fun adjectivePrompt(adj: Adjective, form: ConjForm): DrillPrompt {
         val answer = Conjugator.answer(adj.kana, VerbGroup.GODAN, form.id)
         val (rule, en) = Conjugator.rule(adj.kana, VerbGroup.GODAN, form.id)
+        val answerRuby = Conjugator.spellRuby(adj.ruby, adj.kana, answer)
         return DrillPrompt(
             adj.id, adj.ruby, adj.kana, form.id, form.labelRuby, form.promptRuby,
-            answer, Conjugator.accepts(adj.kana, VerbGroup.GODAN, form.id), rule, en, adj.kind, adj.lessonId,
+            answer, answerRuby, Conjugator.accepts(adj.kana, VerbGroup.GODAN, form.id, adj.ruby),
+            rule, en, adj.kind, adj.lessonId,
         )
     }
 

@@ -2,6 +2,8 @@ package dev.ericallerton.yoruben
 
 import app.cash.paparazzi.DeviceConfig
 import app.cash.paparazzi.Paparazzi
+import dev.ericallerton.yoruben.core.Conjugator
+import dev.ericallerton.yoruben.core.VerbGroup
 import dev.ericallerton.yoruben.ui.DrillScreen
 import dev.ericallerton.yoruben.ui.DrillUi
 import dev.ericallerton.yoruben.ui.HomeScreen
@@ -108,6 +110,46 @@ class Shots {
         DrillScreen(drill(verdict = true, typed = "だして", word = "出[だ]す"), emptySet(), {}, {}, {}, {}, {}, {})
     }
 
+    @Test fun conjugationDictWrong() = shot("conjugation-dict-wrong") {
+        val (rule, en) = Conjugator.rule("すわる", VerbGroup.GODAN, "dict")
+        DrillScreen(
+            DrillUi(
+                counter = "1 of 2",
+                word = "座[すわ]ります",
+                form = "じしょけい",
+                prompt = "ます を じしょけい に",
+                typed = "すわります",
+                tiles = emptyList(),
+                tileMode = false,
+                verdict = false,
+                expected = Conjugator.spellRuby("座[すわ]る", "すわる", "すわる"),
+                rule = rule,
+                ruleEn = en,
+            ),
+            emptySet(), {}, {}, {}, {}, {}, {},
+        )
+    }
+
+    @Test fun conjugationKanji() = shot("conjugation-kanji") {
+        val (rule, en) = Conjugator.rule("すわる", VerbGroup.GODAN, "dict")
+        DrillScreen(
+            DrillUi(
+                counter = "1 of 2",
+                word = "座[すわ]ります",
+                form = "じしょけい",
+                prompt = "ます を じしょけい に",
+                typed = "座る",
+                tiles = emptyList(),
+                tileMode = false,
+                verdict = true,
+                expected = Conjugator.spellRuby("座[すわ]る", "すわる", "すわる"),
+                rule = rule,
+                ruleEn = en,
+            ),
+            emptySet(), {}, {}, {}, {}, {}, {},
+        )
+    }
+
     @Test fun conjugationWrong() = shot("conjugation-wrong") {
         DrillScreen(
             drill(
@@ -123,22 +165,11 @@ class Shots {
     }
 
     @Test fun reader() = shot("reader") {
-        ReadScreen(
-            ReadUi(
-                title = "てください",
-                level = "Level 1",
-                body = "せんせいは 「なまえを 書[か]いてください」と いいました。エリックは なまえを 書[か]きました。",
-                questions = listOf(
-                    ReadQuestion("せんせいは なにを かきましたか。", listOf("なまえ", "ほん", "え"), 0, 0, false),
-                    ReadQuestion("つぎに なにを しますか。", listOf("ほんを よむ", "みずを のむ", "ねる"), -1, 0, false),
-                ),
-                score = null,
-            ),
-            known = emptySet(),
-            onClose = {},
-            onPick = { _, _ -> },
-            onCheck = {},
-        )
+        ReadScreen(readStory(picked = 1, checked = false), emptySet(), {}, { _, _ -> }, {})
+    }
+
+    @Test fun readerAnswered() = shot("reader-answered") {
+        ReadScreen(readStory(picked = 1, checked = true), emptySet(), {}, { _, _ -> }, {})
     }
 
     @Test fun stats() = shot("stats") {
@@ -169,6 +200,22 @@ class Shots {
             onShare = {},
         )
     }
+
+    private fun readStory(picked: Int, checked: Boolean) = ReadUi(
+        title = "えきまで",
+        level = "Level 0",
+        body = "エリックは えきへ 行[い]きます。でんしゃに 乗[の]ります。",
+        questions = listOf(
+            ReadQuestion(
+                "エリックは なにに のりますか。",
+                listOf("でんしゃ", "ひこうき", "じてんしゃ"),
+                picked,
+                0,
+                checked,
+            ),
+        ),
+        score = if (checked) "0 of 1" else null,
+    )
 
     private fun shot(name: String, content: @androidx.compose.runtime.Composable () -> Unit) {
         paparazzi.snapshot(name) {

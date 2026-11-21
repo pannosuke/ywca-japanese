@@ -13,6 +13,7 @@ import dev.ericallerton.yoruben.core.Study
 import dev.ericallerton.yoruben.core.StudyContent
 import dev.ericallerton.yoruben.core.VerbGroup
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import java.io.File
@@ -35,7 +36,7 @@ class StudyTest {
         assertTrue(content.profile.knownKanji.isEmpty())
         val forms = content.forms.filter { it.enabled }.map { it.id }.toSet()
         listOf(
-            "masu", "dict", "masen", "mashita", "masen_deshita", "te", "te_kudasai",
+            "masu", "dict", "masen", "mashita", "masen_deshita", "te", "te_kudasai", "ta", "nai",
             "i_negative", "i_past", "i_past_negative", "na_negative", "na_past", "na_past_negative",
         ).forEach { assertTrue(it, it in forms && Conjugator.supports(it)) }
         content.readers.forEach { reader ->
@@ -82,7 +83,159 @@ class StudyTest {
         assertEquals("かいて", Conjugator.te("かく", VerbGroup.GODAN))
         content.worksheets.flatMap { it.items }.forEach { item ->
             val verb = content.verbs.find { it.id == item.verbId } ?: return@forEach
-            assertEquals(item.id, item.expected, Conjugator.te(verb.kana, Conjugator.groupOf(verb.group)))
+            val te = ConjugationReference.te(verb.kana, verb.group)
+            assertEquals(item.id, te, item.expected)
+            assertEquals(item.id, te, Conjugator.te(verb.kana, Conjugator.groupOf(verb.group)))
+        }
+        content.homework.flatMap { it.items }.forEach { item ->
+            val verb = content.verbs.find { it.id == item.verbId } ?: return@forEach
+            val prompt = item.promptRuby
+            if ("ください" in prompt || "て形" in prompt) {
+                assertEquals(item.id, ConjugationReference.te(verb.kana, verb.group), item.expected)
+            }
+        }
+    }
+
+    @Test
+    fun everyVerbMatchesTheReference() {
+        val forms = listOf(
+            "dict", "masu", "masen", "mashita", "masen_deshita", "te", "ta", "nai", "te_kudasai",
+        )
+        content.verbs.forEach { verb ->
+            val group = Conjugator.groupOf(verb.group)
+            forms.forEach { form ->
+                val expected = ConjugationReference.answer(verb.kana, verb.group, form)
+                assertEquals("${verb.id} $form", expected, Conjugator.answer(verb.kana, group, form))
+                val accepted = Conjugator.accepts(verb.kana, group, form, verb.ruby)
+                assertTrue("${verb.id} $form kana", Conjugator.matches(expected, accepted))
+                val kanji = ConjugationReference.kanji(verb.ruby, verb.kana, expected)
+                assertTrue("${verb.id} $form $kanji", Conjugator.matches(kanji, accepted))
+                assertDirection(verb.kana, group, form)
+            }
+        }
+    }
+
+    @Test
+    fun explanationsNameTheDirection() {
+        val (dictRuby, dictEn) = Conjugator.rule("すわる", VerbGroup.GODAN, "dict")
+        assertEquals(
+            "「ます」を とります。 いだん を うだん に もどします。 うどうしです。 る で おわっても、 るどうし では ありません。",
+            dictRuby,
+        )
+        assertEquals(
+            "Drop ます and change the i-row back to the u-row. This is an u-verb. It ends in ru, but it is an u-verb.",
+            dictEn,
+        )
+        assertFalse(dictRuby.contains("いだん に して"))
+        assertFalse(dictEn.contains("add masu"))
+        val (masuRuby, _) = Conjugator.rule("すわる", VerbGroup.GODAN, "masu")
+        assertTrue(masuRuby.contains("いだん に して「ます」"))
+        assertFalse(masuRuby.contains("もど"))
+        val (hairu, hairuEn) = Conjugator.rule("はいる", VerbGroup.GODAN, "te")
+        assertEquals("うどうしです。 る で おわっても「って」です。 るどうし では ありません。", hairu)
+        assertTrue(hairuEn.contains("tte, not te"))
+        val (iku, ikuEn) = Conjugator.rule("いく", VerbGroup.GODAN, "te")
+        assertTrue(iku.contains("「行[い]く」だけ"))
+        assertTrue(iku.contains("って"))
+        assertTrue(ikuEn.contains("itte, not ite"))
+        assertEquals("suru becomes shi + masu.", Conjugator.rule("べんきょうする", VerbGroup.IRREGULAR, "masu").second)
+        assertEquals("suru becomes shite.", Conjugator.rule("べんきょうする", VerbGroup.IRREGULAR, "te").second)
+        assertTrue(Conjugator.rule("くる", VerbGroup.IRREGULAR, "nai").first.contains("来[こ]ない"))
+        assertTrue(Conjugator.rule("みる", VerbGroup.ICHIDAN, "dict").first.contains("るどうしです"))
+        assertFalse(Conjugator.rule("みる", VerbGroup.ICHIDAN, "dict").first.contains("ではありません"))
+        val (past, _) = Conjugator.rule("たかい", VerbGroup.GODAN, "i_past")
+        assertTrue(past.contains("かった"))
+        assertFalse(past.contains("くない"))
+    }
+
+    @Test
+    fun kanjiAndKanaBothPass() {
+        val sit = Conjugator.accepts("すわる", VerbGroup.GODAN, "dict", "座[すわ]る")
+        assertTrue(Conjugator.matches("すわる", sit))
+        assertTrue(Conjugator.matches("座る", sit))
+        assertTrue(Conjugator.matches("　座る　", sit))
+        assertTrue(Conjugator.matches("座 る", sit))
+        assertTrue(Conjugator.matches("ｽﾜﾙ", sit))
+        assertTrue(Conjugator.matches("スワル", sit))
+        assertFalse(Conjugator.matches("すわります", sit))
+        assertTrue(Conjugator.matches("座って", Conjugator.accepts("すわる", VerbGroup.GODAN, "te", "座[すわ]る")))
+        assertTrue(Conjugator.matches("行って", Conjugator.accepts("いく", VerbGroup.GODAN, "te", "行[い]く")))
+        assertTrue(Conjugator.matches("来ない", Conjugator.accepts("くる", VerbGroup.IRREGULAR, "nai", "来[く]る")))
+        assertTrue(Conjugator.matches("こない", Conjugator.accepts("くる", VerbGroup.IRREGULAR, "nai", "来[く]る")))
+        assertTrue(Conjugator.matches("来て", Conjugator.accepts("くる", VerbGroup.IRREGULAR, "te", "来[く]る")))
+        assertTrue(Conjugator.matches("勉強します", Conjugator.accepts("べんきょうする", VerbGroup.IRREGULAR, "masu", "勉強[べんきょう]する")))
+        assertTrue(Conjugator.matches("勉強して", Conjugator.accepts("べんきょうする", VerbGroup.IRREGULAR, "te", "勉強[べんきょう]する")))
+        assertFalse(Conjugator.matches("りょこうしります", Conjugator.accepts("りょこうする", VerbGroup.IRREGULAR, "masu", "旅行[りょこう]する")))
+        assertFalse(Conjugator.matches("りょこうすって", Conjugator.accepts("りょこうする", VerbGroup.IRREGULAR, "te", "旅行[りょこう]する")))
+        assertEquals("座[すわ]る", Conjugator.spellRuby("座[すわ]る", "すわる", "すわる"))
+        assertEquals("来[こ]ない", Conjugator.spellRuby("来[く]る", "くる", "こない"))
+        assertEquals("行[い]って", Conjugator.spellRuby("行[い]く", "いく", "いって"))
+        listOf("しる" to "godan", "はいる" to "godan", "かえる" to "godan", "きる" to "godan").forEach { (kana, group) ->
+            assertEquals("${kana}ます".let { ConjugationReference.answer(kana, group, "masu") }, Conjugator.answer(kana, VerbGroup.GODAN, "masu"))
+            assertEquals(ConjugationReference.answer(kana, group, "te"), Conjugator.te(kana, VerbGroup.GODAN))
+            assertEquals(ConjugationReference.answer(kana, group, "nai"), Conjugator.answer(kana, VerbGroup.GODAN, "nai"))
+        }
+        assertEquals("しります", Conjugator.answer("しる", VerbGroup.GODAN, "masu"))
+        assertEquals("しって", Conjugator.te("しる", VerbGroup.GODAN))
+        assertEquals("しらない", Conjugator.answer("しる", VerbGroup.GODAN, "nai"))
+        assertEquals("はいって", Conjugator.te("はいる", VerbGroup.GODAN))
+        assertEquals("かえって", Conjugator.te("かえる", VerbGroup.GODAN))
+        assertEquals("きって", Conjugator.te("きる", VerbGroup.GODAN))
+        assertEquals("かわない", Conjugator.answer("かう", VerbGroup.GODAN, "nai"))
+        assertEquals("りょこうします", Conjugator.answer("りょこうする", VerbGroup.IRREGULAR, "masu"))
+        assertEquals("りょこうして", Conjugator.te("りょこうする", VerbGroup.IRREGULAR))
+        assertEquals("高くない", Conjugator.spell("高[たか]い", "たかい", "たかくない"))
+        assertEquals("高かったです", Conjugator.spell("高[たか]い", "たかい", "たかかったです"))
+    }
+
+    @Test
+    fun furiganaStaysWithItsWord() {
+        val one = Ruby.words("書[か]いてください")
+        assertEquals(1, one.size)
+        assertEquals(listOf("書", "いてください"), one[0].map { it.base })
+        val two = Ruby.words("なまえを 書[か]いて")
+        assertEquals(2, two.size)
+        assertEquals(" ", two[0].last().base)
+        assertEquals("書", two[1][0].base)
+        assertEquals("いて", two[1][1].base)
+    }
+
+    private fun assertDirection(kana: String, group: VerbGroup, form: String) {
+        val (ruby, en) = Conjugator.rule(kana, group, form)
+        assertTrue("$kana $form has bare kanji: $ruby", Ruby.bareKanji(ruby).isEmpty())
+        when (form) {
+            "dict" -> {
+                assertTrue("$kana $ruby", ruby.contains("もど") || ruby.contains("とって「る」"))
+                assertFalse(ruby, ruby.contains("いだん に して"))
+                assertFalse(en, en.contains("add masu") || en.contains("add masen"))
+            }
+            "masu" -> {
+                assertTrue(ruby, ruby.contains("ます"))
+                assertFalse(ruby, ruby.contains("もど"))
+                assertTrue(en, en.contains("masu"))
+            }
+            "masen" -> assertTrue(ruby, ruby.contains("ません") && !ruby.contains("ませんでした"))
+            "mashita" -> assertTrue(ruby, ruby.contains("ました"))
+            "masen_deshita" -> assertTrue(ruby, ruby.contains("ませんでした"))
+            "te" -> assertTrue(ruby, ruby.contains("て") || ruby.contains("で"))
+            "te_kudasai" -> {
+                assertTrue(ruby, ruby.contains("ください"))
+                assertFalse(ruby, ruby.contains("た形"))
+            }
+            "ta" -> {
+                assertTrue(ruby, ruby.contains("た") || ruby.contains("だ"))
+                assertFalse(ruby, ruby.contains("て形"))
+            }
+            "nai" -> {
+                assertTrue(ruby, ruby.contains("ない"))
+                assertFalse(ruby, ruby.contains("ます"))
+            }
+        }
+        if (group == VerbGroup.GODAN && kana.endsWith("る")) {
+            assertTrue("$kana $form $ruby", ruby.contains("るどうし では ありません"))
+        }
+        if (group == VerbGroup.ICHIDAN) {
+            assertFalse("$kana $form $ruby", ruby.contains("ではありません"))
         }
     }
 
