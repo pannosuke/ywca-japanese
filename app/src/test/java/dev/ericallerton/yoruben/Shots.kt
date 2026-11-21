@@ -2,8 +2,11 @@ package dev.ericallerton.yoruben
 
 import app.cash.paparazzi.DeviceConfig
 import app.cash.paparazzi.Paparazzi
+import dev.ericallerton.yoruben.core.CardNotes
 import dev.ericallerton.yoruben.core.Conjugator
+import dev.ericallerton.yoruben.core.StudyContent
 import dev.ericallerton.yoruben.core.VerbGroup
+import java.io.File
 import dev.ericallerton.yoruben.ui.DrillScreen
 import dev.ericallerton.yoruben.ui.DrillUi
 import dev.ericallerton.yoruben.ui.HomeScreen
@@ -45,6 +48,34 @@ class Shots {
         )
     }
 
+    @Test fun reviewKanji() = shot("review-kanji") {
+        val card = StudyContent.load(File("content")).deck.cards.first { it.word.startsWith("生活") }
+        val note = CardNotes.parse(card.note)
+        ReviewScreen(
+            ReviewUi(
+                counter = "3 of 18 · On this phone",
+                word = card.word,
+                revealed = true,
+                meaning = card.meaning,
+                definition = card.definition,
+                sentence = card.sentence,
+                sentenceEn = card.sentenceEn,
+                empty = null,
+                offerSaved = false,
+                summary = null,
+                status = "",
+                cardNote = note.prose,
+                kanjiIntro = note.intro,
+                kanji = note.items,
+            ),
+            known = emptySet(),
+            onClose = {},
+            onReveal = {},
+            onGrade = {},
+            onSaved = {},
+        )
+    }
+
     @Test fun review() = shot("review") {
         ReviewScreen(
             ReviewUi(
@@ -58,7 +89,7 @@ class Shots {
                 empty = null,
                 offerSaved = false,
                 summary = null,
-                note = "",
+                status = "",
             ),
             known = emptySet(),
             onClose = {},

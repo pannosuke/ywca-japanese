@@ -2,9 +2,9 @@
 
 A study app for Eric Allerton's Japanese at Osaka YWCA, evening class 2. Tuesday is Tsuji-sensei. Friday is Ōuchi-sensei. Class is 19:00–20:30. He installs it himself with [Obtainium](https://github.com/ImranR98/Obtainium).
 
-Version 0.5.1 is a review, quiz, and drill app. The deckbuilder is archived under `archive/godot-game`. The 0.2 Kotlin prototype is under `archive/kotlin-app`.
+Version 0.5.2 is a review, quiz, and drill app. The deckbuilder is archived under `archive/godot-game`. The 0.2 Kotlin prototype is under `archive/kotlin-app`.
 
-It is built from class material only. Kanji study has not started. Every kanji on screen has furigana unless it is in `known_kanji`. That list is empty.
+It is built from class material only. Kanji study has not started. Japanese on screen has furigana unless the character is in `known_kanji`. That list is empty. An English mnemonic may name the character it is about.
 
 ## How a session goes
 
@@ -30,7 +30,7 @@ https://raw.githubusercontent.com/pannosuke/ywca-japanese/main/content/manifest.
 
 ## Build
 
-Package `dev.ericallerton.yoruben`. `versionCode` 7, `versionName` 0.5.1. JDK 17, Android SDK 35.
+Package `dev.ericallerton.yoruben`. `versionCode` 8, `versionName` 0.5.2. JDK 17, Android SDK 35.
 
 ```bash
 ./gradlew testDebugUnitTest assembleDebug

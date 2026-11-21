@@ -36,8 +36,8 @@ jobs:
           test -s "$APK"
           "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$APK" | tee /tmp/badging.txt
           grep -q "name='dev.ericallerton.yoruben'" /tmp/badging.txt
-          grep -q "versionCode='7'" /tmp/badging.txt
-          grep -q "versionName='0.5.1'" /tmp/badging.txt
+          grep -q "versionCode='8'" /tmp/badging.txt
+          grep -q "versionName='0.5.2'" /tmp/badging.txt
 
   release:
     if: startsWith(github.ref, 'refs/tags/v')
@@ -87,8 +87,8 @@ jobs:
           cp "$APK" "yoruben-${VER}.apk"
           "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "yoruben-${VER}.apk" | tee /tmp/badging.txt
           grep -q "name='dev.ericallerton.yoruben'" /tmp/badging.txt
-          grep -q "versionCode='7'" /tmp/badging.txt
-          grep -q "versionName='0.5.1'" /tmp/badging.txt
+          grep -q "versionCode='8'" /tmp/badging.txt
+          grep -q "versionName='0.5.2'" /tmp/badging.txt
       - name: Publish the release
         uses: softprops/action-gh-release@v2
         with:

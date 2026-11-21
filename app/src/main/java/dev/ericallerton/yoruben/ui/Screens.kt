@@ -43,8 +43,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import dev.ericallerton.yoruben.core.KanjiMnemonic
 
 data class HomeUi(val date: String, val sections: List<Pair<String, String>>)
 
@@ -59,7 +61,10 @@ data class ReviewUi(
     val empty: String?,
     val offerSaved: Boolean,
     val summary: List<Pair<String, String>>?,
-    val note: String,
+    val status: String,
+    val cardNote: String = "",
+    val kanjiIntro: String = "",
+    val kanji: List<KanjiMnemonic> = emptyList(),
 )
 
 data class QuizUi(
@@ -214,14 +219,53 @@ fun ReviewScreen(
                         Spacer(Modifier.height(8.dp))
                     }
                     if (ui.sentenceEn.isNotBlank()) Quiet(ui.sentenceEn)
+                    if (ui.cardNote.isNotBlank()) {
+                        Spacer(Modifier.height(16.dp))
+                        ui.cardNote.lineSequence().map { it.trim() }.filter { it.isNotEmpty() }.forEach { line ->
+                            NoteLine(line, MaterialTheme.typography.bodyLarge, known)
+                            Spacer(Modifier.height(8.dp))
+                        }
+                    }
+                    if (ui.kanjiIntro.isNotBlank() || ui.kanji.isNotEmpty()) {
+                        Spacer(Modifier.height(20.dp))
+                        Hairline()
+                        Spacer(Modifier.height(20.dp))
+                        Quiet("Kanji")
+                        if (ui.kanjiIntro.isNotBlank()) {
+                            Spacer(Modifier.height(8.dp))
+                            NoteLine(ui.kanjiIntro, MaterialTheme.typography.bodyMedium, known)
+                        }
+                        ui.kanji.forEach { bit ->
+                            Spacer(Modifier.height(18.dp))
+                            if (bit.kanji.isNotBlank()) {
+                                NoteLine(bit.kanji, MaterialTheme.typography.titleLarge, known)
+                                Spacer(Modifier.height(6.dp))
+                            }
+                            if (bit.parts.isNotBlank()) {
+                                NoteLine(
+                                    bit.parts,
+                                    MaterialTheme.typography.bodyMedium.copy(color = MaterialTheme.colorScheme.onSurfaceVariant),
+                                    known,
+                                )
+                                Spacer(Modifier.height(6.dp))
+                            }
+                            if (bit.english.isNotBlank()) {
+                                NoteLine(bit.english, MaterialTheme.typography.bodyMedium, known)
+                                Spacer(Modifier.height(6.dp))
+                            }
+                            if (bit.japanese.isNotBlank()) {
+                                NoteLine(bit.japanese, MaterialTheme.typography.bodyLarge, known)
+                            }
+                        }
+                    }
                     Spacer(Modifier.height(28.dp))
                     Quiet("Swipe left Again, right Good")
                 }
             }
         }
-        if (ui.note.isNotBlank()) {
+        if (ui.status.isNotBlank()) {
             Spacer(Modifier.height(16.dp))
-            Text(ui.note, color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodyMedium)
+            Text(ui.status, color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodyMedium)
         }
     }
 }
@@ -652,6 +696,11 @@ private fun Close(onClose: () -> Unit) {
         modifier = Modifier.clickable(onClick = onClose),
     )
     Spacer(Modifier.height(20.dp))
+}
+
+@Composable
+private fun NoteLine(text: String, style: TextStyle, known: Set<Char>) {
+    if ('[' in text) MaybeRuby(text, style, known) else Text(text, style = style)
 }
 
 @Composable

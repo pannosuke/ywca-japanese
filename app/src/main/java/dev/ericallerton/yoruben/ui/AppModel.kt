@@ -8,6 +8,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import dev.ericallerton.yoruben.anki.AnkiClient
+import dev.ericallerton.yoruben.core.CardNotes
 import dev.ericallerton.yoruben.core.DrillPrompt
 import dev.ericallerton.yoruben.core.GradedLine
 import dev.ericallerton.yoruben.core.ProgressFile
@@ -196,6 +197,7 @@ class AppModel(app: Application) : AndroidViewModel(app) {
                 "Streak" to if (streak == 0) "No streak yet" else "$streak days",
             )
         } else null
+        val parsed = CardNotes.parse(card?.note.orEmpty())
         return ReviewUi(
             counter = if (card == null) "" else "${reviewAt + 1} of ${queue.size} · $reviewSource",
             word = card?.word.orEmpty(),
@@ -207,7 +209,10 @@ class AppModel(app: Application) : AndroidViewModel(app) {
             empty = if (queue.isEmpty()) "Nothing is due." else null,
             offerSaved = offerSaved,
             summary = summary,
-            note = reviewNote,
+            status = reviewNote,
+            cardNote = parsed.prose,
+            kanjiIntro = parsed.intro,
+            kanji = parsed.items,
         )
     }
 
