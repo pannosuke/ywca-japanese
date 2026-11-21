@@ -2,7 +2,7 @@
 
 A study app for Eric Allerton's Japanese at Osaka YWCA, evening class 2. Tuesday is Tsuji-sensei. Friday is Ōuchi-sensei. Class is 19:00–20:30. He installs it himself with [Obtainium](https://github.com/ImranR98/Obtainium).
 
-Version 0.5.0 is a review, quiz, and drill app. The deckbuilder is archived under `archive/godot-game`. The 0.2 Kotlin prototype is under `archive/kotlin-app`.
+Version 0.5.1 is a review, quiz, and drill app. The deckbuilder is archived under `archive/godot-game`. The 0.2 Kotlin prototype is under `archive/kotlin-app`.
 
 It is built from class material only. Kanji study has not started. Every kanji on screen has furigana unless it is in `known_kanji`. That list is empty.
 
@@ -14,9 +14,9 @@ Review pulls due cards from the AnkiDroid deck `YWCA`, note type `YWCA Vocab`, a
 
 Quiz is 5, 8, or 10 questions from the deck, a worksheet, graded homework, or a class quiz. A miss is asked once more at the end.
 
-Conjugation is typed kana, with an optional tile row. The rule is shown after the answer, including the `いく` te-form exception. Weak forms and verb groups are asked more often.
+Conjugation is typed. Kana and the kanji spelling of the card both pass, including 座る and 行って. Tiles stay kana. The rule after the answer names the direction and the verb group, including the `いく` te-form exception and u-verbs that end in る. Weak forms and verb groups are asked more often.
 
-Read is a short story with three to five questions. Stats keeps the streak, retention, and the misses. **Share progress** sends a JSON file.
+Read is a short story with three to five questions. A choice fills the row, stays selected, and is marked after Check. Stats keeps the streak, retention, and the misses. **Share progress** sends a JSON file.
 
 A worksheet with an answer key can be filled in and graded on the phone. Photograph grading stays outside the app. The result is a file under `content/homework/`.
 
@@ -30,7 +30,7 @@ https://raw.githubusercontent.com/pannosuke/ywca-japanese/main/content/manifest.
 
 ## Build
 
-Package `dev.ericallerton.yoruben`. `versionCode` 6, `versionName` 0.5.0. JDK 17, Android SDK 35.
+Package `dev.ericallerton.yoruben`. `versionCode` 7, `versionName` 0.5.1. JDK 17, Android SDK 35.
 
 ```bash
 ./gradlew testDebugUnitTest assembleDebug

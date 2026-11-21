@@ -34,7 +34,7 @@ After class, add or edit a file, list any new path in `manifest.json` `files`, a
 
 `forms[]`: `id`, `label_ruby`, `prompt_ruby`, `applies_to` (`verb`, `i-adjective`, or `na-adjective`), `enabled`.
 
-An enabled form is drilled. Ids the app can grade: `masu`, `dict`, `masen`, `mashita`, `masen_deshita`, `te`, `te_kudasai`, `ta`, `i_negative`, `i_past`, `i_past_negative`, `na_negative`, `na_past`, `na_past_negative`. A new pattern needs an app update. Until then, leave it out, or the installed app skips it.
+An enabled form is drilled. Ids the app can grade: `masu`, `dict`, `masen`, `mashita`, `masen_deshita`, `te`, `te_kudasai`, `ta`, `nai`, `i_negative`, `i_past`, `i_past_negative`, `na_negative`, `na_past`, `na_past_negative`. A new pattern needs an app update. Until then, leave it out, or the installed app skips it. A typed answer may be kana or the kanji spelling of that card.
 
 ## grammar.json
 

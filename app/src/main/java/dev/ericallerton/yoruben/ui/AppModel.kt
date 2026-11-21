@@ -335,7 +335,7 @@ class AppModel(app: Application) : AndroidViewModel(app) {
             tiles = bank,
             tileMode = tileMode,
             verdict = drillVerdict,
-            expected = prompt?.answer.orEmpty(),
+            expected = prompt?.answerRuby.orEmpty(),
             rule = prompt?.ruleRuby.orEmpty(),
             ruleEn = prompt?.ruleEn.orEmpty(),
         )
