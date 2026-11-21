@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "id": "g1-te-spelling",
+  "date": "2026-11-21",
+  "teacher_id": "review",
+  "title_ruby": "て形[けい]と ながい おん",
+  "lesson_id": "2026-11-17",
+  "items": [
+    {
+      "id": "te-iku",
+      "prompt_ruby": "くうこうへ ____ ください",
+      "expected": "いって",
+      "accept": [
+        "いって"
+      ],
+      "verb_id": "iku",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "te-dasu",
+      "prompt_ruby": "しゅくだいを ____ ください",
+      "expected": "だして",
+      "accept": [
+        "だして"
+      ],
+      "verb_id": "dasu",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "te-suwaru",
+      "prompt_ruby": "どうぞ ____ ください",
+      "expected": "すわって",
+      "accept": [
+        "すわって"
+      ],
+      "verb_id": "suwaru",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "te-hairu",
+      "prompt_ruby": "どうぞ ____ ください",
+      "expected": "はいって",
+      "accept": [
+        "はいって"
+      ],
+      "verb_id": "hairu",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "te-kaeru",
+      "prompt_ruby": "うちに ____ ください",
+      "expected": "かえって",
+      "accept": [
+        "かえって"
+      ],
+      "verb_id": "kaeru",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "te-harau",
+      "prompt_ruby": "おかねを ____ ください",
+      "expected": "はらって",
+      "accept": [
+        "はらって"
+      ],
+      "verb_id": "harau",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "sp-issho",
+      "prompt_ruby": "らいしゅう ____ こうべに いきませんか。(together)",
+      "expected": "いっしょに",
+      "accept": [
+        "いっしょに"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "sp-koube",
+      "prompt_ruby": "____に いきたいです。(Kobe)",
+      "expected": "こうべ",
+      "accept": [
+        "こうべ"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "sp-hokkaidou",
+      "prompt_ruby": "にほんで ____が みたいです。(Hokkaido)",
+      "expected": "ほっかいどう",
+      "accept": [
+        "ほっかいどう"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "sp-ryokou",
+      "prompt_ruby": "らいねん アメリカへ ____に いきたいです。(a trip)",
+      "expected": "りょこう",
+      "accept": [
+        "りょこう"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    }
+  ]
+}

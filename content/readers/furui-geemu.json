@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "id": "furui-geemu",
+  "level": 1,
+  "title_ruby": "ふるい ゲーム",
+  "lesson_id": "2026-11-17",
+  "body_ruby": "どようび、ともだちの ケンさんが うちに きました。「どうぞ はいってください。」いっしょに ふるい ゲームを しました。ほんとうに たのしかったです。「らいしゅうの どようび、いっしょに あそびませんか。」「いいですね！」",
+  "questions": [
+    {
+      "id": "g1",
+      "prompt_ruby": "だれが うちに きましたか。",
+      "choices": [
+        {
+          "ruby": "ケンさん",
+          "correct": true
+        },
+        {
+          "ruby": "せんせい",
+          "correct": false
+        },
+        {
+          "ruby": "えきいん",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "prompt_ruby": "なにを しましたか。",
+      "choices": [
+        {
+          "ruby": "ふるい ゲーム",
+          "correct": true
+        },
+        {
+          "ruby": "テニス",
+          "correct": false
+        },
+        {
+          "ruby": "りょこう",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "g3",
+      "prompt_ruby": "いつ あそびませんか、と いいましたか。",
+      "choices": [
+        {
+          "ruby": "らいしゅうの どようび",
+          "correct": true
+        },
+        {
+          "ruby": "きのう",
+          "correct": false
+        },
+        {
+          "ruby": "せんしゅう",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "g4",
+      "prompt_ruby": "「together」は どれですか。",
+      "choices": [
+        {
+          "ruby": "いしょうに",
+          "correct": false
+        },
+        {
+          "ruby": "いっしょに",
+          "correct": true
+        },
+        {
+          "ruby": "いっしょうに",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "g5",
+      "prompt_ruby": "「はいります」の て形[けい]は どれですか。",
+      "choices": [
+        {
+          "ruby": "はいて",
+          "correct": false
+        },
+        {
+          "ruby": "はいって",
+          "correct": true
+        },
+        {
+          "ruby": "はいんで",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}
