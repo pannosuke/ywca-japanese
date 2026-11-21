@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "id": "nhl-sports",
+  "level": 1,
+  "title_ruby": "NHLの スポーツ",
+  "lesson_id": "2026-11-17",
+  "body_ruby": "きんようびの よる、エリックさんは うちで テレビを つけました。NHLの スポーツを みました。ほんとうに おもしろかったです。あした、ともだちに はなしました。「にちようび、うちで いっしょに NHLを みませんか。」「いいですね。なんじですか。」「7じです。」「はい、いきます！」",
+  "questions": [
+    {
+      "id": "n1",
+      "prompt_ruby": "きんようび、エリックさんは なにを みましたか。",
+      "choices": [
+        {
+          "ruby": "NHLの スポーツ",
+          "correct": true
+        },
+        {
+          "ruby": "えいが",
+          "correct": false
+        },
+        {
+          "ruby": "サッカー",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "prompt_ruby": "テレビを どう しましたか。",
+      "choices": [
+        {
+          "ruby": "つけました",
+          "correct": true
+        },
+        {
+          "ruby": "けしました",
+          "correct": false
+        },
+        {
+          "ruby": "かいました",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "prompt_ruby": "いつ、いっしょに みませんか、と いいましたか。",
+      "choices": [
+        {
+          "ruby": "にちようび",
+          "correct": true
+        },
+        {
+          "ruby": "きょう",
+          "correct": false
+        },
+        {
+          "ruby": "きのう",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "prompt_ruby": "どこで みますか。",
+      "choices": [
+        {
+          "ruby": "うち",
+          "correct": true
+        },
+        {
+          "ruby": "えき",
+          "correct": false
+        },
+        {
+          "ruby": "がっこう",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "n5",
+      "prompt_ruby": "「いきます」の て形[けい]は どれですか。",
+      "choices": [
+        {
+          "ruby": "いて",
+          "correct": false
+        },
+        {
+          "ruby": "いって",
+          "correct": true
+        },
+        {
+          "ruby": "いんで",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}

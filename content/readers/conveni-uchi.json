@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "id": "conveni-uchi",
+  "level": 1,
+  "title_ruby": "どうぞ はいってください",
+  "lesson_id": "2026-11-17",
+  "body_ruby": "けさ、エリックさんは コンビニに いきました。パンと りんごを かいました。ICOCAで はらいました。うちに かえりました。それから ともだちが きました。「どうぞ はいってください。」れいぞうこから りんごを だしました。「どうぞ たべてください。」「わあ、おいしそうですね。いただきます。」ともだちは「すみません、ゆっくり はなしてください。」と いいました。",
+  "questions": [
+    {
+      "id": "u1",
+      "prompt_ruby": "どこで パンを かいましたか。",
+      "choices": [
+        {
+          "ruby": "コンビニ",
+          "correct": true
+        },
+        {
+          "ruby": "レストラン",
+          "correct": false
+        },
+        {
+          "ruby": "びょういん",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "prompt_ruby": "なにで はらいましたか。",
+      "choices": [
+        {
+          "ruby": "ICOCA",
+          "correct": true
+        },
+        {
+          "ruby": "パスポート",
+          "correct": false
+        },
+        {
+          "ruby": "かばん",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "prompt_ruby": "れいぞうこから なにを だしましたか。",
+      "choices": [
+        {
+          "ruby": "りんご",
+          "correct": true
+        },
+        {
+          "ruby": "くすり",
+          "correct": false
+        },
+        {
+          "ruby": "パスポート",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "prompt_ruby": "「だします」の て形[けい]は どれですか。",
+      "choices": [
+        {
+          "ruby": "たして",
+          "correct": false
+        },
+        {
+          "ruby": "だして",
+          "correct": true
+        },
+        {
+          "ruby": "だって",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "prompt_ruby": "ともだちは なんと いいましたか。",
+      "choices": [
+        {
+          "ruby": "ゆっくり はなしてください",
+          "correct": true
+        },
+        {
+          "ruby": "はやく はなしてください",
+          "correct": false
+        },
+        {
+          "ruby": "しゅくだいを だしてください",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}

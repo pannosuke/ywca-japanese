@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "id": "fuji-to-umi",
+  "level": 1,
+  "title_ruby": "ふじさんと うみ",
+  "lesson_id": "2026-11-17",
+  "body_ruby": "らいしゅうの にちようび、エリックさんは どこかに いきたいです。やまも うみも すきです。ふじさんは ゆうめいです。ふじさんは うみより たかいです。ふゆは やまが さむいです。だから、なつに ふじさんに のぼりたいです。ともだちは「うみに いきましょうか。」と いいました。「なつは うみも いいです。どちらも すきです！」",
+  "questions": [
+    {
+      "id": "f1",
+      "prompt_ruby": "ふじさんは うみより どうですか。",
+      "choices": [
+        {
+          "ruby": "たかいです",
+          "correct": true
+        },
+        {
+          "ruby": "ひくいです",
+          "correct": false
+        },
+        {
+          "ruby": "さむいです",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "prompt_ruby": "いつ ふじさんに のぼりたいですか。",
+      "choices": [
+        {
+          "ruby": "なつ",
+          "correct": true
+        },
+        {
+          "ruby": "ふゆ",
+          "correct": false
+        },
+        {
+          "ruby": "きのう",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "prompt_ruby": "ふゆの やまは どうですか。",
+      "choices": [
+        {
+          "ruby": "さむいです",
+          "correct": true
+        },
+        {
+          "ruby": "あついです",
+          "correct": false
+        },
+        {
+          "ruby": "あたたかいです",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "prompt_ruby": "ともだちは どこに いきましょうか、と いいましたか。",
+      "choices": [
+        {
+          "ruby": "うみ",
+          "correct": true
+        },
+        {
+          "ruby": "がっこう",
+          "correct": false
+        },
+        {
+          "ruby": "びょういん",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "prompt_ruby": "やまと うみと、どちらが すきですか。",
+      "choices": [
+        {
+          "ruby": "どちらも すきです",
+          "correct": true
+        },
+        {
+          "ruby": "やまは ちょっと…",
+          "correct": false
+        },
+        {
+          "ruby": "きらいです",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}
