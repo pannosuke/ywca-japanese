@@ -314,8 +314,13 @@ class StudyTest {
 
     @Test
     fun deckNotesMatchTheMnemonicExport() {
+        assertEquals(49, content.deck.cards.size)
+        assertTrue(content.deck.cards.all { it.definition.isNotBlank() && it.meaning.isNotBlank() })
+        val words = content.deck.cards.map { it.word }.toSet()
+        assertTrue(words.containsAll(listOf("旅行[りょこう]", "降[お]ります", "狭[せま]い", "会話[かいわ]", "厚[あつ]い", "薄[うす]い")))
+        assertFalse("自己紹介[じこしょうかい]" in words || "降[お]りる" in words || "それ" in words)
         val withMnemonic = content.deck.cards.filter { "kanji-mnemonic" in it.note }
-        assertEquals(46, withMnemonic.size)
+        assertEquals(45, withMnemonic.size)
         val distinct = withMnemonic.map { it.note }.toSet()
         assertEquals(45, distinct.size)
         withMnemonic.forEach { card ->
@@ -333,6 +338,11 @@ class StudyTest {
             assertEquals(card.note, study)
         }
         val life = content.deck.cards.first { it.word.startsWith("生活") }
+        assertEquals(
+            "毎日[まいにち]、 食[た]べたり、 はたらいたり、 休[やす]んだりすること。たとえば、 朝[あさ]おきて、 学校[がっこう]へ 行[い]き、 夜[よる]ねること。",
+            life.definition,
+        )
+        assertEquals("日本[にほん]の 生活[せいかつ]に もう 慣[な]れました。", life.sentence)
         val parsed = CardNotes.parse(life.note)
         assertTrue(parsed.prose.contains("暮[く]らす"))
         assertEquals(listOf("生[せい]", "活[かつ]"), parsed.items.map { it.kanji })

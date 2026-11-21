@@ -62,4 +62,4 @@ A class quiz used as a question source. `id`, `lesson_id`, `title_ruby`, `items[
 
 ## deck.json
 
-The offline copy of the YWCA deck. `deck_name`, `note_type`, `cards[]` with `id`, `lesson_id`, `word`, `definition`, `meaning`, `sentence`, `sentence_en`, `note`. `note` is the Anki Note field: the class note, then a `<div class="kanji-mnemonic">` block. The review back shows that block as Kanji. Used when AnkiDroid is missing or the permission is refused. Scheduling then stays on the phone with FSRS.
+The offline copy of the active YWCA deck: the notes Anki is studying, not the suspended word bank. `deck_name`, `note_type`, `cards[]` with `id`, `lesson_id`, `word`, `definition`, `meaning`, `sentence`, `sentence_en`, `note`. Those fields match the Anki note. `note` is the class note, then a `<div class="kanji-mnemonic">` block. The review back shows that block as Kanji. A suspended note stays out of this file. It remains in `vocab.json`, and a verb keeps its `group` in `verbs.json`. Used when AnkiDroid is missing or the permission is refused. Scheduling then stays on the phone with FSRS.

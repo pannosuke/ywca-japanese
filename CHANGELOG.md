@@ -5,7 +5,7 @@
 Not tagged in this pull request. `versionCode` is 8, so Obtainium can replace 0.5.1 in place. Package name stays `dev.ericallerton.yoruben`. The release is signed with the same keystore as 0.5.1.
 
 - The review back shows the Anki Note field under the definition and the example. The class note stays as prose. The kanji mnemonic is a Kanji section: the character, its parts, a short English line, and a Japanese line, with furigana. The same field is read from AnkiDroid and from `content/deck.json`.
-- The offline deck notes for those cards now match the YWCA deck on AnkiWeb. A word that was only in Anki, not in the offline deck, was added so the fallback can show it.
+- The offline deck is the 49 cards Anki is studying. Definitions, meanings, sentences, and notes match those notes, including 生活. Suspended notes stay in the word bank in `vocab.json` and are not review cards. A verb keeps its group in `verbs.json`.
 
 ## 0.5.1
 
