@@ -2,7 +2,7 @@
 
 Study material is JSON. The app bundles this folder and, on launch with a network, reads `content/manifest.json` from `main` on GitHub. A higher `version` replaces the cached copy. An older build ignores a form id it does not know.
 
-Kanji that a person sees must be written `漢字[よみ]`, unless every character in that run is listed in `profile.json` `known_kanji`. Eric's list is empty. Ids, notes, and English glosses are not shown as Japanese, so they may contain bare kanji.
+Kanji that a person sees must be written `漢字[よみ]`, unless every character in that run is listed in `profile.json` `known_kanji`. Eric's list is empty. Ids and English glosses may contain bare kanji. A deck `note` is shown on the review back. Japanese in that note uses furigana. The English mnemonic names the kanji it is talking about.
 
 After class, add or edit a file, list any new path in `manifest.json` `files`, and add 1 to `version`. No app release is required for new words, sheets, scores, or stories.
 
@@ -62,4 +62,4 @@ A class quiz used as a question source. `id`, `lesson_id`, `title_ruby`, `items[
 
 ## deck.json
 
-The offline copy of the YWCA deck. `deck_name`, `note_type`, `cards[]` with `id`, `lesson_id`, `word`, `definition`, `meaning`, `sentence`, `sentence_en`, `note`. Used when AnkiDroid is missing or the permission is refused. Scheduling then stays on the phone with FSRS.
+The offline copy of the active YWCA deck: the notes Anki is studying, not the suspended word bank. `deck_name`, `note_type`, `cards[]` with `id`, `lesson_id`, `word`, `definition`, `meaning`, `sentence`, `sentence_en`, `note`. Those fields match the Anki note. `note` is the class note, then a `<div class="kanji-mnemonic">` block. The review back shows that block as Kanji. A suspended note stays out of this file. It remains in `vocab.json`, and a verb keeps its `group` in `verbs.json`. Used when AnkiDroid is missing or the permission is refused. Scheduling then stays on the phone with FSRS.

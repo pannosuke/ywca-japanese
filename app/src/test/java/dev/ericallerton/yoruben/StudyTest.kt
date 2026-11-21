@@ -1,5 +1,7 @@
 package dev.ericallerton.yoruben
 
+import dev.ericallerton.yoruben.anki.ankiField
+import dev.ericallerton.yoruben.core.CardNotes
 import dev.ericallerton.yoruben.core.Conjugator
 import dev.ericallerton.yoruben.core.ContentChecks
 import dev.ericallerton.yoruben.core.Fsrs
@@ -300,4 +302,66 @@ class StudyTest {
         val json = Study(content, ProgressFile(profileId = "eric")).exportJson(0L)
         assertTrue(json.contains("\"profile_id\": \"eric\"") || json.contains("\"profile_id\":\"eric\""))
     }
+
+    @Test
+    fun noteFieldIsSeparateFromTheStatusString() {
+        val names = listOf("Word", "Definition", "Meaning", "Sentence", "SentenceEN", "Note")
+        val fields = listOf("生活[せいかつ]", "まいにちの くらし。", "life", "", "", "prose\n<div class=\"kanji-mnemonic\">x</div>")
+        assertEquals(fields[5], ankiField(names, fields, "Note", 5))
+        assertEquals("from-index", ankiField(emptyList(), List(6) { if (it == 5) "from-index" else "" }, "Note", 5))
+        assertEquals("named", ankiField(listOf("note"), listOf("named"), "Note", 5))
+    }
+
+    @Test
+    fun deckNotesMatchTheMnemonicExport() {
+        assertEquals(49, content.deck.cards.size)
+        assertTrue(content.deck.cards.all { it.definition.isNotBlank() && it.meaning.isNotBlank() })
+        val words = content.deck.cards.map { it.word }.toSet()
+        assertTrue(words.containsAll(listOf("旅行[りょこう]", "降[お]ります", "狭[せま]い", "会話[かいわ]", "厚[あつ]い", "薄[うす]い")))
+        assertFalse("自己紹介[じこしょうかい]" in words || "降[お]りる" in words || "それ" in words)
+        val withMnemonic = content.deck.cards.filter { "kanji-mnemonic" in it.note }
+        assertEquals(45, withMnemonic.size)
+        val distinct = withMnemonic.map { it.note }.toSet()
+        assertEquals(45, distinct.size)
+        withMnemonic.forEach { card ->
+            val parsed = CardNotes.parse(card.note)
+            assertTrue(card.id, parsed.hasKanji)
+            assertFalse(card.id, "<" in parsed.prose || ">" in parsed.prose)
+            (listOf(parsed.intro) + parsed.items.flatMap { listOf(it.kanji, it.parts, it.english, it.japanese) }).forEach { line ->
+                assertFalse(card.id + line, "<" in line || ">" in line)
+            }
+            parsed.items.forEach { item ->
+                assertTrue(card.id, Ruby.bareKanji(item.kanji).isEmpty())
+                assertTrue(card.id + item.japanese, Ruby.bareKanji(item.japanese).isEmpty())
+            }
+            val study = card.toPublic()
+            assertEquals(card.note, study)
+        }
+        val life = content.deck.cards.first { it.word.startsWith("生活") }
+        assertEquals(
+            "毎日[まいにち]、 食[た]べたり、 はたらいたり、 休[やす]んだりすること。たとえば、 朝[あさ]おきて、 学校[がっこう]へ 行[い]き、 夜[よる]ねること。",
+            life.definition,
+        )
+        assertEquals("日本[にほん]の 生活[せいかつ]に もう 慣[な]れました。", life.sentence)
+        val parsed = CardNotes.parse(life.note)
+        assertTrue(parsed.prose.contains("暮[く]らす"))
+        assertEquals(listOf("生[せい]", "活[かつ]"), parsed.items.map { it.kanji })
+        assertEquals("土 earth + a sprout", parsed.items[0].parts)
+        assertEquals("A plant pushing up through the soil — life beginning.", parsed.items[0].english)
+        assertEquals("土[つち]から 芽[め]が 出[で]る。", parsed.items[0].japanese)
+        assertTrue(Ruby.bareKanji(parsed.items[0].japanese).isEmpty())
+        val night = CardNotes.parse(content.deck.cards.first { it.word.startsWith("昨夜") }.note)
+        assertTrue(night.intro.contains("ゆうべ"))
+        assertEquals("昨[さく]", night.items[0].kanji)
+        val plain = CardNotes.parse("クラスの メモ。 <b>太字</b>")
+        assertEquals("クラスの メモ。 太字", plain.prose)
+        assertTrue(plain.items.isEmpty())
+        val hostile = CardNotes.parse("メモ <script>alert(1)</script><!--hide-->&amp; ok")
+        assertEquals("メモ & ok", hostile.prose)
+        assertFalse("<" in hostile.prose)
+    }
+
+    private fun dev.ericallerton.yoruben.core.DeckCard.toPublic() =
+        dev.ericallerton.yoruben.core.Study(content, ProgressFile()).dueLocal(0L, 500)
+            .first { it.id == id }.note
 }

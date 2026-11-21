@@ -107,11 +107,7 @@ class AnkiClient(private val context: Context) {
             (if (nameCol >= 0) it.getString(nameCol).orEmpty() else "") to parsed.map { n -> n.trim().trim('"') }
         }
         if (noteType.isNotBlank() && modelName.isNotBlank() && modelName != noteType) return null
-        fun field(name: String, fallback: Int): String {
-            val index = names.indexOfFirst { it.equals(name, ignoreCase = true) }
-            val i = if (index >= 0) index else fallback
-            return fields.getOrElse(i) { "" }
-        }
+        fun field(name: String, fallback: Int): String = ankiField(names, fields, name, fallback)
         return StudyCard(
             id = "anki:$noteId:$ord",
             lessonId = "",
@@ -120,6 +116,7 @@ class AnkiClient(private val context: Context) {
             meaning = field("Meaning", 2),
             sentence = field("Sentence", 3),
             sentenceEn = field("SentenceEN", 4),
+            note = field("Note", 5),
             noteId = noteId,
             ord = ord,
             fromAnki = true,
@@ -134,4 +131,10 @@ class AnkiClient(private val context: Context) {
         private val NOTES: Uri = Uri.parse("content://com.ichi2.anki.flashcards/notes")
         private val MODELS: Uri = Uri.parse("content://com.ichi2.anki.flashcards/models")
     }
+}
+
+internal fun ankiField(names: List<String>, fields: List<String>, name: String, fallback: Int): String {
+    val index = names.indexOfFirst { it.equals(name, ignoreCase = true) }
+    val i = if (index >= 0) index else fallback
+    return fields.getOrElse(i) { "" }
 }

@@ -85,6 +85,7 @@ data class StudyCard(
     val meaning: String,
     val sentence: String,
     val sentenceEn: String,
+    val note: String = "",
     val noteId: Long = -1,
     val ord: Int = 0,
     val fromAnki: Boolean = false,
@@ -669,4 +670,4 @@ class Study(val content: StudyContent, progress: ProgressFile) {
     }
 }
 
-private fun DeckCard.toCard() = StudyCard(id, lessonId, word, definition, meaning, sentence, sentenceEn)
+private fun DeckCard.toCard() = StudyCard(id, lessonId, word, definition, meaning, sentence, sentenceEn, note)
