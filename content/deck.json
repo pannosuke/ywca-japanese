@@ -11,7 +11,7 @@
       "meaning": "sunset; setting sun",
       "sentence": "茨城[いばらき]の 夕日[ゆうひ]は とても きれいです。",
       "sentence_en": "The sunset in Ibaraki is really beautiful.",
-      "note": "よく 帰[かえ]りに 空[そら]を 見[み]てみて。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">夕[ゆう]</span>\n<div class=\"km-parts\">pictograph: a crescent moon</div>\n</div>\n<div class=\"km-en\">A sliver of moon — evening.</div>\n<div class=\"km-ja\">三日月[みかづき]の 夕[ゆう]がた。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">日[ひ]</span>\n<div class=\"km-parts\">pictograph: the sun</div>\n</div>\n<div class=\"km-en\">A picture of the sun — day, or the sun itself (夕日).</div>\n<div class=\"km-ja\">お 日[ひ]さまの 形[かたち]。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "よく 帰[かえ]りに 空[そら]を 見[み]てみて。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">夕[ゆう]</span>\n<div class=\"km-parts\">a thin crescent moon</div>\n</div>\n<div class=\"km-en\">A thin crescent moon — evening. Spot it: 歹 has an extra stroke inside; 夂 is a zigzag fold; 夕 is the clean sliver. 多 is simply two 夕 stacked. You’ll see 夕方 and 夕日 over Ibaraki.</div>\n<div class=\"km-ja\">ほそい 月[つき]が、 夕[ゆう]がた。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">日[ひ]</span>\n<div class=\"km-parts\">a square sun with one bar through it</div>\n</div>\n<div class=\"km-en\">A square sun with one bar through the middle — the sun, or a day. Spot it: 目 is taller and has two bars; 口 is empty inside; 曰 is wider and flatter. You’ll see 日 on calendars, and in 夕日.</div>\n<div class=\"km-ja\">なかに 線[せん]が 一本[いっぽん]の、お 日[ひ]さま。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:万里の長城",
@@ -21,7 +21,7 @@
       "meaning": "the Great Wall of China",
       "sentence": "来年[らいねん]、 万里[ばんり]の 長城[ちょうじょう]に 行[い]きたいです。",
       "sentence_en": "Next year, I want to go to the Great Wall of China.",
-      "note": "「 万里[ばんり]」は「とても 長[なが]い 距離[きょり]」という 意味[いみ]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">万[ばん]</span>\n<div class=\"km-parts\">一 one + a hooked stroke</div>\n</div>\n<div class=\"km-en\">A tiny character for a huge number: ten thousand. (The old form 萬 was a picture of a scorpion.)</div>\n<div class=\"km-ja\">とても 大[おお]きい 数[かず]、 万[まん]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">里[り]</span>\n<div class=\"km-parts\">田 rice field + 土 earth</div>\n</div>\n<div class=\"km-en\">Fields and earth — a village, or a unit of distance (万里).</div>\n<div class=\"km-ja\">田[た]と 土[つち]の 里[さと]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">長[ちょう]</span>\n<div class=\"km-parts\">pictograph: an old person with long hair and a cane</div>\n</div>\n<div class=\"km-en\">Long hair, a long life — long, or a chief. In 長城, the long wall.</div>\n<div class=\"km-ja\">髪[かみ]が 長[なが]い、 長[なが]い。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">城[じょう]</span>\n<div class=\"km-parts\">土 earth + 成 become (also the sound)</div>\n</div>\n<div class=\"km-en\">Earth built up until it becomes a castle wall. 成 also gives the sound.</div>\n<div class=\"km-ja\">土[つち]で つくった 城[しろ]。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "「 万里[ばんり]」は「とても 長[なが]い 距離[きょり]」という 意味[いみ]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">万[ばん]</span>\n<div class=\"km-parts\">a straight top bar (一) + a hooked downstroke</div>\n</div>\n<div class=\"km-en\">A tiny hook hanging from a straight bar — a small shape for a huge number, ten thousand. Spot it: 方 has an open box on the lower right; 万 is only that hook. You’ll see 万 on price tags and on a 1万円 bill.</div>\n<div class=\"km-ja\">ちいさい 字[じ]なのに、とても 大[おお]きい 数[かず]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">里[り]</span>\n<div class=\"km-parts\">a rice field (田) over earth (土)</div>\n</div>\n<div class=\"km-en\">A rice field (田) sitting on earth (土) — a village, or an old unit of distance. Spot it: 理 adds a king (王) on the left; 黒 puts four dots (灬) under 里. Plain 里 is just field on earth. You’ll see it in 万里の長城.</div>\n<div class=\"km-ja\">田[た]の 下[した]が 土[つち]なら、 里[さと]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">長[ちょう]</span>\n<div class=\"km-parts\">a long-haired elder: a wide hat, a flowing mane, a walking leg</div>\n</div>\n<div class=\"km-en\">Long hair flowing down from a wide hat — long, or a chief. Spot it: the mane zigzags down the middle, taller than 衣, which opens like a robe. You’ll see 長い, 長城 in 万里の長城, and 市長 on city notices.</div>\n<div class=\"km-ja\">ながい 髪[かみ]の 人[ひと]、 長[なが]い。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">城[じょう]</span>\n<div class=\"km-parts\">a mound of earth (土) + a becoming shape (成)</div>\n</div>\n<div class=\"km-en\">Earth (土) piled until it becomes (成) a wall — a castle. Spot it: 成 alone has no earth; 城 always has that 土 on the left. You’ll see 大阪城 on signs and maps.</div>\n<div class=\"km-ja\">土[つち]を 盛[も]って つくった 城[しろ]。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:北東",
@@ -31,7 +31,7 @@
       "meaning": "northeast",
       "sentence": "茨城[いばらき]は 東京[とうきょう]の 北東[ほくとう]に あります。",
       "sentence_en": "Ibaraki is to the northeast of Tokyo.",
-      "note": "東北[とうほく]は「 北[きた]と 東[ひがし]の あいだ」ではなく、 日本[にほん]の 北[きた]の ほうの 名前[なまえ]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">北[ほく]</span>\n<div class=\"km-parts\">two people (匕) sitting back-to-back</div>\n</div>\n<div class=\"km-en\">Two people sitting back-to-back. The back side stood for north — the way turned away from the sun.</div>\n<div class=\"km-ja\">せなかを 向[む]けた 北[きた]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">東[とう]</span>\n<div class=\"km-parts\">木 tree + 日 sun (the sun behind a tree)</div>\n</div>\n<div class=\"km-en\">The sun coming up behind a tree — east.</div>\n<div class=\"km-ja\">木[き]の うしろから 日[ひ]が 出[で]る、 東[ひがし]。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "東北[とうほく]は「 北[きた]と 東[ひがし]の あいだ」ではなく、 日本[にほん]の 北[きた]の ほうの 名前[なまえ]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">北[ほく]</span>\n<div class=\"km-parts\">two people sitting back-to-back</div>\n</div>\n<div class=\"km-en\">Two people sitting back-to-back — the cold “back” side, north. Spot it: 比 has two 匕 facing the same way, side by side; 北 turns the left one around, backs together. You’ll see 北口 at JR 茨木, and 北東 on a weather map.</div>\n<div class=\"km-ja\">せなかあわせが 北[きた]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">東[とう]</span>\n<div class=\"km-parts\">a tree (木) with a sun (日) in its middle</div>\n</div>\n<div class=\"km-en\">The sun (日) caught in a tree (木) — sunrise, east. Spot it: 車 has a 田 (a box with a plus) in the middle; 東 has a 日 (only one bar inside the box). You’ll see 東口 at JR 茨木.</div>\n<div class=\"km-ja\">木[き]の 中[なか]の 日[ひ]が、 東[ひがし]。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:厳しい",
@@ -41,7 +41,7 @@
       "meaning": "strict; severe",
       "sentence": "日本語[にほんご]の 先生[せんせい]は 少[すこ]し 厳[きび]しいですが、 とても 親切[しんせつ]です。",
       "sentence_en": "My Japanese teacher is a little strict, but very kind.",
-      "note": "天気[てんき]や テストにも 使[つか]える（ 厳[きび]しい 暑[あつ]さ、 厳[きび]しい テスト）。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">厳[きび]</span>\n<div class=\"km-parts\">a heavy top + 厂 cliff + 敢 dare</div>\n</div>\n<div class=\"km-en\">A daring (敢) cliff (厂) under a heavy top — stern and strict.</div>\n<div class=\"km-ja\">がけの ように 厳[きび]しい。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "天気[てんき]や テストにも 使[つか]える（ 厳[きび]しい 暑[あつ]さ、 厳[きび]しい テスト）。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">厳[きび]</span>\n<div class=\"km-parts\">a heavy spiky lid + a cliff (厂) + a daring hand (敢)</div>\n</div>\n<div class=\"km-en\">A heavy lid over a cliff (厂) and a daring hand (敢) — stern, no-nonsense. Spot it: 敢 is the right-hand piece alone; 厳 always wears that heavy, spiky lid on top. Think of a 厳しい teacher.</div>\n<div class=\"km-ja\">おもい フタの 下[した]は、 厳[きび]しい。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:親切な",
@@ -51,7 +51,7 @@
       "meaning": "kind",
       "sentence": "病院[びょういん]の 看護師[かんごし]は とても 親切[しんせつ]な 人[ひと]です。",
       "sentence_en": "The nurse at the hospital is a very kind person.",
-      "note": "「 親切[しんせつ]にする」「 親切[しんせつ]な 人[ひと]」と 覚[おぼ]えると 使[つか]いやすい。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">親[しん]</span>\n<div class=\"km-parts\">亲 (the sound; also “parent”) + 見 see</div>\n</div>\n<div class=\"km-en\">Seeing your own people — a parent, or closeness. In 親切, that closeness is kindness. 亲 is also the sound.</div>\n<div class=\"km-ja\">近[ちか]くで 見[み]る 人[ひと]、 親[おや]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">切[せつ]</span>\n<div class=\"km-parts\">七 seven + 刀 knife</div>\n</div>\n<div class=\"km-en\">A knife (刀). 七 is mostly the sound. To cut. In 親切 it also means earnest, kind.</div>\n<div class=\"km-ja\">刀[かたな]で 切[き]る。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "「 親切[しんせつ]にする」「 親切[しんせつ]な 人[ひと]」と 覚[おぼ]えると 使[つか]いやすい。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">親[しん]</span>\n<div class=\"km-parts\">a standing family-tree shape (亲) + an eye on legs (見)</div>\n</div>\n<div class=\"km-en\">A family-tree shape (亲) plus an eye on legs (見) — seeing your own people: a parent, or closeness. Spot it: 新 uses the same left side, but has an axe (斤) on the right, not 見. You’ll see 親切 in class, and 親 on forms.</div>\n<div class=\"km-ja\">見[み]えるのが 親[おや]、ちかい 人[ひと]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">切[せつ]</span>\n<div class=\"km-parts\">seven (七) + a sword (刀)</div>\n</div>\n<div class=\"km-en\">A sword (刀) next to a marked 七 — a blade that cuts. Spot it: 初 has a clothes radical (衤) on the left, not 七; 切’s left side is that crossed 七. You’ll see 切符 at the ticket machines.</div>\n<div class=\"km-ja\">刀[かたな]が あるから、 切[き]れる。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:楽な",
@@ -61,7 +61,7 @@
       "meaning": "easy; comfortable",
       "sentence": "茨城[いばらき]の 生活[せいかつ]は 楽[らく]です。",
       "sentence_en": "Life in Ibaraki is comfortable.",
-      "note": "「 楽[らく]」は「かんたん」と「くつろげる」の 両方[りょうほう]の 意味[いみ]がある。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">楽[らく]</span>\n<div class=\"km-parts\">a drum (the top) + 木 wood</div>\n</div>\n<div class=\"km-en\">A drum on a wooden stand — music, and the easy, pleasant feeling it gives (楽な).</div>\n<div class=\"km-ja\">たいこの 音[おと]は 楽[たの]しい、 楽[らく]。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "「 楽[らく]」は「かんたん」と「くつろげる」の 両方[りょうほう]の 意味[いみ]がある。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">楽[らく]</span>\n<div class=\"km-parts\">a white drum-top with two tassels + a tree (木)</div>\n</div>\n<div class=\"km-en\">A white drum sitting on a wooden stand (木) — music, and the easy feeling it gives. Spot it: 薬 is 楽 with grass (艹) on top; 楽 itself has no grass. You’ll see 音楽, and 楽しい on posters; 楽な in class means “easy.”</div>\n<div class=\"km-ja\">たいこと 木[き]で、 楽[たの]しい、 楽[らく]。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:暇な",
@@ -71,7 +71,7 @@
       "meaning": "free; not busy",
       "sentence": "土曜日[どようび]は 暇[ひま]なので、 どこかへ 行[い]きませんか。",
       "sentence_en": "I'm free on Saturday, so shall we go somewhere?",
-      "note": "「 暇[ひま]」は「ひまがある／ 忙[いそが]しくない」。つまらない、という 意味[いみ]ではない。「つまらない」は 退屈[たいくつ]（な）。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">暇[ひま]</span>\n<div class=\"km-parts\">日 day + 叚 (the sound; also once meant “borrow”)</div>\n</div>\n<div class=\"km-en\">Spare hours in the day — time off. 叚 is mostly the sound (it also meant “borrow”).</div>\n<div class=\"km-ja\">ひまな 日[ひ]、 自由[じゆう]な 時間[じかん]。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "「 暇[ひま]」は「ひまがある／ 忙[いそが]しくない」。つまらない、という 意味[いみ]ではない。「つまらない」は 退屈[たいくつ]（な）。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">暇[ひま]</span>\n<div class=\"km-parts\">a sun / day (日) + a leftover stacked block (叚)</div>\n</div>\n<div class=\"km-en\">A day (日) with a leftover block on the right — spare hours, time off. Spot it: 仮 has a person (亻) on the left, not a sun; 暇 is a 日-kanji, about time. You’ll see 暇な日, and お暇 at a goodbye.</div>\n<div class=\"km-ja\">日[ひ]が あいている、ひまな とき。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:生活",
@@ -81,7 +81,7 @@
       "meaning": "life; lifestyle; daily living",
       "sentence": "日本[にほん]の 生活[せいかつ]に もう 慣[な]れました。",
       "sentence_en": "I've already gotten used to life in Japan.",
-      "note": "「 生活[せいかつ]する」で「 暮[く]らす」と 近[ちか]い 意味[いみ]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">生[せい]</span>\n<div class=\"km-parts\">土 earth + a sprout</div>\n</div>\n<div class=\"km-en\">A plant pushing up through the soil — life beginning.</div>\n<div class=\"km-ja\">土[つち]から 芽[め]が 出[で]る。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">活[かつ]</span>\n<div class=\"km-parts\">氵 water + 舌 tongue</div>\n</div>\n<div class=\"km-en\">Water on the tongue: you’re alive and lively. 舌 is mostly the sound (かつ), not “tongue” as meaning.</div>\n<div class=\"km-ja\">水[みず]が あると いきいきする。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "「 生活[せいかつ]する」で「 暮[く]らす」と 近[ちか]い 意味[いみ]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">生[せい]</span>\n<div class=\"km-parts\">a sprout tick on top of an earth-like base (土)</div>\n</div>\n<div class=\"km-en\">A sprout pushing up through the soil — life, raw, fresh. Spot it: 牛 has a wider horned top and no sprout tick; 生 has that extra angled stroke on top and a 土-like base. You’ll see 生ビール on an izakaya menu, and 生活 in daily words.</div>\n<div class=\"km-ja\">土[つち]から 芽[め]が 出[で]る、いきている。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">活[かつ]</span>\n<div class=\"km-parts\">three drops of water (氵) + a tongue (舌)</div>\n</div>\n<div class=\"km-en\">Three drops of water (氵) splashing on a tongue (舌): a lively, living mouth. Spot it: 話 puts words (言) next to the same tongue; 括 puts a hand (扌) there instead. You’ll see 生活 on everyday labels and apartment ads.</div>\n<div class=\"km-ja\">水[みず]が 舌[した]に かかって、いきいきしている。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:匂い",
@@ -91,7 +91,7 @@
       "meaning": "smell (pleasant or neutral)",
       "sentence": "この 花[はな]は いい 匂[にお]いが します。",
       "sentence_en": "This flower smells nice.",
-      "note": "よく 使[つか]う 形[かたち]は「いい 匂[にお]いが する」。 嫌[いや]な 匂[にお]いは「くさい」とも 言[い]う。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">匂[にお]</span>\n<div class=\"km-parts\">勹 wrap + 匕 spoon / person</div>\n</div>\n<div class=\"km-en\">A Japanese-made character: a scent wrapping (勹) around you.</div>\n<div class=\"km-ja\">まわりに 包[つつ]む いい 香[かお]り。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "よく 使[つか]う 形[かたち]は「いい 匂[にお]いが する」。 嫌[いや]な 匂[にお]いは「くさい」とも 言[い]う。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">匂[にお]</span>\n<div class=\"km-parts\">a wrapping scoop (勹) + a sitting spoon / person (匕)</div>\n</div>\n<div class=\"km-en\">A scoop wrapping around a little sitting shape (匕) — a smell curling around you. Spot it: 包 looks close, but holds a winding 己 inside, not this 匕. Catch it at a bakery or ramen shop on the way home.</div>\n<div class=\"km-ja\">まわりから におってくる。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:昨夜",
@@ -101,7 +101,7 @@
       "meaning": "last night",
       "sentence": "昨夜[ゆうべ]は 夕日[ゆうひ]が きれいでした。",
       "sentence_en": "The sunset was beautiful last night.",
-      "note": "日常[にちじょう]では ゆうべ。 昨夜[さくや]と 読[よ]むこともある（ 少[すこ]し 改[あらた]まった 言[い]い 方[かた]）。ゆうべは「 夕[ゆう]べ」と 書[か]くことも 多[おお]い。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-en\">This word is read ゆうべ — a special reading, not one sound per kanji.</div>\n<div class=\"km-item\">\n<span class=\"km-k\">昨[さく]</span>\n<div class=\"km-parts\">日 day + 乍 (the sound)</div>\n</div>\n<div class=\"km-en\">A day that just happened — yesterday, or last night. 乍 is mostly the sound.</div>\n<div class=\"km-ja\">一[いち]つ 前[まえ]の 日[ひ]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">夜[や]</span>\n<div class=\"km-parts\">亠 cover + 亻 person + 夕 evening</div>\n</div>\n<div class=\"km-en\">A person under cover of evening — night.</div>\n<div class=\"km-ja\">夜[よる]の 中[なか]に 人[ひと]が いる。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "日常[にちじょう]では ゆうべ。 昨夜[さくや]と 読[よ]むこともある（ 少[すこ]し 改[あらた]まった 言[い]い 方[かた]）。ゆうべは「 夕[ゆう]べ」と 書[か]くことも 多[おお]い。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-en\">This word is read ゆうべ — a special reading, not one sound per kanji.</div>\n<div class=\"km-item\">\n<span class=\"km-k\">昨[さく]</span>\n<div class=\"km-parts\">a sun / day (日) + a saw-like 乍</div>\n</div>\n<div class=\"km-en\">A day (日) with a saw-shaped 乍 — the day that just passed, yesterday. Spot it: 作 uses the same 乍, but with a person (亻) on the left, not a sun. 日 is your clue it’s about time. You’ll see 昨日, and 昨夜.</div>\n<div class=\"km-ja\">日[ひ]が ついているから、きのう。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">夜[や]</span>\n<div class=\"km-parts\">a lid (亠) + a person (亻) + a crescent evening (夕)</div>\n</div>\n<div class=\"km-en\">A person (亻) tucked under a lid when the crescent (夕) is out — night. Spot it: 夕 alone is just the crescent; 夜 hides a person inside. 液 adds three water drops on the left. You’ll see 夜 on last-train boards and night menus.</div>\n<div class=\"km-ja\">人[ひと]が 夕[ゆう]がたの 中[なか]に いる、 夜[よる]。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:看護師",
@@ -111,7 +111,7 @@
       "meaning": "nurse",
       "sentence": "友達[ともだち]は 親切[しんせつ]な 看護師[かんごし]になりたいです。",
       "sentence_en": "My friend wants to become a kind nurse.",
-      "note": "古[ふる]い 言[い]い 方[かた]の「 看護婦[かんごふ]」は 今[いま]は 使[つか]わない。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">看[かん]</span>\n<div class=\"km-parts\">手 hand + 目 eye</div>\n</div>\n<div class=\"km-en\">A hand shading the eyes to look carefully — to watch over someone (看護師).</div>\n<div class=\"km-ja\">手[て]を 目[め]に あてて よく 見[み]る。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">護[ご]</span>\n<div class=\"km-parts\">言 words + 蒦 (the sound)</div>\n</div>\n<div class=\"km-en\">A promise of words that protect. 蒦 is mostly the sound. In 看護師, the “protect” of care.</div>\n<div class=\"km-ja\">守[まも]る、 保護[ほご]の ご。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">師[し]</span>\n<div class=\"km-parts\">an encampment / group + 巾 cloth</div>\n</div>\n<div class=\"km-en\">The leader of a group — a master or professional, as in 看護師 (nurse).</div>\n<div class=\"km-ja\">その 仕事[しごと]の せんせい、プロ。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "古[ふる]い 言[い]い 方[かた]の「 看護婦[かんごふ]」は 今[いま]は 使[つか]わない。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">看[かん]</span>\n<div class=\"km-parts\">a hand (手) over an eye (目)</div>\n</div>\n<div class=\"km-en\">A hand (手) shading an eye (目) — looking after someone carefully. Spot it: 着 has a sheep-like 羊 on top, not a hand; 看 is a hand over an eye. You’ll see 看護師 at the clinic.</div>\n<div class=\"km-ja\">手[て]を 目[め]の 上[うえ]に のせて、よく 見[み]る。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">護[ご]</span>\n<div class=\"km-parts\">words (言) + a catching bundle (蒦)</div>\n</div>\n<div class=\"km-en\">Words (言) beside a catching bundle — a promise that protects. Spot it: 獲 has a dog (犭) on the left, not words; 護 is the 言 version. You’ll see it in 看護師, and 保護 on safety notices.</div>\n<div class=\"km-ja\">言[こと]葉[ば]で 守[まも]る、 護[ご]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">師[し]</span>\n<div class=\"km-parts\">a stacked official side (𠂤) + a hanging cloth (巾)</div>\n</div>\n<div class=\"km-en\">A stacked official side and a hanging cloth (巾) — a master, a professional. Spot it: 帰 also uses that stacked left side, but ends in a broom-like shape, not a simple cloth 巾. You’ll see 看護師 at clinics, and 教師 for a teacher.</div>\n<div class=\"km-ja\">その 仕事[しごと]の プロ、せんせい。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:通訳",
@@ -121,7 +121,7 @@
       "meaning": "interpreter (spoken language)",
       "sentence": "万里[ばんり]の 長城[ちょうじょう]で、 通訳[つうやく]が 親切[しんせつ]に 説明[せつめい]してくれました。",
       "sentence_en": "At the Great Wall, an interpreter kindly explained things for me.",
-      "note": "話[はな]す 言葉[ことば]の ときが 通訳[つうやく]。 書[か]いた 文[ぶん]を 訳[やく]す 人[ひと]は 翻訳者[ほんやくしゃ]。 仕事[しごと]そのものも「 通訳[つうやく]」と 言[い]う。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">通[つう]</span>\n<div class=\"km-parts\">辶 walk + 甬 (the sound)</div>\n</div>\n<div class=\"km-en\">Walking all the way through — to pass, to go between (通訳). 甬 is mostly the sound.</div>\n<div class=\"km-ja\">中[なか]を 通[とお]る。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">訳[やく]</span>\n<div class=\"km-parts\">言 words + 尺 measure (the sound)</div>\n</div>\n<div class=\"km-en\">Putting words into another measure — a translation (通訳). 尺 is mostly the sound.</div>\n<div class=\"km-ja\">ことばを 訳[やく]す。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "話[はな]す 言葉[ことば]の ときが 通訳[つうやく]。 書[か]いた 文[ぶん]を 訳[やく]す 人[ひと]は 翻訳者[ほんやくしゃ]。 仕事[しごと]そのものも「 通訳[つうやく]」と 言[い]う。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">通[つう]</span>\n<div class=\"km-parts\">a walking road (辶) + a bent pipe (甬)</div>\n</div>\n<div class=\"km-en\">A bent pipe (甬) on the walking road (辶) — you go through, you commute, you pass between. Spot it: 過 also walks on 辶, but its right side is a wide crooked jaw (咼), not this narrow 甬. You’ll see 通勤, 通路, and the 通 in 普通 at JR 茨木.</div>\n<div class=\"km-ja\">ほそい くだの みちを 通[とお]る。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">訳[やく]</span>\n<div class=\"km-parts\">words (言) + a little measure (尺)</div>\n</div>\n<div class=\"km-en\">Words (言) next to a small measure (尺) — you measure words into another language. Spot it: easy to mix with 駅. 訳 has words (言); 駅 has a horse (馬). You’ll see 駅 all over JR 茨木; 訳 shows up in 通訳 and 翻訳.</div>\n<div class=\"km-ja\">言[こと]葉[ば]の ほうが 訳[やく]。 馬[うま]なら 駅[えき]。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:警官",
@@ -131,7 +131,7 @@
       "meaning": "police officer",
       "sentence": "道[みち]が 分[わ]からなかったので、 警官[けいかん]に 聞[き]きました。",
       "sentence_en": "I didn't know the way, so I asked a police officer.",
-      "note": "話[はな]すときは「お 巡[まわ]りさん」とも 言[い]う。もっと 一般的[いっぱんてき]な 言[い]い 方[かた]は 警察官[けいさつかん]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">警[けい]</span>\n<div class=\"km-parts\">敬 respect (the sound) + 言 words</div>\n</div>\n<div class=\"km-en\">Sharp but formal words — a warning. In 警官, the official who warns. 敬 is also the sound.</div>\n<div class=\"km-ja\">注意[ちゅうい]する ことば。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">官[かん]</span>\n<div class=\"km-parts\">宀 roof + stacked official rooms</div>\n</div>\n<div class=\"km-en\">A roof over official rooms — a government officer (警官).</div>\n<div class=\"km-ja\">やくしょの 人[ひと]。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "話[はな]すときは「お 巡[まわ]りさん」とも 言[い]う。もっと 一般的[いっぱんてき]な 言[い]い 方[かた]は 警察官[けいさつかん]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">警[けい]</span>\n<div class=\"km-parts\">a respectful 敬 on top + words (言) underneath</div>\n</div>\n<div class=\"km-en\">Careful, formal words (言) under a respectful 敬 — a warning, or the police who give one. Spot it: 敬 has no 言; 警 is 敬 standing on a pile of words. You’ll see 警察, a 交番, and 警官.</div>\n<div class=\"km-ja\">下[した]に 言[こと]葉[ば]が あったら、 警官[けいかん]の けい。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">官[かん]</span>\n<div class=\"km-parts\">a roof (宀) + two stacked official rooms</div>\n</div>\n<div class=\"km-en\">A roof (宀) over two stacked rooms — a government official. Spot it: 宮 has two mouths (呂) under the roof; 官’s lower rooms look like a folded pipe, not two 口. You’ll see 警官, and 官 on government buildings.</div>\n<div class=\"km-ja\">やねの 下[した]の へやは、やくしょの 人[ひと]。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:物価",
@@ -141,7 +141,7 @@
       "meaning": "prices; cost of living (in general)",
       "sentence": "茨城[いばらき]は 東京[とうきょう]より 物価[ぶっか]が 低[ひく]いです。",
       "sentence_en": "The cost of living in Ibaraki is lower than in Tokyo.",
-      "note": "物価[ぶっか]は 全体[ぜんたい]の 話[はなし]。 一[ひと]つの 物[もの]の ときは 値段[ねだん]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">物[ぶっ]</span>\n<div class=\"km-parts\">牛 ox + 勿 (the sound)</div>\n</div>\n<div class=\"km-en\">An ox — a classic “thing” you own. 勿 is mostly the sound. Goods, things (物価).</div>\n<div class=\"km-ja\">もの、 品物[しなもの]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">価[か]</span>\n<div class=\"km-parts\">亻 person + 覀 (the top of 西 west)</div>\n</div>\n<div class=\"km-en\">A person’s worth. 覀 is what’s left of older 價 (亻 + merchant 賈) — mostly the sound.</div>\n<div class=\"km-ja\">物[もの]の ねうち。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "物価[ぶっか]は 全体[ぜんたい]の 話[はなし]。 一[ひと]つの 物[もの]の ときは 値段[ねだん]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">物[ぶっ]</span>\n<div class=\"km-parts\">an ox (牛) + a waving wrap (勿)</div>\n</div>\n<div class=\"km-en\">An ox (牛) beside a waving wrap (勿) — a thing, goods. Spot it: 特 also starts with 牛, but the right side is 寺 (a temple), not the three slashes of 勿. You’ll see 物価 in the news, and 荷物 at the station.</div>\n<div class=\"km-ja\">うしの となりの、もの。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">価[か]</span>\n<div class=\"km-parts\">a standing person (亻) + a west-like box (覀, the top of 西)</div>\n</div>\n<div class=\"km-en\">A person standing by a west-like box (覀) — someone’s worth, the price in general (物価). Spot it: 値, the other “price” kanji, has a straight eye (直) on the right, not this 西-like box. You’ll see 物価 in the news, and 価格 on store tags.</div>\n<div class=\"km-ja\">西[にし]に にた 箱[はこ]が、ものの ねうち。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:値段",
@@ -151,7 +151,7 @@
       "meaning": "price (of a specific item)",
       "sentence": "この パンの 値段[ねだん]は 二百[にひゃく] 円[えん]です。",
       "sentence_en": "This bread costs 200 yen.",
-      "note": "値段[ねだん]は「この パンは いくら？」の 答[こた]え。 町[まち] 全体[ぜんたい]の 高[たか]さは 物価[ぶっか]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">値[ね]</span>\n<div class=\"km-parts\">亻 person + 直 straight</div>\n</div>\n<div class=\"km-en\">A straight worth to a person — the price of one thing (値段).</div>\n<div class=\"km-ja\">ひとつの 物[もの]の ねだん。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">段[だん]</span>\n<div class=\"km-parts\">carved steps + 殳 a hand with a tool</div>\n</div>\n<div class=\"km-en\">Steps cut into stone — a level or grade, as in a price (値段).</div>\n<div class=\"km-ja\">だん、 階段[かいだん]の だん。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "値段[ねだん]は「この パンは いくら？」の 答[こた]え。 町[まち] 全体[ぜんたい]の 高[たか]さは 物価[ぶっか]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">値[ね]</span>\n<div class=\"km-parts\">a standing person (亻) + a straight eye (直)</div>\n</div>\n<div class=\"km-en\">A person (亻) and a straight, honest eye (直) — the straight price of one thing (値段). Spot it: 価 has a 西-like box on the right, not this tall 直. You’ll see 値段 and 値札 at the supermarket.</div>\n<div class=\"km-ja\">まっすぐな ねだん。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">段[だん]</span>\n<div class=\"km-parts\">a carved staircase on the left + a hand with a tool (殳)</div>\n</div>\n<div class=\"km-en\">A little staircase and a hand with a tool (殳) — steps, a level, a grade. Spot it: the left side looks like a stair, not a person (亻); 役 and 投 have different left sides. You’ll see 階段 at JR 茨木, and 値段 at the store.</div>\n<div class=\"km-ja\">階[かい]段[だん]の だん。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:実際",
@@ -161,7 +161,7 @@
       "meaning": "actually; in reality",
       "sentence": "写真[しゃしん]では 小[ちい]さく 見[み]えますが、 実際[じっさい]の 万里[ばんり]の 長城[ちょうじょう]は とても 長[なが]いです。",
       "sentence_en": "It looks small in photos, but the Great Wall is actually very long.",
-      "note": "「 実際[じっさい]は」「 実際[じっさい]に」の 形[かたち]で よく 出[で]る。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">実[じっ]</span>\n<div class=\"km-parts\">宀 roof + a bursting harvest shape</div>\n</div>\n<div class=\"km-en\">The real crop stored under the roof — the real thing, actually (実際).</div>\n<div class=\"km-ja\">ほんとうの もの。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">際[さい]</span>\n<div class=\"km-parts\">阝 place + 祭 festival (the sound)</div>\n</div>\n<div class=\"km-en\">The edge of a place — a boundary, or “in actual fact” (実際). 祭 is mostly the sound.</div>\n<div class=\"km-ja\">ふち、 実際[じっさい]の さい。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "「 実際[じっさい]は」「 実際[じっさい]に」の 形[かたち]で よく 出[で]る。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">実[じっ]</span>\n<div class=\"km-parts\">a roof (宀) + a bursting harvest shape</div>\n</div>\n<div class=\"km-en\">A bursting harvest kept under a roof (宀) — the real thing, actually. Spot it: 売 has a 士 and little legs (儿) and looks open at the bottom; 実 is a solid roof over a tight, bursting core. You’ll see 実際 in class, and 果実 on fruit packs.</div>\n<div class=\"km-ja\">やねの 下[した]の、ほんとうの もの。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">際[さい]</span>\n<div class=\"km-parts\">a hill / place (阝) + a festival (祭)</div>\n</div>\n<div class=\"km-en\">A festival (祭) at the edge of a hill (阝) — an edge, an occasion, or “in actual fact.” Spot it: 祭 is the right side alone, with 示 at the bottom and no hill; 際 always has 阝 on the left. You’ll see 実際 in class, and 国際 in the news.</div>\n<div class=\"km-ja\">まつりに 丘[おか]が ついたら、ふちの さい。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:どこか",
@@ -181,7 +181,7 @@
       "meaning": "low; short (in height)",
       "sentence": "この 椅子[いす]は ちょっと 低[ひく]いです。",
       "sentence_en": "This chair is a little low.",
-      "note": "物[もの]の 高[たか]さは「 低[ひく]い」。 人[ひと]の 背[せ]の 高[たか]さも「 背[せ]が 低[ひく]い」。 物価[ぶっか]が 安[やす]いことも「 物価[ぶっか]が 低[ひく]い」と 言[い]える。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">低[ひく]</span>\n<div class=\"km-parts\">亻 person + 氐 bottom (also the sound)</div>\n</div>\n<div class=\"km-en\">A person sinking to the bottom (氐) — low. 氐 is also the sound.</div>\n<div class=\"km-ja\">下[した]の ほうへ 低[ひく]い。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "物[もの]の 高[たか]さは「 低[ひく]い」。 人[ひと]の 背[せ]の 高[たか]さも「 背[せ]が 低[ひく]い」。 物価[ぶっか]が 安[やす]いことも「 物価[ぶっか]が 低[ひく]い」と 言[い]える。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">低[ひく]</span>\n<div class=\"km-parts\">a standing person (亻) + a low shelf with a drop (氐)</div>\n</div>\n<div class=\"km-en\">A person (亻) sunk down to a low shelf (氐) — low, or short. Spot it: 底 uses the same 氐, but under a shelter (广), not beside a person. You’ll see 低脂肪 on milk at the supermarket.</div>\n<div class=\"km-ja\">人[ひと]が 下[した]に しずんで、 低[ひく]い。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:頻度",
@@ -191,7 +191,7 @@
       "meaning": "frequency",
       "sentence": "「Ankiの 頻度[ひんど]は？」「 毎日[まいにち]です！ 大阪駅[おおさかえき]までの 電車[でんしゃ]の 中[なか]で します。」",
       "sentence_en": "\"How often do you do Anki?\" \"Every day! I do it on the train to Osaka Station.\"",
-      "note": "日本語[にほんご]の ことばは「 頻度[ひんど]」。 先生[せんせい]は、クラスの 中国[ちゅうごく]の 人[ひと]のために、 中国語[ちゅうごくご]の「 頻率[ひんりつ]」も 書[か]きました。 読[よ]み 方[かた]は「ひんど」。いつも・よく・ときどき・あまり・ぜんぜん は 頻度[ひんど]の ことば。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">頻[ひん]</span>\n<div class=\"km-parts\">歩 steps + 頁 head</div>\n</div>\n<div class=\"km-en\">Steps passing in front of you again and again — frequency (頻度).</div>\n<div class=\"km-ja\">何度[なんど]も 歩[ある]く、 頻度[ひんど]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">度[ど]</span>\n<div class=\"km-parts\">广 building + 廿 twenty + 又 hand</div>\n</div>\n<div class=\"km-en\">Hands measuring inside a building — a degree, how often (頻度).</div>\n<div class=\"km-ja\">どのくらい、 何度[なんど]。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "日本語[にほんご]の ことばは「 頻度[ひんど]」。 先生[せんせい]は、クラスの 中国[ちゅうごく]の 人[ひと]のために、 中国語[ちゅうごくご]の「 頻率[ひんりつ]」も 書[か]きました。 読[よ]み 方[かた]は「ひんど」。いつも・よく・ときどき・あまり・ぜんぜん は 頻度[ひんど]の ことば。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">頻[ひん]</span>\n<div class=\"km-parts\">steps (歩) + a big head (頁)</div>\n</div>\n<div class=\"km-en\">Steps (歩) passing in front of a big head (頁) again and again — frequent. Spot it: 歩 alone has no head; 頻 is 歩 with that tall 頁 on the right (a face with long legs). You’ll see 頻度 in class.</div>\n<div class=\"km-ja\">何[なん]度[ど]も 歩[ある]く、 頻[ひん]度[ど]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">度[ど]</span>\n<div class=\"km-parts\">a shelter (广) + a twenty-ish block (廿) + a right hand (又)</div>\n</div>\n<div class=\"km-en\">A hand (又) measuring under a shelter (广) — a degree, or how many times. Spot it: 渡 adds water (氵) on the left; plain 度 has no water. 席 also uses 广 but ends in 巾, not 又. You’ll see 温度 on a weather app, and 頻度 in class.</div>\n<div class=\"km-ja\">手[て]で はかる、どのくらい。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:入ります",
@@ -201,7 +201,7 @@
       "meaning": "enter; go in",
       "sentence": "雨[あめ]ですね。 梅田[うめだ]の 駅[えき]の カフェに 入[はい]りませんか。",
       "sentence_en": "It's raining. Want to duck into a café at Umeda station?",
-      "note": "「〜に 入[はい]ります」（に）。 反対[はんたい]は 出[で]ます。 お 風呂[ふろ]に 入[はい]ります＝take a bath。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">入[はい]</span>\n<div class=\"km-parts\">pictograph: a wedge pointing in</div>\n</div>\n<div class=\"km-en\">A wedge pushing inward — to enter, to go in.</div>\n<div class=\"km-ja\">中[なか]へ 入[はい]る 形[かたち]。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "「〜に 入[はい]ります」（に）。 反対[はんたい]は 出[で]ます。 お 風呂[ふろ]に 入[はい]ります＝take a bath。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">入[はい]</span>\n<div class=\"km-parts\">a wedge pointing in</div>\n</div>\n<div class=\"km-en\">A wedge sliding inward — to enter, to go in. Spot it: 人 opens downward like a standing person; 入 points in from the top; 八 is two loose slants that never meet as a point. You’ll see 入口 at JR 茨木.</div>\n<div class=\"km-ja\">とんがって、 中[なか]へ 入[はい]る。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:旅行",
@@ -211,7 +211,7 @@
       "meaning": "travel; trip",
       "sentence": "来月[らいげつ]、 京都[きょうと]へ 旅行[りょこう]に 行[い]きたいです。 古[ふる]い 町[まち]が 見[み]たいです！",
       "sentence_en": "Next month I want to take a trip to Kyoto. I want to see the old town!",
-      "note": "「 旅行[りょこう]します」で 動詞[どうし]になる。「 旅行[りょこう]に 行[い]きます」とも 言[い]う。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">旅[りょ]</span>\n<div class=\"km-parts\">方 banner / direction + a person with a pack</div>\n</div>\n<div class=\"km-en\">A person with a pack under a banner — a trip (旅行).</div>\n<div class=\"km-ja\">かばんを 持[も]って 旅[たび]に 出[で]る。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">行[こう]</span>\n<div class=\"km-parts\">彳 step + 亍 small steps</div>\n</div>\n<div class=\"km-en\">Two feet taking steps — to go, or a trip (旅行).</div>\n<div class=\"km-ja\">歩[ある]いて 行[い]く。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "「 旅行[りょこう]します」で 動詞[どうし]になる。「 旅行[りょこう]に 行[い]きます」とも 言[い]う。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">旅[りょ]</span>\n<div class=\"km-parts\">a direction banner (方) + a person with a pack</div>\n</div>\n<div class=\"km-en\">A direction banner (方) and a person carrying a pack — a trip. Spot it: 方 alone is just the banner; 旅 adds the traveler on the right. 派 looks similar, but the right side drips like streams, not a packed person. You’ll see 旅行 on station posters.</div>\n<div class=\"km-ja\">ハタと かばんの 人[ひと]が、 旅[たび]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">行[こう]</span>\n<div class=\"km-parts\">a step on the left (彳) and a step on the right (亍) — an open gate of feet</div>\n</div>\n<div class=\"km-en\">Two stepping sides, like an open gate of feet — to go, a line, a trip. Spot it: 待 and 後 fill the middle with extra parts; 行 stays open in the center. You’ll see 大阪行き on the train display at JR 茨木, and 旅行 on posters.</div>\n<div class=\"km-ja\">りょうがわの あしで、 行[い]く。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:ちょっと…",
@@ -231,7 +231,7 @@
       "meaning": "late; slow",
       "sentence": "昨夜[ゆうべ]は ITの 仕事[しごと]が 忙[いそが]しくて、 寝[ね]たのは 3 時[じ]でした。 遅[おそ]かったです！",
       "sentence_en": "Last night my IT work was so busy I didn't go to bed until 3. That was late!",
-      "note": "時間[じかん]が おそい(late)と、スピードが おそい(slow)の 両方[りょうほう]。 過去[かこ]は「 遅[おそ]かった」。「おそかったですね」は「 夜[よる]おそくまで 起[お]きていたね」。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">遅[おそ]</span>\n<div class=\"km-parts\">辶 walk + 尸 + 羊 (from 犀 rhinoceros; mostly the sound)</div>\n</div>\n<div class=\"km-en\">A slow, heavy walker — late, or slow. The right side is a simplified leftover of 犀 (rhinoceros), mostly the sound.</div>\n<div class=\"km-ja\">ゆっくり 歩[ある]くから 遅[おそ]い。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "時間[じかん]が おそい(late)と、スピードが おそい(slow)の 両方[りょうほう]。 過去[かこ]は「 遅[おそ]かった」。「おそかったですね」は「 夜[よる]おそくまで 起[お]きていたね」。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">遅[おそ]</span>\n<div class=\"km-parts\">a walking road (辶) + a body (尸) over a sheep (羊)</div>\n</div>\n<div class=\"km-en\">A heavy sheep-shaped load (尸 over 羊) on the walking road (辶) — a slow walker, late. Spot it: 速 also walks on 辶, but carries a tight upright bundle (束), not this 尸+羊. You’ll see 遅延 on the JR screen when the train is late.</div>\n<div class=\"km-ja\">おもそうに あるくから、 遅[おそ]い。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:働きます",
@@ -241,7 +241,7 @@
       "meaning": "work",
       "sentence": "火曜日[かようび]と 金曜日[きんようび]は 5 時[じ]ごろまで 働[はたら]きます。それから、YWCAへ 行[い]きます。",
       "sentence_en": "On Tuesdays and Fridays I work until about 5. Then I go to YWCA.",
-      "note": "場所[ばしょ]は「で」: 会社[かいしゃ]で 働[はたら]きます。「 仕事[しごと]を します」とも 言[い]う。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">働[はたら]</span>\n<div class=\"km-parts\">亻 person + 動 move</div>\n</div>\n<div class=\"km-en\">A Japanese-made character: a person (亻) in motion (動) — work.</div>\n<div class=\"km-ja\">人[ひと]が 動[うご]いて はたらく。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "場所[ばしょ]は「で」: 会社[かいしゃ]で 働[はたら]きます。「 仕事[しごと]を します」とも 言[い]う。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">働[はたら]</span>\n<div class=\"km-parts\">a standing person (亻) + move (動)</div>\n</div>\n<div class=\"km-en\">A person (亻) plus “move” (動) — a person in motion is working. Spot it: 動 is the same shape without the person; 働 always has that slim person on the left. You’ll see 働く on job ads.</div>\n<div class=\"km-ja\">人[ひと]が 動[うご]いて はたらく。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:〜ごろ",
@@ -261,7 +261,7 @@
       "meaning": "adjective",
       "sentence": "「 狭[せま]い」は い 形容詞[けいようし]、「 賑[にぎ]やか」は な 形容詞[けいようし]です。",
       "sentence_en": "\"Narrow\" is an i-adjective, and \"lively\" is a na-adjective.",
-      "note": "「きれい」「きらい」は「い」で 終[お]わるけど、な 形容詞[けいようし]！\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">形[けい]</span>\n<div class=\"km-parts\">开 (a frame; also the sound) + 彡 lines</div>\n</div>\n<div class=\"km-en\">Strokes (彡) that draw a shape. 开 is mostly the sound.</div>\n<div class=\"km-ja\">かたちを かいた 線[せん]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">容[よう]</span>\n<div class=\"km-parts\">宀 roof + 谷 valley (the sound)</div>\n</div>\n<div class=\"km-en\">A roof with room to hold things — form, appearance (形容詞). 谷 is mostly the sound.</div>\n<div class=\"km-ja\">入[い]れる かたち、 様子[ようす]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">詞[し]</span>\n<div class=\"km-parts\">言 words + 司 administer (the sound)</div>\n</div>\n<div class=\"km-en\">Managed words — a “word,” as in 名詞, 動詞, 形容詞. 司 is mostly the sound.</div>\n<div class=\"km-ja\">ことば、 品詞[ひんし]の し。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "「きれい」「きらい」は「い」で 終[お]わるけど、な 形容詞[けいようし]！\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">形[けい]</span>\n<div class=\"km-parts\">a two-post frame (开) + three whisker lines (彡)</div>\n</div>\n<div class=\"km-en\">A frame with three whisker-lines (彡) drawn on it — a shape. Spot it: 刑 has the same left side but a knife (刂) on the right, not those three whiskers. You’ll see 形容詞 on worksheets.</div>\n<div class=\"km-ja\">三[さん]ぼんの 線[せん]が、かたち。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">容[よう]</span>\n<div class=\"km-parts\">a roof (宀) + a valley (谷)</div>\n</div>\n<div class=\"km-en\">A roof (宀) over a valley (谷) — room enough to hold a shape, an appearance. Spot it: 谷 is the valley alone; 容 puts a roof on it. 浴 puts water (氵) on the left of 谷 instead. You’ll see 形容詞 on class worksheets.</div>\n<div class=\"km-ja\">やねの 下[した]に 入[い]れる かたち。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">詞[し]</span>\n<div class=\"km-parts\">words (言) + a manager hook over a mouth (司)</div>\n</div>\n<div class=\"km-en\">Words (言) next to an official 司 — managed words, a “word” or part of speech. Spot it: 飼 has food (食) on the left, not 言; 司 alone is just the official. You’ll see 名詞, 動詞, and 形容詞 on YWCA worksheets.</div>\n<div class=\"km-ja\">言[こと]葉[ば]の となりが 司[し]なら、ことばの し。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:名詞",
@@ -271,7 +271,7 @@
       "meaning": "noun",
       "sentence": "「 電車[でんしゃ]」も「 大阪駅[おおさかえき]」も 名詞[めいし]です。",
       "sentence_en": "Both \"train\" and \"Osaka Station\" are nouns.",
-      "note": "同[おな]じ 読[よ]み 方[かた]の「 名刺[めいし]」は business card。ITの 仕事[しごと]で よく 使[つか]う！\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">名[めい]</span>\n<div class=\"km-parts\">夕 evening + 口 mouth</div>\n</div>\n<div class=\"km-en\">At night you call out a name so someone can hear you.</div>\n<div class=\"km-ja\">夜[よる]、 名[な]前[まえ]を 呼[よ]ぶ。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">詞[し]</span>\n<div class=\"km-parts\">言 words + 司 administer (the sound)</div>\n</div>\n<div class=\"km-en\">Managed words — a “word,” as in 名詞, 動詞, 形容詞. 司 is mostly the sound.</div>\n<div class=\"km-ja\">ことば、 品詞[ひんし]の し。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "同[おな]じ 読[よ]み 方[かた]の「 名刺[めいし]」は business card。ITの 仕事[しごと]で よく 使[つか]う！\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">名[めい]</span>\n<div class=\"km-parts\">a crescent evening (夕) + a mouth (口)</div>\n</div>\n<div class=\"km-en\">An evening crescent (夕) over a mouth (口) — at night you call someone’s name. Spot it: 各 has a folded walking 夂 on top, not the clean crescent of 夕. You’ll see 名前, and 名物 on restaurant signs.</div>\n<div class=\"km-ja\">夕[ゆう]がたに 口[くち]で 名[な]前[まえ]を よぶ。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">詞[し]</span>\n<div class=\"km-parts\">words (言) + a manager hook over a mouth (司)</div>\n</div>\n<div class=\"km-en\">Words (言) next to an official 司 — managed words, a “word” or part of speech. Spot it: 飼 has food (食) on the left, not 言; 司 alone is just the official. You’ll see 名詞, 動詞, and 形容詞 on YWCA worksheets.</div>\n<div class=\"km-ja\">言[こと]葉[ば]の となりが 司[し]なら、ことばの し。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:同じぐらい",
@@ -281,7 +281,7 @@
       "meaning": "about the same",
       "sentence": "茨木[いばらき]の ラーメンは、 大阪駅[おおさかえき]の 近[ちか]くの ラーメンと 同[おな]じぐらい おいしいです。",
       "sentence_en": "Ramen in Ibaraki is about as good as ramen near Osaka Station.",
-      "note": "「Aは Bと 同[おな]じぐらい 〜です」の 形[かたち]で 使[つか]う。「より」で くらべて、ほとんど ちがわないとき。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">同[おな]</span>\n<div class=\"km-parts\">a frame / cover + 口 mouth</div>\n</div>\n<div class=\"km-en\">One mouth under the same cover — the same.</div>\n<div class=\"km-ja\">おなじ 口[くち]、おなじ もの。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "「Aは Bと 同[おな]じぐらい 〜です」の 形[かたち]で 使[つか]う。「より」で くらべて、ほとんど ちがわないとき。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">同[おな]</span>\n<div class=\"km-parts\">a wide hood + a bar (一) + a mouth (口)</div>\n</div>\n<div class=\"km-en\">One mouth (口) under the same wide hood — the same. Spot it: 向 looks similar, but the mouth sits in an open-bottomed frame with a top-hat stroke; 同’s hood is squared, with a bar over the mouth. You’ll see 同じ in class, and 同時 on schedules.</div>\n<div class=\"km-ja\">おなじ カバーの 下[した]の 口[くち]。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:賑やかな",
@@ -291,7 +291,7 @@
       "meaning": "lively; bustling (Eric wrote 'noisy')",
       "sentence": "金曜日[きんようび]の 夜[よる]の 梅田[うめだ]は とても 賑[にぎ]やかです。 茨木[いばらき]は 静[しず]かです。",
       "sentence_en": "Umeda on a Friday night is really lively. Ibaraki is quiet.",
-      "note": "賑[にぎ]やか は 人[ひと]が 多[おお]くて 楽[たの]しい ようす（いい 意味[いみ]）。いやな「noisy」は「うるさい」。な 形容詞[けいようし]: 賑[にぎ]やかな 町[まち]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">賑[にぎ]</span>\n<div class=\"km-parts\">貝 money + 辰 (the sound)</div>\n</div>\n<div class=\"km-en\">Money moving in a market — a lively, bustling place. 辰 is mostly the sound.</div>\n<div class=\"km-ja\">お店[みせ]が にぎやか。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "賑[にぎ]やか は 人[ひと]が 多[おお]くて 楽[たの]しい ようす（いい 意味[いみ]）。いやな「noisy」は「うるさい」。な 形容詞[けいようし]: 賑[にぎ]やかな 町[まち]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">賑[にぎ]</span>\n<div class=\"km-parts\">a money shell (貝) + a busy 辰 shape</div>\n</div>\n<div class=\"km-en\">Money (貝) moving beside a busy 辰 — a market in full swing, bustling. Spot it: 振 has a hand (扌) on the left, not money; 賑 is the 貝 kanji. You’ll feel it on a にぎやかな shopping street in 茨木 or 大阪.</div>\n<div class=\"km-ja\">お 金[かね]が うごく 店[みせ]は、にぎやか。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:どちら",
@@ -311,7 +311,7 @@
       "meaning": "the ~ one (in comparisons)",
       "sentence": "「ITの 仕事[しごと]と 日本語[にほんご]の 勉強[べんきょう]と、どちらが 難[むずか]しいですか。」「 日本語[にほんご]の 方[ほう]が 難[むずか]しいです！」",
       "sentence_en": "\"Which is harder, IT work or studying Japanese?\" \"Japanese is harder!\"",
-      "note": "「AとBと どちらが 〜ですか」の 答[こた]えは「Aの 方[ほう]が 〜です」。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">方[ほう]</span>\n<div class=\"km-parts\">pictograph meaning side or direction</div>\n</div>\n<div class=\"km-en\">A simple character for a side or direction — “this one” in a comparison (〜の 方).</div>\n<div class=\"km-ja\">その ほう、 方向[ほうこう]。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "「AとBと どちらが 〜ですか」の 答[こた]えは「Aの 方[ほう]が 〜です」。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">方[ほう]</span>\n<div class=\"km-parts\">a lid + a wide open box on the lower right</div>\n</div>\n<div class=\"km-en\">A lid over an open-sided box — a direction, a side, “this one.” Spot it: 万 is the hook-only lookalike with no box; 方 has that open square on the lower right. You’ll see 東口の方, and 〜の方 in class comparisons.</div>\n<div class=\"km-ja\">あいている はこが、その ほう。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:普通",
@@ -321,7 +321,7 @@
       "meaning": "local train (stops at every station)",
       "sentence": "間[ま]に 合[あ]ったら、 茨木[いばらき]から 大阪[おおさか]まで 快速[かいそく]に 乗[の]ります。 間[ま]に 合[あ]わなかったら、 普通[ふつう]です。",
       "sentence_en": "If I make it in time, I take the rapid from Ibaraki to Osaka. If I don't, it's the local.",
-      "note": "ここでは 電車[でんしゃ]の しゅるいで、「 各駅[かくえき]」（ 各駅停車[かくえきていしゃ]）と 同[おな]じ。「normal」の 意味[いみ]ではない。 快速[かいそく]は 止[と]まらない 駅[えき]が ある。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">普[ふ]</span>\n<div class=\"km-parts\">並 side by side + 日 sun</div>\n</div>\n<div class=\"km-en\">Everyone standing side by side under the sun — everywhere, ordinary. In 普通, the train that stops everywhere.</div>\n<div class=\"km-ja\">どこにでも ある、ふつう。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">通[つう]</span>\n<div class=\"km-parts\">辶 walk + 甬 (the sound)</div>\n</div>\n<div class=\"km-en\">Walking all the way through — to pass, to go between (通訳). 甬 is mostly the sound.</div>\n<div class=\"km-ja\">中[なか]を 通[とお]る。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "ここでは 電車[でんしゃ]の しゅるいで、「 各駅[かくえき]」（ 各駅停車[かくえきていしゃ]）と 同[おな]じ。「normal」の 意味[いみ]ではない。 快速[かいそく]は 止[と]まらない 駅[えき]が ある。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">普[ふ]</span>\n<div class=\"km-parts\">people side by side (並) + a sun (日)</div>\n</div>\n<div class=\"km-en\">People standing side by side (並) under the sun (日) — ordinary, everywhere. Spot it: the top is a wide “side-by-side” crown (並); 晋 has a different, narrower top. You’ll see 普通 on the JR display at 茨木 — the local train toward 大阪.</div>\n<div class=\"km-ja\">みんな 並[なら]んで、ふつう。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">通[つう]</span>\n<div class=\"km-parts\">a walking road (辶) + a bent pipe (甬)</div>\n</div>\n<div class=\"km-en\">A bent pipe (甬) on the walking road (辶) — you go through, you commute, you pass between. Spot it: 過 also walks on 辶, but its right side is a wide crooked jaw (咼), not this narrow 甬. You’ll see 通勤, 通路, and the 通 in 普通 at JR 茨木.</div>\n<div class=\"km-ja\">ほそい くだの みちを 通[とお]る。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:降ります",
@@ -331,7 +331,7 @@
       "meaning": "get off (a train, bus)",
       "sentence": "茨木駅[いばらきえき]で 電車[でんしゃ]に 乗[の]って、 大阪駅[おおさかえき]で 降[お]ります。それから、 地下[ちか]の M16 出口[でぐち]まで 歩[ある]きます。",
       "sentence_en": "I get on the train at Ibaraki Station and get off at Osaka Station. Then I walk to exit M16 underground.",
-      "note": "電車[でんしゃ]を 降[お]ります（を）、 電車[でんしゃ]に 乗[の]ります（に）。 助詞[じょし]が ちがう。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">降[お]</span>\n<div class=\"km-parts\">阝 hill + 夅 descend (also the sound)</div>\n</div>\n<div class=\"km-en\">Coming down a hill (夅 already means “descend”) — to get off a train.</div>\n<div class=\"km-ja\">丘[おか]を 降[お]りる。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "電車[でんしゃ]を 降[お]ります（を）、 電車[でんしゃ]に 乗[の]ります（に）。 助詞[じょし]が ちがう。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">降[お]</span>\n<div class=\"km-parts\">a hill on the left (阝) + a body coming down (夅)</div>\n</div>\n<div class=\"km-en\">A hill (阝) and a body coming down (夅) — you go down, you get off, or rain falls. Spot it: 除 also has the hill, but its right side is 余, not this stacked 夅. You’ll 降ります at 大阪, and see 降車 on a bus; also 雨が降る.</div>\n<div class=\"km-ja\">おかを 降[お]りる、 雨[あめ]が 降[ふ]る。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:貸します",
@@ -341,7 +341,7 @@
       "meaning": "lend",
       "sentence": "「すみません、ボールペンを 貸[か]してください。」「はい、どうぞ。 金曜日[きんようび]に 返[かえ]してくださいね。」",
       "sentence_en": "\"Excuse me, could you lend me a ballpoint pen?\" \"Sure, here. Give it back on Friday, OK?\"",
-      "note": "貸[か]します＝lend（あげる 方[ほう]）。 借[か]ります＝borrow（もらう 方[ほう]）。よく まちがえるので 注意[ちゅうい]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">貸[か]</span>\n<div class=\"km-parts\">代 substitute (the sound) + 貝 money</div>\n</div>\n<div class=\"km-en\">Money you hand over in someone’s place — to lend. 代 also gives the sound.</div>\n<div class=\"km-ja\">お 金[かね]を 貸[か]す。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "貸[か]します＝lend（あげる 方[ほう]）。 借[か]ります＝borrow（もらう 方[ほう]）。よく まちがえるので 注意[ちゅうい]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">貸[か]</span>\n<div class=\"km-parts\">a substitute 代 on top + a shell of money (貝)</div>\n</div>\n<div class=\"km-en\">A “stand-in” 代 sitting on a money shell (貝) — money you hand over for a while, to lend. Spot it: 貨 also sits on 貝, but its top is 化 (change), not 代. You’ll see 貸出 at the library, and 貸し自転車.</div>\n<div class=\"km-ja\">代[か]わりの 下[した]の お 金[かね]を、 貸[か]す。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:動詞",
@@ -351,7 +351,7 @@
       "meaning": "verb",
       "sentence": "「 乗[の]ります」と「 降[お]ります」は 動詞[どうし]です。",
       "sentence_en": "\"Get on\" and \"get off\" are verbs.",
-      "note": "クラスでは「ます 形[けい]」で 覚[おぼ]えて、そこから て 形[けい]を 作[つく]る。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">動[どう]</span>\n<div class=\"km-parts\">重 heavy + 力 power</div>\n</div>\n<div class=\"km-en\">Heavy strength gets things moving. 重 also gives the sound.</div>\n<div class=\"km-ja\">力[ちから]で 動[うご]く。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">詞[し]</span>\n<div class=\"km-parts\">言 words + 司 administer (the sound)</div>\n</div>\n<div class=\"km-en\">Managed words — a “word,” as in 名詞, 動詞, 形容詞. 司 is mostly the sound.</div>\n<div class=\"km-ja\">ことば、 品詞[ひんし]の し。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "クラスでは「ます 形[けい]」で 覚[おぼ]えて、そこから て 形[けい]を 作[つく]る。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">動[どう]</span>\n<div class=\"km-parts\">a heavy pile (重) + a muscle arm (力)</div>\n</div>\n<div class=\"km-en\">A heavy load (重) and a strong arm (力) — it takes power to get something moving. Spot it: 働 adds a person (亻) on the left; plain 動 has no person. You’ll see 自動ドア, and 動詞 on class worksheets.</div>\n<div class=\"km-ja\">おもいものを 力[ちから]で 動[うご]かす。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">詞[し]</span>\n<div class=\"km-parts\">words (言) + a manager hook over a mouth (司)</div>\n</div>\n<div class=\"km-en\">Words (言) next to an official 司 — managed words, a “word” or part of speech. Spot it: 飼 has food (食) on the left, not 言; 司 alone is just the official. You’ll see 名詞, 動詞, and 形容詞 on YWCA worksheets.</div>\n<div class=\"km-ja\">言[こと]葉[ば]の となりが 司[し]なら、ことばの し。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:出します",
@@ -361,7 +361,7 @@
       "meaning": "hand in; hand over; take out",
       "sentence": "金曜日[きんようび]の 授業[じゅぎょう]で、 宿題[しゅくだい]を 先生[せんせい]に 出[だ]します。",
       "sentence_en": "In Friday's class I hand my homework in to the teacher.",
-      "note": "宿題[しゅくだい]を 出[だ]す（hand in）、かばんから 出[だ]す（take out）、 手紙[てがみ]を 出[だ]す（send）。 出[で]ます（go out）と ちがう。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">出[だ]</span>\n<div class=\"km-parts\">屮 sprout + 凵 container</div>\n</div>\n<div class=\"km-en\">A plant pushing out of a pot — to go out, or take something out.</div>\n<div class=\"km-ja\">外[そと]へ 出[で]てくる。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "宿題[しゅくだい]を 出[だ]す（hand in）、かばんから 出[だ]す（take out）、 手紙[てがみ]を 出[だ]す（send）。 出[で]ます（go out）と ちがう。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">出[だ]</span>\n<div class=\"km-parts\">two boxes stacked, like a plant pushing out of a pot</div>\n</div>\n<div class=\"km-en\">Two boxes stacked, a plant shoving up out of a pot — something coming out. Spot it: 山 is one mountain with three peaks; 出 is two layers, a box on a box. You’ll see 出口 at JR 茨木.</div>\n<div class=\"km-ja\">はこから 外[そと]へ 出[で]てくる。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:付けます",
@@ -371,7 +371,7 @@
       "meaning": "turn on; switch on",
       "sentence": "会社[かいしゃ]に 着[つ]いたら、まず パソコンを 付[つ]けます。",
       "sentence_en": "When I get to the office, the first thing I do is switch on my PC.",
-      "note": "電気[でんき]・テレビ・エアコンを つけます ⇔ 消[け]します。ひらがなで「つけます」と 書[か]くことが 多[おお]い。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">付[つ]</span>\n<div class=\"km-parts\">亻 person + 寸 hand / inch</div>\n</div>\n<div class=\"km-en\">A hand passing something to a person — you stick it on, or switch it on.</div>\n<div class=\"km-ja\">人[ひと]に 手[て]で わたす。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "電気[でんき]・テレビ・エアコンを つけます ⇔ 消[け]します。ひらがなで「つけます」と 書[か]くことが 多[おお]い。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">付[つ]</span>\n<div class=\"km-parts\">a standing person (亻) + a little hand (寸)</div>\n</div>\n<div class=\"km-en\">A little hand (寸) holding something out to a person (亻) — you stick it on, or switch it on. Spot it: 村 has a tree (木) next to that same little hand, not a person. You’ll see 受付 at a front desk, including the YWCA.</div>\n<div class=\"km-ja\">人[ひと]の となりの 小[ちい]さい 手[て]で、くっつける。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:消します",
@@ -381,7 +381,7 @@
       "meaning": "turn off; switch off",
       "sentence": "YWCAの 授業[じゅぎょう]が 終[お]わったら、 先生[せんせい]が 電気[でんき]を 消[け]します。",
       "sentence_en": "When YWCA class is over, the teacher switches off the lights.",
-      "note": "⇔ 付[つ]けます。 字[じ]を 消[け]します（erase）にも 使[つか]う。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">消[け]</span>\n<div class=\"km-parts\">氵 water + 肖 (the sound)</div>\n</div>\n<div class=\"km-en\">Water putting something out — to turn off, or to erase. 肖 is mostly the sound.</div>\n<div class=\"km-ja\">水[みず]で 消[け]す。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "⇔ 付[つ]けます。 字[じ]を 消[け]します（erase）にも 使[つか]う。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">消[け]</span>\n<div class=\"km-parts\">three drops of water (氵) + a little 月-shape under a cover (肖)</div>\n</div>\n<div class=\"km-en\">Water (氵) poured over a small 月-shape (肖) — it puts a light out, or erases a mark. Spot it: 肖 is the right piece alone; 消 always has the three water drops. You’ll see 消火器 in a hallway, and you 消します the light.</div>\n<div class=\"km-ja\">水[みず]で 火[ひ]や 字[じ]を 消[け]す。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:教えます",
@@ -391,7 +391,7 @@
       "meaning": "teach; tell",
       "sentence": "火曜日[かようび]は 先生[せんせい]が 日本語[にほんご]を 教[おし]えます。 会社[かいしゃ]では、 私[わたし]が ITを 教[おし]えます！",
       "sentence_en": "On Tuesdays the teacher teaches me Japanese. At work, I teach IT!",
-      "note": "「 道[みち]を 教[おし]えてください」は「tell me the way」。teach だけでなく tell の 意味[いみ]も ある。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">教[おし]</span>\n<div class=\"km-parts\">孝 filial (contains 子 child; also the sound) + 攵 a teaching hand</div>\n</div>\n<div class=\"km-en\">A hand (攵) teaching a child (the 子 in 孝) — to teach, or to tell someone the way.</div>\n<div class=\"km-ja\">子[こ]どもに 教[おし]える。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "「 道[みち]を 教[おし]えてください」は「tell me the way」。teach だけでなく tell の 意味[いみ]も ある。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">教[おし]</span>\n<div class=\"km-parts\">a child (子) under an old-timer (孝) + a teaching hand (攵)</div>\n</div>\n<div class=\"km-en\">A child (子) and a hand coming down to teach (攵) — to teach, or to tell someone the way. Spot it: 孝 is the left piece alone, with no teaching hand; 教 always has 攵 on the right. You’ll see 教室 at the YWCA.</div>\n<div class=\"km-ja\">子[こ]どもに 手[て]で 教[おし]える。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:狭",
@@ -401,7 +401,7 @@
       "meaning": "narrow; small (space)",
       "sentence": "梅田[うめだ]の ラーメン 屋[や]は 狭[せま]いですが、とても おいしいです。",
       "sentence_en": "The ramen shop in Umeda is tiny, but it's really good.",
-      "note": "反対[はんたい]は 広[ひろ]い。 部屋[へや]や 道[みち]に 使[つか]う。 人[ひと]が 多[おお]いときは「 混[こ]んでいる」。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">狭[せま]</span>\n<div class=\"km-parts\">犭 dog + 夹 squeeze (also the sound)</div>\n</div>\n<div class=\"km-en\">A dog squeezed in tight (夹) — narrow. 夹 also gives the sound.</div>\n<div class=\"km-ja\">はさまって 狭[せま]い。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "反対[はんたい]は 広[ひろ]い。 部屋[へや]や 道[みち]に 使[つか]う。 人[ひと]が 多[おお]いときは「 混[こ]んでいる」。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">狭[せま]</span>\n<div class=\"km-parts\">a stray dog (犭) + a squeezed person (夹)</div>\n</div>\n<div class=\"km-en\">A dog (犭) squeezed in a tight clamp (夹) — narrow. Spot it: 挟 has a hand (扌) on the left, not the dog; 狭 is the animal radical. You’ll feel it in a 狭い train seat on the way to 大阪.</div>\n<div class=\"km-ja\">いぬが はさまって、 狭[せま]い。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:送ります",
@@ -411,7 +411,7 @@
       "meaning": "send (a letter, package)",
       "sentence": "毎週[まいしゅう]、YWCAの プリントを スキャンして、メールで 送[おく]ります。",
       "sentence_en": "Every week I scan my YWCA handouts and send them by email.",
-      "note": "メールも「 送[おく]ります」で いい。 人[ひと]を 駅[えき]まで 送[おく]ります＝see someone off / give a ride。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">送[おく]</span>\n<div class=\"km-parts\">辶 walk + 关 a waving figure</div>\n</div>\n<div class=\"km-en\">Someone walking away as you send them off — to send a letter, or walk someone to the station.</div>\n<div class=\"km-ja\">行[い]く 人[ひと]を 送[おく]る。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "メールも「 送[おく]ります」で いい。 人[ひと]を 駅[えき]まで 送[おく]ります＝see someone off / give a ride。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">送[おく]</span>\n<div class=\"km-parts\">a walking road (辶) + a waving figure in a hat (关)</div>\n</div>\n<div class=\"km-en\">A waving figure (关) on the walking road (辶) — you send a thing off, or walk someone to the station. Spot it: 関 uses a similar 关 but inside a gate (門), with no walking road. 送 always sits on 辶. You’ll 見送る someone at JR 茨木.</div>\n<div class=\"km-ja\">みちを あるく 人[ひと]を 送[おく]る。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:弾きます",
@@ -421,7 +421,7 @@
       "meaning": "play (guitar, piano)",
       "sentence": "「 先生[せんせい]、ピアノを 弾[ひ]きますか。」「はい、 時々[ときどき] 弾[ひ]きます。」",
       "sentence_en": "\"Sensei, do you play the piano?\" \"Yes, sometimes.\"",
-      "note": "楽器[がっき]で ちがう: ギター・ピアノは 弾[ひ]く、ドラムは たたく。スポーツの play は「します」。 同[おな]じ 音[おと]の 引[ひ]きます は pull。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">弾[ひ]</span>\n<div class=\"km-parts\">弓 bow + 単 simple / single (the sound)</div>\n</div>\n<div class=\"km-en\">A bow that twangs — you pluck a string (ギターを 弾きます). 単 is mostly the sound.</div>\n<div class=\"km-ja\">弓[ゆみ]の つるを はじく。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "楽器[がっき]で ちがう: ギター・ピアノは 弾[ひ]く、ドラムは たたく。スポーツの play は「します」。 同[おな]じ 音[おと]の 引[ひ]きます は pull。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">弾[ひ]</span>\n<div class=\"km-parts\">a bow (弓) + a simple stack (単)</div>\n</div>\n<div class=\"km-en\">A bow (弓) next to a stacked 単 — a string you pluck, or something you fire. Spot it: 単 alone has no bow; 弾 always has that curved 弓 on the left. 戦 puts a spear (戈) next to 単 instead. You’ll 弾きます a guitar.</div>\n<div class=\"km-ja\">弓[ゆみ]で つるを はじく。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:会話",
@@ -431,7 +431,7 @@
       "meaning": "conversation",
       "sentence": "YWCAの 会話[かいわ]の 授業[じゅぎょう]は 火曜日[かようび]と 金曜日[きんようび]です。 楽[たの]しいです！",
       "sentence_en": "My YWCA conversation class is on Tuesdays and Fridays. It's fun!",
-      "note": "クラスの プリントの「 別科[べっか]【かいわ】」の かいわ。「 会話[かいわ]を します」と 言[い]う。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">会[かい]</span>\n<div class=\"km-parts\">人 person + 云 say</div>\n</div>\n<div class=\"km-en\">People meeting and speaking — a gathering, or a talk (会話).</div>\n<div class=\"km-ja\">人[ひと]が 集[あつ]まって 話[はな]す。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">話[わ]</span>\n<div class=\"km-parts\">言 words + 舌 tongue (also the sound)</div>\n</div>\n<div class=\"km-en\">Words on the tongue — talk, a conversation (会話). 舌 also helps the sound.</div>\n<div class=\"km-ja\">舌[した]で 話[はな]す。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "クラスの プリントの「 別科[べっか]【かいわ】」の かいわ。「 会話[かいわ]を します」と 言[い]う。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">会[かい]</span>\n<div class=\"km-parts\">a person-roof (人) + a little puff (ム) over a floor line (一)</div>\n</div>\n<div class=\"km-en\">People under one roof with a little talking puff (ム) — they meet, or have a talk (会話). Spot it: 今 is the short lookalike; 今 ends in a hook, while 会 has that puff and a floor line under it. You’ll see 会話 in class, and 会場 on event signs.</div>\n<div class=\"km-ja\">人[ひと]が 集[あつ]まって 会[あ]う。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">話[わ]</span>\n<div class=\"km-parts\">words (言) + a tongue (舌)</div>\n</div>\n<div class=\"km-en\">Words (言) on a tongue (舌) — talk, a story, a conversation. Spot it: 活 uses the same tongue but with water (氵), not words; 語 has 吾 on the right, not 舌. You’ll see 会話 in class, and 電話 everywhere.</div>\n<div class=\"km-ja\">言[こと]葉[ば]と 舌[した]で 話[はな]す。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:厚",
@@ -441,7 +441,7 @@
       "meaning": "thick (book, bread)",
       "sentence": "この 日本語[にほんご]の 本[ほん]は 厚[あつ]いですね！ 大阪駅[おおさかえき]までの 電車[でんしゃ]で 少[すこ]しずつ 読[よ]みます。",
       "sentence_en": "This Japanese book is so thick! I'll read a little at a time on the train to Osaka Station.",
-      "note": "あつい は 三[みっ]つ: 暑[あつ]い（ 天気[てんき]が hot）、 熱[あつ]い（ものが hot）、 厚[あつ]い（thick）。 反対[はんたい]は 薄[うす]い（thin）。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">厚[あつ]</span>\n<div class=\"km-parts\">厂 cliff / shelter + 日 sun + 子 child</div>\n</div>\n<div class=\"km-en\">Sun and a child under a solid cliff-roof — thick, substantial.</div>\n<div class=\"km-ja\">あつくて しっかりしている。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "あつい は 三[みっ]つ: 暑[あつ]い（ 天気[てんき]が hot）、 熱[あつ]い（ものが hot）、 厚[あつ]い（thick）。 反対[はんたい]は 薄[うす]い（thin）。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">厚[あつ]</span>\n<div class=\"km-parts\">a cliff roof (厂) + a sun (日) + a child (子)</div>\n</div>\n<div class=\"km-en\">A sun (日) and a child (子) under a solid cliff roof (厂) — thick, generous, well-built. Spot it: 原 also sits under 厂, but holds 白 and 小, not 日 and 子. You’ll see 厚切り on supermarket packs of bacon or bread.</div>\n<div class=\"km-ja\">がけの 下[した]に 日[ひ]と 子[こ]がいて、あつい。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:薄",
@@ -451,7 +451,7 @@
       "meaning": "thin; weak/light (drinks, flavor)",
       "sentence": "YWCAの 授業[じゅぎょう]の プリントは 薄[うす]いです。 厚[あつ]くないです。",
       "sentence_en": "The YWCA class handouts are thin. They're not thick.",
-      "note": "反対[はんたい]は 厚[あつ]い。 飲[の]み 物[もの]や 味[あじ]にも 使[つか]う: コーヒーが 薄[うす]い（weak coffee）、 味[あじ]が 薄[うす]い（bland）。 反対[はんたい]は 濃[こ]い。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">薄[うす]</span>\n<div class=\"km-parts\">艹 grass + 溥 (water spreading; the sound)</div>\n</div>\n<div class=\"km-en\">Thin as a blade of grass, or watered down. 溥 is mostly the sound.</div>\n<div class=\"km-ja\">草[くさ]のように 薄[うす]い。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "反対[はんたい]は 厚[あつ]い。 飲[の]み 物[もの]や 味[あじ]にも 使[つか]う: コーヒーが 薄[うす]い（weak coffee）、 味[あじ]が 薄[うす]い（bland）。 反対[はんたい]は 濃[こ]い。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">薄[うす]</span>\n<div class=\"km-parts\">grass (艹) + a watered-down base (溥)</div>\n</div>\n<div class=\"km-en\">Grass (艹) over a watered-down base — thin, or a weak flavor. Spot it: 簿 looks almost the same but wears the bamboo crown (⺮) instead of grass (艹). You’ll see 薄味 on a menu, or 薄い tea.</div>\n<div class=\"km-ja\">くさかんむりなら、 薄[うす]い。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:履きます",
@@ -461,7 +461,7 @@
       "meaning": "put on; wear (pants, shoes, socks: below the waist)",
       "sentence": "今朝[けさ]、 左[ひだり]と 右[みぎ]で ちがう 色[いろ]の くつしたを 履[は]いて、 茨木駅[いばらきえき]から 快速[かいそく]に 乗[の]りました！",
       "sentence_en": "This morning I put on mismatched socks and got on the rapid at Ibaraki Station!",
-      "note": "着[き]ます は 上[うえ]（シャツ・ジャケット）、 履[は]きます は 下[した]（ズボン・スカート・くつ）、かけます は めがね。て 形[けい]: 履[は]いて（き→いて、グループ1）。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">履[は]</span>\n<div class=\"km-parts\">尸 person + 復 return / walk (also the sound)</div>\n</div>\n<div class=\"km-en\">A person walking, step after step — the shoes or pants you put on.</div>\n<div class=\"km-ja\">足[あし]に はく もの。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "着[き]ます は 上[うえ]（シャツ・ジャケット）、 履[は]きます は 下[した]（ズボン・スカート・くつ）、かけます は めがね。て 形[けい]: 履[は]いて（き→いて、グループ1）。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">履[は]</span>\n<div class=\"km-parts\">a body / door (尸) + a walking-back bundle (the right of 復)</div>\n</div>\n<div class=\"km-en\">A body (尸) with a walking pack underneath — the shoes or pants you put on. Spot it: 復 has the step radical (彳) on the left; 履 wears the 尸 “door/body” on top instead. Think of the genkan, putting on shoes to go out.</div>\n<div class=\"km-ja\">からだの 下[した]に、はく もの。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:掛けます",
@@ -471,7 +471,7 @@
       "meaning": "wear (glasses, sunglasses); hang",
       "sentence": "サングラスを 掛[か]けて、 茨木駅[いばらきえき]から 快速[かいそく]に 乗[の]ります。かっこいいでしょう？",
       "sentence_en": "I put on my sunglasses and get on the rapid at Ibaraki Station. Cool, right?",
-      "note": "めがね・サングラスは「かけます」。 同[おな]じ 音[おと]で「 電話[でんわ]を かけます」（make a call）も ある。て 形[けい]: 掛[か]けて（グループ2）。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">掛[か]</span>\n<div class=\"km-parts\">扌 hand + 卦 divination sign (the sound)</div>\n</div>\n<div class=\"km-en\">A hand hanging something up — glasses on your face, or a call you place. 卦 is mostly the sound.</div>\n<div class=\"km-ja\">手[て]で かける、ぶらさげる。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "めがね・サングラスは「かけます」。 同[おな]じ 音[おと]で「 電話[でんわ]を かけます」（make a call）も ある。て 形[けい]: 掛[か]けて（グループ2）。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">掛[か]</span>\n<div class=\"km-parts\">a hand on the left (扌) + stacked earth blocks (圭) + a stick tick (卜)</div>\n</div>\n<div class=\"km-en\">A hand (扌) hanging something from stacked earth (圭) and a stick (卜) — glasses on your face, or a call you place. Spot it: the right side is two earth boxes with a 卜 tick poking out — not 掲, which hides a sun (日) in there. You’ll 眼鏡を掛けます, or 電話を掛けます.</div>\n<div class=\"km-ja\">手[て]で かけて、ぶらさげる。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:払います",
@@ -481,7 +481,7 @@
       "meaning": "pay",
       "sentence": "大阪駅[おおさかえき]の コンビニで あんパンを 二[ふた]つ 買[か]いました。ICOCAで 払[はら]いました！",
       "sentence_en": "I bought two anpan at a convenience store in Osaka Station. I paid with my ICOCA!",
-      "note": "「〜で 払[はら]います」: カードで、 現金[げんきん]で、ICOCAで。て 形[けい]: 払[はら]って（い→って、グループ1）。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">払[はら]</span>\n<div class=\"km-parts\">扌 hand + 厶 private (the sound)</div>\n</div>\n<div class=\"km-en\">A hand paying out, or brushing something away. 厶 is mostly the sound.</div>\n<div class=\"km-ja\">手[て]で お 金[かね]を はらう。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "「〜で 払[はら]います」: カードで、 現金[げんきん]で、ICOCAで。て 形[けい]: 払[はら]って（い→って、グループ1）。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">払[はら]</span>\n<div class=\"km-parts\">a hand on the left (扌) + a private hook (厶)</div>\n</div>\n<div class=\"km-en\">A hand (扌) flicking a little hook (厶) — you pay, or you brush something off. Spot it: 私 has grain (禾) on the left, not a hand; 払 is the hand radical. You’ll see お支払い at the register, and 払い on a ticket machine.</div>\n<div class=\"km-ja\">手[て]で お 金[かね]を はらう。</div>\n</div><!-- /kanji-mnemonic -->"
     },
     {
       "id": "vocab:子守唄",
@@ -491,7 +491,7 @@
       "meaning": "lullaby",
       "sentence": "帰[かえ]りの 電車[でんしゃ]は 静[しず]かです。ゆれは 子守唄[こもりうた]ですね。 茨木駅[いばらきえき]で 降[お]りるのを わすれないで！",
       "sentence_en": "The train home is quiet. The rocking is a lullaby. Don't forget to get off at Ibaraki Station!",
-      "note": "ねむる ための 歌[うた]（lullaby）。 子[こ]どもの 歌[うた] ぜんぶは「 童謡[どうよう]」（children's songs）。 子守[こもり]＝ 子[こ]どもの せわ、 唄[うた]＝うた。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">子[こ]</span>\n<div class=\"km-parts\">pictograph: a child with little arms</div>\n</div>\n<div class=\"km-en\">A baby with a big head and little arms — child.</div>\n<div class=\"km-ja\">子[こ]どもの 形[かたち]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">守[もり]</span>\n<div class=\"km-parts\">宀 roof + 寸 hand</div>\n</div>\n<div class=\"km-en\">A hand keeping watch under the roof — to protect, to look after.</div>\n<div class=\"km-ja\">いえで 守[まも]る。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">唄[うた]</span>\n<div class=\"km-parts\">口 mouth + 貝 shell (the sound)</div>\n</div>\n<div class=\"km-en\">A mouth singing. 貝 (shell) is mostly the sound (ばい).</div>\n<div class=\"km-ja\">口[くち]で 歌[うた]う。</div>\n</div><!-- /kanji-mnemonic -->"
+      "note": "ねむる ための 歌[うた]（lullaby）。 子[こ]どもの 歌[うた] ぜんぶは「 童謡[どうよう]」（children's songs）。 子守[こもり]＝ 子[こ]どもの せわ、 唄[うた]＝うた。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">子[こ]</span>\n<div class=\"km-parts\">a baby: a head, a crossbar of little arms, and a drop</div>\n</div>\n<div class=\"km-en\">A big-headed baby with little arms — a child. Spot it: 了 is the same body with the left arm missing; 子 has both arms on the crossbar. You’ll see 子ども, and お子様ランチ on family menus.</div>\n<div class=\"km-ja\">あたまの 大[おお]きい 子[こ]ども。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">守[もり]</span>\n<div class=\"km-parts\">a roof (宀) + a little hand (寸)</div>\n</div>\n<div class=\"km-en\">A little hand (寸) keeping watch under a roof (宀) — to protect. Spot it: 宇 has 于 under the roof, a more open hook, not the compact 寸. You’ll see お守り at a shrine.</div>\n<div class=\"km-ja\">やねの 下[した]で 手[て]が 守[まも]る。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">唄[うた]</span>\n<div class=\"km-parts\">a mouth (口) + a shell (貝)</div>\n</div>\n<div class=\"km-en\">A mouth (口) beside a shell (貝) — a mouth singing an old-style song. Spot it: 員 stacks the mouth on top of the shell; 唄 puts the mouth on the left, side by side. You’ll see it in 子守唄.</div>\n<div class=\"km-ja\">口[くち]と 貝[かい]で、うたを うたう。</div>\n</div><!-- /kanji-mnemonic -->"
     }
   ]
 }

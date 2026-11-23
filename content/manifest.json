@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": 5,
+  "version": 6,
   "files": [
     "profile.json",
     "lessons.json",
