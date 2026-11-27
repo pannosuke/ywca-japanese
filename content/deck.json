@@ -492,6 +492,166 @@
       "sentence": "帰[かえ]りの 電車[でんしゃ]は 静[しず]かです。ゆれは 子守唄[こもりうた]ですね。 茨木駅[いばらきえき]で 降[お]りるのを わすれないで！",
       "sentence_en": "The train home is quiet. The rocking is a lullaby. Don't forget to get off at Ibaraki Station!",
       "note": "ねむる ための 歌[うた]（lullaby）。 子[こ]どもの 歌[うた] ぜんぶは「 童謡[どうよう]」（children's songs）。 子守[こもり]＝ 子[こ]どもの せわ、 唄[うた]＝うた。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">子[こ]</span>\n<div class=\"km-parts\">a baby: a head, a crossbar of little arms, and a drop</div>\n</div>\n<div class=\"km-en\">A big-headed baby with little arms — a child. Spot it: 了 is the same body with the left arm missing; 子 has both arms on the crossbar. You’ll see 子ども, and お子様ランチ on family menus.</div>\n<div class=\"km-ja\">あたまの 大[おお]きい 子[こ]ども。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">守[もり]</span>\n<div class=\"km-parts\">a roof (宀) + a little hand (寸)</div>\n</div>\n<div class=\"km-en\">A little hand (寸) keeping watch under a roof (宀) — to protect. Spot it: 宇 has 于 under the roof, a more open hook, not the compact 寸. You’ll see お守り at a shrine.</div>\n<div class=\"km-ja\">やねの 下[した]で 手[て]が 守[まも]る。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">唄[うた]</span>\n<div class=\"km-parts\">a mouth (口) + a shell (貝)</div>\n</div>\n<div class=\"km-en\">A mouth (口) beside a shell (貝) — a mouth singing an old-style song. Spot it: 員 stacks the mouth on top of the shell; 唄 puts the mouth on the left, side by side. You’ll see it in 子守唄.</div>\n<div class=\"km-ja\">口[くち]と 貝[かい]で、うたを うたう。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:主婦",
+      "lesson_id": "2026-11-20",
+      "word": "主婦[しゅふ]",
+      "definition": "家[いえ]で りょうりや そうじなど、 家[いえ]の しごとを する 人[ひと]。",
+      "meaning": "housewife; homemaker",
+      "sentence": "となりの 主婦[しゅふ]の 方[かた]は、毎朝[まいあさ] 公園[こうえん]で ラジオ 体操[たいそう]を しています。",
+      "sentence_en": "The homemaker next door does radio calisthenics in the park every morning.",
+      "note": "男[おとこ]の 人[ひと]なら「主夫[しゅふ]」とも 書[か]く。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">主[しゅ]</span>\n<div class=\"km-parts\">a dot (丶) on top of 王</div>\n</div>\n<div class=\"km-en\">A flame (丶) burning on top of a lamp stand (王) — the main light of the house, so “master” or “main.” Spot it: 王 has no dot; 玉 has its dot at the bottom right; 主 wears it on top like a hat. You’ll see 主食 on menus and 主婦, ご主人.</div>\n<div class=\"km-ja\">王[おう]さまの あたまに 火[ひ]が ひとつ。いえの 主[しゅ]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">婦[ふ]</span>\n<div class=\"km-parts\">woman (女) + 帚 (a broom)</div>\n</div>\n<div class=\"km-en\">A woman (女) holding a broom (帚) — an old picture of a wife at home. Spot it: 帰 (go home) has the same broom with two strokes (丨丿) on the left instead of 女. You’ll see 主婦 and 婦人服 (“women’s clothing”) on department-store floor guides.</div>\n<div class=\"km-ja\">女[おんな]の 人[ひと]と ほうき。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:似ています",
+      "lesson_id": "2026-11-20",
+      "word": "似[に]ています",
+      "definition": "顔[かお]や かたちが、ほかの 人[ひと]や ものと おなじように 見[み]えること。",
+      "meaning": "resemble; look like",
+      "sentence": "ケンケンの 顔[かお]は 私[わたし]に 似[に]ていますが、わらった 顔[かお]は しげこに そっくりです。",
+      "sentence_en": "Kenken's face looks like mine, but his smile is exactly Shigeko's.",
+      "note": "「Aは Bに 似[に]ています」「Aと Bは 似[に]ています」。いつも「似[に]ています」の かたちで つかう。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">似[に]</span>\n<div class=\"km-parts\">a standing person (亻) + 以 (a hand pulling something along)</div>\n</div>\n<div class=\"km-en\">A person (亻) standing beside 以 and copying its pose — they look alike. Spot it: 以 alone (no person) is the 以 in 以上; 似 always has that slim person on the left. You’ll see 似合う (“it suits you”) on clothing-store signs.</div>\n<div class=\"km-ja\">人[ひと]が となりの まねを して、にている。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:ご主人",
+      "lesson_id": "2026-11-20",
+      "word": "ご 主人[しゅじん]",
+      "definition": "ほかの 人[ひと]の おっとを、ていねいに いう ことば。",
+      "meaning": "(someone else's) husband",
+      "sentence": "となりの 奥[おく]さんの ご 主人[しゅじん]も、毎朝[まいあさ] 茨木駅[いばらきえき]から 大阪[おおさか]まで 電車[でんしゃ]で 行[い]きます。",
+      "sentence_en": "Our neighbor's husband also takes the train from Ibaraki Station to Osaka every morning.",
+      "note": "ほかの 人[ひと]の おっと＝ご 主人[しゅじん]。じぶんの おっと＝夫[おっと]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">主[しゅ]</span>\n<div class=\"km-parts\">a dot (丶) on top of 王</div>\n</div>\n<div class=\"km-en\">A flame (丶) burning on top of a lamp stand (王) — the main light of the house, so “master” or “main.” Spot it: 王 has no dot; 玉 has its dot at the bottom right; 主 wears it on top like a hat. You’ll see 主食 on menus and 主婦, ご主人.</div>\n<div class=\"km-ja\">王[おう]さまの あたまに 火[ひ]が ひとつ。いえの 主[しゅ]。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">人[じん]</span>\n<div class=\"km-parts\">two strokes leaning on each other (人)</div>\n</div>\n<div class=\"km-en\">Two legs walking, leaning on each other — a person. Spot it: 入 (enter) leans the other way, with the right stroke on top; 八 (eight) has two strokes that do not touch. You’ll see 人身事故 on JR delay boards and 2人 on restaurant waiting lists.</div>\n<div class=\"km-ja\">2本[ほん]の 足[あし]で 立[た]つ 人[ひと]。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:夫",
+      "lesson_id": "2026-11-20",
+      "word": "夫[おっと]",
+      "definition": "けっこんした 男[おとこ]の 人[ひと]。じぶんの おっとの ことを 話[はな]す ときに つかう。",
+      "meaning": "(my) husband",
+      "sentence": "しげこは「夫[おっと]は 毎晩[まいばん] NHLの 試合[しあい]を 見[み]ています」と 言[い]いました。",
+      "sentence_en": "Shigeko said, \"My husband watches NHL games every night.\"",
+      "note": "小[ちい]さい っ を わすれないで！ おっと＝husband、おと（音[おと]）＝sound。ほかの 人[ひと]の おっと＝ご 主人[しゅじん]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">夫[おっと]</span>\n<div class=\"km-parts\">大 (a big person) + one extra bar across the head</div>\n</div>\n<div class=\"km-en\">A grown man (大) with a hairpin bar through his hair — an adult man, a husband. Spot it: the middle line pokes up through the top bar; in 天 (heaven) it does not, and 失 (lose) has a slanted tick at the top left. You’ll see 夫婦 (“married couple”) on shop deals like 夫婦割.</div>\n<div class=\"km-ja\">大[おお]きい 人[ひと]の あたまに、かんざし 一本[いっぽん]。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:妻",
+      "lesson_id": "2026-11-20",
+      "word": "妻[つま]",
+      "definition": "けっこんした 女[おんな]の 人[ひと]。じぶんの つまの ことを 話[はな]す ときに つかう。",
+      "meaning": "(my) wife",
+      "sentence": "妻[つま]は 研究者[けんきゅうしゃ]です。週末[しゅうまつ]は いっしょに 箕面[みのお]の 山[やま]を 歩[ある]きます。",
+      "sentence_en": "My wife is a researcher. On weekends we hike the Minoh mountains together.",
+      "note": "ほかの 人[ひと]の つま＝奥[おく]さん。じぶんの つま＝妻[つま]。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">妻[つま]</span>\n<div class=\"km-parts\">a hand (⺕) holding a hairpin (十) + woman (女) below</div>\n</div>\n<div class=\"km-en\">A hand (⺕) sliding a hairpin (十) into a woman’s (女) hair — the wife getting ready. Spot it: 要 (need) has a lid-box 覀 on top of 女, not a hand; 妻’s top has a line running through the hand. You’ll see 妻 in TV drama titles and 夫妻 (“Mr. and Mrs.”).</div>\n<div class=\"km-ja\">手[て]で 女[おんな]の 人[ひと]の かみに、かざりを さす。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:祖母",
+      "lesson_id": "2026-11-20",
+      "word": "祖母[そぼ]",
+      "definition": "じぶんの おとうさんや おかあさんの、おかあさん。",
+      "meaning": "(my) grandmother",
+      "sentence": "子[こ]どもの とき、祖母[そぼ]の 家[いえ]で ファミコンを たくさん しました。",
+      "sentence_en": "When I was a kid, I played a lot of Famicom at my grandma's house.",
+      "note": "ほかの 人[ひと]の そぼ＝おばあさん。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">祖[そ]</span>\n<div class=\"km-parts\">an altar (礻) + 且 (a stack of offerings)</div>\n</div>\n<div class=\"km-en\">An altar (礻) next to a stack of offerings (且) for the family who came before — ancestors, grandparents. Spot it: 組 (group, as in TV 番組) has thread (糸) instead of the altar; 礻 has one dot, 衤 (clothing) has two. You’ll see 祖父 and 祖母 on forms, and 先祖 at Obon.</div>\n<div class=\"km-ja\">かみさまの 台[だい]の よこに、つみかさねた おそなえ。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">母[ぼ]</span>\n<div class=\"km-parts\">a woman’s shape with two dots inside</div>\n</div>\n<div class=\"km-en\">A woman with two dots — a mother feeding her baby. Spot it: 毎 (every, 毎日) is 母 wearing a little hat (𠂉) on top. You’ll see 母の日 displays in May and 祖母.</div>\n<div class=\"km-ja\">二[ふた]つの 点[てん]は、赤[あか]ちゃんに ミルクを あげる おかあさん。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:祖父",
+      "lesson_id": "2026-11-20",
+      "word": "祖父[そふ]",
+      "definition": "じぶんの おとうさんや おかあさんの、おとうさん。",
+      "meaning": "(my) grandfather",
+      "sentence": "祖父[そふ]は ホッケーが 大好[だいす]きで、よく いっしょに テレビで NHLを 見[み]ました。",
+      "sentence_en": "My grandpa loved hockey, and we often watched the NHL on TV together.",
+      "note": "ほかの 人[ひと]の そふ＝おじいさん。そぼ（grandma）と そふ（grandpa）: ぼ と ふ を まちがえないで。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">祖[そ]</span>\n<div class=\"km-parts\">an altar (礻) + 且 (a stack of offerings)</div>\n</div>\n<div class=\"km-en\">An altar (礻) next to a stack of offerings (且) for the family who came before — ancestors, grandparents. Spot it: 組 (group, as in TV 番組) has thread (糸) instead of the altar; 礻 has one dot, 衤 (clothing) has two. You’ll see 祖父 and 祖母 on forms, and 先祖 at Obon.</div>\n<div class=\"km-ja\">かみさまの 台[だい]の よこに、つみかさねた おそなえ。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">父[ふ]</span>\n<div class=\"km-parts\">two short strokes on top + a big cross (ㄨ)</div>\n</div>\n<div class=\"km-en\">Dad’s two raised eyebrows over his crossed arms (ㄨ) — “because I said so.” Spot it: 交 (cross, as in 交番) puts a lid (亠) on top of 父; 文 (writing) has the lid but no separate eyebrows. You’ll see 父の日 in June and 祖父.</div>\n<div class=\"km-ja\">まゆげを 上[あ]げて、うでを くむ おとうさん。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:例えば",
+      "lesson_id": "2026-11-20",
+      "word": "例[たと]えば",
+      "definition": "わかりやすく するために、ひとつ れいを 出[だ]す ときに いう ことば。",
+      "meaning": "for example",
+      "sentence": "古[ふる]い ゲームが 好[す]きです。例[たと]えば、スーパーマリオや ゼルダです。",
+      "sentence_en": "I like old games. For example, Super Mario and Zelda.",
+      "note": "ひらがなで「たとえば」と 書[か]く ことも 多[おお]い。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">例[たと]</span>\n<div class=\"km-parts\">a standing person (亻) + 列 (a row: 歹 + 刂)</div>\n</div>\n<div class=\"km-en\">A person (亻) pointing at one thing in a row (列) — “for example, this one.” Spot it: 列 alone has no person; it is the 列 of 行列, the line outside a ramen shop. You’ll see 記入例 (“filled-in example”) on city-hall forms.</div>\n<div class=\"km-ja\">ならんだ ものを 人[ひと]が ゆびさして、「たとえば これ」。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:研究者",
+      "lesson_id": "2026-11-20",
+      "word": "研究者[けんきゅうしゃ]",
+      "definition": "あたらしい ことを 見[み]つけるために、ふかく しらべる しごとの 人[ひと]。",
+      "meaning": "researcher",
+      "sentence": "妻[つま]は 研究者[けんきゅうしゃ]です。でも、家[いえ]では ケンケンの トミカの 研究[けんきゅう]を しています。",
+      "sentence_en": "My wife is a researcher. But at home she does research on Kenken's Tomica cars.",
+      "note": "研究[けんきゅう]＝research、〜者[しゃ]＝〜する 人[ひと]（医者[いしゃ]の 者[しゃ]）。のばす 音[おと]: けん・きゅう・しゃ。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">研[けん]</span>\n<div class=\"km-parts\">stone (石) + 开 (two flat bars on legs)</div>\n</div>\n<div class=\"km-en\">Grinding a stone (石) flat between two bars (开) — polishing until it shines, like careful study. Spot it: 形 (shape) has the same 开 but with three hair strokes (彡); 研 has the stone. You’ll see 研修中 (“in training”) on new staff name tags at konbini.</div>\n<div class=\"km-ja\">石[いし]を たいらに みがいて、よく しらべる。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">究[きゅう]</span>\n<div class=\"km-parts\">a hole (穴) on top + nine (九) below</div>\n</div>\n<div class=\"km-en\">Crawling down a hole (穴) nine (九) times to reach the very bottom — investigating all the way. Spot it: 空 (sky, as in 空港) has 工 under the hole cover; 究 has the hooked 九. You’ll see 研究所 (“research institute”) on building signs.</div>\n<div class=\"km-ja\">あなの おくまで 九[きゅう]かい もぐって、しらべる。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">者[しゃ]</span>\n<div class=\"km-parts\">an old man (耂) + the sun (日) below</div>\n</div>\n<div class=\"km-en\">An old man (耂) working under the sun (日) all day — “the person who does it.” Spot it: 暑 (hot) puts the sun on top; 著 has grass (艹) on top. You’ll see it in 医者 and on 関係者以外立入禁止 (“staff only”) doors.</div>\n<div class=\"km-ja\">〜する 人[ひと]。医者[いしゃ]の しゃ。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:兄",
+      "lesson_id": "2026-11-20",
+      "word": "兄[あに]",
+      "definition": "じぶんより 年[とし]が 上[うえ]の、じぶんの 男[おとこ]の きょうだい。",
+      "meaning": "(my) older brother",
+      "sentence": "子[こ]どもの とき、兄[あに]は ゲームの コントローラーを ぜんぜん 貸[か]してくれませんでした。",
+      "sentence_en": "When we were kids, my older brother never let me use the game controller.",
+      "note": "ほかの 人[ひと]の あに＝お 兄[にい]さん。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">兄[あに]</span>\n<div class=\"km-parts\">a big mouth (口) on legs (儿)</div>\n</div>\n<div class=\"km-en\">A big mouth (口) walking on legs (儿) — the older brother always giving orders. Spot it: 元 (as in 元気) has two lines on top, not a mouth; 兄 has the box. You’ll see 兄弟 (“siblings”) and お兄さん.</div>\n<div class=\"km-ja\">大[おお]きい 口[くち]で しゃべる あに。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:姉",
+      "lesson_id": "2026-11-20",
+      "word": "姉[あね]",
+      "definition": "じぶんより 年[とし]が 上[うえ]の、じぶんの 女[おんな]の きょうだい。",
+      "meaning": "(my) older sister",
+      "sentence": "姉[あね]は りょうりが 上手[じょうず]です。でも、たこやきは 私[わたし]の ほうが 上手[じょうず]です！",
+      "sentence_en": "My older sister is a good cook. But I make better takoyaki!",
+      "note": "ほかの 人[ひと]の あね＝お 姉[ねえ]さん。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">姉[あね]</span>\n<div class=\"km-parts\">woman (女) + 市 (market: a dot-lid 亠 + 巾)</div>\n</div>\n<div class=\"km-en\">A woman (女) who goes to the market (市) on her own — the grown-up older sister. Spot it: 妹 (younger sister) has 未 (a small tree) instead of 市. 市 is the same piece you see on 茨木市 city signs.</div>\n<div class=\"km-ja\">ひとりで 市[いち]ばへ 行[い]く 女[おんな]の 人[ひと]。あね。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:妹",
+      "lesson_id": "2026-11-20",
+      "word": "妹[いもうと]",
+      "definition": "じぶんより 年[とし]が 下[した]の、じぶんの 女[おんな]の きょうだい。",
+      "meaning": "(my) younger sister",
+      "sentence": "妹[いもうと]は アメリカで 会社員[かいしゃいん]を しています。ドラマを 見[み]るのが 好[す]きです。",
+      "sentence_en": "My younger sister works at a company in America. She likes watching TV dramas.",
+      "note": "ほかの 人[ひと]の いもうと＝いもうとさん。「う」を わすれないで: い・も・う・と。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">妹[いもうと]</span>\n<div class=\"km-parts\">woman (女) + 未 (“not yet”: a tree with a short top bar)</div>\n</div>\n<div class=\"km-en\">A girl (女) next to a tree that is not grown yet (未) — the younger sister. Spot it: 姉 has 市 on the right; in 未 the top bar is short, while in 末 (end) it is long. You’ll see 姉妹 (“sisters”) and 姉妹都市 (“sister cities”).</div>\n<div class=\"km-ja\">まだ 小[ちい]さい 木[き]の よこの 女[おんな]の 子[こ]。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:弟",
+      "lesson_id": "2026-11-20",
+      "word": "弟[おとうと]",
+      "definition": "じぶんより 年[とし]が 下[した]の、じぶんの 男[おとこ]の きょうだい。",
+      "meaning": "(my) younger brother",
+      "sentence": "弟[おとうと]は 大[だい]の ホッケーファンです。毎晩[まいばん]、NHLの 試合[しあい]を 見[み]ています。",
+      "sentence_en": "My younger brother is a huge hockey fan. He watches NHL games every night.",
+      "note": "ほかの 人[ひと]の おとうと＝おとうとさん。「う」を わすれないで: お・と・う・と。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">弟[おとうと]</span>\n<div class=\"km-parts\">two little horns (丷) + a cord (弓) wound around a stick</div>\n</div>\n<div class=\"km-en\">Two little horns (丷) over a cord wrapped around a stick — the youngest, tied up at the end of the line. Spot it: 第 (as in 第1) has a bamboo top (⺮) instead of the horns. You’ll see 兄弟 and 弟子 (“apprentice”).</div>\n<div class=\"km-ja\">ぼうに ひもを ぐるぐる。あとから 生[う]まれた おとうと。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:両親",
+      "lesson_id": "2026-11-20",
+      "word": "両親[りょうしん]",
+      "definition": "じぶんの おとうさんと おかあさん、二人[ふたり]の こと。",
+      "meaning": "(my) parents",
+      "sentence": "両親[りょうしん]は アメリカに 住[す]んでいます。お 正月[しょうがつ]に ビデオ 電話[でんわ]で ケンケンに 会[あ]います。",
+      "sentence_en": "My parents live in America. At New Year's they see Kenken on a video call.",
+      "note": "ほかの 人[ひと]の りょうしん＝ご 両親[りょうしん]。のばす 音[おと]: りょう・しん。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">両[りょう]</span>\n<div class=\"km-parts\">a top bar (一) + a frame (冂) holding two matching halves</div>\n</div>\n<div class=\"km-en\">A yoke (一) over a frame with two matching halves inside — both sides at once. Spot it: 西 (west) has bent legs inside a box, and 雨 (rain) has four drops; 両 has two little 入 shapes. You’ll see 両替 (“money exchange”) and 10両 (“10 cars”) on JR platform signs.</div>\n<div class=\"km-ja\">二[ふた]つが ならんで、りょうほう。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">親[しん]</span>\n<div class=\"km-parts\">a standing family-tree shape (亲) + an eye on legs (見)</div>\n</div>\n<div class=\"km-en\">A family-tree shape (亲) plus an eye on legs (見) — seeing your own people: a parent, or closeness. Spot it: 新 uses the same left side, but has an axe (斤) on the right, not 見. You’ll see 親切 in class, and 親 on forms.</div>\n<div class=\"km-ja\">見[み]えるのが 親[おや]、ちかい 人[ひと]。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:教師",
+      "lesson_id": "2026-11-20",
+      "word": "教師[きょうし]",
+      "definition": "学校[がっこう]などで、べんきょうを 教[おし]える しごとの 人[ひと]。",
+      "meaning": "teacher (as a job)",
+      "sentence": "YWCAの おおうち 先生[せんせい]は 日本語[にほんご]の 教師[きょうし]です。金曜日[きんようび]の クラスで 会[あ]います。",
+      "sentence_en": "Ōuchi-sensei at YWCA is a Japanese teacher. I see her in Friday class.",
+      "note": "しごとの 名前[なまえ]は「教師[きょうし]」。よぶ ときは「先生[せんせい]」。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">教[きょう]</span>\n<div class=\"km-parts\">a child (子) under an old-timer (孝) + a teaching hand (攵)</div>\n</div>\n<div class=\"km-en\">A child (子) and a hand coming down to teach (攵) — to teach, or to tell someone the way. Spot it: 孝 is the left piece alone, with no teaching hand; 教 always has 攵 on the right. You’ll see 教室 at the YWCA.</div>\n<div class=\"km-ja\">子[こ]どもに 手[て]で 教[おし]える。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">師[し]</span>\n<div class=\"km-parts\">a stacked official side (𠂤) + a hanging cloth (巾)</div>\n</div>\n<div class=\"km-en\">A stacked official side and a hanging cloth (巾) — a master, a professional. Spot it: 帰 also uses that stacked left side, but ends in a broom-like shape, not a simple cloth 巾. You’ll see 看護師 at clinics, and 教師 for a teacher.</div>\n<div class=\"km-ja\">その 仕事[しごと]の プロ、せんせい。</div>\n</div><!-- /kanji-mnemonic -->"
+    },
+    {
+      "id": "vocab:農民",
+      "lesson_id": "2026-11-20",
+      "word": "農民[のうみん]",
+      "definition": "田[た]んぼや はたけで、お 米[こめ]や やさいを 作[つく]る 人[ひと]。",
+      "meaning": "farmer",
+      "sentence": "むかしの ゲームでは、村[むら]の 農民[のうみん]が いつも「ゆうしゃさま、たすけて！」と 言[い]います。",
+      "sentence_en": "In old games, the village farmers always say, \"Hero, please help us!\"",
+      "note": "今[いま]は「農家[のうか]の 人[ひと]」と 言[い]う ほうが ふつう。\n\n<div class=\"kanji-mnemonic\">\n<div class=\"km-label\">かんじ</div>\n<div class=\"km-item\">\n<span class=\"km-k\">農[のう]</span>\n<div class=\"km-parts\">a curved field (曲) on top + 辰 (an old clam-shell hoe)</div>\n</div>\n<div class=\"km-en\">A bent field (曲) above a shell hoe (辰) — turning the soil, farming. Spot it: 濃 (thick, as in 濃い) is 農 with water (氵) on the left. You’ll see JA農協 signs and 農家 vegetable stands.</div>\n<div class=\"km-ja\">まがった はたけを くわで たがやす。</div>\n<div class=\"km-item\">\n<span class=\"km-k\">民[みん]</span>\n<div class=\"km-parts\">a box on top (𠃍) + 氏 below, with a long tail sweeping right</div>\n</div>\n<div class=\"km-en\">A small box over a long sweeping tail — lots of ordinary people moving together. Spot it: 氏 (Mr./clan) is 民 without the box on top. You’ll see 民宿 (“family guesthouse”) and 市民 (“citizens”) on city signs.</div>\n<div class=\"km-ja\">たくさんの 人[ひと]が いっしょに くらす。</div>\n</div><!-- /kanji-mnemonic -->"
     }
   ]
 }

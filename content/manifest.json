@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": 6,
+  "version": 7,
   "files": [
     "profile.json",
     "lessons.json",
@@ -29,6 +29,11 @@
     "readers/nhl-sports.json",
     "readers/fuji-to-umi.json",
     "readers/conveni-uchi.json",
-    "worksheets/g1-te-spelling.json"
+    "worksheets/g1-te-spelling.json",
+    "worksheets/no49-teimasu.json",
+    "worksheets/hw49.json",
+    "homework/hw49.json",
+    "quizzes/class-2026-11-20.json",
+    "readers/tonari-kazoku.json"
   ]
 }

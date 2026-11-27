@@ -588,6 +588,106 @@
         "出て"
       ],
       "gloss_en": "出[で]る is group 2: drop ます, add て. でて, not でって."
+    },
+    {
+      "id": "g-1120-01",
+      "lesson_id": "2026-11-20",
+      "pattern_ruby": "[place]に 住[す]んで います",
+      "cloze_ruby": "りょうしんは アメリカ__ すんで います。",
+      "answer": "に",
+      "accept": [
+        "に"
+      ],
+      "gloss_en": "Where you live takes に: アメリカに すんで います."
+    },
+    {
+      "id": "g-1120-02",
+      "lesson_id": "2026-11-20",
+      "pattern_ruby": "[place]で Vて います",
+      "cloze_ruby": "おとうとは だいがく__ べんきょうして います。",
+      "answer": "で",
+      "accept": [
+        "で"
+      ],
+      "gloss_en": "Where an activity happens takes で: だいがくで べんきょうして います."
+    },
+    {
+      "id": "g-1120-03",
+      "lesson_id": "2026-11-20",
+      "pattern_ruby": "[job]を して います",
+      "cloze_ruby": "いもうとは かいしゃいん__ して います。",
+      "answer": "を",
+      "accept": [
+        "を"
+      ],
+      "gloss_en": "Job + を して います: かいしゃいんを して います."
+    },
+    {
+      "id": "g-1120-04",
+      "lesson_id": "2026-11-20",
+      "pattern_ruby": "Aは Bに 似[に]て います",
+      "cloze_ruby": "ケンケンは つま__ にて います。",
+      "answer": "に",
+      "accept": [
+        "に",
+        "と"
+      ],
+      "gloss_en": "Looks like someone: Bに にて います (Aと Bは にて います also works)."
+    },
+    {
+      "id": "g-1120-05",
+      "lesson_id": "2026-11-20",
+      "pattern_ruby": "[ride]に 乗[の]ります",
+      "cloze_ruby": "むすこは じてんしゃ__ のります。",
+      "answer": "に",
+      "accept": [
+        "に"
+      ],
+      "gloss_en": "You ride ON something with に: じてんしゃに のります, not じてんしゃを."
+    },
+    {
+      "id": "g-1120-06",
+      "lesson_id": "2026-11-20",
+      "pattern_ruby": "[toy]で 遊[あそ]びます",
+      "cloze_ruby": "むすこは トミカ__ あそびます。",
+      "answer": "で",
+      "accept": [
+        "で"
+      ],
+      "gloss_en": "You play WITH a toy using で: トミカで あそびます, not トミカを."
+    },
+    {
+      "id": "g-1120-07",
+      "lesson_id": "2026-11-20",
+      "pattern_ruby": "なadj + で + adj",
+      "cloze_ruby": "むすこは げんき__ やさしい こです。",
+      "answer": "で",
+      "accept": [
+        "で"
+      ],
+      "gloss_en": "Join a な-adjective to the next adjective with で: げんきで やさしい. と only joins nouns."
+    },
+    {
+      "id": "g-1120-08",
+      "lesson_id": "2026-11-20",
+      "pattern_ruby": "Vる + のが 好[す]きです",
+      "cloze_ruby": "ドラマを みる__が すきです。",
+      "answer": "の",
+      "accept": [
+        "の"
+      ],
+      "gloss_en": "A verb needs の (or こと) before が すきです: みるのが すきです."
+    },
+    {
+      "id": "g-1120-09",
+      "lesson_id": "2026-11-20",
+      "pattern_ruby": "〜と よんで います",
+      "cloze_ruby": "むすこを ケンケン__ よんで います。",
+      "answer": "と",
+      "accept": [
+        "と"
+      ],
+      "gloss_en": "Quote a name with と: ケンケンと よんで います (keep the い: よんで います)."
     }
   ]
 }

@@ -99,6 +99,33 @@
       "gloss_ja": "おとが すくない。",
       "gloss_en": "quiet",
       "lesson_id": "2026-10-30"
+    },
+    {
+      "id": "genki",
+      "kind": "na",
+      "ruby": "元気[げんき]",
+      "kana": "げんき",
+      "gloss_ja": "からだが じょうぶで、ちからが いっぱい",
+      "gloss_en": "healthy; energetic (げんきで やさしい)",
+      "lesson_id": "2026-11-20"
+    },
+    {
+      "id": "yasashii",
+      "kind": "i",
+      "ruby": "優[やさ]しい",
+      "kana": "やさしい",
+      "gloss_ja": "人[ひと]に あたたかい",
+      "gloss_en": "kind; gentle",
+      "lesson_id": "2026-11-20"
+    },
+    {
+      "id": "kawaii",
+      "kind": "i",
+      "ruby": "かわいい",
+      "kana": "かわいい",
+      "gloss_ja": "小[ちい]さくて、だいじに したく なる",
+      "gloss_en": "cute",
+      "lesson_id": "2026-11-20"
     }
   ]
 }

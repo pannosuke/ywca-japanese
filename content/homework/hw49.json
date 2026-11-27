@@ -1,0 +1,157 @@
+{
+  "schema": 1,
+  "id": "hw49-result",
+  "worksheet_id": "hw49",
+  "date": "2026-11-20",
+  "teacher_id": "ouchi",
+  "title_ruby": "しゅくだい かぞくを しょうかいして ください",
+  "note": "No.49 homework (assigned 11/20, due 11/24; Eric missed the 11/24 class). Graded by Grok Bot: 12/16 (13/16 with half credit for two small slips). Part 1 dialogue 9/9. Misses: いっしょに けっこんしていません (いっしょに does not go with けっこん), よんでます → よんで います (keep the い in writing), げんきと やさしい → げんきで やさしい (な-adjective + で), じてんしゃを のると … あそぶが すきです → じてんしゃに のる / トミカで あそぶ / Vることが すきです.",
+  "correct": 12,
+  "total": 16,
+  "items": [
+    {
+      "id": "hw49-1a",
+      "prompt_ruby": "B: ____です。(family photo)",
+      "expected": "かぞくの しゃしん",
+      "answer": "かぞくの しゃしん",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-1b",
+      "prompt_ruby": "A: ____。(show me!)",
+      "expected": "みせて、みせて",
+      "answer": "みせて、みせて",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-1c",
+      "prompt_ruby": "A: この ひとは、Bさんの ____。(your wife?)",
+      "expected": "おくさんですか",
+      "answer": "おくさんですか",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-1d",
+      "prompt_ruby": "B: ええ、そうです。____。(lives in Bangkok)",
+      "expected": "つまは バンコクに すんで います",
+      "answer": "つまは バンコクに すんでいます",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-1e",
+      "prompt_ruby": "B: これは ____。(child)",
+      "expected": "こどもです",
+      "answer": "こどもです",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-1f",
+      "prompt_ruby": "A: わあ、Bさんに ____。(looks like you)",
+      "expected": "にて いますね",
+      "answer": "にていますね",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-1g",
+      "prompt_ruby": "A: ____！(cute)",
+      "expected": "かわいい",
+      "answer": "かわいい",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-1h",
+      "prompt_ruby": "B: それは ____です。(younger brother)",
+      "expected": "おとうと",
+      "answer": "おとうと",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-1i",
+      "prompt_ruby": "B: ____。(studies at a US university)",
+      "expected": "アメリカの だいがくで べんきょうして います",
+      "answer": "アメリカのだいがくでべんきょうしています",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-2a",
+      "prompt_ruby": "わたしの かぞく ①",
+      "expected": "ははと ちちは アメリカに すんで います。",
+      "answer": "ははとちちはアメリカにすんでいます。",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-2b",
+      "prompt_ruby": "わたしの かぞく ②",
+      "expected": "ふたりは けっこんして いません。（いっしょに すんで いません。）",
+      "answer": "いっしょにけっこんしていません。",
+      "correct": false,
+      "error_type": "word_choice",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-2c",
+      "prompt_ruby": "わたしの かぞく ③",
+      "expected": "つまは けんきゅうしゃです。",
+      "answer": "つまはけんきゅうしゃです。",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-2d",
+      "prompt_ruby": "わたしの かぞく ④",
+      "expected": "むすこは けんのすけです。",
+      "answer": "むすこはけんのすけです。",
+      "correct": true,
+      "error_type": "",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-2e",
+      "prompt_ruby": "わたしの かぞく ⑤",
+      "expected": "ケンケンと よんで います。",
+      "answer": "ケンケンとよんでます。",
+      "correct": false,
+      "error_type": "dropped_i",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-2f",
+      "prompt_ruby": "わたしの かぞく ⑥",
+      "expected": "とても げんきで やさしい こです。",
+      "answer": "とてもげんきとやさしいこです。",
+      "correct": false,
+      "error_type": "na_adjective_de",
+      "verb_id": ""
+    },
+    {
+      "id": "hw49-2g",
+      "prompt_ruby": "わたしの かぞく ⑦",
+      "expected": "じてんしゃに のることと、はたらく くるまを みることと、トミカで あそぶことが すきです。",
+      "answer": "じてんしゃをのると はたらくくるまをみると トミカをあそぶがすきです。",
+      "correct": false,
+      "error_type": "particles_nominalizer",
+      "verb_id": ""
+    }
+  ]
+}
