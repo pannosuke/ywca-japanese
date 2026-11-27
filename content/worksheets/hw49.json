@@ -1,0 +1,181 @@
+{
+  "schema": 1,
+  "id": "hw49",
+  "date": "2026-11-20",
+  "teacher_id": "ouchi",
+  "title_ruby": "しゅくだい かぞくを しょうかいして ください",
+  "lesson_id": "2026-11-20",
+  "items": [
+    {
+      "id": "hw49-1a",
+      "prompt_ruby": "B: ____です。(family photo)",
+      "expected": "かぞくの しゃしん",
+      "accept": [
+        "かぞくの しゃしん",
+        "かぞくのしゃしん"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-1b",
+      "prompt_ruby": "A: ____。(show me!)",
+      "expected": "みせて、みせて",
+      "accept": [
+        "みせて、みせて"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-1c",
+      "prompt_ruby": "A: この ひとは、Bさんの ____。(your wife?)",
+      "expected": "おくさんですか",
+      "accept": [
+        "おくさんですか"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-1d",
+      "prompt_ruby": "B: ええ、そうです。____。(lives in Bangkok)",
+      "expected": "つまは バンコクに すんで います",
+      "accept": [
+        "つまは バンコクに すんで います",
+        "つまはバンコクにすんでいます"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-1e",
+      "prompt_ruby": "B: これは ____。(child)",
+      "expected": "こどもです",
+      "accept": [
+        "こどもです"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-1f",
+      "prompt_ruby": "A: わあ、Bさんに ____。(looks like you)",
+      "expected": "にて いますね",
+      "accept": [
+        "にて いますね",
+        "にていますね"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-1g",
+      "prompt_ruby": "A: ____！(cute)",
+      "expected": "かわいい",
+      "accept": [
+        "かわいい"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-1h",
+      "prompt_ruby": "B: それは ____です。(younger brother)",
+      "expected": "おとうと",
+      "accept": [
+        "おとうと"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-1i",
+      "prompt_ruby": "B: ____。(studies at a US university)",
+      "expected": "アメリカの だいがくで べんきょうして います",
+      "accept": [
+        "アメリカの だいがくで べんきょうして います",
+        "アメリカのだいがくでべんきょうしています"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-2a",
+      "prompt_ruby": "わたしの かぞく ①",
+      "expected": "ははと ちちは アメリカに すんで います。",
+      "accept": [
+        "ははと ちちは アメリカに すんで います。",
+        "ははとちちはアメリカにすんでいます。"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-2b",
+      "prompt_ruby": "わたしの かぞく ②",
+      "expected": "ふたりは けっこんして いません。（いっしょに すんで いません。）",
+      "accept": [
+        "ふたりは けっこんして いません。（いっしょに すんで いません。）",
+        "ふたりはけっこんしていません。（いっしょにすんでいません。）"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-2c",
+      "prompt_ruby": "わたしの かぞく ③",
+      "expected": "つまは けんきゅうしゃです。",
+      "accept": [
+        "つまは けんきゅうしゃです。",
+        "つまはけんきゅうしゃです。"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-2d",
+      "prompt_ruby": "わたしの かぞく ④",
+      "expected": "むすこは けんのすけです。",
+      "accept": [
+        "むすこは けんのすけです。",
+        "むすこはけんのすけです。"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-2e",
+      "prompt_ruby": "わたしの かぞく ⑤",
+      "expected": "ケンケンと よんで います。",
+      "accept": [
+        "ケンケンと よんで います。",
+        "ケンケンとよんでいます。"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-2f",
+      "prompt_ruby": "わたしの かぞく ⑥",
+      "expected": "とても げんきで やさしい こです。",
+      "accept": [
+        "とても げんきで やさしい こです。",
+        "とてもげんきでやさしいこです。"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "hw49-2g",
+      "prompt_ruby": "わたしの かぞく ⑦",
+      "expected": "じてんしゃに のることと、はたらく くるまを みることと、トミカで あそぶことが すきです。",
+      "accept": [
+        "じてんしゃに のることと、はたらく くるまを みることと、トミカで あそぶことが すきです。",
+        "じてんしゃにのることと、はたらくくるまをみることと、トミカであそぶことがすきです。"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    }
+  ]
+}

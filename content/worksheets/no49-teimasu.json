@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "id": "no49-teimasu",
+  "date": "2026-11-27",
+  "teacher_id": "review",
+  "title_ruby": "Vて います（かぞくの しょうかい）",
+  "lesson_id": "2026-11-20",
+  "items": [
+    {
+      "id": "ti-sumu",
+      "prompt_ruby": "りょうしんは アメリカに ____ います。(すむ)",
+      "expected": "すんで",
+      "accept": [
+        "すんで",
+        "住んで"
+      ],
+      "verb_id": "sumu",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "ti-hataraku",
+      "prompt_ruby": "いもうとは かいしゃで ____ います。(はたらく)",
+      "expected": "はたらいて",
+      "accept": [
+        "はたらいて",
+        "働いて"
+      ],
+      "verb_id": "hataraku",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "ti-benkyou",
+      "prompt_ruby": "おとうとは だいがくで ____ います。(べんきょうする)",
+      "expected": "べんきょうして",
+      "accept": [
+        "べんきょうして",
+        "勉強して"
+      ],
+      "verb_id": "benkyou",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "ti-kekkon",
+      "prompt_ruby": "あには ____ います。(けっこんする)",
+      "expected": "けっこんして",
+      "accept": [
+        "けっこんして",
+        "結婚して"
+      ],
+      "verb_id": "kekkon",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "ti-yomu",
+      "prompt_ruby": "むすこを ケンケンと ____ います。(よむ)",
+      "expected": "よんで",
+      "accept": [
+        "よんで",
+        "呼んで"
+      ],
+      "verb_id": "",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "ti-miru",
+      "prompt_ruby": "ちちは まいばん NHLを ____ います。(みる)",
+      "expected": "みて",
+      "accept": [
+        "みて",
+        "見て"
+      ],
+      "verb_id": "miru",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "ti-noru",
+      "prompt_ruby": "むすこは じてんしゃに ____ います。(のる)",
+      "expected": "のって",
+      "accept": [
+        "のって",
+        "乗って"
+      ],
+      "verb_id": "noru",
+      "kind": "fill_blank"
+    },
+    {
+      "id": "ti-asobu",
+      "prompt_ruby": "むすこは トミカで ____ います。(あそぶ)",
+      "expected": "あそんで",
+      "accept": [
+        "あそんで",
+        "遊んで"
+      ],
+      "verb_id": "asobu",
+      "kind": "fill_blank"
+    }
+  ]
+}

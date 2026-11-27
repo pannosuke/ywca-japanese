@@ -1,0 +1,152 @@
+{
+  "schema": 1,
+  "id": "class-2026-11-20",
+  "lesson_id": "2026-11-20",
+  "title_ruby": "かぞくの ことば",
+  "items": [
+    {
+      "id": "q1",
+      "kind": "meaning_to_word",
+      "prompt_ruby": "(my) wife — talking about your own",
+      "answer": "つま",
+      "choices": [
+        "つま",
+        "おくさん",
+        "ごしゅじん",
+        "おっと"
+      ]
+    },
+    {
+      "id": "q2",
+      "kind": "meaning_to_word",
+      "prompt_ruby": "(someone else's) husband",
+      "answer": "ごしゅじん",
+      "choices": [
+        "ごしゅじん",
+        "おっと",
+        "おとうと",
+        "おじいさん"
+      ]
+    },
+    {
+      "id": "q3",
+      "kind": "meaning_to_word",
+      "prompt_ruby": "(my) husband — talking about your own",
+      "answer": "おっと",
+      "choices": [
+        "おっと",
+        "おと",
+        "ごしゅじん",
+        "おうと"
+      ]
+    },
+    {
+      "id": "q4",
+      "kind": "meaning_to_word",
+      "prompt_ruby": "(my) grandmother",
+      "answer": "そぼ",
+      "choices": [
+        "そぼ",
+        "そふ",
+        "おばあさん",
+        "はは"
+      ]
+    },
+    {
+      "id": "q5",
+      "kind": "meaning_to_word",
+      "prompt_ruby": "(my) grandfather",
+      "answer": "そふ",
+      "choices": [
+        "そふ",
+        "そぼ",
+        "おじいさん",
+        "ちち"
+      ]
+    },
+    {
+      "id": "q6",
+      "kind": "meaning_to_word",
+      "prompt_ruby": "(my) younger brother",
+      "answer": "おとうと",
+      "choices": [
+        "おとうと",
+        "おとと",
+        "おとうさん",
+        "いもうと"
+      ]
+    },
+    {
+      "id": "q7",
+      "kind": "meaning_to_word",
+      "prompt_ruby": "(my) parents",
+      "answer": "りょうしん",
+      "choices": [
+        "りょうしん",
+        "りょしん",
+        "きょうだい",
+        "りょうし"
+      ]
+    },
+    {
+      "id": "q8",
+      "kind": "word_to_meaning",
+      "prompt_ruby": "けんきゅうしゃ",
+      "answer": "researcher",
+      "choices": [
+        "researcher",
+        "teacher",
+        "doctor",
+        "farmer"
+      ]
+    },
+    {
+      "id": "q9",
+      "kind": "word_to_meaning",
+      "prompt_ruby": "にて います",
+      "answer": "resembles; looks like",
+      "choices": [
+        "resembles; looks like",
+        "is living",
+        "is wearing",
+        "is studying"
+      ]
+    },
+    {
+      "id": "q10",
+      "kind": "fill_particle",
+      "prompt_ruby": "むすこは じてんしゃ__ のります。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "を",
+        "で",
+        "と"
+      ]
+    },
+    {
+      "id": "q11",
+      "kind": "fill_particle",
+      "prompt_ruby": "むすこは げんき__ やさしい こです。",
+      "answer": "で",
+      "choices": [
+        "で",
+        "と",
+        "に",
+        "が"
+      ]
+    },
+    {
+      "id": "q12",
+      "kind": "fill_particle",
+      "prompt_ruby": "おとうとは だいがく__ べんきょうして います。",
+      "answer": "で",
+      "choices": [
+        "で",
+        "に",
+        "を",
+        "へ"
+      ]
+    }
+  ]
+}

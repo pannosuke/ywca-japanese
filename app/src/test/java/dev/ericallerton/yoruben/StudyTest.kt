@@ -314,15 +314,15 @@ class StudyTest {
 
     @Test
     fun deckNotesMatchTheMnemonicExport() {
-        assertEquals(49, content.deck.cards.size)
+        assertEquals(65, content.deck.cards.size)
         assertTrue(content.deck.cards.all { it.definition.isNotBlank() && it.meaning.isNotBlank() })
         val words = content.deck.cards.map { it.word }.toSet()
         assertTrue(words.containsAll(listOf("旅行[りょこう]", "降[お]ります", "狭[せま]い", "会話[かいわ]", "厚[あつ]い", "薄[うす]い")))
         assertFalse("自己紹介[じこしょうかい]" in words || "降[お]りる" in words || "それ" in words)
         val withMnemonic = content.deck.cards.filter { "kanji-mnemonic" in it.note }
-        assertEquals(45, withMnemonic.size)
+        assertEquals(61, withMnemonic.size)
         val distinct = withMnemonic.map { it.note }.toSet()
-        assertEquals(45, distinct.size)
+        assertEquals(61, distinct.size)
         withMnemonic.forEach { card ->
             val parsed = CardNotes.parse(card.note)
             assertTrue(card.id, parsed.hasKanji)
